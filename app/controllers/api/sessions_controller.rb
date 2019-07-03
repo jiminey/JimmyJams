@@ -5,7 +5,7 @@ class Api::SessionsController < ApplicationController
       logout
       render "api/users/show"
     else
-      render json: ["Already Sign Out"], status: 404
+      render json: ["Already signed out"], status: 404
     end
   end
 
