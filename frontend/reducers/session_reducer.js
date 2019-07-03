@@ -15,7 +15,7 @@ const sessionReducer = (state = _nullUser, action) => {
             return _nullUser
 
         default:
-            return State
+            return state
     }
 }
 
