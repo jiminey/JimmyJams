@@ -1,6 +1,7 @@
 class Api::SessionsController < ApplicationController
   
   def create
+ 
     @user = User.find_by_credentials(params[:user][:username], params[:user][:password])
     if @user
       login(@user)
@@ -11,8 +12,9 @@ class Api::SessionsController < ApplicationController
   end
 
   def destroy
+    @user = current_user
     if current_user
-      logout
+      logout 
       render "api/users/show"
     else
       render json: ["Already signed out"], status: 404
