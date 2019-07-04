@@ -5,9 +5,11 @@ import SignupFormContainer from '../session_form/signup_form_container';
 
 
 import {Route,Switch} from 'react-router-dom';
+import ModalContainer from './modal/modal_container'
 
 const App = () => (
     <div className='splash'>
+        <Modal /> 
 
         <div className='splash-top'>
             <div className='splash-header'>
@@ -19,11 +21,11 @@ const App = () => (
                         <p>JimmyJams</p>
                     </div>
                 </div>
-                <Switch>
+                {/* <Switch>
                     <Route exact path='/' component={GreetingContainer} />
                     <Route path='/login'  component={LoginFormContainer} />
                     <Route path='/signup' component={SignupFormContainer} />
-                </Switch>
+                </Switch> */}
             </div>
         
 

@@ -169,6 +169,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _session_form_login_form_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../session_form/login_form_container */ "./frontend/session_form/login_form_container.jsx");
 /* harmony import */ var _session_form_signup_form_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../session_form/signup_form_container */ "./frontend/session_form/signup_form_container.jsx");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _modal_modal_container__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modal/modal_container */ "./frontend/components/modal/modal_container.js");
+/* harmony import */ var _modal_modal_container__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modal_modal_container__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 
@@ -178,7 +181,7 @@ __webpack_require__.r(__webpack_exports__);
 var App = function App() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "splash"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Modal, null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "splash-top"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "splash-header"
@@ -188,17 +191,7 @@ var App = function App() {
     className: "splash-logo-img"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "splash-logo-word"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "JimmyJams"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Route"], {
-    exact: true,
-    path: "/",
-    component: _greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Route"], {
-    path: "/login",
-    component: _session_form_login_form_container__WEBPACK_IMPORTED_MODULE_2__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Route"], {
-    path: "/signup",
-    component: _session_form_signup_form_container__WEBPACK_IMPORTED_MODULE_3__["default"]
-  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "JimmyJams"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "splash-middle"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "splash-bottom"
@@ -337,6 +330,17 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(_greeting__WEBPACK_IMPORTED_MODULE_0__["default"]));
+
+/***/ }),
+
+/***/ "./frontend/components/modal/modal_container.js":
+/*!******************************************************!*\
+  !*** ./frontend/components/modal/modal_container.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/jiminey/Desktop/fullstackproject/JimmyJams/frontend/components/modal/modal_container.js: Unexpected token, expected \"{\" (13:0)\n\n\u001b[0m \u001b[90m 11 | \u001b[39m    })\u001b[0m\n\u001b[0m \u001b[90m 12 | \u001b[39m    \u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 | \u001b[39m}\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 14 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 15 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 | \u001b[39m\u001b[36mimport\u001b[39m \u001b[36mdefault\u001b[39m connect(mapStateToProps\u001b[33m,\u001b[39m mapDispatchToProps)(\u001b[33mModal\u001b[39m)\u001b[0m\n    at Object.raise (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:6344:17)\n    at Object.unexpected (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:7659:16)\n    at Object.expect (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:7645:28)\n    at Object.parseBlock (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:10329:10)\n    at Object.parseFunctionBody (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:9408:24)\n    at Object.parseFunctionBodyAndFinish (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:9378:10)\n    at Object.parseMethod (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:9332:10)\n    at Object.parseObjectMethod (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:9248:19)\n    at Object.parseObjPropValue (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:9290:23)\n    at Object.parseObjectMember (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:9214:10)\n    at Object.parseObj (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:9138:25)\n    at Object.parseExprAtom (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:8774:21)\n    at Object.parseExprAtom (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:3599:20)\n    at Object.parseExprSubscripts (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:8413:23)\n    at Object.parseMaybeUnary (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:8393:21)\n    at Object.parseExprOps (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:8280:23)\n    at Object.parseMaybeConditional (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:8253:23)\n    at Object.parseMaybeAssign (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:8200:21)\n    at Object.parseVar (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:10439:26)\n    at Object.parseVarStatement (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:10258:10)\n    at Object.parseStatementContent (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:9855:21)\n    at Object.parseStatement (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:9788:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:10364:25)\n    at Object.parseBlockBody (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:10351:10)\n    at Object.parseTopLevel (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:9717:10)\n    at Object.parse (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:11233:17)\n    at parse (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:11269:38)\n    at parser (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/core/lib/transformation/normalize-file.js:170:34)\n    at normalizeFile (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/core/lib/transformation/normalize-file.js:138:11)\n    at runSync (/Users/jiminey/Desktop/fullstackproject/JimmyJams/node_modules/@babel/core/lib/transformation/index.js:44:43)");
 
 /***/ }),
 
