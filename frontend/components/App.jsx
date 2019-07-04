@@ -25,9 +25,7 @@ const App = () => (
                     <Route path='/signup' component={SignupFormContainer} />
                 </Switch>
             </div>
-            <div className='splash-background'>
-                
-            </div>
+        
 
 
         </div>
