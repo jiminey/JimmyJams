@@ -1,9 +1,14 @@
 div {
+    background: yellow;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background: yellow;
-    padding: 1px;
+    background-image: url(../images/logo.png);
+    background-size: 55px;
+    background-repeat: no-repeat;
+}
+
+.jimmyjams {
+    padding-left: 360px;
 }
 
 .sLinks {
@@ -28,7 +33,7 @@ div {
 }
 
 .demologin {
-    
+
 }
 
 

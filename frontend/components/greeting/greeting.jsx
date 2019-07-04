@@ -17,13 +17,11 @@ class Greeting extends React.Component{
         let { logout, currentUser } = this.props
          
         const personalGreeting = () => {
-            
             return(
-                
-                <div>
-            <h2>Hello, {currentUser.username} </h2>
-            <button onClick={this.handleClick}>Log Out</button>
-        </div>
+            <div>
+                <h2>Hello, {currentUser.username} </h2>
+                <button onClick={this.handleClick}>Log Out</button>
+            </div>
             )
         }
         

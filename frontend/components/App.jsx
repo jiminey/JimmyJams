@@ -7,12 +7,12 @@ import SignupFormContainer from '../session_form/signup_form_container';
 import {Route,Switch} from 'react-router-dom';
 
 const App = () => (
-    <div>
+    <div className='navbar'>
         
         <header>
             <div>
-            <link rel='stylesheet' type='text/css' href='style.css' /> 
-            <h2>JimmyJams</h2>
+                
+                <h2 className='jimmyjams'>JimmyJams</h2>
             </div>
         </header>
 
