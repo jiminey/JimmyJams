@@ -30,9 +30,13 @@ class Greeting extends React.Component{
         const sessionLinks = () => {
             
             return (
-                <div>
-            <Link to="/login">Log In</Link> 
-            <Link to="/signup">Sign Up</Link> 
+            <div className="sLinks">
+                <div className="singin">
+                    <Link to="/login">Sign In</Link> 
+                </div>
+                <div className="signup">
+                    <Link to="/signup">Create Account</Link>   
+                </div> 
             </div>
         )
     }
