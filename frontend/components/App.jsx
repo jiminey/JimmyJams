@@ -7,27 +7,40 @@ import SignupFormContainer from '../session_form/signup_form_container';
 import {Route,Switch} from 'react-router-dom';
 
 const App = () => (
-    <div>
-        <div className='splash-header'>
-            <div className='splash-logo'>
-                <div className ='splash-logo-img'>
-                    
+    <div className='splash'>
+
+        <div className='splash-top'>
+            <div className='splash-header'>
+                <div className='splash-logo'>
+                    <div className ='splash-logo-img'>
+                        
+                    </div>
+                    <div className='splash-logo-word'>
+                        <p>JimmyJams</p>
+                    </div>
                 </div>
-                <div className='splash-logo-word'>
-                    <p>JimmyJams</p>
-                </div>
+                <Switch>
+                    <Route exact path='/' component={GreetingContainer} />
+                    <Route path='/login'  component={LoginFormContainer} />
+                    <Route path='/signup' component={SignupFormContainer} />
+                </Switch>
             </div>
-            <Switch>
-                <Route exact path='/' component={GreetingContainer} />
-                <Route path='/login'  component={LoginFormContainer} />
-                <Route path='/signup' component={SignupFormContainer} />
-            </Switch>
+            <div className='splash-background'>
+                
+            </div>
+
+
         </div>
 
-        <body>
-        </body>
-    </div>
+        <div className='splash-middle'>
 
+        </div>
+
+        <div className='splash-bottom'>
+
+        </div>
+
+    </div>
 );
 
 export default App;
