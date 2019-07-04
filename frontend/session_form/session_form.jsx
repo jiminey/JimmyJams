@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -10,7 +11,7 @@ class SessionForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChange(field) {
+    update(field) {
         return e => this.setState({
             [field]: e.currentTarget.value
         });
@@ -19,8 +20,7 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user);
-        this.props.history.push('/')
+        this.props.processForm(user).then(this.props.closeModal);
     }
 
     renderErrors() {
@@ -37,35 +37,37 @@ class SessionForm extends React.Component {
 
     render() {
         return (
-            <div>
-                {this.renderErrors()}
-                <h2>Welcome to the Form (in session_form.jsx)</h2>
-                Please {this.props.formType} or {this.props.navLink}
-                {this.renderErrors()}
-                <form onSubmit={this.handleSubmit}>
-
-                    <label>Username:
-                        <input type="text"
-                            value={this.state.username}
-                            onChange={this.handleChange('username')}
-                        />
-                    </label>
-
-                    <br/>
-                    <label>Password:
-                        <input type="password"
-                            value={this.state.password}
-                            onChange={this.handleChange('password')}
-                        />
-                    </label>
-
-                    <br/>
-                    <input type='submit' value={this.props.formType} />
-
+            <div className="login-form-container">
+                <form onSubmit={this.handleSubmit} className="login-form-box">
+                    Welcome to JimmyJams!
+          <br />
+                    Please {this.props.formType} or {this.props.otherForm}
+                    <div onClick={this.props.closeModal} className="close-x">X</div>
+                    {this.renderErrors()}
+                    <div className="login-form">
+                        <br />
+                        <label>Username:
+              <input type="text"
+                                value={this.state.username}
+                                onChange={this.update('username')}
+                                className="login-input"
+                            />
+                        </label>
+                        <br />
+                        <label>Password:
+              <input type="password"
+                                value={this.state.password}
+                                onChange={this.update('password')}
+                                className="login-input"
+                            />
+                        </label>
+                        <br />
+                        <input className="session-submit" type="submit" value={this.props.formType} />
+                    </div>
                 </form>
             </div>
         );
     }
 }
 
-export default SessionForm;
+export default withRouter(SessionForm);
