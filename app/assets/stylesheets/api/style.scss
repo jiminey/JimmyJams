@@ -7,17 +7,28 @@ div {
 }
 
 .sLinks {
-    dispaly: flex;
     justify-content: space-between;
 }
 
 .singin {
-    border: 1px;
-    background: red;
+    padding: 2px 16px;
+    height: 30px;
+    line-height: 24px;
+    margin: 0 0 0 6px;
+    transition: opacity .2s linear;
+    font-size: 14px;
 }
 .signup {
-    border: 1px;
-    background: orange;
+    display: inline-block;
+    padding: 2px 16px;
+    background-color: #f50;
+    border-color: #f50;
+    font-size: 14px;
+
+}
+
+.demologin {
+    
 }
 
 

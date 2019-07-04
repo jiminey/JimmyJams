@@ -37,6 +37,9 @@ class Greeting extends React.Component{
                 <div className="signup">
                     <Link to="/signup">Create Account</Link>   
                 </div> 
+                 <div className="demologin">
+                    <p>Demo Login</p>
+                </div> 
             </div>
         )
     }

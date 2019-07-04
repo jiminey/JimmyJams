@@ -277,7 +277,9 @@ function (_React$Component) {
           className: "signup"
         }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_0__["Link"], {
           to: "/signup"
-        }, "Create Account")));
+        }, "Create Account")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+          className: "demologin"
+        }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Demo Login")));
       };
 
       return currentUser ? personalGreeting() : sessionLinks();
