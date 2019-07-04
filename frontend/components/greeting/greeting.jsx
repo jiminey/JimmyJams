@@ -28,16 +28,20 @@ class Greeting extends React.Component{
         const sessionLinks = () => {
             
             return (
-            <div className="sLinks">
-                <div className="singin">
+            <div className='splash-buttons'>
+
+                <button className='signin'>  
                     <Link to="/login">Sign In</Link> 
-                </div>
-                <div className="signup">
+                </button>
+                
+               <button className='create-account'>
                     <Link to="/signup">Create Account</Link>   
-                </div> 
-                 <div className="demologin">
-                    <p>Demo Login</p>
-                </div> 
+               </button>
+                
+                 <button className='demo-login'>
+                    Demo Login 
+                 </button>
+
             </div>
         )
     }

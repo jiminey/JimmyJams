@@ -176,11 +176,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "navbar"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-    className: "jimmyjams"
-  }, "JimmyJams"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Route"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "splash-header"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "splash-logo"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "splash-logo-img"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "splash-logo-word"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "JimmyJams"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Route"], {
     exact: true,
     path: "/",
     component: _greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"]
@@ -190,7 +194,7 @@ var App = function App() {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Route"], {
     path: "/signup",
     component: _session_form_signup_form_container__WEBPACK_IMPORTED_MODULE_3__["default"]
-  })));
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("body", null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
@@ -268,18 +272,18 @@ function (_React$Component) {
 
       var sessionLinks = function sessionLinks() {
         return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-          className: "sLinks"
-        }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-          className: "singin"
+          className: "splash-buttons"
+        }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+          className: "signin"
         }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_0__["Link"], {
           to: "/login"
-        }, "Sign In")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-          className: "signup"
+        }, "Sign In")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+          className: "create-account"
         }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_0__["Link"], {
           to: "/signup"
-        }, "Create Account")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-          className: "demologin"
-        }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Demo Login")));
+        }, "Create Account")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+          className: "demo-login"
+        }, "Demo Login"));
       };
 
       return currentUser ? personalGreeting() : sessionLinks();
