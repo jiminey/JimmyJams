@@ -967,7 +967,7 @@ function (_React$Component) {
         id: "username"
       })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("input", {
         type: "password",
-        placeholder: "Password",
+        placeholder: "Enter your password here ",
         value: this.state.password,
         onChange: this.update('password'),
         className: "login-input",
@@ -979,7 +979,9 @@ function (_React$Component) {
         id: "session-submit-btn"
       })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
         className: "fine-print"
-      }, "We may use your email and devices for updates and tips on SoundCloud's products and services, and for activities notifications. You can unsubscribe for free at any time in your notification settings. We may use information you provide us in order to show you targeted ads as described in our Privacy Policy.")));
+      }, "We may use your email and devices for updates and tips on SoundCloud's products and services, and for activities notifications. You can unsubscribe for free at any time in your notification settings."), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
+        className: "fine-print"
+      }, "We may use information you provide us in order to show you targeted ads as described in our Privacy Policy.")));
     }
   }]);
 

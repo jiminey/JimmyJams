@@ -82,7 +82,9 @@ class SessionForm extends React.Component {
                     <div className="login-form">
                         <br />
                         <label>
-                            <input type="text" placeholder="Your username or Profile URL *"
+                            <input 
+                                type="text" 
+                                placeholder="Your username or Profile URL *"
                                 value={this.state.username}
                                 onChange={this.update('username')}
                                 className="login-input"
@@ -91,7 +93,9 @@ class SessionForm extends React.Component {
                         </label>
                         <br />
                         <label>
-                            <input type="password" placeholder="Password"
+                            <input 
+                                type="password" 
+                                placeholder="Enter your password here "
                                 value={this.state.password}
                                 onChange={this.update('password')}
                                 className="login-input"
@@ -99,12 +103,24 @@ class SessionForm extends React.Component {
                             />
                         </label>
                         <br />
-                        <input className="session-submit" type="submit" value={this.props.formType} id='session-submit-btn'/>
+                            <input 
+                                 className="session-submit" 
+                                 type="submit"
+                                 value={this.props.formType} 
+                                 id='session-submit-btn'/>
                     </div>
                     <br />
-                        <p className='fine-print'>We may use your email and devices for updates and tips on SoundCloud's products and services, and for activities notifications. You can unsubscribe for free at any time in your notification settings.
-
-We may use information you provide us in order to show you targeted ads as described in our Privacy Policy.</p>
+                        <p className='fine-print'>
+                        We may use your email and devices 
+                        for updates and tips on SoundCloud's 
+                        products and services,
+                        and for activities notifications. 
+                        You can unsubscribe for free at any time in your 
+                        notification settings.</p> 
+                        <br /> 
+                        <p className='fine-print'>We may use information you provide us in 
+                        order to show you targeted ads as described 
+                        in our Privacy Policy.</p>
                 </form>
             </div>
         );
