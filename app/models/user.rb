@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: api_users
+# Table name: users
 #
 #  id              :bigint           not null, primary key
 #  username        :string           not null
@@ -17,6 +17,11 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6, allow_nil: true}
 
   attr_reader :password
+
+  has_many :uploaded_songs,
+    foreign_key: :uploader_id,
+    class_name: :Song
+  
 
   after_initialize :ensure_session_token
 
