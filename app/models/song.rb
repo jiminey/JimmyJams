@@ -17,7 +17,8 @@ class Song < ApplicationRecord
         foreign_key: :uploader_id, 
         class_name: :User
 
-    has_one_attached :song_photos
+    has_one_attached :album_cover
+    has_one_attached :song_file
 
     
 end
