@@ -239,11 +239,7 @@ var App = function App() {
     className: "banner-text"
   }, "Upload your first track and begin your journey. JimmyJams gives ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " you space to create, find your fans, and connect with other ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " artists."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "splash-upload-btn"
-  }, "Start uploading today")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "coverphoto",
-    src: "coverphoto.jpg",
-    alt: ""
-  })));
+  }, "Start uploading today"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
@@ -390,7 +386,7 @@ function Modal(_ref) {
     className: "modal-background",
     onClick: closeModal
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "modal-child",
+    className: "modal-child w3-animate-top",
     onClick: function onClick(e) {
       return e.stopPropagation();
     }

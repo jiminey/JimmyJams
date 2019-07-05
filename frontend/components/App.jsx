@@ -35,8 +35,6 @@ const App = () => (
 
                 <button className='splash-upload-btn'>Start uploading today</button>
             </div>
-
-            <img className='coverphoto' src="coverphoto.jpg" alt=""/>
         </div>
     </div>
         

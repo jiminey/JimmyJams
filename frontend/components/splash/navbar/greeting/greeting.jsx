@@ -19,7 +19,6 @@ class Greeting extends React.Component{
         const personalGreeting = () => {
             return(
             <div>
-                <h2>Hello, {currentUser.username} </h2>
                 <button onClick={this.handleClick}>Log Out</button>
             </div>
             )
