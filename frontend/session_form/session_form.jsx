@@ -73,7 +73,7 @@ class SessionForm extends React.Component {
                     <br />
                     <button className='demologin-btn'onClick={this.demoLogin}>Continue with Demo</button>
                     <br />
-                    <p>or </p>
+                    <p className='modal-break'>or </p>
                     <br />
 
           <br />
@@ -109,6 +109,8 @@ class SessionForm extends React.Component {
                                  value={this.props.formType} 
                                  id='session-submit-btn'/>
                     </div>
+                    <br/> 
+                    <p className='blue-hyperlink-help'>Need help?</p>
                     <br />
                         <p className='fine-print'>
                         We may use your email and devices 
@@ -120,7 +122,7 @@ class SessionForm extends React.Component {
                         <br /> 
                         <p className='fine-print'>We may use information you provide us in 
                         order to show you targeted ads as described 
-                        in our Privacy Policy.</p>
+                        in our <span className='blue-hyperlink'>Privacy Policy.</span></p>
                 </form>
             </div>
         );

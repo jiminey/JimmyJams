@@ -120,8 +120,9 @@
 
 .login-form-container {
    display: flex;
+   flex-direction: column;
    justify-content: center;
-    width: 400px;
+   width: 400px;
  }
 
  .login-form {
@@ -145,6 +146,10 @@
    position: relative;
    width: 400px;
    border-radius: 3px;
+   height: 575px;
+   display: flex;
+   justify-content: center; 
+   flex-direction: column;
    
  }
 
@@ -199,4 +204,40 @@
 .modal-escape {
     color: gray;
     float: right;
+    font-size: 12px; 
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+
+    
+}
+
+.modal-break {
+    display: block;
+    height: 3px;
+    border: 0;
+    border-top: 2px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    color: gray; 
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+
+    
+}
+
+.blue-hyperlink { 
+    cursor:pointer;
+    color:blue;
+    text-decoration:underline
+}
+.blue-hyperlink-help { 
+    cursor:pointer;
+    color:blue;
+    text-decoration:underline;
+    font-size: 12px; 
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    flex-wrap: wrap;
+    overflow-wrap: break-word;
+    display: flex;
+    justify-content: flex-end;
 }

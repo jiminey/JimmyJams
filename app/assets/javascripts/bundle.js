@@ -956,7 +956,9 @@ function (_React$Component) {
       }, "Continue with Facebook"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("button", {
         className: "demologin-btn",
         onClick: this.demoLogin
-      }, "Continue with Demo"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, "or "), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+      }, "Continue with Demo"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
+        className: "modal-break"
+      }, "or "), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
         className: "login-form"
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("input", {
         type: "text",
@@ -978,10 +980,14 @@ function (_React$Component) {
         value: this.props.formType,
         id: "session-submit-btn"
       })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
+        className: "blue-hyperlink-help"
+      }, "Need help?"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
         className: "fine-print"
       }, "We may use your email and devices for updates and tips on SoundCloud's products and services, and for activities notifications. You can unsubscribe for free at any time in your notification settings."), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
         className: "fine-print"
-      }, "We may use information you provide us in order to show you targeted ads as described in our Privacy Policy.")));
+      }, "We may use information you provide us in order to show you targeted ads as described in our ", react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", {
+        className: "blue-hyperlink"
+      }, "Privacy Policy."))));
     }
   }]);
 
