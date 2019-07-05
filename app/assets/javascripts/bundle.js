@@ -231,7 +231,19 @@ var App = function App() {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
     path: "/signup",
     component: _session_form_signup_form_container__WEBPACK_IMPORTED_MODULE_3__["default"]
-  }))))));
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "banner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "banner-main-text"
+  }, "What's next in music is first on JimmyJams"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "banner-text"
+  }, "Upload your first track and begin your journey. JimmyJams gives ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " you space to create, find your fans, and connect with other ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " artists."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "splash-upload-btn"
+  }, "Start uploading today")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "coverphoto",
+    src: "coverphoto.jpg",
+    alt: ""
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);

@@ -25,8 +25,19 @@ const App = () => (
                     </Switch>
                 </div>
             </header>
+
+            <div className='banner' >
+                <h2 className='banner-main-text'>What's next in music is first on JimmyJams</h2> 
+
+                <h3 className='banner-text'>Upload your first track and begin your journey. JimmyJams 
+                gives <br /> you space to create, find your fans, and 
+                connect with other <br /> artists.</h3>
+
+                <button className='splash-upload-btn'>Start uploading today</button>
+            </div>
+
+            <img className='coverphoto' src="coverphoto.jpg" alt=""/>
         </div>
-            {/* <img className='coverphoto' src="coverphoto.jpg" alt=""/> */}
     </div>
         
 );
