@@ -3,8 +3,8 @@ import React from 'react';
 // import LoginFormContainer from '../session_form/login_form_container';
 // import SignupFormContainer from '../session_form/signup_form_container';
 import Modal from './modal/modal'
-import Splash from './splash/splash'
-
+import SplashContainer from './splash/splash_container'
+import {AuthRoute} from '../util/route.util'
 import {Route, Switch} from 'react-router-dom';
 
 const App = () => (
@@ -13,10 +13,9 @@ const App = () => (
     <div className='splash'>
         <Modal /> 
         <Switch >
-
-        
-            <Route exact path='/' component={Splash} />
-            <Route path='/' component={Splash} />
+            {/* <ProtectedRoute exact path='/discover' component={DiscoverContainer} /> */}
+            <AuthRoute exact path='/' component={SplashContainer} />
+            <Route path='/' component={SplashContainer} />
         </Switch>
     </div>
         
