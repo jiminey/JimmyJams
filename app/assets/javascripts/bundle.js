@@ -269,7 +269,12 @@ function (_React$Component) {
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Main, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", null, "MAIN PAGE"));
+      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("header", {
+        className: "main-navbar"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, "LOGO"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, "Home"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, "Stream"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, "Library"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
+        type: "text",
+        placeholder: "Search"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, "Upgrade"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, "Upload"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, "Pic"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, "JIMMMYYY"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, "Bell"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, "Mail"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, ". . .")));
     }
   }]);
 
@@ -1024,6 +1029,7 @@ function (_React$Component) {
       e.preventDefault();
       var user = Object.assign({}, this.state);
       this.props.processForm(user).then(this.props.closeModal);
+      this.props.history.push('/main');
     }
   }, {
     key: "renderErrors",

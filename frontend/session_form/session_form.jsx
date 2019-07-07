@@ -22,6 +22,8 @@ class SessionForm extends React.Component {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user).then(this.props.closeModal);
+        this.props.history.push('/main');    
+
     }
 
     renderErrors() {
@@ -68,7 +70,7 @@ class SessionForm extends React.Component {
     render() {
         return (
             <div className="login-form-container">
-                <form onSubmit={this.handleSubmit} className="login-form-box">
+                <form onSubmit={this.handleSubmit} className="login-form-box" >
                     <button className='facebook-btn' onClick={this.demoLogin}>Continue with Facebook</button>
                     <br />
                     <button className='demologin-btn'onClick={this.demoLogin}>Continue with Demo</button>

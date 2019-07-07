@@ -9,6 +9,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
             <button className='signin-btn' onClick={() => openModal('login')}>Sign In</button>
             &nbsp;&nbsp;
       <button className='signup-btn' onClick={() => openModal('signup')}>Create account</button>
+
         </nav>
     );
     const personalGreeting = () => (
