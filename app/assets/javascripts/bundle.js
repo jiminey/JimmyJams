@@ -1314,7 +1314,9 @@ function (_React$Component) {
         className: "section-body"
       }, "Related tracks"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
         className: "splash-trending-btn"
-      }, "Explore trending playlists"))));
+      }, "Explore trending playlists"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "bottom-content"
+      }));
     }
   }]);
 

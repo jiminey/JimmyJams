@@ -148,6 +148,10 @@ class Splash extends React.Component {
                         </div>
                     </div>
 
+                    <div className='bottom-content'>
+                        
+                    </div>
+
                 </div>
 
         
