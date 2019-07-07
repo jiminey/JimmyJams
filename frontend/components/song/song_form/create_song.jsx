@@ -25,10 +25,15 @@ class CreateSong extends React.Component {
 
                     <div className='main-left'>
                         <div className='header-logo'>
+                            <Link to='/'>HOMEPAGE</Link>
                         </div>
-                        <button className='home'>Home</button>
+                        <button className='home'>
+                            <Link to='/main'>Home</Link>
+                        </button>
                         <button className='stream'>Stream</button>
-                        <button className='library'>Library</button>
+                        <button className='library'>
+                            <Link to='/library'>Library</Link>
+                        </button>
                     </div>
 
                     <div className='main-middle'>

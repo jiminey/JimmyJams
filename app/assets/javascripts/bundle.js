@@ -289,10 +289,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _splash_splash_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./splash/splash_container */ "./frontend/components/splash/splash_container.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _main_page_main_container__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./main_page/main_container */ "./frontend/components/main_page/main_container.jsx");
-/* harmony import */ var _components_song_song_form_create_song_container__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/song/song_form/create_song_container */ "./frontend/components/song/song_form/create_song_container.js");
+/* harmony import */ var _song_song_form_create_song_container__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./song/song_form/create_song_container */ "./frontend/components/song/song_form/create_song_container.js");
+/* harmony import */ var _library_library_container__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./library/library_container */ "./frontend/components/library/library_container.js");
 
 
  // import {AuthRoute} from '../util/route.util'
+
 
 
 
@@ -303,8 +305,12 @@ var App = function App() {
     className: "splash"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modal_modal__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
     exact: true,
+    path: "/library",
+    component: _library_library_container__WEBPACK_IMPORTED_MODULE_6__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
+    exact: true,
     path: "/upload",
-    component: _components_song_song_form_create_song_container__WEBPACK_IMPORTED_MODULE_5__["default"]
+    component: _song_song_form_create_song_container__WEBPACK_IMPORTED_MODULE_5__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
     exact: true,
     path: "/main",
@@ -320,10 +326,10 @@ var App = function App() {
 
 /***/ }),
 
-/***/ "./frontend/components/main_page/main.jsx":
-/*!************************************************!*\
-  !*** ./frontend/components/main_page/main.jsx ***!
-  \************************************************/
+/***/ "./frontend/components/library/library.jsx":
+/*!*************************************************!*\
+  !*** ./frontend/components/library/library.jsx ***!
+  \*************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -350,22 +356,22 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var Main =
+var CreateSong =
 /*#__PURE__*/
 function (_React$Component) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(Main, _React$Component);
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(CreateSong, _React$Component);
 
-  function Main(props) {
+  function CreateSong(props) {
     var _this;
 
-    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Main);
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, CreateSong);
 
-    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Main).call(this, props));
+    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(CreateSong).call(this, props));
     _this.state = {};
     return _this;
   }
 
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Main, [{
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(CreateSong, [{
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("header", {
@@ -374,13 +380,19 @@ function (_React$Component) {
         className: "main-left"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "header-logo"
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
+        to: "/"
+      }, "HOMEPAGE")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
         className: "home"
-      }, "Home"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
+        to: "/main"
+      }, "Home")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
         className: "stream"
       }, "Stream"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
         className: "library"
-      }, "Library")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
+        to: "/library"
+      }, "Library"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "main-middle"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
         className: "search",
@@ -508,6 +520,241 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "section-body"
       }, "Related tracks"))))));
+    }
+  }]);
+
+  return CreateSong;
+}(react__WEBPACK_IMPORTED_MODULE_5___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (CreateSong);
+
+/***/ }),
+
+/***/ "./frontend/components/library/library_container.js":
+/*!**********************************************************!*\
+  !*** ./frontend/components/library/library_container.js ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _library_library__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../library/library */ "./frontend/components/library/library.jsx");
+
+
+
+var mapStateToProps = function mapStateToProps(_ref) {
+  var session = _ref.session;
+  return {
+    currentUser: session.id
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {};
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_library_library__WEBPACK_IMPORTED_MODULE_1__["default"]));
+
+/***/ }),
+
+/***/ "./frontend/components/main_page/main.jsx":
+/*!************************************************!*\
+  !*** ./frontend/components/main_page/main.jsx ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
+
+
+
+
+
+
+
+var Main =
+/*#__PURE__*/
+function (_React$Component) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(Main, _React$Component);
+
+  function Main(props) {
+    var _this;
+
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Main);
+
+    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Main).call(this, props));
+    _this.state = {};
+    return _this;
+  }
+
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Main, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("header", {
+        className: "main-navbar"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "main-left"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "header-logo"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
+        to: "/"
+      }, "HOMEPAGE")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+        className: "home"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
+        to: "/main"
+      }, "Home")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+        className: "stream"
+      }, "Stream"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+        className: "library"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
+        to: "/library"
+      }, "Library"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "main-middle"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
+        className: "search",
+        type: "text",
+        placeholder: "Search"
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "main-right"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "upgrade"
+      }, "Upgrade"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "upload"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
+        className: "upload",
+        to: "/upload"
+      }, "Upload")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "username"
+      }, "Jimmy Nguyen"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "bell"
+      }, " "), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "mail"
+      }, " "), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "dropdown"
+      }, " . . ."))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "main-page-content"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "music-content"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "section"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "section-content"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
+        className: "section-title"
+      }, "New Music Now"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
+        className: "section-body"
+      }, "The latest hits, updated all the time")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - Po.."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks")))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "section"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "section-content"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
+        className: "section-title"
+      }, "New Music Now"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
+        className: "section-body"
+      }, "The latest hits, updated all the time")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - Po.."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks")))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "section"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "section-content"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
+        className: "section-title"
+      }, "New Music Now"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
+        className: "section-body"
+      }, "The latest hits, updated all the time")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - Po.."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks")))))));
     }
   }]);
 
@@ -709,13 +956,19 @@ function (_React$Component) {
         className: "main-left"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "header-logo"
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
+        to: "/"
+      }, "HOMEPAGE")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
         className: "home"
-      }, "Home"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
+        to: "/main"
+      }, "Home")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
         className: "stream"
       }, "Stream"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
         className: "library"
-      }, "Library")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
+        to: "/library"
+      }, "Library"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "main-middle"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
         className: "search",
@@ -965,7 +1218,15 @@ function (_React$Component) {
         className: "banner-text"
       }, "Upload your first track and begin your journey. JimmyJams gives ", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), " you space to create, find your fans, and connect with other ", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), " artists."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
         className: "splash-upload-btn"
-      }, "Start uploading today")));
+      }, "Start uploading today")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "body-content"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "splash-search"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
+        className: "search",
+        type: "text",
+        placeholder: "Search for artists, bands, tracks, podcasts"
+      }))));
     }
   }]);
 
