@@ -50,7 +50,7 @@ class Main extends React.Component {
                     </div>
                 </header>
     
-<div className='main-page-content'>
+            <div className='main-page-content'>
     
                 <div className='music-content'>
                     <div className='section'>
@@ -93,8 +93,8 @@ class Main extends React.Component {
 
                     <div className='section'>
                         <div className='section-content'>
-                            <h1 className='section-title'>New Music Now</h1>
-                            <h3 className='section-body'>The latest hits, updated all the time</h3>
+                            <h1 className='section-title'>JimmyJams Charts</h1>
+                                <h3 className='section-body'>The most played tracks on JimmyJams this week</h3>
                         </div>
                         <div className='row'>
                             <div className='pic-area'>
@@ -129,8 +129,8 @@ class Main extends React.Component {
 
                     <div className='section'>
                         <div className='section-content'> 
-                            <h1 className='section-title'>New Music Now</h1>
-                            <h3 className='section-body'>The latest hits, updated all the time</h3>
+                            <h1 className='section-title'>More of what you like</h1>
+                                <h3 className='section-body'>Suggestions based on what you've liked or played</h3>
                         </div>
                         <div className='row'>
                             <div className='pic-area'>
@@ -163,8 +163,21 @@ class Main extends React.Component {
                         </div>
                     </div>
                 </div>
-</div>
+                {/* music content */}
+
+
+
+            <div className='main-col'>
+                
+                <div className='who-to-follow'>Who to follow</div>
+                <div className='thing-you-like'>Things you might like</div>
+                <div className='listening-history'>Listening history</div>
+                <div className='go-mobile'>Go mobile</div>
             </div>
+
+            </div> 
+            {/* main page content */}
+        </div>
         ) 
     };
 };

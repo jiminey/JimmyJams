@@ -692,9 +692,9 @@ function (_React$Component) {
         className: "section-content"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
         className: "section-title"
-      }, "New Music Now"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
+      }, "JimmyJams Charts"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
         className: "section-body"
-      }, "The latest hits, updated all the time")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "The most played tracks on JimmyJams this week")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pic-area"
@@ -726,9 +726,9 @@ function (_React$Component) {
         className: "section-content"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
         className: "section-title"
-      }, "New Music Now"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
+      }, "More of what you like"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
         className: "section-body"
-      }, "The latest hits, updated all the time")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "Suggestions based on what you've liked or played")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pic-area"
@@ -754,7 +754,17 @@ function (_React$Component) {
         className: "pic-main"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "section-body"
-      }, "Related tracks")))))));
+      }, "Related tracks"))))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "main-col"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "who-to-follow"
+      }, "Who to follow"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "thing-you-like"
+      }, "Things you might like"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "listening-history"
+      }, "Listening history"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "go-mobile"
+      }, "Go mobile"))));
     }
   }]);
 
