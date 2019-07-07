@@ -275,7 +275,7 @@ function (_React$Component) {
         className: "main-left"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "header-logo"
-      }, "LOGO"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
         className: "home"
       }, "Home"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
         className: "stream"
@@ -297,11 +297,23 @@ function (_React$Component) {
         className: "username"
       }, "Jimmy Nguyen"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "bell"
-      }, "Bell"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, " "), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "mail"
-      }, "Mail"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "dropdown"
-      }, ". . ."))));
+      }, " "), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "dropdown"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+        onclick: "myFunction()",
+        "class": "dropbtn"
+      }, ". . ."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        id: "myDropdown",
+        "class": "dropdown-content"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "#"
+      }, "Link 1"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "#"
+      }, "Link 2"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "#"
+      }, "Link 3"))))));
     }
   }]);
 

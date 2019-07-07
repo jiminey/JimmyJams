@@ -17,7 +17,8 @@ class Main extends React.Component {
                 <header className='main-navbar'>
 
                     <div className='main-left'>
-                        <div className='header-logo'>LOGO</div>
+                        <div className='header-logo'>
+                        </div>
                         <button className='home'>Home</button>
                         <button className='stream'>Stream</button>
                         <button className='library'>Library</button>
@@ -31,9 +32,17 @@ class Main extends React.Component {
                         <div className='upgrade' >Upgrade</div>
                         <div className='upload'>Upload</div>
                         <div className='username'>Jimmy Nguyen</div>
-                        <div className='bell'>Bell</div>
-                        <div className='mail'>Mail</div>
-                        <div className='dropdown'>. . .</div>
+                        <div className='bell'> </div>
+                        <div className='mail'> </div>
+                        <div class="dropdown">
+                            <button onclick="myFunction()" class="dropbtn">. . .</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                        </div>
+
                     </div>
 
                 </header>

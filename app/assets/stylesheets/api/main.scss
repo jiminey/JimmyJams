@@ -1,9 +1,11 @@
+
 .main-navbar {
-    display: flex;
     width: 100%;
+    display: flex;
+    margin: 0;
     //width: 1101px;
     height:45.98px;
-    justify-content: space-between;
+    justify-content: center;
     font: 100 14px/1.5 "Interstate","Lucida Grande",Arial,sans-serif;
     background: #333;
     height: 46px;
@@ -13,7 +15,6 @@
 }
 
 .main-left {
-
     width: 380.98px;
     height: 45.98px;
     display: flex;
@@ -22,15 +23,12 @@
     background: #333;
 }
 
-.header-logo {
-}
-
 .home {
     width: 103.99px;
     height: 45.98px;
     text-align: center;
     border: 1px solid black;
-
+    
     color: #999;
     background: #333;
     border-radius:1px;
@@ -44,11 +42,13 @@
     color: #999;
     border: 1px solid black;
     border-radius:1px;
-
-
+    cursor: pointer;
+    
+    
 }
 
 .library {
+    cursor: pointer;
     width: 103.99px;
     height: 45.98px;
     text-align: center;
@@ -62,7 +62,7 @@
     width: 248.46px;
     height: 45.98px;
 }
-     
+
 
 .search{
     height: 28px;
@@ -76,7 +76,7 @@
     font-weight: 100;
     font-size: 14px;
     line-height: 20px;
- }   
+}   
 .main-right {
     width: 450.56px;
     height: 45.98px;
@@ -92,6 +92,7 @@
 .header-logo {
     width: 69;
     height: 45.98px;
+    
 }
 
 .upgrade {
@@ -100,25 +101,44 @@
     color: #f70;
     float: left;
     font: 100 14px/1.5 "Interstate","Lucida Grande",Arial,sans-serif;
+    cursor: pointer;
 }
 
 .upload {
-     width: 64.03px;
+    width: 64.03px;
     height: 43.5px;
     color: #ccc;
+    cursor: pointer;
 }
 .username {
+    background-repeat: no-repeat;
+    background-image: image-url('/assets/profilepic.png');
+    background-size: 25px 25px;
     width: 175.31px;
     height: 43.5px;
     color: #ccc;
+    display:flex;
+    justify-content:space-around;
+    cursor: pointer;
+    
+
+
 }
 .bell {
     width: 45.98px;
     height: 45.98px;
     color: #ccc;
+    background-repeat: no-repeat;
+    background-image: image-url('/assets/notification.png');
+    background-size: 25px 25px;
+    cursor: pointer;
+   
 }
 .mail {
-
+    background-repeat: no-repeat;
+    background-image: image-url('/assets/mail.png');
+    background-size: 25px 25px;
+    cursor: pointer;
     width: 45.98px;
     height: 45.98px;
     color: #ccc;
@@ -127,12 +147,17 @@
     color: #ccc;
     width: 45.98px;
     height: 45.98px;
-
+    
 }
 
 .header-logo {
     width: 69px;
     height: 45.98px;
-    background: blue;
-
+    background-repeat:no-repeat;
+    background-image: image-url('/assets/soundcloudlogo.png');
+    background-size: 100% 100%;
+    cursor: pointer;
+    
 }
+
+
