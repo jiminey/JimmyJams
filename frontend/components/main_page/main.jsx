@@ -1,4 +1,5 @@
 import React from 'react' 
+import {Link} from 'react-router-dom'
 
 
 class Main extends React.Component {
@@ -31,7 +32,9 @@ class Main extends React.Component {
 
                     <div className='main-right'>
                         <div className='upgrade' >Upgrade</div>
-                        <div className='upload'>Upload</div>
+                        <div className='upload'>
+                            <Link className='upload'to='/upload'>Upload</Link>
+                        </div>
                         <div className='username'>Jimmy Nguyen</div>
                         <div className='bell'> </div>
                         <div className='mail'> </div>
