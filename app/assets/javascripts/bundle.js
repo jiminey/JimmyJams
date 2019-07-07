@@ -1312,7 +1312,9 @@ function (_React$Component) {
         className: "pic-splash"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, " No Role Modelz - J"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "section-body"
-      }, "Related tracks"))))));
+      }, "Related tracks"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+        className: "splash-trending-btn"
+      }, "Explore trending playlists"))));
     }
   }]);
 

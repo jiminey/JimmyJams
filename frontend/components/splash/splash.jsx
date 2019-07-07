@@ -142,6 +142,8 @@ class Splash extends React.Component {
 
                         </div>
 
+                        <button className='splash-trending-btn'>Explore trending playlists</button>
+
 
                         </div>
                     </div>
