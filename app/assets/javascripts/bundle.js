@@ -271,10 +271,37 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("header", {
         className: "main-navbar"
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, "LOGO"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, "Home"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, "Stream"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, "Library"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "main-left"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "header-logo"
+      }, "LOGO"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+        className: "home"
+      }, "Home"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+        className: "stream"
+      }, "Stream"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+        className: "library"
+      }, "Library")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "main-middle"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
+        className: "search",
         type: "text",
         placeholder: "Search"
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, "Upgrade"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, "Upload"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, "Pic"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, "JIMMMYYY"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, "Bell"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, "Mail"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, ". . .")));
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "main-right"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "upgrade"
+      }, "Upgrade"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "upload"
+      }, "Upload"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "username"
+      }, "Jimmy Nguyen"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "bell"
+      }, "Bell"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "mail"
+      }, "Mail"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "dropdown"
+      }, ". . ."))));
     }
   }]);
 

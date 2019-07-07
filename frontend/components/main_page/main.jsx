@@ -15,18 +15,27 @@ class Main extends React.Component {
         return (
             <div> 
                 <header className='main-navbar'>
-                    <div>LOGO</div>
-                    <div>Home</div>
-                    <div>Stream</div>
-                    <div>Library</div>
-                    <input type="text" placeholder="Search"/>
-                    <div>Upgrade</div>
-                    <div>Upload</div>
-                    <div>Pic</div>
-                    <div>JIMMMYYY</div>
-                    <div>Bell</div>
-                    <div>Mail</div>
-                    <div>. . .</div>
+
+                    <div className='main-left'>
+                        <div className='header-logo'>LOGO</div>
+                        <button className='home'>Home</button>
+                        <button className='stream'>Stream</button>
+                        <button className='library'>Library</button>
+                    </div>
+
+                    <div className='main-middle'>
+                        <input className='search' type="text" placeholder="Search"/>
+                    </div>
+
+                    <div className='main-right'>
+                        <div className='upgrade' >Upgrade</div>
+                        <div className='upload'>Upload</div>
+                        <div className='username'>Jimmy Nguyen</div>
+                        <div className='bell'>Bell</div>
+                        <div className='mail'>Mail</div>
+                        <div className='dropdown'>. . .</div>
+                    </div>
+
                 </header>
             </div>
         ) 

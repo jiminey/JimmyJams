@@ -1,0 +1,138 @@
+.main-navbar {
+    display: flex;
+    width: 100%;
+    //width: 1101px;
+    height:45.98px;
+    justify-content: space-between;
+    font: 100 14px/1.5 "Interstate","Lucida Grande",Arial,sans-serif;
+    background: #333;
+    height: 46px;
+    transition: height .2s ease-in-out;
+
+    
+}
+
+.main-left {
+
+    width: 380.98px;
+    height: 45.98px;
+    display: flex;
+    justify-content: flex-start;
+    color: #999;
+    background: #333;
+}
+
+.header-logo {
+}
+
+.home {
+    width: 103.99px;
+    height: 45.98px;
+    text-align: center;
+    border: 1px solid black;
+
+    color: #999;
+    background: #333;
+    border-radius:1px;
+}
+
+.stream {
+    width: 103.99px;
+    height: 45.98px;
+    text-align: center;
+    background: #333;
+    color: #999;
+    border: 1px solid black;
+    border-radius:1px;
+
+
+}
+
+.library {
+    width: 103.99px;
+    height: 45.98px;
+    text-align: center;
+    border: 1px solid black;
+    background: #333;
+    color: #999;
+    border-radius:1px;
+}
+
+.main-middle {
+    width: 248.46px;
+    height: 45.98px;
+}
+     
+
+.search{
+    height: 28px;
+    width: 100%;
+    margin-top: 9px;
+    display:flex; 
+    margin-left: 15px;
+    border-radius: 3px;
+    display: inline-block;
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 20px;
+ }   
+.main-right {
+    width: 450.56px;
+    height: 45.98px;
+    display: flex;
+    justify-content: flex-start;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.header-logo {
+    width: 69;
+    height: 45.98px;
+}
+
+.upgrade {
+    width: 73.27px;
+    height: 43.5px;
+    color: #f70;
+    float: left;
+    font: 100 14px/1.5 "Interstate","Lucida Grande",Arial,sans-serif;
+}
+
+.upload {
+     width: 64.03px;
+    height: 43.5px;
+    color: #ccc;
+}
+.username {
+    width: 175.31px;
+    height: 43.5px;
+    color: #ccc;
+}
+.bell {
+    width: 45.98px;
+    height: 45.98px;
+    color: #ccc;
+}
+.mail {
+
+    width: 45.98px;
+    height: 45.98px;
+    color: #ccc;
+}
+.dropdown {
+    color: #ccc;
+    width: 45.98px;
+    height: 45.98px;
+
+}
+
+.header-logo {
+    width: 69px;
+    height: 45.98px;
+    background: blue;
+
+}
