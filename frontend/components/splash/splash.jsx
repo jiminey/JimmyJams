@@ -35,10 +35,115 @@ class Splash extends React.Component {
                     </div>
 
                     <div className='body-content'>
-                        <div className='splash-search'>
-                        <input className='search' type="text" placeholder="Search for artists, bands, tracks, podcasts" />
+                        <div className='body-search'>
+                            <div className='splash-search'>
+                                <input className='search' type="text" placeholder="   Search for artists, bands, tracks, podcasts" />
+                            </div>
+
+                            <div className='or'>or</div>
+
+                            <button className='splash-yourown-btn'>Upload your own</button>
                         </div>
 
+                        <div className='body-text'>
+                            Hear what’s trending for free in the JimmyJams community
+                        </div>
+
+                        <div className='splash-songs'>
+
+                            <div className='splash-row'>
+                                <div className='pic-area'>
+                                    <div className='pic-splash'>
+                                    </div>
+                                    <p> No Role Modelz - J</p>
+                                    <p className='section-body'>Related tracks</p>
+                                </div>
+
+                                <div className='pic-area'>
+                                    <div className='pic-splash'>
+                                    </div>
+                                    <p> No Role Modelz - J</p>
+                                    <p className='section-body'>Related tracks</p>
+                                </div>
+
+                                <div className='pic-area'>
+                                    <div className='pic-splash'>
+                                    </div>
+                                    <p> No Role Modelz - J</p>
+                                    <p className='section-body'>Related tracks</p>
+                                </div>
+
+                                <div className='pic-area'>
+                                    <div className='pic-splash'>
+                                    </div>
+                                    <p> No Role Modelz - J</p>
+                                    <p className='section-body'>Related tracks</p>
+                                </div>
+
+                                <div className='pic-area'>
+                                    <div className='pic-splash'>
+                                    </div>
+                                    <p> No Role Modelz - J</p>
+                                    <p className='section-body'>Related tracks</p>
+                                </div>
+
+                                <div className='pic-area'>
+                                    <div className='pic-splash'>
+                                    </div>
+                                    <p> No Role Modelz - J</p>
+                                    <p className='section-body'>Related tracks</p>
+                                </div>
+
+                            </div>
+
+
+                        <div className='splash-row'>
+                            <div className='pic-area'>
+                                <div className='pic-splash'>
+                                </div>
+                                <p> No Role Modelz - J</p>
+                                <p className='section-body'>Related tracks</p>
+                            </div>
+
+                            <div className='pic-area'>
+                                <div className='pic-splash'>
+                                </div>
+                                <p> No Role Modelz - J</p>
+                                <p className='section-body'>Related tracks</p>
+                            </div>
+
+                            <div className='pic-area'>
+                                <div className='pic-splash'>
+                                </div>
+                                <p> No Role Modelz - J</p>
+                                <p className='section-body'>Related tracks</p>
+                            </div>
+
+                            <div className='pic-area'>
+                                <div className='pic-splash'>
+                                </div>
+                                <p> No Role Modelz - J</p>
+                                <p className='section-body'>Related tracks</p>
+                            </div>
+
+                            <div className='pic-area'>
+                                <div className='pic-splash'>
+                                </div>
+                                <p> No Role Modelz - J</p>
+                                <p className='section-body'>Related tracks</p>
+                            </div>
+
+                            <div className='pic-area'>
+                                <div className='pic-splash'>
+                                </div>
+                                <p> No Role Modelz - J</p>
+                                <p className='section-body'>Related tracks</p>
+                            </div>
+
+                        </div>
+
+
+                        </div>
                     </div>
 
                 </div>

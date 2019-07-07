@@ -61,28 +61,28 @@ class Main extends React.Component {
                         <div className='row'>
 
                             <div className='pic-area'> 
-                                <div className='pic'>
+                                <div className='pic-main'>
                                 </div>
                                     <p>SunFlower - Po..</p>
                                     <p className='section-body'>Related tracks</p>
                             </div>
 
                             <div className='pic-area'>
-                                <div className='pic'>
+                                <div className='pic-main'>
                                 </div>
                                 <p>SunFlower - P</p>
                                 <p className='section-body'>Related tracks</p>
                             </div>
 
                             <div className='pic-area'>
-                                <div className='pic'>
+                                <div className='pic-main'>
                                 </div>
                                 <p>SunFlower - P</p>
                                 <p className='section-body'>Related tracks</p>
                             </div>
 
                             <div className='pic-area'>
-                                <div className='pic'>
+                                <div className='pic-main'>
                                 </div>
                                 <p>SunFlower - P</p>
                                 <p className='section-body'>Related tracks</p>
@@ -98,28 +98,28 @@ class Main extends React.Component {
                         </div>
                         <div className='row'>
                             <div className='pic-area'>
-                                <div className='pic'>
+                                <div className='pic-main'>
                                 </div>
                                 <p>SunFlower - Po..</p>
                                 <p className='section-body'>Related tracks</p>
                             </div>
 
                             <div className='pic-area'>
-                                <div className='pic'>
+                                <div className='pic-main'>
                                 </div>
                                 <p>SunFlower - P</p>
                                 <p className='section-body'>Related tracks</p>
                             </div>
 
                             <div className='pic-area'>
-                                <div className='pic'>
+                                <div className='pic-main'>
                                 </div>
                                 <p>SunFlower - P</p>
                                 <p className='section-body'>Related tracks</p>
                             </div>
 
                             <div className='pic-area'>
-                                <div className='pic'>
+                                <div className='pic-main'>
                                 </div>
                                 <p>SunFlower - P</p>
                                 <p className='section-body'>Related tracks</p>
@@ -134,28 +134,28 @@ class Main extends React.Component {
                         </div>
                         <div className='row'>
                             <div className='pic-area'>
-                                <div className='pic'>
+                                <div className='pic-main'>
                                 </div>
                                 <p>SunFlower - Po..</p>
                                 <p className='section-body'>Related tracks</p>
                             </div>
 
                             <div className='pic-area'>
-                                <div className='pic'>
+                                <div className='pic-main'>
                                 </div>
                                 <p>SunFlower - P</p>
                                 <p className='section-body'>Related tracks</p>
                             </div>
 
                             <div className='pic-area'>
-                                <div className='pic'>
+                                <div className='pic-main'>
                                 </div>
                                 <p>SunFlower - P</p>
                                 <p className='section-body'>Related tracks</p>
                             </div>
 
                             <div className='pic-area'>
-                                <div className='pic'>
+                                <div className='pic-main'>
                                 </div>
                                 <p>SunFlower - P</p>
                                 <p className='section-body'>Related tracks</p>

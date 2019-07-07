@@ -665,25 +665,25 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pic-area"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic"
+        className: "pic-main"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - Po.."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "section-body"
       }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pic-area"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic"
+        className: "pic-main"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "section-body"
       }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pic-area"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic"
+        className: "pic-main"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "section-body"
       }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pic-area"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic"
+        className: "pic-main"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "section-body"
       }, "Related tracks")))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -699,25 +699,25 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pic-area"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic"
+        className: "pic-main"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - Po.."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "section-body"
       }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pic-area"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic"
+        className: "pic-main"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "section-body"
       }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pic-area"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic"
+        className: "pic-main"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "section-body"
       }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pic-area"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic"
+        className: "pic-main"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "section-body"
       }, "Related tracks")))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -733,25 +733,25 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pic-area"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic"
+        className: "pic-main"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - Po.."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "section-body"
       }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pic-area"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic"
+        className: "pic-main"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "section-body"
       }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pic-area"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic"
+        className: "pic-main"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "section-body"
       }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pic-area"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic"
+        className: "pic-main"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "section-body"
       }, "Related tracks")))))));
@@ -1221,12 +1221,98 @@ function (_React$Component) {
       }, "Start uploading today")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "body-content"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "body-search"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "splash-search"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
         className: "search",
         type: "text",
-        placeholder: "Search for artists, bands, tracks, podcasts"
-      }))));
+        placeholder: "   Search for artists, bands, tracks, podcasts"
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "or"
+      }, "or"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+        className: "splash-yourown-btn"
+      }, "Upload your own")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "body-text"
+      }, "Hear what\u2019s trending for free in the JimmyJams community"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "splash-songs"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "splash-row"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-splash"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, " No Role Modelz - J"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-splash"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, " No Role Modelz - J"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-splash"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, " No Role Modelz - J"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-splash"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, " No Role Modelz - J"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-splash"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, " No Role Modelz - J"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-splash"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, " No Role Modelz - J"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "splash-row"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-splash"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, " No Role Modelz - J"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-splash"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, " No Role Modelz - J"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-splash"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, " No Role Modelz - J"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-splash"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, " No Role Modelz - J"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-splash"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, " No Role Modelz - J"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-splash"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, " No Role Modelz - J"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks"))))));
     }
   }]);
 
