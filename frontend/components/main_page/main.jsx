@@ -11,6 +11,7 @@ class Main extends React.Component {
         };
     }
 
+   
     render() {
         return (
             <div> 
@@ -34,18 +35,123 @@ class Main extends React.Component {
                         <div className='username'>Jimmy Nguyen</div>
                         <div className='bell'> </div>
                         <div className='mail'> </div>
-                        <div class="dropdown">
-                            <button onclick="myFunction()" class="dropbtn">. . .</button>
-                            <div id="myDropdown" class="dropdown-content">
-                                <a href="#">Link 1</a>
-                                <a href="#">Link 2</a>
-                                <a href="#">Link 3</a>
-                            </div>
-                        </div>
+                        <div className='dropdown'> . . .</div>
 
                     </div>
-
                 </header>
+                
+                <div className='music-content'>
+                    <div className='section'>
+                        <div className='section-content'>
+                            <h1 className='section-title'>New Music Now</h1>
+                            <h3 className='section-body'>The latest hits, updated all the time</h3>
+                        </div>
+                        <div className='row'>
+
+                            <div className='pic-area'> 
+                                <div className='pic'>
+                                </div>
+                                    <p>SunFlower - Po..</p>
+                                    <p className='section-body'>Related tracks</p>
+                            </div>
+
+                            <div className='pic-area'>
+                                <div className='pic'>
+                                </div>
+                                <p>SunFlower - P</p>
+                                <p className='section-body'>Related tracks</p>
+                            </div>
+
+                            <div className='pic-area'>
+                                <div className='pic'>
+                                </div>
+                                <p>SunFlower - P</p>
+                                <p className='section-body'>Related tracks</p>
+                            </div>
+
+                            <div className='pic-area'>
+                                <div className='pic'>
+                                </div>
+                                <p>SunFlower - P</p>
+                                <p className='section-body'>Related tracks</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div className='section'>
+                        <div className='section-content'>
+                            <h1 className='section-title'>New Music Now</h1>
+                            <h3 className='section-body'>The latest hits, updated all the time</h3>
+                        </div>
+                        <div className='row'>
+                            <div className='pic-area'>
+                                <div className='pic'>
+                                </div>
+                                <p>SunFlower - Po..</p>
+                                <p className='section-body'>Related tracks</p>
+                            </div>
+
+                            <div className='pic-area'>
+                                <div className='pic'>
+                                </div>
+                                <p>SunFlower - P</p>
+                                <p className='section-body'>Related tracks</p>
+                            </div>
+
+                            <div className='pic-area'>
+                                <div className='pic'>
+                                </div>
+                                <p>SunFlower - P</p>
+                                <p className='section-body'>Related tracks</p>
+                            </div>
+
+                            <div className='pic-area'>
+                                <div className='pic'>
+                                </div>
+                                <p>SunFlower - P</p>
+                                <p className='section-body'>Related tracks</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className='section'>
+                        <div className='section-content'> 
+                            <h1 className='section-title'>New Music Now</h1>
+                            <h3 className='section-body'>The latest hits, updated all the time</h3>
+                        </div>
+                        <div className='row'>
+                            <div className='pic-area'>
+                                <div className='pic'>
+                                </div>
+                                <p>SunFlower - Po..</p>
+                                <p className='section-body'>Related tracks</p>
+                            </div>
+
+                            <div className='pic-area'>
+                                <div className='pic'>
+                                </div>
+                                <p>SunFlower - P</p>
+                                <p className='section-body'>Related tracks</p>
+                            </div>
+
+                            <div className='pic-area'>
+                                <div className='pic'>
+                                </div>
+                                <p>SunFlower - P</p>
+                                <p className='section-body'>Related tracks</p>
+                            </div>
+
+                            <div className='pic-area'>
+                                <div className='pic'>
+                                </div>
+                                <p>SunFlower - P</p>
+                                <p className='section-body'>Related tracks</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         ) 
     };
