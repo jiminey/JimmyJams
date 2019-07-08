@@ -189,7 +189,7 @@ body {
 
 .row {
     display:flex;
-    width: 600px;
+    width: 625px;
     border-bottom: 1px solid #999;
     padding-bottom: 20px;
 }
@@ -247,24 +247,45 @@ body {
 
 
 .main-col {
-    background: teal;
+
     width: 370px;
     display: flex;
     flex-direction: column; 
-    justify-content: space-between;
+    justify-content: flex-start;
 }
-
 
 .who-to-follow {
-    height: 252px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-left: 1px solid #999; 
+    height: 250px;
 }
 
+
 .wtf-title {
-    font-weight: 100;
     color: #999;
     border-bottom: 1px solid #999;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 10px;
-    margin: 10px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+.display-threes {
+    margin-left: 30px;
+}
+
+.small-pic {
+    height: 40px;
+    width: 200px;
+
+    margin-top:20px;
+    background-image: image-url('/assets/logic.jpg');
+    background-size: 35px 35px;
+    background-repeat: no-repeat;
+    padding-left: 50px;
 }

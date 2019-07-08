@@ -171,26 +171,63 @@ class Main extends React.Component {
                 
                 <div className='who-to-follow'>
                     <div className='wtf-title'>
-                        <p>Who to follow</p>
+                        <p className='wtf-text'>Who to follow</p>
                         <p>View All</p>
                     </div>
+
+                <div className='display-threes'>
+                    <div className='small-pic'> 
+                        Logic
+                    </div>
+                    <div className='small-pic'> 
+                        Logic
+                    </div>
+                    <div className='small-pic'> 
+                        Logic
+                    </div>
+                </div>
+                
                 </div>
 
-                <div className='thing-you-like'>
+                <div className='who-to-follow'>
                     <div className='wtf-title'>
-                        <p>Things you might like</p>
+                        <p>You might like</p>
                         <p>View All</p>
+                    </div>
+
+                    <div className='display-threes'>
+                        <div className='small-pic'> 
+                            Logic
+                         </div>
+                        <div className='small-pic'> 
+                            Logic
+                        </div>
+                        <div className='small-pic'> 
+                            Logic
+                        </div>
                     </div>
                 </div>
 
-                <div className='listening-history'>
+                <div className='who-to-follow'>
                     <div className='wtf-title'>
                         <p>Listening history</p>
                         <p>View All</p>
                     </div>
+
+                    <div className='display-threes'>
+                        <div className='small-pic'> 
+                            Logic
+                         </div>
+                        <div className='small-pic'> 
+                            Logic
+                        </div>
+                        <div className='small-pic'> 
+                            Logic
+                        </div>
+                    </div>
                 </div>
 
-                <div className='go-mobile'>
+                <div className='who-to-follow'>
                     <div className='wtf-title'>
                         <p>Go mobile</p>
                         <p>View All</p>

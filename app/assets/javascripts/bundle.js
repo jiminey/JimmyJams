@@ -760,16 +760,42 @@ function (_React$Component) {
         className: "who-to-follow"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "wtf-title"
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "Who to follow"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "View All"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "thing-you-like"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "wtf-text"
+      }, "Who to follow"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "View All")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "display-threes"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "small-pic"
+      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "small-pic"
+      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "small-pic"
+      }, "Logic"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "who-to-follow"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "wtf-title"
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "Things you might like"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "View All"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "listening-history"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "You might like"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "View All")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "display-threes"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "small-pic"
+      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "small-pic"
+      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "small-pic"
+      }, "Logic"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "who-to-follow"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "wtf-title"
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "Listening history"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "View All"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "go-mobile"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "Listening history"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "View All")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "display-threes"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "small-pic"
+      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "small-pic"
+      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "small-pic"
+      }, "Logic"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "who-to-follow"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "wtf-title"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "Go mobile"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "View All"))))));
