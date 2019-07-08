@@ -1,9 +1,21 @@
 .pic-lib {
-    width: 150.75px;
-    height: 150.75px;
+    width: 135.75px;
+    height: 135.75px;
     background-repeat:no-repeat;
     background-image: image-url('/assets/giraffage.jpg');
     background-size: 100% 100%;
     margin-right: 20px;
     cursor: pointer;
+    
 }
+
+
+.lib-content {
+    background:white;
+    margin: 0 auto;
+    width: 1000px;
+    height:900px;
+}
+
+
+

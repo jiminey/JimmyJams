@@ -416,7 +416,7 @@ function (_React$Component) {
       }, " "), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "dropdown"
       }, " . . ."))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "music-content"
+        className: "lib-content"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "section"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -796,7 +796,10 @@ function (_React$Component) {
         className: "who-to-follow"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "wtf-title"
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("i", {
+        "class": "fa fa-users",
+        "aria-hidden": "true"
+      }, " Who to follow"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "wtf-text"
       }, "Who to follow"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "View All")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "display-threes"

@@ -171,6 +171,7 @@ class Main extends React.Component {
                 
                 <div className='who-to-follow'>
                     <div className='wtf-title'>
+                        <i class="fa fa-users" aria-hidden="true"> Who to follow</i>
                         <p className='wtf-text'>Who to follow</p>
                         <p>View All</p>
                     </div>
