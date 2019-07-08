@@ -171,8 +171,7 @@ class Main extends React.Component {
                 
                 <div className='who-to-follow'>
                     <div className='wtf-title'>
-                        <i class="fa fa-users" aria-hidden="true"> Who to follow</i>
-                        <p className='wtf-text'>Who to follow</p>
+                        <i className='wtf-text' class="fa fa-users" aria-hidden="true"> Who to follow</i>
                         <p>View All</p>
                     </div>
 
@@ -184,13 +183,11 @@ class Main extends React.Component {
                         <p className='small-body'>
                             1-800-273-8255 (feat. A..)
                         </p>
-                    </div>
-                    <div className='small-pic'> 
-                        <p className='small-title'>
-                        Logic
-                        </p>
-                        <p className='small-body'>
-                            1-800-273-8255 (feat. A..)
+                        <p className='icon' >
+                            <i class="fa fa-play fa-xs" aria-hidden="true" > 61.5M </i>
+                            <i class="fa fa-heart fa-xs" aria-hidden="true"> 743K </i>
+                            <i class="fa fa-retweet fa-xs" aria-hidden="true"> 34.1K </i>
+                            <i class="fa fa-comment fa-xs" aria-hidden="true"> 8,845 </i>
                         </p>
                     </div>
                     <div className='small-pic'> 
@@ -199,6 +196,26 @@ class Main extends React.Component {
                         </p>
                         <p className='small-body'>
                             1-800-273-8255 (feat. A..)
+                        </p>
+                        <p className='icon' >
+                            <i class="fa fa-play fa-xs" aria-hidden="true" > 61.5M </i>
+                            <i class="fa fa-heart fa-xs" aria-hidden="true"> 743K </i>
+                            <i class="fa fa-retweet fa-xs" aria-hidden="true"> 34.1K </i>
+                            <i class="fa fa-comment fa-xs" aria-hidden="true"> 8,845 </i>
+                        </p>
+                    </div>
+                    <div className='small-pic'> 
+                        <p className='small-title'>
+                        Logic
+                        </p>
+                        <p className='small-body'>
+                            1-800-273-8255 (feat. A..)
+                        </p>
+                        <p className='icon' >
+                            <i class="fa fa-play fa-xs" aria-hidden="true" > 61.5M </i>
+                            <i class="fa fa-heart fa-xs" aria-hidden="true"> 743K </i>
+                            <i class="fa fa-retweet fa-xs" aria-hidden="true"> 34.1K </i>
+                            <i class="fa fa-comment fa-xs" aria-hidden="true"> 8,845 </i>
                         </p>
                     </div>
                 </div>
@@ -207,7 +224,7 @@ class Main extends React.Component {
 
                 <div className='who-to-follow'>
                     <div className='wtf-title'>
-                        <p>You might like</p>
+                        <i class="fa fa-heart" aria-hidden="true"> You might like</i>
                         <p>View All</p>
                     </div>
 
@@ -219,6 +236,12 @@ class Main extends React.Component {
                             <p className='small-body'>
                                 1-800-273-8255 (feat. A..)
                             </p>
+                            <p className='icon' >
+                                <i class="fa fa-play fa-xs" aria-hidden="true" > 61.5M </i>
+                                <i class="fa fa-heart fa-xs" aria-hidden="true"> 743K </i>
+                                <i class="fa fa-retweet fa-xs" aria-hidden="true"> 34.1K </i>
+                                <i class="fa fa-comment fa-xs" aria-hidden="true"> 8,845 </i>
+                            </p>
                          </div>
                         <div className='small-pic'> 
                             <p className='small-title'>
@@ -227,6 +250,12 @@ class Main extends React.Component {
                             <p className='small-body'>
                                 1-800-273-8255 (feat. A..)
                             </p>
+                            <p className='icon' >
+                                <i class="fa fa-play fa-xs" aria-hidden="true" > 61.5M </i>
+                                <i class="fa fa-heart fa-xs" aria-hidden="true"> 743K </i>
+                                <i class="fa fa-retweet fa-xs" aria-hidden="true"> 34.1K </i>
+                                <i class="fa fa-comment fa-xs" aria-hidden="true"> 8,845 </i>
+                            </p>
                         </div>
                         <div className='small-pic'> 
                             <p className='small-title'>
@@ -234,6 +263,12 @@ class Main extends React.Component {
                             </p>
                             <p className='small-body'>
                                 1-800-273-8255 (feat. A..)
+                            </p>
+                            <p className='icon' >
+                                <i class="fa fa-play fa-xs" aria-hidden="true" > 61.5M </i>
+                                <i class="fa fa-heart fa-xs" aria-hidden="true"> 743K </i>
+                                <i class="fa fa-retweet fa-xs" aria-hidden="true"> 34.1K </i>
+                                <i class="fa fa-comment fa-xs" aria-hidden="true"> 8,845 </i>
                             </p>
                         </div>
                     </div>
@@ -241,7 +276,7 @@ class Main extends React.Component {
 
                 <div className='who-to-follow'>
                     <div className='wtf-title'>
-                        <p>Listening history</p>
+                        <i class="fa fa-calendar" aria-hidden="true"> Listening history</i>
                         <p>View All</p>
                     </div>
 
@@ -253,6 +288,12 @@ class Main extends React.Component {
                             <p className='small-body'>
                                 1-800-273-8255 (feat. A..)
                             </p>
+                            <p className='icon' >
+                                <i class="fa fa-play fa-xs" aria-hidden="true" > 61.5M </i>
+                                <i class="fa fa-heart fa-xs" aria-hidden="true"> 743K </i>
+                                <i class="fa fa-retweet fa-xs" aria-hidden="true"> 34.1K </i>
+                                <i class="fa fa-comment fa-xs" aria-hidden="true"> 8,845 </i>
+                            </p>
                          </div>
                         <div className='small-pic'> 
                             <p className='small-title'>
@@ -261,6 +302,12 @@ class Main extends React.Component {
                             <p className='small-body'>
                                 1-800-273-8255 (feat. A..)
                             </p>
+                            <p className='icon' >
+                                <i class="fa fa-play fa-xs" aria-hidden="true" > 61.5M </i>
+                                <i class="fa fa-heart fa-xs" aria-hidden="true"> 743K </i>
+                                <i class="fa fa-retweet fa-xs" aria-hidden="true"> 34.1K </i>
+                                <i class="fa fa-comment fa-xs" aria-hidden="true"> 8,845 </i>
+                            </p>
                         </div>
                         <div className='small-pic'> 
                             <p className='small-title'>
@@ -268,6 +315,12 @@ class Main extends React.Component {
                             </p>
                             <p className='small-body'>
                                 1-800-273-8255 (feat. A..)
+                            </p>
+                            <p className='icon' >
+                                <i class="fa fa-play fa-xs" aria-hidden="true" > 61.5M </i>
+                                <i class="fa fa-heart fa-xs" aria-hidden="true"> 743K </i>
+                                <i class="fa fa-retweet fa-xs" aria-hidden="true"> 34.1K </i>
+                                <i class="fa fa-comment fa-xs" aria-hidden="true"> 8,845 </i>
                             </p>
                         </div>
                     </div>
