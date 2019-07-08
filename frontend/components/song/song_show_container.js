@@ -8,7 +8,8 @@ const mapStateToProps = (state, ownProps) => {
     let song = state.entities.song[songId]
 
     return ({
-        song
+        song,
+        currentUser: state.session.currentUser
     })
 };
 

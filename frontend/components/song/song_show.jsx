@@ -6,9 +6,7 @@ class songShow extends React.Compoent {
     constructor(props){
         super(props)
 
-        this.state = {
-            song: song 
-        }
+        this.state = this.props.song
     };
 
     componentDidMount() {
@@ -27,7 +25,7 @@ class songShow extends React.Compoent {
                 <h2>{song.artist}</h2>
 
                 <div>
-                    <img src={song.albumCoverURL} alt="lost photo"/>
+                    <img src={song.album_coverURL} alt="lost photo"/>
                 </div>
 
             </div>

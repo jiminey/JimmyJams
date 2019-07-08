@@ -6,14 +6,85 @@ class CreateSong extends React.Component {
         super(props)
         this.state = { 
             title: '', 
-            albumCoverURL: null, 
-            albumCoverFile: null, 
+            artist: '',
+            album_coverUrl: null, 
+            album_coverFile: null, 
             song_fileURL: null, 
-            song_file: null, 
-            loading: false 
+            song_fileFile: null
         };
+
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleAlbumCover = this.handleAlbumCover.bind(this);
+        this.handleSongFile = this.handleSongFile.bind(this);
+
     }
 
+
+    handleSubmit(e) {
+        e.preventDefault();
+
+        const formData = new FormData();
+        formData.append('song[title]', this.state.title);
+        formData.append('song[artist]', this.state.artist);
+        if (this.state.album_coverFile) {
+
+            formData.append('song[album_cover]', this.state.album_coverFile);
+        }
+
+        if (this.state.song_fileFile) {
+            formData.append('song[song_file]', this.state.song_fileFile);
+        }
+
+
+        this.props.createSong(formData).then( res => console.log(res))
+
+        // $.ajax({
+        //     url: 'api/posts',
+        //     method: 'POST',
+        //     data: formData,
+        //     contentType: false,
+        //     processData: false
+        // }).then (
+        //     (response) => console.log(response.message),
+        //     (response) => console.log(response.responseJSON)
+        // )
+
+
+    }
+    
+    handleAlbumCover(e) {
+        let reader = new FileReader();
+        let file = e.currentTarget.files[0];
+        
+        reader.onloadend = () =>
+        this.setState({ album_coverUrl: reader.result, album_coverFile: file });
+    
+        if (file) {
+            reader.readAsDataURL(file);
+        } 
+        // else {
+        //     this.setState({ album_coverUrl: "", album_coverFile: null });
+        // }
+    }
+
+    handleSongFile(e) {
+        let reader = new FileReader();
+        let file = e.currentTarget.files[0];
+
+        reader.onloadend = () =>
+            this.setState({ song_fileUrl: reader.result, song_fileFile: file });
+
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+    
+    }
+
+    handleChange(field) {
+        return e => (
+            this.setState({[field]: e.currentTarget.value})
+        )
+    }
 
 
 
@@ -53,30 +124,40 @@ class CreateSong extends React.Component {
                     </div>
                 </header>
 
-                <div upload-form-content>
-                    <form >
+                <div>
+                    <form onSubmit={this.handleSubmit} >
                         <div >
                             <br />
                             <label> Title
                                 <input
+                                    onChange={this.handleChange('title')}
                                     type="text"
-                                    placeholder='HELLO'
+                                    placeholder='Enter song title'
                         
                                 />
                             </label>
                             <br />
                             <label> Artist
                                 <input
+                                    onChange={this.handleChange('artist')}
                                     type="text"
-                                    placeholder="Enter your password here "
+                                    placeholder="Enter name of artist"
                                 
                                 />
                             </label>
                             <br />
                             <input
-                                type="submit"
-                                value='choose files to upload'
+                                onChange={this.handleAlbumCover}
+                                type="file"
+                                accept='image/*'
                             />
+                            <input
+                                onChange={this.handleSongFile}
+                                type="file"
+                                accept='audio/*'
+                            />
+
+                            <button>Submit</button>
                         </div>
                         <br />
                         <p className='blue-hyperlink-help'>Need help?</p>
@@ -87,7 +168,7 @@ class CreateSong extends React.Component {
                             products and services,
                             and for activities notifications.
                             You can unsubscribe for free at any time in your
-                        notification settings.</p>
+                            notification settings.</p>
                         <br />
                         <p className='fine-print'>We may use information you provide us in
                         order to show you targeted ads as described
