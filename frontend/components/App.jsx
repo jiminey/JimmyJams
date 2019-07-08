@@ -6,12 +6,14 @@ import {Route, Switch} from 'react-router-dom';
 import MainContainer from './main_page/main_container'
 import UploadFormContainer from './song/song_form/create_song_container'
 import LibraryContainer from './library/library_container'
+import UpdateSongContainer from './song/song_form/update_song_container'
 const App = () => (
     
 
     <div className='splash'>
         <Modal /> 
         <Switch >
+
             <Route exact path='/library' component={LibraryContainer} />
             <Route exact path='/upload'component={UploadFormContainer} /> 
             <Route exact path='/main' component={MainContainer} />

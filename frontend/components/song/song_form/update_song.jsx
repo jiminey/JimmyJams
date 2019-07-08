@@ -25,7 +25,7 @@ class UpdateSongForm extends React.Component {
 
         return (
             <form onSubmit={this.handleSubmit}>
-                <div><img src={this.props.song.photoUrl} /></div>
+                <div><img src={this.props.song.album_coverUrl} /></div>
                 <div >{this.props.song.title}</div>
 
 

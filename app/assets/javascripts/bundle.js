@@ -291,9 +291,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _main_page_main_container__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./main_page/main_container */ "./frontend/components/main_page/main_container.jsx");
 /* harmony import */ var _song_song_form_create_song_container__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./song/song_form/create_song_container */ "./frontend/components/song/song_form/create_song_container.js");
 /* harmony import */ var _library_library_container__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./library/library_container */ "./frontend/components/library/library_container.js");
+/* harmony import */ var _song_song_form_update_song_container__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./song/song_form/update_song_container */ "./frontend/components/song/song_form/update_song_container.js");
 
 
  // import {AuthRoute} from '../util/route.util'
+
 
 
 
@@ -1398,6 +1400,155 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_song_form_create_song__WEBPACK_IMPORTED_MODULE_2__["default"]));
+
+/***/ }),
+
+/***/ "./frontend/components/song/song_form/update_song.jsx":
+/*!************************************************************!*\
+  !*** ./frontend/components/song/song_form/update_song.jsx ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+
+
+
+
+
+
+
+
+
+var UpdateSongForm =
+/*#__PURE__*/
+function (_React$Component) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default()(UpdateSongForm, _React$Component);
+
+  function UpdateSongForm(props) {
+    var _this;
+
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default()(this, UpdateSongForm);
+
+    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(UpdateSongForm).call(this, props));
+    _this.handleSubmit = _this.handleSubmit.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default()(_this));
+    _this.state = _this.props.song;
+    return _this;
+  }
+
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default()(UpdateSongForm, [{
+    key: "handleChange",
+    value: function handleChange(field) {
+      var _this2 = this;
+
+      return function (e) {
+        _this2.setState(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({}, field, e.target.value));
+      };
+    }
+  }, {
+    key: "handleSubmit",
+    value: function handleSubmit(e) {
+      var _this3 = this;
+
+      e.preventDefault();
+      this.props.updateSong({
+        id: this.state.id,
+        title: this.state.title
+      }).then(function () {
+        return _this3.props.closeModal();
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("form", {
+        onSubmit: this.handleSubmit
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+        src: this.props.song.album_coverUrl
+      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, this.props.song.title), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", null, "Edit Title:", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+        type: "text",
+        onChange: this.handleChange('title'),
+        placeholder: "Please enter a title"
+      }))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", null, "Edit Artist:", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+        type: "text",
+        onChange: this.handleChange('artist'),
+        placeholder: "Please enter an artist"
+      }))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+        type: "submit",
+        value: "Update song"
+      }));
+    }
+  }]);
+
+  return UpdateSongForm;
+}(react__WEBPACK_IMPORTED_MODULE_7___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (UpdateSongForm);
+
+/***/ }),
+
+/***/ "./frontend/components/song/song_form/update_song_container.js":
+/*!*********************************************************************!*\
+  !*** ./frontend/components/song/song_form/update_song_container.js ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _actions_song_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../actions/song_actions */ "./frontend/actions/song_actions.js");
+/* harmony import */ var _song_form_update_song__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../song_form/update_song */ "./frontend/components/song/song_form/update_song.jsx");
+
+
+
+
+var mapStateToProps = function mapStateToProps(_ref) {
+  var session = _ref.session;
+  return {
+    currentUser: session.id
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    closeModal: function (_closeModal) {
+      function closeModal() {
+        return _closeModal.apply(this, arguments);
+      }
+
+      closeModal.toString = function () {
+        return _closeModal.toString();
+      };
+
+      return closeModal;
+    }(function () {
+      return dispatch(closeModal());
+    }),
+    updateSong: function updateSong(song) {
+      return dispatch(Object(_actions_song_actions__WEBPACK_IMPORTED_MODULE_1__["updateSong"])(song));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_song_form_update_song__WEBPACK_IMPORTED_MODULE_2__["default"]));
 
 /***/ }),
 
