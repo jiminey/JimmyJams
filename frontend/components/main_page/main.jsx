@@ -177,13 +177,28 @@ class Main extends React.Component {
 
                 <div className='display-threes'>
                     <div className='small-pic'> 
+                        <p className='small-title'>
                         Logic
+                        </p>
+                        <p className='small-body'>
+                            1-800-273-8255 (feat. A..)
+                        </p>
                     </div>
                     <div className='small-pic'> 
+                        <p className='small-title'>
                         Logic
+                        </p>
+                        <p className='small-body'>
+                            1-800-273-8255 (feat. A..)
+                        </p>
                     </div>
                     <div className='small-pic'> 
+                        <p className='small-title'>
                         Logic
+                        </p>
+                        <p className='small-body'>
+                            1-800-273-8255 (feat. A..)
+                        </p>
                     </div>
                 </div>
                 
@@ -197,13 +212,28 @@ class Main extends React.Component {
 
                     <div className='display-threes'>
                         <div className='small-pic'> 
+                            <p className='small-title'>
                             Logic
+                            </p>
+                            <p className='small-body'>
+                                1-800-273-8255 (feat. A..)
+                            </p>
                          </div>
                         <div className='small-pic'> 
+                            <p className='small-title'>
                             Logic
+                            </p>
+                            <p className='small-body'>
+                                1-800-273-8255 (feat. A..)
+                            </p>
                         </div>
                         <div className='small-pic'> 
+                            <p className='small-title'>
                             Logic
+                            </p>
+                            <p className='small-body'>
+                                1-800-273-8255 (feat. A..)
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -216,18 +246,33 @@ class Main extends React.Component {
 
                     <div className='display-threes'>
                         <div className='small-pic'> 
+                            <p className='small-title'>
                             Logic
+                            </p>
+                            <p className='small-body'>
+                                1-800-273-8255 (feat. A..)
+                            </p>
                          </div>
                         <div className='small-pic'> 
+                            <p className='small-title'>
                             Logic
+                            </p>
+                            <p className='small-body'>
+                                1-800-273-8255 (feat. A..)
+                            </p>
                         </div>
                         <div className='small-pic'> 
+                            <p className='small-title'>
                             Logic
+                            </p>
+                            <p className='small-body'>
+                                1-800-273-8255 (feat. A..)
+                            </p>
                         </div>
                     </div>
                 </div>
 
-                <div className='who-to-follow'>
+                <div className='go-mobile'>
                     <div className='wtf-title'>
                         <p>Go mobile</p>
                         <p>View All</p>

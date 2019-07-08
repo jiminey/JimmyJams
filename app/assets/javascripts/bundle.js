@@ -398,7 +398,7 @@ function (_React$Component) {
         className: "search",
         type: "text",
         placeholder: "Search"
-      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "main-right"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "upgrade"
@@ -430,25 +430,37 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pic-area"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic"
+        className: "pic-lib"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - Po.."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "section-body"
       }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pic-area"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic"
+        className: "pic-lib"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - Po.."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-lib"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - Po.."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-lib"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "section-body"
       }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pic-area"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic"
+        className: "pic-lib"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "section-body"
       }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pic-area"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic"
+        className: "pic-lib"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "section-body"
       }, "Related tracks")))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -457,32 +469,44 @@ function (_React$Component) {
         className: "section-content"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
         className: "section-title"
-      }, "New Music Now"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
+      }, "JimmyJams Charts"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
         className: "section-body"
-      }, "The latest hits, updated all the time")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "The most played tracks on JimmyJams this week")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pic-area"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic"
+        className: "pic-lib"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - Po.."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "section-body"
       }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pic-area"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic"
+        className: "pic-lib"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "section-body"
       }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pic-area"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic"
+        className: "pic-lib"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "section-body"
       }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pic-area"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic"
+        className: "pic-lib"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-lib"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-lib"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "section-body"
       }, "Related tracks")))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -491,32 +515,44 @@ function (_React$Component) {
         className: "section-content"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
         className: "section-title"
-      }, "New Music Now"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
+      }, "More of what you like"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
         className: "section-body"
-      }, "The latest hits, updated all the time")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "Suggestions based on what you've liked or played")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pic-area"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic"
+        className: "pic-lib"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - Po.."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "section-body"
       }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pic-area"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic"
+        className: "pic-lib"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "section-body"
       }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pic-area"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic"
+        className: "pic-lib"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "section-body"
       }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pic-area"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic"
+        className: "pic-lib"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-lib"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "section-body"
+      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-area"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-lib"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "section-body"
       }, "Related tracks"))))));
@@ -766,11 +802,23 @@ function (_React$Component) {
         className: "display-threes"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "small-pic"
-      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "small-title"
+      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "small-body"
+      }, "1-800-273-8255 (feat. A..)")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "small-pic"
-      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "small-title"
+      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "small-body"
+      }, "1-800-273-8255 (feat. A..)")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "small-pic"
-      }, "Logic"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "small-title"
+      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "small-body"
+      }, "1-800-273-8255 (feat. A..)")))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "who-to-follow"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "wtf-title"
@@ -778,11 +826,23 @@ function (_React$Component) {
         className: "display-threes"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "small-pic"
-      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "small-title"
+      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "small-body"
+      }, "1-800-273-8255 (feat. A..)")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "small-pic"
-      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "small-title"
+      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "small-body"
+      }, "1-800-273-8255 (feat. A..)")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "small-pic"
-      }, "Logic"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "small-title"
+      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "small-body"
+      }, "1-800-273-8255 (feat. A..)")))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "who-to-follow"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "wtf-title"
@@ -790,12 +850,24 @@ function (_React$Component) {
         className: "display-threes"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "small-pic"
-      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "small-title"
+      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "small-body"
+      }, "1-800-273-8255 (feat. A..)")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "small-pic"
-      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "small-title"
+      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "small-body"
+      }, "1-800-273-8255 (feat. A..)")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "small-pic"
-      }, "Logic"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "who-to-follow"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "small-title"
+      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "small-body"
+      }, "1-800-273-8255 (feat. A..)")))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "go-mobile"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "wtf-title"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "Go mobile"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "View All"))))));
