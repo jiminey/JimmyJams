@@ -169,10 +169,34 @@ class Main extends React.Component {
 
             <div className='main-col'>
                 
-                <div className='who-to-follow'>Who to follow</div>
-                <div className='thing-you-like'>Things you might like</div>
-                <div className='listening-history'>Listening history</div>
-                <div className='go-mobile'>Go mobile</div>
+                <div className='who-to-follow'>
+                    <div className='wtf-title'>
+                        <p>Who to follow</p>
+                        <p>View All</p>
+                    </div>
+                </div>
+
+                <div className='thing-you-like'>
+                    <div className='wtf-title'>
+                        <p>Things you might like</p>
+                        <p>View All</p>
+                    </div>
+                </div>
+
+                <div className='listening-history'>
+                    <div className='wtf-title'>
+                        <p>Listening history</p>
+                        <p>View All</p>
+                    </div>
+                </div>
+
+                <div className='go-mobile'>
+                    <div className='wtf-title'>
+                        <p>Go mobile</p>
+                        <p>View All</p>
+                    </div>
+                </div>
+
             </div>
 
             </div> 
