@@ -9,13 +9,6 @@ import configureStore from './store/store';
 
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('root');
-    // window.getState = store.getState;
-    // window.dispatch = store.dispatch;
-    // window.store = store;
-
-    // window.login = login; 
-    // window.signup = signup;
-    // window.logout = logout;
     let store;
     if (window.currentUser) {
         const preloadedState = {
@@ -29,8 +22,15 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         store = configureStore();
     }
+    
+    window.getState = store.getState;
+    // window.dispatch = store.dispatch;
+    // window.store = store;
 
-
+    // window.login = login; 
+    // window.signup = signup;
+    // window.logout = logout;
+    
     
     ReactDOM.render(<Root store={store} />  , root);
 });

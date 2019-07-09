@@ -2,7 +2,7 @@ import React from 'react'
 
 //check line 9
 
-class songShow extends React.Compoent {
+class SongShow extends React.Component {
     constructor(props){
         super(props)
 
@@ -16,16 +16,15 @@ class songShow extends React.Compoent {
 
 
     render() {
-        let song = this.props.song 
                 
         return (
             <div>
-                
-                <h1>{song.title}</h1>
-                <h2>{song.artist}</h2>
+                <h1> HELLOOOO</h1>
+                <h1>{this.props.song.title}</h1>
+                <h2>{this.props.song.artist}</h2>
 
                 <div>
-                    <img src={song.album_coverURL} alt="lost photo"/>
+                    <img src={this.props.song.album_coverURL} alt="lost photo"/>
                 </div>
 
             </div>
@@ -37,4 +36,4 @@ class songShow extends React.Compoent {
 };
 
 
-export default songShow
+export default SongShow
