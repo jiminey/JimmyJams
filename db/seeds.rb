@@ -27,26 +27,29 @@ song10 = Song.create(title: 'Waiting for Love', artist: 'Avicii')
 song11 = Song.create(title: 'Come Back To Earth', artist: 'Mac Miller')
 song12 = Song.create(title: 'Is It Love', artist: '3LAU feat. Yeah Boy')
 
-song1.album_cover(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/nFXdMNsnQMwvYnSvQbN9udMv'), filename: 'sunflower.jpg')
-
+song1.album_cover(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/nFXdMNsnQMwvYnSvQbN9udMv'), filename: 'sunflower.mp3')
 song2.album_cover(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/vBSvntsgbnsiPngxomzYHyYG'), filename: 'jcole.jpg')
-
 song3.album_cover(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/qg6zuTS8ZtfUg4VU5Kf5PZcQ'), filename: 'callmemaybe.png')
-
 song4.album_cover(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/JWQZUFdxAQk8o9bbfW5EghDA'), filename: 'heysoulsister.jpg')
-
 song5.album_cover(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/TuGaGaTxKwg9FCEhm2pX4HKP'), filename: 'firestone.jpg')
-
 song6.album_cover(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/Lg1Eoh8QUyn2TqRxzt3T2fM3'), filename: 'bestpart.jpg')
-
 song7.album_cover(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/uB2zDF1AwQARcHPm65UpPqYQ'), filename: 'logic.jpg')
-
 song8.album_cover(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/2ZxQGDKBwJaSVZK3vG55VhoY'), filename: 'mygirl.jpg')
-
 song9.album_cover(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/g1UUfmZCH3EReJzpCJgrwtbs'), filename: 'honesty.jpg')
-
 song10.album_cover(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/XBagDbwjhhQatCoDApjBy5if'), filename: 'waitingforlove.png')
-
 song11.album_cover(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/jJ8of2myVKamdQRmSWZh7rTJ'), filename: 'macmiller.png')
-
 song12.album_cover(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/wRTYFfGdUKfA54rVMTdCYzhY'), filename: 'blau.jpg')
+
+song1.song_file(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/rVf5LfQniaDMnYGbXqc8rgDs'), filename: 'sunflower.mp3')
+song2.song_file(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/h4VrV8CLKzqG5opmiFtCnkWw'), filename: 'jcole.mp3')
+song3.song_file(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/riSJMy6A67kpcSWJu4d3Mgiy'), filename: 'callmemaybe.mp3')
+song4.song_file(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/ppaqY8bBRzHcMfkCpTtZh8zH'), filename: 'heysoulsister.mp3')
+song5.song_file(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/6dfRVGjNCeYZp1XTnziFr8ok'), filename: 'firestone.mp3')
+song6.song_file(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/uvuSMwQ3FqxT9HCrvKoxLvSi'), filename: 'bestpart.mp3')
+song7.song_file(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/AQEmFEjM5wek1rFH5cekeNWz'), filename: 'logic.mp3')
+song8.song_file(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/4vva1XTpeT9vFKvJbhLAQjVY'), filename: 'mygirl.mp3')
+song9.song_file(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/gSghuzUY63Z7wZpRYYyqN7ZG'), filename: 'honesty.mp3')
+song10.song_file(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/VwreTeiFXvVPXPZoZYCnwQzU'), filename: 'waitingforlove.mp3')
+song11.song_file(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/usmb4nrEvsF9idWa5Hq4dF34'), filename: 'macmiller.mp3')
+song12.song_file(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/MuGz8dJZtL9yzXULLJCmfXr7'), filename: 'blau.mp3')
+
