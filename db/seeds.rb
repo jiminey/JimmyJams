@@ -14,26 +14,26 @@ user1 = User.create(username: "jimmythanhnguyen", password: "pleasehireme")
 
 Song.destroy_all
 
-song1 = Song.create(title: 'Sunflower', artist: 'Post Malone & Swae Lee')
-song2 = Song.create(title: 'No Role Modelz', artist: 'J. Cole')
-song3 = Song.create(title: 'Call Me Maybe', artist: 'Carly R. Jepsen')
-song4 = Song.create(title: 'Hey Soul Sister', artist: 'Train')
-song5 = Song.create(title: "Firestone ft. Conrad Sewell", artist: 'Kygo')
-song6 = Song.create(title: 'Best Part', artist: 'Daniel Caesar')
-song7 = Song.create(title: '1-800-273-8255 ft. Alessia Cara & Khalid', artist: 'Logic')
-song8 = Song.create(title: 'My Girl', artist: 'The Temptations')
-song9 = Song.create(title: 'Honesty', artist: 'Pink$weat')
-song10 = Song.create(title: 'Waiting for Love', artist: 'Avicii')
-song11 = Song.create(title: 'Come Back To Earth', artist: 'Mac Miller')
-song12 = Song.create(title: 'Is It Love', artist: '3LAU feat. Yeah Boy')
-song13 = Song.create(title: 'Sunday Morning', artist: 'Maroon 5')
+song1 = Song.create(title: 'Sunflower', artist: 'Post Malone & Swae Lee', uploader_id: user1.id)
+song2 = Song.create(title: 'No Role Modelz', artist: 'J. Cole', uploader_id: user1.id)
+song3 = Song.create(title: 'Call Me Maybe', artist: 'Carly R. Jepsen', uploader_id: user1.id)
+song4 = Song.create(title: 'Hey Soul Sister', artist: 'Train', uploader_id: user1.id)
+song5 = Song.create(title: "Firestone ft. Conrad Sewell", artist: 'Kygo', uploader_id: user1.id)
+song6 = Song.create(title: 'Best Part', artist: 'Daniel Caesar', uploader_id: user1.id)
+song7 = Song.create(title: '1-800-273-8255 ft. Alessia Cara & Khalid', artist: 'Logic', uploader_id: user1.id)
+song8 = Song.create(title: 'My Girl', artist: 'The Temptations', uploader_id: user1.id)
+song9 = Song.create(title: 'Honesty', artist: 'Pink$weat', uploader_id: user1.id)
+song10 = Song.create(title: 'Waiting for Love', artist: 'Avicii', uploader_id: user1.id)
+song11 = Song.create(title: 'Come Back To Earth', artist: 'Mac Miller', uploader_id: user1.id)
+song12 = Song.create(title: 'Is It Love', artist: '3LAU feat. Yeah Boy', uploader_id: user1.id)
+song13 = Song.create(title: 'Sunday Morning', artist: 'Maroon 5', uploader_id: user1.id)
 
 
 
 album_cover_file1 = open('https://seed-jimmyjams.s3-us-west-1.amazonaws.com/sunflower.jpg') 
 song1.album_cover.attach(io: album_cover_file1, filename: 'sunflower.jpg')
 song_file1 = open('https://seed-jimmyjams.s3-us-west-1.amazonaws.com/sunflower.mp3') 
-song1.song_file.attach(io: song_file1, song_file1: 'sunflower.mp3')
+song1.song_file.attach(io: song_file1, filename: 'sunflower.mp3')
 
 album_cover_file2 = open('https://seed-jimmyjams.s3-us-west-1.amazonaws.com/jcole.jpg') 
 song1.album_cover.attach(io: album_cover_file2, filename: 'jcole.jpg')
@@ -41,7 +41,7 @@ song_file2 = open('https://seed-jimmyjams.s3-us-west-1.amazonaws.com/jcole.mp3')
 song1.song_file.attach(io: song_file2, filename: 'jcole.mp3')
 
 album_cover_file3 = open('https://seed-jimmyjams.s3-us-west-1.amazonaws.com/callmemaybe.png') 
-song1.album_cover.attach(io: album_cover_file3, album_cover_file3: 'callmemaybe.png')
+song1.album_cover.attach(io: album_cover_file3, filename: 'callmemaybe.png')
 song_file3 = open('https://seed-jimmyjams.s3-us-west-1.amazonaws.com/callmemaybe.mp3') 
 song1.song_file.attach(io: song_file3, filename: 'callmemaybe.mp3')
 
@@ -92,6 +92,6 @@ song1.song_file.attach(io: song_file12, filename: 'sundaymorning.mp3')
 
 album_cover_file13 = open('https://seed-jimmyjams.s3-us-west-1.amazonaws.com/waitingforlove.png') 
 song1.album_cover.attach(io: album_cover_file13, filename: 'waitingforlove.png')
-song_file1 = open('https://seed-jimmyjams.s3-us-west-1.amazonaws.com/waitingforlove.mp3') 
+song_file13 = open('https://seed-jimmyjams.s3-us-west-1.amazonaws.com/waitingforlove.mp3') 
 song1.song_file.attach(io: song_file13, filename: 'waitingforlove.mp3')
 
