@@ -15,11 +15,11 @@ class SongIndexItem extends React.Component {
                     </div>
 
                     <div className='pic-content'>
-                        {this.props.song.title.slice(0,16)}
+                        {this.props.song.artist.slice(0,16)}
                     </div>
 
-                    <div className='pic-content'>
-                        {this.props.song.artist.slice(0,16)}
+                    <div className='pic-content-body'>
+                        {this.props.song.title.slice(0,16)}
                     </div>
                 </div>
             </div>

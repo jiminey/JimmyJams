@@ -69,12 +69,12 @@ class Splash extends React.Component {
 
                         <div className='splash-songs'>
 
+                            <div className='splash-rows'>
+                                {songs}
+                            </div>
 
                         <button className='splash-trending-btn'>Explore trending playlists</button>
 
-                <div className='splash-rows'>
-                    {songs}
-                </div>
 
                         </div>
                     </div>
@@ -86,7 +86,6 @@ class Splash extends React.Component {
 
                 </div>
 
-        
         )
     }
 }

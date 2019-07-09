@@ -1514,9 +1514,9 @@ function (_React$Component) {
         src: this.props.song.album_coverUrl
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "pic-content"
-      }, this.props.song.title.slice(0, 16)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic-content"
-      }, this.props.song.artist.slice(0, 16))));
+      }, this.props.song.artist.slice(0, 16)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "pic-content-body"
+      }, this.props.song.title.slice(0, 16))));
     }
   }]);
 
@@ -1831,11 +1831,11 @@ function (_React$Component) {
         className: "body-text"
       }, "Hear what\u2019s trending for free in the JimmyJams community"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "splash-songs"
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
-        className: "splash-trending-btn"
-      }, "Explore trending playlists"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "splash-rows"
-      }, songs))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, songs), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+        className: "splash-trending-btn"
+      }, "Explore trending playlists"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "bottom-content"
       }));
     }
