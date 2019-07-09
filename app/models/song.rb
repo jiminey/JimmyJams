@@ -8,7 +8,7 @@
 #  uploader_id :integer          not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#
+
 
 class Song < ApplicationRecord
     validates :title, :artist, presence:true

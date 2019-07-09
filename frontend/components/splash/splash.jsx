@@ -1,6 +1,7 @@
 import React from 'react' 
 import GreetingContainer from './greeting/greeting_container'
 import {Route} from 'react-router-dom'
+import SongIndexItem from '../song/song_index_item'
 
 
 class Splash extends React.Component {
@@ -8,12 +9,30 @@ class Splash extends React.Component {
     constructor(props){
         super(props)
     }
+
+    componentDidMount() {
+        this.props.fetchAllSongs();
+        this.props.fetchAllUsers();
+    }
     
     render() {
-        return (
+
+        let songs = this.props.songs.slice(0,12).map( song => {
+            return (
+                <div key={song.id}>
+                    <SongIndexItem key={song.id} path={this.props.location.pathname} song={song} users={this.props.users} />
+                </div>
+            )
+        });
+
+
+        return ( 
+
+    
     
 
                 <div className='main-content'>
+
                     <header className='splash-header'>
                         <div className='splash-nav-left'>
                             <img className='logo-pic' src="whitecloudlogo.png" alt='lost picture' />
@@ -51,99 +70,12 @@ class Splash extends React.Component {
 
                         <div className='splash-songs'>
 
-                            <div className='splash-row'>
-                                <div className='pic-area'>
-                                    <div className='pic-splash'>
-                                    </div>
-                                    <p> No Role Modelz - J</p>
-                                    <p className='section-body'>Related tracks</p>
-                                </div>
-
-                                <div className='pic-area'>
-                                    <div className='pic-splash'>
-                                    </div>
-                                    <p> No Role Modelz - J</p>
-                                    <p className='section-body'>Related tracks</p>
-                                </div>
-
-                                <div className='pic-area'>
-                                    <div className='pic-splash'>
-                                    </div>
-                                    <p> No Role Modelz - J</p>
-                                    <p className='section-body'>Related tracks</p>
-                                </div>
-
-                                <div className='pic-area'>
-                                    <div className='pic-splash'>
-                                    </div>
-                                    <p> No Role Modelz - J</p>
-                                    <p className='section-body'>Related tracks</p>
-                                </div>
-
-                                <div className='pic-area'>
-                                    <div className='pic-splash'>
-                                    </div>
-                                    <p> No Role Modelz - J</p>
-                                    <p className='section-body'>Related tracks</p>
-                                </div>
-
-                                <div className='pic-area'>
-                                    <div className='pic-splash'>
-                                    </div>
-                                    <p> No Role Modelz - J</p>
-                                    <p className='section-body'>Related tracks</p>
-                                </div>
-
-                            </div>
-
-
-                        <div className='splash-row'>
-                            <div className='pic-area'>
-                                <div className='pic-splash'>
-                                </div>
-                                <p> No Role Modelz - J</p>
-                                <p className='section-body'>Related tracks</p>
-                            </div>
-
-                            <div className='pic-area'>
-                                <div className='pic-splash'>
-                                </div>
-                                <p> No Role Modelz - J</p>
-                                <p className='section-body'>Related tracks</p>
-                            </div>
-
-                            <div className='pic-area'>
-                                <div className='pic-splash'>
-                                </div>
-                                <p> No Role Modelz - J</p>
-                                <p className='section-body'>Related tracks</p>
-                            </div>
-
-                            <div className='pic-area'>
-                                <div className='pic-splash'>
-                                </div>
-                                <p> No Role Modelz - J</p>
-                                <p className='section-body'>Related tracks</p>
-                            </div>
-
-                            <div className='pic-area'>
-                                <div className='pic-splash'>
-                                </div>
-                                <p> No Role Modelz - J</p>
-                                <p className='section-body'>Related tracks</p>
-                            </div>
-
-                            <div className='pic-area'>
-                                <div className='pic-splash'>
-                                </div>
-                                <p> No Role Modelz - J</p>
-                                <p className='section-body'>Related tracks</p>
-                            </div>
-
-                        </div>
 
                         <button className='splash-trending-btn'>Explore trending playlists</button>
 
+                <div>
+                    {songs}
+                </div>
 
                         </div>
                     </div>
@@ -151,6 +83,7 @@ class Splash extends React.Component {
                     <div className='bottom-content'>
                         
                     </div>
+
 
                 </div>
 
