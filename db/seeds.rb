@@ -31,7 +31,7 @@ song1.album_cover(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/nFX
 
 song2.album_cover(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/vBSvntsgbnsiPngxomzYHyYG'), filename: 'jcole.jpg')
 
-song3.album_cover(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/qg6zuTS8ZtfUg4VU5Kf5PZcQ'), filename: 'callmemaybe.jpg')
+song3.album_cover(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/qg6zuTS8ZtfUg4VU5Kf5PZcQ'), filename: 'callmemaybe.png')
 
 song4.album_cover(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/JWQZUFdxAQk8o9bbfW5EghDA'), filename: 'heysoulsister.jpg')
 
@@ -45,8 +45,8 @@ song8.album_cover(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/2Zx
 
 song9.album_cover(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/g1UUfmZCH3EReJzpCJgrwtbs'), filename: 'honesty.jpg')
 
-song10.album_cover(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/XBagDbwjhhQatCoDApjBy5if'), filename: 'waitingforlove.jpg')
+song10.album_cover(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/XBagDbwjhhQatCoDApjBy5if'), filename: 'waitingforlove.png')
 
-song11.album_cover(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/jJ8of2myVKamdQRmSWZh7rTJ'), filename: 'macmiller.jpg')
+song11.album_cover(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/jJ8of2myVKamdQRmSWZh7rTJ'), filename: 'macmiller.png')
 
 song12.album_cover(io: open('https://jimmyjams-dev.s3-us-west-1.amazonaws.com/wRTYFfGdUKfA54rVMTdCYzhY'), filename: 'blau.jpg')
