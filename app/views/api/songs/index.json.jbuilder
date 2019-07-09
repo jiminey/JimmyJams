@@ -3,9 +3,9 @@
         json.extract! song, :id, :title, :artist
 
         if song.album_cover.attached? 
-            json.album_coverURL url_for(song.album_cover)
+            json.album_coverUrl url_for(song.album_cover)
         else 
-            json.album_coverURL ''
+            json.album_coverUrl ''
         end
 
          if song.song_file.attached? 

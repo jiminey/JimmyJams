@@ -19,12 +19,11 @@ class SongShow extends React.Component {
                 
         return (
             <div>
-                <h1> HELLOOOO</h1>
                 <h1>{this.props.song.title}</h1>
                 <h2>{this.props.song.artist}</h2>
 
                 <div>
-                    <img src={this.props.song.album_coverURL} alt="lost photo"/>
+                    <img src={this.props.song.album_coverUrl} alt="lost photo"/>
                 </div>
 
             </div>

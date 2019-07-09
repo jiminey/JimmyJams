@@ -363,17 +363,24 @@ body {
 
 }
 
-.splash-row {
-    margin-left: 15px;
-    display: flex;
-    justify-content: center;
+
+.splash-rows {
+    display:flex ; 
+    flex-wrap: wrap;
 }
 
+.pic-content {
+    display: flex; 
+    flex-wrap: wrap;
+}
+
+
+
 .pic-splash {
-    width: 130.97px;
-    height: 130.97px;
+    width: 124.97px;
+    height: 124.97px;
     background-repeat:no-repeat;
-    background-image: image-url('/assets/jcole.jpg');
+    // background-image: image-url('/assets/jcole.jpg');
     background-size: 100% 100%;
     margin-right: 20px;
     cursor: pointer;

@@ -16,7 +16,6 @@ class Splash extends React.Component {
     }
     
     render() {
-
         let songs = this.props.songs.slice(0,12).map( song => {
             return (
                 <div key={song.id}>
@@ -73,7 +72,7 @@ class Splash extends React.Component {
 
                         <button className='splash-trending-btn'>Explore trending playlists</button>
 
-                <div>
+                <div className='splash-rows'>
                     {songs}
                 </div>
 

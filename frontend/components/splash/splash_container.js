@@ -4,10 +4,12 @@ import Splash from './splash'
 import {fetchAllSongs} from '../../actions/song_actions'
 import {fetchAllUsers} from '../../actions/user_actions'
 
-const mapStateToProps = state => ({
-    songs: Object.values(state.entities.songs),
-    users: state.entities.users
-});
+const mapStateToProps = state => {
+    return({
+        songs: Object.values(state.entities.songs),
+        users: state.entities.users
+    })
+};
 
 const mapDispatchToProps = dispatch => ({
     openModal: modal => dispatch(openModal(modal)),

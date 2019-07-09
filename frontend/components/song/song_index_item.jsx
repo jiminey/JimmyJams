@@ -9,17 +9,17 @@ class SongIndexItem extends React.Component {
     render() {
         return (
             <div>
-                <div>
+                <div >
                     <div>
-                        <img src={this.props.song.album_coverUrl}/>
+                        <img className='pic-splash' src={this.props.song.album_coverUrl}/>
                     </div>
 
-                    <div>
-                        {this.props.song.title}
+                    <div className='pic-content'>
+                        {this.props.song.title.slice(0,16)}
                     </div>
 
-                    <div>
-                        {this.props.song.artist}
+                    <div className='pic-content'>
+                        {this.props.song.artist.slice(0,16)}
                     </div>
                 </div>
             </div>
