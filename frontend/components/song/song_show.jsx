@@ -72,6 +72,18 @@ class SongShow extends React.Component {
 
 
                        <div className='show-top-left'>
+                           <div className='show-top-left-2'> 
+                                <img className= 'orangeplay' src='assets/orangeplay' ></img>
+                                
+                                <div className='top-words'>
+                                    <div className='top-artist'>{this.props.song.artist}</div>
+                                    <div className='top-title'>{this.props.song.title}</div>
+                                </div>
+                           </div>
+
+                           <div>
+
+                           </div>
 
                        </div>
 

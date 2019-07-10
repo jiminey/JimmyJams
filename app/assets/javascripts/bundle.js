@@ -1648,7 +1648,18 @@ function (_React$Component) {
         className: "show-top"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "show-top-left"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "show-top-left-2"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+        className: "orangeplay",
+        src: "assets/orangeplay"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "top-words"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "top-artist"
+      }, this.props.song.artist), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "top-title"
+      }, this.props.song.title))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "show-top-left"
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "show-bottom"
