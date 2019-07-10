@@ -1,21 +1,27 @@
 import React from 'react' 
 import {Link} from 'react-router-dom'
-
+import SongIndexItem from '../song/song_index_item'
 
 class Main extends React.Component {
 
     constructor(props){
-
         super(props)
-        this.state = {
-
-        };
     }
 
+   componentDidMount() {
+       this.props.fetchAllSongs();
+       this.props.fetchAllUsers();
+   }
    
     render() {
         
-        
+        let songs = this.props.songs.slice(0, 4).sort(function () { return 0.5 - Math.random() }).map(song => {
+            return (
+                <div key={song.id}>
+                    <SongIndexItem key={song.id} path={this.props.location.pathname} song={song} users={this.props.users} />
+                </div>
+            )
+        });
 
 
         return (
@@ -59,39 +65,7 @@ class Main extends React.Component {
                 <div className='music-content'>
                     <div className='section'>
                         <div className='section-content'>
-                            <h1 className='section-title'>New Music Now</h1>
-                            <h3 className='section-body'>The latest hits, updated all the time</h3>
-                        </div>
-                        <div className='row'>
-
-                            <div className='pic-area'> 
-                                <div className='pic-main'>
-                                </div>
-                                    <p>SunFlower - Po..</p>
-                                    <p className='section-body'>Related tracks</p>
-                            </div>
-
-                            <div className='pic-area'>
-                                <div className='pic-main'>
-                                </div>
-                                <p>SunFlower - P</p>
-                                <p className='section-body'>Related tracks</p>
-                            </div>
-
-                            <div className='pic-area'>
-                                <div className='pic-main'>
-                                </div>
-                                <p>SunFlower - P</p>
-                                <p className='section-body'>Related tracks</p>
-                            </div>
-
-                            <div className='pic-area'>
-                                <div className='pic-main'>
-                                </div>
-                                <p>SunFlower - P</p>
-                                <p className='section-body'>Related tracks</p>
-                            </div>
-                            
+                            {songs}
                         </div>
                     </div>
 
