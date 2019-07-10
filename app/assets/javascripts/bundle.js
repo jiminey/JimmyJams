@@ -1644,7 +1644,15 @@ function (_React$Component) {
         className: "dropdown"
       }, " . . ."))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "show-body"
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", null, "hLLEOOO")));
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "show-top"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "show-top-left"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "show-top-left"
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "show-bottom"
+      })));
     }
   }]);
 

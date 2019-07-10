@@ -66,7 +66,30 @@ class SongShow extends React.Component {
 
 
                 <div className='show-body'>
-                    <h1>hLLEOOO</h1>
+
+
+                   <div className='show-top'>
+
+
+                       <div className='show-top-left'>
+
+                       </div>
+
+
+                       <div className='show-top-left'>
+
+                       </div>
+
+                       
+                   </div>
+
+
+
+                   <div className='show-bottom'>
+
+                   </div>
+
+
                 </div> 
 
 
