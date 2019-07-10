@@ -14,11 +14,7 @@ class Main extends React.Component {
    }
 
 
-   singleSong() {
-       
 
-   }
-   
     render() {
         
         let songs1 = this.props.songs.sort(function () { return 0.5 - Math.random() }).slice(0, 4).map(song => {

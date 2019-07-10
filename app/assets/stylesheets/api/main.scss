@@ -311,10 +311,15 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 4px;
-    cursor: pointer;
+    cursor: pointer;g
 }
 
 .main-row {
     display: flex ;
+
+}
+.main-row-lib {
+    display: flex ;
+    flex-wrap: wrap;
 
 }
