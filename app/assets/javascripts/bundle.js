@@ -2109,7 +2109,10 @@ function (_React$Component) {
       }, "What's next in music is first on JimmyJams"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
         className: "banner-text"
       }, "Upload your first track and begin your journey. JimmyJams gives ", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), " you space to create, find your fans, and connect with other ", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), " artists."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
-        className: "splash-upload-btn"
+        className: "splash-upload-btn",
+        onClick: function onClick() {
+          return _this.props.openModal('login');
+        }
       }, "Start uploading today")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "body-content"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -2123,7 +2126,10 @@ function (_React$Component) {
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "or"
       }, "or"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
-        className: "splash-yourown-btn"
+        className: "splash-yourown-btn",
+        onClick: function onClick() {
+          return _this.props.openModal('login');
+        }
       }, "Upload your own")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "body-text"
       }, "Hear what\u2019s trending for free in the JimmyJams community"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {

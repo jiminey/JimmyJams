@@ -50,7 +50,7 @@ class Splash extends React.Component {
                                 gives <br /> you space to create, find your fans, and
                                 connect with other <br /> artists.</h3>
 
-                        <button className='splash-upload-btn'>Start uploading today</button>
+                    <button className='splash-upload-btn' onClick={() => this.props.openModal('login')} >Start uploading today</button>
                     </div>
 
                     <div className='body-content'>
@@ -61,7 +61,7 @@ class Splash extends React.Component {
 
                             <div className='or'>or</div>
 
-                            <button className='splash-yourown-btn'>Upload your own</button>
+                        <button className='splash-yourown-btn' onClick={() => this.props.openModal('login')} >Upload your own</button>
                         </div>
 
                         <div className='body-text'>
