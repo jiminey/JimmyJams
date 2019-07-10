@@ -1,7 +1,5 @@
 import React from 'react'
 
-//check line 9
-
 class SongShow extends React.Component {
     constructor(props){
         super(props)

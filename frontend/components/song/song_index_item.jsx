@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'react-router-dom'
 
 
 class SongIndexItem extends React.Component {
@@ -9,8 +10,9 @@ class SongIndexItem extends React.Component {
 
 
     play(e) {
+        
         let audio = new Audio(`${this.props.song.song_fileUrl}`);
-        audio.play();
+        audio.play()
     }
 
     render() {
