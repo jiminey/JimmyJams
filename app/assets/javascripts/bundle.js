@@ -2090,7 +2090,9 @@ function (_React$Component) {
     value: function render() {
       var _this = this;
 
-      var songs = this.props.songs.slice(0, 12).map(function (song) {
+      var songs = this.props.songs.slice(0, 12).sort(function () {
+        return 0.5 - Math.random();
+      }).map(function (song) {
         return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
           key: song.id
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_song_song_index_item__WEBPACK_IMPORTED_MODULE_8__["default"], {
