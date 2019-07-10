@@ -12,6 +12,12 @@ class Main extends React.Component {
        this.props.fetchAllSongs();
        this.props.fetchAllUsers();
    }
+
+
+   singleSong() {
+       
+
+   }
    
     render() {
         

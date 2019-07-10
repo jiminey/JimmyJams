@@ -711,6 +711,9 @@ function (_React$Component) {
       this.props.fetchAllUsers();
     }
   }, {
+    key: "singleSong",
+    value: function singleSong() {}
+  }, {
     key: "render",
     value: function render() {
       var _this = this;
