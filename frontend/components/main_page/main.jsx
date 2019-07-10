@@ -15,13 +15,32 @@ class Main extends React.Component {
    
     render() {
         
-        let songs = this.props.songs.slice(0, 4).sort(function () { return 0.5 - Math.random() }).map(song => {
+        let songs1 = this.props.songs.sort(function () { return 0.5 - Math.random() }).slice(0, 4).map(song => {
             return (
                 <div key={song.id}>
                     <SongIndexItem key={song.id} path={this.props.location.pathname} song={song} users={this.props.users} />
                 </div>
             )
         });
+
+        let songs2 = this.props.songs.sort(function () { return 0.5 - Math.random() }).slice(0, 4).map(song => {
+            return (
+                <div key={song.id}>
+                    <SongIndexItem key={song.id} path={this.props.location.pathname} song={song} users={this.props.users} />
+                </div>
+            )
+        });
+
+        let songs3 = this.props.songs.sort(function () { return 0.5 - Math.random() }).slice(0, 4).map(song => {
+            return (
+                <div key={song.id}>
+                    <SongIndexItem key={song.id} path={this.props.location.pathname} song={song} users={this.props.users} />
+                </div>
+            )
+        });
+
+        
+
 
 
         return (
@@ -63,83 +82,44 @@ class Main extends React.Component {
             <div className='main-page-content'>
     
                 <div className='music-content'>
+
                     <div className='section'>
-                        <div className='section-content'>
-                            {songs}
-                        </div>
+
+                            <div className='section-content'>
+                                <h1 className='section-title'>JimmyJams Charts</h1>
+                                    <h3 className='section-body'>The most played tracks on JimmyJams this week</h3>
+                            
+                                <div className='main-row'>
+                                    {songs1}
+                                </div>
+                            </div>   
                     </div>
 
                     <div className='section'>
-                        <div className='section-content'>
-                            <h1 className='section-title'>JimmyJams Charts</h1>
-                                <h3 className='section-body'>The most played tracks on JimmyJams this week</h3>
-                        </div>
-                        <div className='row'>
-                            <div className='pic-area'>
-                                <div className='pic-main'>
-                                </div>
-                                <p>SunFlower - Po..</p>
-                                <p className='section-body'>Related tracks</p>
-                            </div>
 
-                            <div className='pic-area'>
-                                <div className='pic-main'>
+                            <div className='section-content'>
+                                <h1 className='section-title'>JimmyJams Charts</h1>
+                                    <h3 className='section-body'>The most played tracks on JimmyJams this week</h3>
+                                
+                                <div className='main-row'>
+                                    {songs2}
                                 </div>
-                                <p>SunFlower - P</p>
-                                <p className='section-body'>Related tracks</p>
-                            </div>
-
-                            <div className='pic-area'>
-                                <div className='pic-main'>
-                                </div>
-                                <p>SunFlower - P</p>
-                                <p className='section-body'>Related tracks</p>
-                            </div>
-
-                            <div className='pic-area'>
-                                <div className='pic-main'>
-                                </div>
-                                <p>SunFlower - P</p>
-                                <p className='section-body'>Related tracks</p>
-                            </div>
-                        </div>
+                            </div>   
                     </div>
 
                     <div className='section'>
-                        <div className='section-content'> 
-                            <h1 className='section-title'>More of what you like</h1>
-                                <h3 className='section-body'>Suggestions based on what you've liked or played</h3>
-                        </div>
-                        <div className='row'>
-                            <div className='pic-area'>
-                                <div className='pic-main'>
-                                </div>
-                                <p>SunFlower - Po..</p>
-                                <p className='section-body'>Related tracks</p>
-                            </div>
 
-                            <div className='pic-area'>
-                                <div className='pic-main'>
+                            <div className='section-content'>
+                                <h1 className='section-title'>JimmyJams Charts</h1>
+                                    <h3 className='section-body'>The most played tracks on JimmyJams this week</h3>
+                                
+                                <div className='main-row'>
+                                    {songs3}
                                 </div>
-                                <p>SunFlower - P</p>
-                                <p className='section-body'>Related tracks</p>
-                            </div>
-
-                            <div className='pic-area'>
-                                <div className='pic-main'>
-                                </div>
-                                <p>SunFlower - P</p>
-                                <p className='section-body'>Related tracks</p>
-                            </div>
-
-                            <div className='pic-area'>
-                                <div className='pic-main'>
-                                </div>
-                                <p>SunFlower - P</p>
-                                <p className='section-body'>Related tracks</p>
-                            </div>
-                        </div>
+                            </div>   
                     </div>
+
+                   
                 </div>
                 {/* music content */}
 

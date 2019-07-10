@@ -715,9 +715,33 @@ function (_React$Component) {
     value: function render() {
       var _this = this;
 
-      var songs = this.props.songs.slice(0, 4).sort(function () {
+      var songs1 = this.props.songs.sort(function () {
         return 0.5 - Math.random();
-      }).map(function (song) {
+      }).slice(0, 4).map(function (song) {
+        return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+          key: song.id
+        }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_song_song_index_item__WEBPACK_IMPORTED_MODULE_7__["default"], {
+          key: song.id,
+          path: _this.props.location.pathname,
+          song: song,
+          users: _this.props.users
+        }));
+      });
+      var songs2 = this.props.songs.sort(function () {
+        return 0.5 - Math.random();
+      }).slice(0, 4).map(function (song) {
+        return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+          key: song.id
+        }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_song_song_index_item__WEBPACK_IMPORTED_MODULE_7__["default"], {
+          key: song.id,
+          path: _this.props.location.pathname,
+          song: song,
+          users: _this.props.users
+        }));
+      });
+      var songs3 = this.props.songs.sort(function () {
+        return 0.5 - Math.random();
+      }).slice(0, 4).map(function (song) {
         return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
           key: song.id
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_song_song_index_item__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -776,7 +800,13 @@ function (_React$Component) {
         className: "section"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "section-content"
-      }, songs)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
+        className: "section-title"
+      }, "JimmyJams Charts"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
+        className: "section-body"
+      }, "The most played tracks on JimmyJams this week"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "main-row"
+      }, songs1))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "section"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "section-content"
@@ -784,67 +814,19 @@ function (_React$Component) {
         className: "section-title"
       }, "JimmyJams Charts"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
         className: "section-body"
-      }, "The most played tracks on JimmyJams this week")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "row"
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic-area"
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic-main"
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - Po.."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
-        className: "section-body"
-      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic-area"
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic-main"
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
-        className: "section-body"
-      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic-area"
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic-main"
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
-        className: "section-body"
-      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic-area"
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic-main"
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
-        className: "section-body"
-      }, "Related tracks")))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "The most played tracks on JimmyJams this week"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "main-row"
+      }, songs2))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "section"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "section-content"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
         className: "section-title"
-      }, "More of what you like"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
+      }, "JimmyJams Charts"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
         className: "section-body"
-      }, "Suggestions based on what you've liked or played")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "row"
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic-area"
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic-main"
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - Po.."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
-        className: "section-body"
-      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic-area"
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic-main"
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
-        className: "section-body"
-      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic-area"
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic-main"
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
-        className: "section-body"
-      }, "Related tracks")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic-area"
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "pic-main"
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "SunFlower - P"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
-        className: "section-body"
-      }, "Related tracks"))))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "The most played tracks on JimmyJams this week"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "main-row"
+      }, songs3)))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "main-col"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "who-to-follow"

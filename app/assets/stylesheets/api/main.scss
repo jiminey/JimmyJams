@@ -237,7 +237,8 @@ body {
 }
 
 .section {
-    margin-left:40px;
+    margin-left: 40px;
+    border-bottom: 1px solid #ccc;
 } 
 
 
@@ -313,3 +314,7 @@ body {
     cursor: pointer;
 }
 
+.main-row {
+    display: flex ;
+
+}
