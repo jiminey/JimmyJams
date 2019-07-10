@@ -6,9 +6,9 @@ import SongShow from '../song/song_show'
 
 const mapStateToProps = (state, ownProps) => {
     
-    let songId = ownProps.match.params.songId
-    let song = state.entities.song[songId]
-
+    
+    let songId = ownProps.match.params.songId;
+    let song = state.entities.songs[songId];
     return ({
         song,
         currentUser: state.session.currentUser
