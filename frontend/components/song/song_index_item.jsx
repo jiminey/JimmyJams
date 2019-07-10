@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 
 class SongIndexItem extends React.Component {
@@ -15,12 +15,17 @@ class SongIndexItem extends React.Component {
         audio.play()
     }
 
+
+
     render() {
         return (
             <div>
                 <div >
                     <div>
+                        <Link to={`/songs/${this.props.song.id}`}>
                             <img onClick={this.play} className='pic-splash' src={this.props.song.album_coverUrl}/>
+                        </Link>
+                            
                     </div>
 
                     
