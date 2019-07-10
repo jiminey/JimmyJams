@@ -9,7 +9,7 @@ class CreateSong extends React.Component {
             artist: '',
             album_coverUrl: null, 
             album_coverFile: null, 
-            song_fileURL: null, 
+            song_fileUrl: null, 
             song_fileFile: null
         };
 

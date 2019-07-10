@@ -9,9 +9,9 @@
         end
 
          if song.song_file.attached? 
-            json.song_fileURL url_for(song.song_file)
+            json.song_fileUrl url_for(song.song_file)
         else 
-            json.song_fileURL ''
+            json.song_fileUrl ''
         end
     end
 end

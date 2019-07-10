@@ -78,7 +78,7 @@ song9.song_file.attach(io: song_file9, filename: 'honesty.mp3')
 album_cover_file10 = open('https://seed-jimmyjams.s3-us-west-1.amazonaws.com/macmiller.png') 
 song10.album_cover.attach(io: album_cover_file10, filename: 'macmiller.png')
 song_file10 = open('https://seed-jimmyjams.s3-us-west-1.amazonaws.com/macmiller.mp3') 
-song1.song_file.attach(io: song_file10, filename: 'macmiller.mp3')
+song10.song_file.attach(io: song_file10, filename: 'macmiller.mp3')
 
 album_cover_file11 = open('https://seed-jimmyjams.s3-us-west-1.amazonaws.com/blau.jpg') 
 song11.album_cover.attach(io: album_cover_file11, filename: 'blau.jpg')
