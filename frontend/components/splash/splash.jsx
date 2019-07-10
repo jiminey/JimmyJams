@@ -8,11 +8,16 @@ class Splash extends React.Component {
 
     constructor(props){
         super(props)
+        this.move = this.move.bind(this)
     }
 
     componentDidMount() {
         this.props.fetchAllSongs();
         this.props.fetchAllUsers();
+    }
+
+    move(e) {
+        this.props.history.push('/library')
     }
     
     render() {
@@ -27,10 +32,6 @@ class Splash extends React.Component {
 
 
         return ( 
-
-    
-    
-
                 <div className='main-content'>
 
                     <header className='splash-header'>
@@ -74,7 +75,7 @@ class Splash extends React.Component {
                                 {songs}
                             </div>
 
-                        <button className='splash-trending-btn'>Explore trending playlists</button>
+                        <button className='splash-trending-btn' onClick={this.move} >Explore trending playlists</button>
 
 
                         </div>
@@ -83,9 +84,9 @@ class Splash extends React.Component {
                     <div className='bottom-content'>
                         
                     </div>
+                
 
-
-                </div>
+            </div>
 
         )
     }
