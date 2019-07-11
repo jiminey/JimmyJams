@@ -92,6 +92,7 @@ class SongShow extends React.Component {
                             {/* waveform here */}
                            <div>
 
+                            <i class="fa fa-trash" aria-hidden="true"></i>
                            </div>
 
                        </div>

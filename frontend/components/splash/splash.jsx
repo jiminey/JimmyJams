@@ -75,7 +75,7 @@ class Splash extends React.Component {
                                 {songs}
                             </div>
 
-                        <button className='splash-trending-btn' onClick={this.move} >Explore trending playlists</button>
+                        <button className='splash-trending-btn' onClick={() => this.props.openModal('login')} >Explore trending playlists</button>
 
 
                         </div>
@@ -91,7 +91,7 @@ class Splash extends React.Component {
         )
     }
 }
-    
+
 
 
 
