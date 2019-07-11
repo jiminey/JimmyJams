@@ -1375,6 +1375,7 @@ function (_React$Component) {
         }), " Uploading..."));
       } else {
         return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, " ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+          className: "form-upload-btn",
           type: "submit",
           value: "Upload"
         })));
@@ -1427,21 +1428,26 @@ function (_React$Component) {
         className: "dropdown"
       }, " . . ."))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "upload-main"
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        className: "upload-size"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("form", {
         onSubmit: this.handleSubmit
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "form-content"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
         className: "fh1"
-      }, "Choose and upload your tracks and albums here"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", null, " Title", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+      }, "Choose and upload your tracks and albums here"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", null, "Title:", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+        className: "artist-input",
         onChange: this.handleChange('title'),
         type: "text",
-        placeholder: "Enter song title"
-      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", null, " Artist", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+        placeholder: "  Enter the title of the track"
+      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", null, "Artist:", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+        className: "artist-input",
         onChange: this.handleChange('artist'),
         type: "text",
-        placeholder: "Enter name of artist"
+        placeholder: "  Enter the name of artist"
       })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+        className: "image-btn",
         onChange: this.handleAlbumCover,
         type: "file",
         accept: "image/*"
@@ -1449,15 +1455,7 @@ function (_React$Component) {
         onChange: this.handleSongFile,
         type: "file",
         accept: "audio/*"
-      }), this.loading()), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "blue-hyperlink-help"
-      }, "Need help?"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "fine-print"
-      }, "We may use your email and devices for updates and tips on SoundCloud's products and services, and for activities notifications. You can unsubscribe for free at any time in your notification settings."), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "fine-print"
-      }, "We may use information you provide us in order to show you targeted ads as described in our ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
-        className: "blue-hyperlink"
-      }, "Privacy Policy.")))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_9__["default"], null));
+      }), this.loading())))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_9__["default"], null));
     }
   }]);
 
@@ -46496,7 +46494,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

@@ -87,7 +87,7 @@ class CreateSong extends React.Component {
         } else {
             return (
                 <div>
-                    <div> <input type="submit" value="Upload" /></div>
+                    <div> <input className='form-upload-btn' type="submit" value="Upload" /></div>
                 </div>
             )
         }
@@ -132,40 +132,45 @@ class CreateSong extends React.Component {
                 </header>
 
                 <div className='upload-main'>
+                    <div className='upload-size'>
+                        
                     <form onSubmit={this.handleSubmit} >
                         <div className='form-content' >
                             <h1 className='fh1'>Choose and upload your tracks and albums here</h1>
                             <br />
-                            <label> Title
+                            <label>Title:
                                 <input
+                                    className='artist-input'
                                     onChange={this.handleChange('title')}
                                     type="text"
-                                    placeholder='Enter song title'
-                        
-                                />
+                                    placeholder='  Enter the title of the track'
+                                    
+                                    />
                             </label>
                             <br />
-                            <label> Artist
+                            <label>Artist:
                                 <input
+                                    className='artist-input'
                                     onChange={this.handleChange('artist')}
                                     type="text"
-                                    placeholder="Enter name of artist"
-                                
-                                />
+                                    placeholder="  Enter the name of artist"
+                                    
+                                    />
                             </label>
                             <br />
-                            <input
+                            <input  
 
+                                className='image-btn'
                                 onChange={this.handleAlbumCover}
                                 type="file"
                                 accept='image/*'
-                            />
+                                />
                             <input
-                            
+                                
                                 onChange={this.handleSongFile}
                                 type="file"
                                 accept='audio/*'
-                            />
+                                />
                             
                             
                                 {this.loading()}
@@ -173,22 +178,10 @@ class CreateSong extends React.Component {
 
 
                         </div>
-                        <br />
-                        <p className='blue-hyperlink-help'>Need help?</p>
-                        <br />
-                        <p className='fine-print'>
-                            We may use your email and devices
-                            for updates and tips on SoundCloud's
-                            products and services,
-                            and for activities notifications.
-                            You can unsubscribe for free at any time in your
-                            notification settings.</p>
-                        <br />
-                        <p className='fine-print'>We may use information you provide us in
-                        order to show you targeted ads as described
-                        in our <span className='blue-hyperlink'>Privacy Policy.</span></p>
+                     
                     </form>
                 </div>
+            </div>
 
                 <AudioPlayerContainer /> 
 
