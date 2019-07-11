@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import SongIndexItem from '../song/song_index_item'
+import AudioPlayerContainer from '../audioplayer/audioplayer_container'
 
 class CreateSong extends React.Component {
     constructor(props) {
@@ -111,6 +112,8 @@ class CreateSong extends React.Component {
                     </div>
 
                 </div>
+                <AudioPlayerContainer /> 
+
         </div>
         )
     }

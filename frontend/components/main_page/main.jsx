@@ -1,6 +1,7 @@
 import React from 'react' 
 import {Link} from 'react-router-dom'
 import SongIndexItem from '../song/song_index_item'
+import AudioPlayerContainer from '../audioplayer/audioplayer_container'
 
 class Main extends React.Component {
 
@@ -297,6 +298,8 @@ class Main extends React.Component {
 
             </div> 
             {/* main page content */}
+                <AudioPlayerContainer /> 
+
         </div>
         ) 
     };

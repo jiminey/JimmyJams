@@ -387,7 +387,7 @@ var App = function App() {
     exact: true,
     path: "/",
     component: _splash_splash_container__WEBPACK_IMPORTED_MODULE_2__["default"]
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_8__["default"], null));
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
@@ -439,23 +439,25 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "playbar"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "playbar-sub"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "playbar-left"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "p1"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("i", {
         "class": "fa fa-step-backward",
         "aria-hidden": "true"
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("i", {
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "p2"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("i", {
         "class": "fa fa-play",
         "aria-hidden": "true"
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("i", {
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "p3"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("i", {
         "class": "fa fa-step-forward",
         "aria-hidden": "true"
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("i", {
-        "class": "fa fa-random",
-        "aria-hidden": "true"
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("i", {
-        "class": "fa fa-repeat",
-        "aria-hidden": "true"
-      })));
+      })))));
     }
   }]);
 
@@ -515,6 +517,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _song_song_index_item__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../song/song_index_item */ "./frontend/components/song/song_index_item.jsx");
+/* harmony import */ var _audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../audioplayer/audioplayer_container */ "./frontend/components/audioplayer/audioplayer_container.js");
+
 
 
 
@@ -647,7 +651,7 @@ function (_React$Component) {
         className: "section-body"
       }, "The tracks you recently liked"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "main-row-lib"
-      }, songs2))))));
+      }, songs2))))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_8__["default"], null));
     }
   }]);
 
@@ -721,6 +725,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _song_song_index_item__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../song/song_index_item */ "./frontend/components/song/song_index_item.jsx");
+/* harmony import */ var _audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../audioplayer/audioplayer_container */ "./frontend/components/audioplayer/audioplayer_container.js");
+
 
 
 
@@ -1077,7 +1083,7 @@ function (_React$Component) {
         className: "go-mobile"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "wtf-title"
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "Go mobile"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "View All"))))));
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "Go mobile"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "View All"))))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_8__["default"], null));
     }
   }]);
 
@@ -1258,6 +1264,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../audioplayer/audioplayer_container */ "./frontend/components/audioplayer/audioplayer_container.js");
+
 
 
 
@@ -1442,7 +1450,7 @@ function (_React$Component) {
         className: "fine-print"
       }, "We may use information you provide us in order to show you targeted ads as described in our ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
         className: "blue-hyperlink"
-      }, "Privacy Policy.")))));
+      }, "Privacy Policy.")))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_9__["default"], null));
     }
   }]);
 
@@ -1588,6 +1596,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../audioplayer/audioplayer_container */ "./frontend/components/audioplayer/audioplayer_container.js");
+
 
 
 
@@ -1914,7 +1924,7 @@ function (_React$Component) {
         className: "go-mobile"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "wtf-title"
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "Go mobile"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "View All"))))))));
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "Go mobile"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "View All"))))))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_7__["default"], null));
     }
   }]);
 

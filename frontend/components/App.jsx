@@ -24,7 +24,6 @@ const App = () => (
             <Route exact path='/' component={SplashContainer} />
         </Switch>
 
-        <AudioPlayerContainer /> 
     </div>
         
 );

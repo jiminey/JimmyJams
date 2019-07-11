@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import AudioPlayerContainer from '../../audioplayer/audioplayer_container'
 
 class CreateSong extends React.Component {
     constructor(props){
@@ -175,6 +176,8 @@ class CreateSong extends React.Component {
                         in our <span className='blue-hyperlink'>Privacy Policy.</span></p>
                     </form>
                 </div>
+                <AudioPlayerContainer /> 
+
             </div>
         )
     }
