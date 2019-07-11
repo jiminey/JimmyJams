@@ -11,7 +11,8 @@ const mapStateToProps = ({session}) => {
 }
     
 const mapDispatchToProps = dispatch => ({
-    createSong: (song) => dispatch(createSong(song))
+    createSong: (song) => dispatch(createSong(song)),
+    
 }) 
 
 

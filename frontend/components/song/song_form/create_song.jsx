@@ -11,18 +11,21 @@ class CreateSong extends React.Component {
             album_coverUrl: null, 
             album_coverFile: null, 
             song_fileUrl: null, 
-            song_fileFile: null
+            song_fileFile: null,
+            loading: false
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleAlbumCover = this.handleAlbumCover.bind(this);
         this.handleSongFile = this.handleSongFile.bind(this);
+        this.loading = this.loading.bind(this);
 
     }
 
 
     handleSubmit(e) {
         e.preventDefault();
+        this.setState({ loading: true });
 
         const formData = new FormData();
         formData.append('song[title]', this.state.title);
@@ -37,19 +40,7 @@ class CreateSong extends React.Component {
         }
 
 
-        this.props.createSong(formData).then( res => console.log(res))
-
-        // $.ajax({
-        //     url: 'api/posts',
-        //     method: 'POST',
-        //     data: formData,
-        //     contentType: false,
-        //     processData: false
-        // }).then (
-        //     (response) => console.log(response.message),
-        //     (response) => console.log(response.responseJSON)
-        // )
-
+        this.props.createSong(formData).then( res => this.then.history.push(`/library`) )
 
     }
     
@@ -63,9 +54,7 @@ class CreateSong extends React.Component {
         if (file) {
             reader.readAsDataURL(file);
         } 
-        // else {
-        //     this.setState({ album_coverUrl: "", album_coverFile: null });
-        // }
+
     }
 
     handleSongFile(e) {
@@ -85,6 +74,23 @@ class CreateSong extends React.Component {
         return e => (
             this.setState({[field]: e.currentTarget.value})
         )
+    }
+
+
+    loading() {
+        if (this.state.loading === true) {
+            return (
+                <div>
+                   <div><i className="fas fa-spinner fa-spin"></i> Uploading...</div>
+                </div>
+            )
+        } else {
+            return (
+                <div>
+                    <div> <input type="submit" value="Upload" /></div>
+                </div>
+            )
+        }
     }
 
 
@@ -157,8 +163,12 @@ class CreateSong extends React.Component {
                                 type="file"
                                 accept='audio/*'
                             />
+                            
+                            
+                                {this.loading()}
+                    
 
-                            <button>Submit</button>
+
                         </div>
                         <br />
                         <p className='blue-hyperlink-help'>Need help?</p>
@@ -176,6 +186,7 @@ class CreateSong extends React.Component {
                         in our <span className='blue-hyperlink'>Privacy Policy.</span></p>
                     </form>
                 </div>
+
                 <AudioPlayerContainer /> 
 
             </div>

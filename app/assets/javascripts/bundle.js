@@ -550,33 +550,19 @@ function (_React$Component) {
     value: function render() {
       var _this = this;
 
+      var songs2 = this.props.songs.map(function (song) {
+        return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+          key: song.id
+        }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_song_song_index_item__WEBPACK_IMPORTED_MODULE_7__["default"], {
+          key: song.id,
+          path: _this.props.location.pathname,
+          song: song,
+          users: _this.props.users
+        }));
+      });
       var songs1 = this.props.songs.sort(function () {
         return 0.5 - Math.random();
       }).slice(0, 6).map(function (song) {
-        return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-          key: song.id
-        }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_song_song_index_item__WEBPACK_IMPORTED_MODULE_7__["default"], {
-          key: song.id,
-          path: _this.props.location.pathname,
-          song: song,
-          users: _this.props.users
-        }));
-      });
-      var songs2 = this.props.songs.sort(function () {
-        return 0.5 - Math.random();
-      }).slice(0, 12).map(function (song) {
-        return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-          key: song.id
-        }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_song_song_index_item__WEBPACK_IMPORTED_MODULE_7__["default"], {
-          key: song.id,
-          path: _this.props.location.pathname,
-          song: song,
-          users: _this.props.users
-        }));
-      });
-      var songs3 = this.props.songs.sort(function () {
-        return 0.5 - Math.random();
-      }).slice(0, 4).map(function (song) {
         return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
           key: song.id
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_song_song_index_item__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -637,9 +623,9 @@ function (_React$Component) {
         className: "section-content"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
         className: "section-title"
-      }, "JimmyJams Recently played"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
+      }, "JimmyJams Featured Hits"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
         className: "section-body"
-      }, "The tracks you recently played "), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "Our recently featured tracks "), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "main-row"
       }, songs1))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "section"
@@ -647,9 +633,9 @@ function (_React$Component) {
         className: "section-content"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
         className: "section-title"
-      }, "JimmyJams Likes"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
+      }, "All of the JimmyJams"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
         className: "section-body"
-      }, "The tracks you recently liked"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "The tracks you like and can't get enough of"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "main-row-lib"
       }, songs2))))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_8__["default"], null));
     }
@@ -1293,18 +1279,25 @@ function (_React$Component) {
       album_coverUrl: null,
       album_coverFile: null,
       song_fileUrl: null,
-      song_fileFile: null
+      song_fileFile: null,
+      loading: false
     };
     _this.handleSubmit = _this.handleSubmit.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default()(_this));
     _this.handleAlbumCover = _this.handleAlbumCover.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default()(_this));
     _this.handleSongFile = _this.handleSongFile.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default()(_this));
+    _this.loading = _this.loading.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default()(_this));
     return _this;
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default()(CreateSong, [{
     key: "handleSubmit",
     value: function handleSubmit(e) {
+      var _this2 = this;
+
       e.preventDefault();
+      this.setState({
+        loading: true
+      });
       var formData = new FormData();
       formData.append('song[title]', this.state.title);
       formData.append('song[artist]', this.state.artist);
@@ -1318,43 +1311,12 @@ function (_React$Component) {
       }
 
       this.props.createSong(formData).then(function (res) {
-        return console.log(res);
-      }); // $.ajax({
-      //     url: 'api/posts',
-      //     method: 'POST',
-      //     data: formData,
-      //     contentType: false,
-      //     processData: false
-      // }).then (
-      //     (response) => console.log(response.message),
-      //     (response) => console.log(response.responseJSON)
-      // )
+        return _this2.then.history.push("/library");
+      });
     }
   }, {
     key: "handleAlbumCover",
     value: function handleAlbumCover(e) {
-      var _this2 = this;
-
-      var reader = new FileReader();
-      var file = e.currentTarget.files[0];
-
-      reader.onloadend = function () {
-        return _this2.setState({
-          album_coverUrl: reader.result,
-          album_coverFile: file
-        });
-      };
-
-      if (file) {
-        reader.readAsDataURL(file);
-      } // else {
-      //     this.setState({ album_coverUrl: "", album_coverFile: null });
-      // }
-
-    }
-  }, {
-    key: "handleSongFile",
-    value: function handleSongFile(e) {
       var _this3 = this;
 
       var reader = new FileReader();
@@ -1362,6 +1324,25 @@ function (_React$Component) {
 
       reader.onloadend = function () {
         return _this3.setState({
+          album_coverUrl: reader.result,
+          album_coverFile: file
+        });
+      };
+
+      if (file) {
+        reader.readAsDataURL(file);
+      }
+    }
+  }, {
+    key: "handleSongFile",
+    value: function handleSongFile(e) {
+      var _this4 = this;
+
+      var reader = new FileReader();
+      var file = e.currentTarget.files[0];
+
+      reader.onloadend = function () {
+        return _this4.setState({
           song_fileUrl: reader.result,
           song_fileFile: file
         });
@@ -1374,11 +1355,25 @@ function (_React$Component) {
   }, {
     key: "handleChange",
     value: function handleChange(field) {
-      var _this4 = this;
+      var _this5 = this;
 
       return function (e) {
-        return _this4.setState(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({}, field, e.currentTarget.value));
+        return _this5.setState(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({}, field, e.currentTarget.value));
       };
+    }
+  }, {
+    key: "loading",
+    value: function loading() {
+      if (this.state.loading === true) {
+        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+          className: "fas fa-spinner fa-spin"
+        }), " Uploading..."));
+      } else {
+        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, " ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+          type: "submit",
+          value: "Upload"
+        })));
+      }
     }
   }, {
     key: "render",
@@ -1442,7 +1437,7 @@ function (_React$Component) {
         onChange: this.handleSongFile,
         type: "file",
         accept: "audio/*"
-      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", null, "Submit")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+      }), this.loading()), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         className: "blue-hyperlink-help"
       }, "Need help?"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         className: "fine-print"
