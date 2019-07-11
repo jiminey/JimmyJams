@@ -1311,7 +1311,7 @@ function (_React$Component) {
       }
 
       this.props.createSong(formData).then(function (res) {
-        return _this2.then.history.push("/library");
+        return _this2.props.history.push("/library");
       });
     }
   }, {

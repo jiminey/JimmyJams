@@ -40,7 +40,7 @@ class CreateSong extends React.Component {
         }
 
 
-        this.props.createSong(formData).then( res => this.then.history.push(`/library`) )
+        this.props.createSong(formData).then( res => this.props.history.push(`/library`) )
 
     }
     
