@@ -14,6 +14,11 @@ class Main extends React.Component {
        this.props.fetchAllUsers();
    }
 
+    move() {
+
+        this.props.history.push('/');
+    }
+
 
 
     render() {
@@ -42,6 +47,8 @@ class Main extends React.Component {
             )
         });
 
+
+       
         
 
 
@@ -51,12 +58,14 @@ class Main extends React.Component {
                 <header className='main-navbar'>
 
                     <div className='main-left'>
-                        <div className='header-logo'>
-                            <Link to='/'>HOMEPAGE</Link>
+                        <div className='header-logo' onClick={this.move}>
+                        
                         </div>
+
                         <button className='home'>
-                            <Link to='/main'>Home</Link>
+                            <Link className='home2' to='/main'>Home</Link>
                         </button>
+
                         <button className='stream'>Stream</button>
                         <button className='library'>
                             <Link to='/library'>Library</Link>

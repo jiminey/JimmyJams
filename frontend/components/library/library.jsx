@@ -42,7 +42,7 @@ class CreateSong extends React.Component {
 
                     <div className='main-left'>
                         <div className='header-logo'>
-                            <Link to='/'>HOMEPAGE</Link>
+                            <Link className='home2' to='/'></Link>
                         </div>
                         <button className='home'>
                             <Link to='/main'>Home</Link>

@@ -15,7 +15,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
     const personalGreeting = () => (
         <hgroup className="header-group">
 
-            <button className='signup-btn' onClick={() => openModal('signup')}>Log out</button>
+            <button className='signup-btn' onClick={logout}>Log out</button>
         </hgroup>
     );
 

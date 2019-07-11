@@ -2,6 +2,8 @@ import { connect } from 'react-redux';
 
 import { fetchSong } from '../../actions/song_actions';
 import SongShow from '../song/song_show'
+import {deleteSong, updateSong} from '../../actions/song_actions'
+import {openModal} from '../../actions/modal_actions'
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -16,7 +18,10 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-    fetchSong: (id) => dispatch(fetchSong(id))
+    fetchSong: (id) => dispatch(fetchSong(id)),
+    deleteSong: id => dispatch(deleteSong(id)),
+    updateSong: song => dispatch(updateSong(song)),
+    openModal: (type, song) => dispatch(openModal(type, song))
 });
 
 export default connect(

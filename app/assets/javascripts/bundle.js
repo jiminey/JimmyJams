@@ -374,7 +374,7 @@ var App = function App() {
     exact: true,
     path: "/library",
     component: _library_library_container__WEBPACK_IMPORTED_MODULE_7__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_3__["AuthRoute"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Route"], {
     exact: true,
     path: "/upload",
     component: _song_song_form_create_song_container__WEBPACK_IMPORTED_MODULE_6__["default"]
@@ -578,8 +578,9 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "header-logo"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
+        className: "home2",
         to: "/"
-      }, "HOMEPAGE")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
         className: "home"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
         to: "/main"
@@ -739,6 +740,11 @@ function (_React$Component) {
       this.props.fetchAllUsers();
     }
   }, {
+    key: "move",
+    value: function move() {
+      this.props.history.push('/');
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this = this;
@@ -784,12 +790,12 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "main-left"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "header-logo"
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
-        to: "/"
-      }, "HOMEPAGE")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+        className: "header-logo",
+        onClick: this.move
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
         className: "home"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
+        className: "home2",
         to: "/main"
       }, "Home")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
         className: "stream"
@@ -1384,8 +1390,9 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "header-logo"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["Link"], {
+        className: "home2",
         to: "/"
-      }, "HOMEPAGE")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
         className: "home"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["Link"], {
         to: "/main"
@@ -1418,9 +1425,15 @@ function (_React$Component) {
         className: "mail"
       }, " "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "dropdown"
-      }, " . . ."))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("form", {
+      }, " . . ."))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        className: "upload-main"
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("form", {
         onSubmit: this.handleSubmit
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", null, " Title", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        className: "form-content"
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
+        className: "fh1"
+      }, "Choose and upload your tracks and albums here"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", null, " Title", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         onChange: this.handleChange('title'),
         type: "text",
         placeholder: "Enter song title"
@@ -1624,6 +1637,8 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       if (!this.props.song) {
         return null;
       }
@@ -1635,8 +1650,9 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "header-logo"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
+        className: "home2",
         to: "/"
-      }, "HOMEPAGE")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
         className: "home"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
         to: "/main"
@@ -1686,7 +1702,11 @@ function (_React$Component) {
         className: "top-artist"
       }, this.props.song.artist), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "top-title"
-      }, this.props.song.title))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("i", {
+      }, this.props.song.title))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+        onClick: function onClick() {
+          return _this2.props.openModal('deletesong', song);
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("i", {
         "class": "fa fa-trash",
         "aria-hidden": "true"
       }))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -1945,6 +1965,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _actions_song_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../actions/song_actions */ "./frontend/actions/song_actions.js");
 /* harmony import */ var _song_song_show__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../song/song_show */ "./frontend/components/song/song_show.jsx");
+/* harmony import */ var _actions_modal_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/modal_actions */ "./frontend/actions/modal_actions.js");
+
+
 
 
 
@@ -1962,6 +1985,15 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     fetchSong: function fetchSong(id) {
       return dispatch(Object(_actions_song_actions__WEBPACK_IMPORTED_MODULE_1__["fetchSong"])(id));
+    },
+    deleteSong: function deleteSong(id) {
+      return dispatch(Object(_actions_song_actions__WEBPACK_IMPORTED_MODULE_1__["deleteSong"])(id));
+    },
+    updateSong: function updateSong(song) {
+      return dispatch(Object(_actions_song_actions__WEBPACK_IMPORTED_MODULE_1__["updateSong"])(song));
+    },
+    openModal: function openModal(type, song) {
+      return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_3__["openModal"])(type, song));
     }
   };
 };
@@ -2009,9 +2041,7 @@ var Greeting = function Greeting(_ref) {
       className: "header-group"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "signup-btn",
-      onClick: function onClick() {
-        return openModal('signup');
-      }
+      onClick: logout
     }, "Log out"));
   };
 

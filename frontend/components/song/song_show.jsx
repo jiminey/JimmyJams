@@ -36,7 +36,7 @@ class SongShow extends React.Component {
 
                     <div className='main-left'>
                         <div className='header-logo'>
-                            <Link to='/'>HOMEPAGE</Link>
+                            <Link className='home2' to='/'></Link>
                         </div>
                         <button className='home'>
                             <Link to='/main'>Home</Link>
@@ -92,9 +92,10 @@ class SongShow extends React.Component {
                             {/* waveform here */}
                            <div>
 
-                            <i class="fa fa-trash" aria-hidden="true"></i>
                            </div>
-
+                            <button onClick={() => this.props.openModal('deletesong', song )} >
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                            </button>
                        </div>
 
 

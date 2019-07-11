@@ -19,7 +19,7 @@ const App = () => (
         <Switch >
             <Route exact path='/songs/:songId' component={SongShowContainer}/> 
             <AuthRoute exact path='/library' component={LibraryContainer} />
-            <AuthRoute exact path='/upload'component={CreateSongFormContainer} /> 
+            <Route exact path='/upload'component={CreateSongFormContainer} /> 
             <AuthRoute exact path='/main' component={MainContainer} />
             <Route exact path='/' component={SplashContainer} />
         </Switch>

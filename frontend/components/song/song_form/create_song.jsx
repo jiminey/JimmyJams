@@ -103,7 +103,7 @@ class CreateSong extends React.Component {
 
                     <div className='main-left'>
                         <div className='header-logo'>
-                            <Link to='/'>HOMEPAGE</Link>
+                            <Link className='home2' to='/'></Link>
                         </div>
                         <button className='home'>
                             <Link to='/main'>Home</Link>
@@ -131,9 +131,10 @@ class CreateSong extends React.Component {
                     </div>
                 </header>
 
-                <div>
+                <div className='upload-main'>
                     <form onSubmit={this.handleSubmit} >
-                        <div >
+                        <div className='form-content' >
+                            <h1 className='fh1'>Choose and upload your tracks and albums here</h1>
                             <br />
                             <label> Title
                                 <input
@@ -154,11 +155,13 @@ class CreateSong extends React.Component {
                             </label>
                             <br />
                             <input
+
                                 onChange={this.handleAlbumCover}
                                 type="file"
                                 accept='image/*'
                             />
                             <input
+                            
                                 onChange={this.handleSongFile}
                                 type="file"
                                 accept='audio/*'
