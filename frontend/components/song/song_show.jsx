@@ -7,6 +7,7 @@ class SongShow extends React.Component {
         super(props)
 
         this.state = this.props.song
+        this.handleDelete = this.handleDelete.bind(this)
 
 
     };
@@ -16,6 +17,12 @@ class SongShow extends React.Component {
         this.props.fetchSong(songId);
     }
 
+
+    handleDelete(e) {
+        e.preventDefault();
+        this.props.deleteSong(this.props.song.id)
+        this.props.history.push('/library')
+    }
 
     render() {
 
@@ -93,7 +100,7 @@ class SongShow extends React.Component {
                            <div>
 
                            </div>
-                            <button onClick={() => this.props.openModal('deletesong', song )} >
+                            <button onClick={this.handleDelete}>
                                 <i class="fa fa-trash" aria-hidden="true"></i>
                             </button>
                        </div>
