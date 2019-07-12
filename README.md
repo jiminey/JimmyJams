@@ -25,6 +25,8 @@ JimmyJams is a fullstack application that uses Ruby on Rails as a backend API, P
 
 Users can create their own account/re-login or try out the site with the demo-login function/.
 
+![Demo Login Function](https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/demologin.gif?raw=true)
+
 ### <u> Song interaction </u>
 
 Users can upload, delete, and listen to songs on the site.
