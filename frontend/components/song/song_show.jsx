@@ -79,7 +79,7 @@ class SongShow extends React.Component {
 
                        <div className='show-top-left'>
                            <div className='show-top-left-2'> 
-                                <img className= 'orangeplay' src='assets/orangeplay' ></img>
+                                <img className='orangeplay' src='https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangeplay.png?raw=true' ></img>
                                 
                                     <div className='top-words'>
                                         <div className='top-artist'>{this.props.song.artist}</div>

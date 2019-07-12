@@ -1693,7 +1693,7 @@ function (_React$Component) {
         className: "show-top-left-2"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         className: "orangeplay",
-        src: "assets/orangeplay"
+        src: "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangeplay.png?raw=true"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "top-words"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
