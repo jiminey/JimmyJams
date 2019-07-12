@@ -17,9 +17,9 @@ const App = () => (
     <div className='splash'>
         <Modal /> 
         <Switch >
-            <Route exact path='/songs/:songId' component={SongShowContainer}/> 
+            <AuthRoute exact path='/songs/:songId' component={SongShowContainer}/> 
             <AuthRoute exact path='/library' component={LibraryContainer} />
-            <Route exact path='/upload'component={CreateSongFormContainer} /> 
+            <AuthRoute exact path='/upload'component={CreateSongFormContainer} /> 
             <AuthRoute exact path='/main' component={MainContainer} />
             <Route exact path='/' component={SplashContainer} />
         </Switch>
