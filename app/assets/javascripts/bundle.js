@@ -1734,7 +1734,9 @@ function (_React$Component) {
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, SongShow);
 
     _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(SongShow).call(this, props));
-    _this.state = _this.props.song;
+    _this.state = {
+      audio: new Audio("".concat(_this.props.song.song_fileUrl))
+    };
     _this.handleDelete = _this.handleDelete.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     _this.play = _this.play.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     return _this;
@@ -1760,13 +1762,11 @@ function (_React$Component) {
   }, {
     key: "play",
     value: function play(e) {
-      var audio = new Audio("".concat(this.props.song.song_fileUrl));
-
       if (this.props.playState) {
-        audio.pause();
+        this.state.audio.pause();
         this.props.pauseSong(this.props.song);
       } else {
-        audio.play();
+        this.state.audio.play();
         this.props.playSong(this.props.song);
       }
     }
