@@ -29,10 +29,10 @@ class SongShow extends React.Component {
     play(e) {
         if (this.props.playState){
             this.state.audio.pause();
-            this.props.pauseSong(this.props.song)
+            this.props.pauseSong()
         } else {
             this.state.audio.play();
-            this.props.playSong(this.props.song);
+            this.props.playSong(this.props.song, this.state.audio);
         }
     }
 

@@ -104,12 +104,13 @@ __webpack_require__.r(__webpack_exports__);
 var PLAYSONG = "PLAYSONG";
 var PAUSESONG = "PAUSESONG";
 var RESUME = "RESUME";
-var playSong = function playSong(song) {
+var playSong = function playSong(song, audio) {
   return {
     type: PLAYSONG,
     songUrl: song.song_fileUrl,
     songId: song.id,
-    currentSong: song
+    currentSong: song,
+    currentAudio: audio
   };
 };
 var pauseSong = function pauseSong() {
@@ -581,14 +582,15 @@ var msp = function msp(state) {
     songUrl: state.player.songUrl,
     playState: state.player.playState,
     currentSong: state.entities.songs[state.player.songId],
-    songList: state.player.songList
+    songList: state.player.songList,
+    currentAudio: state.player.currentAudio
   };
 };
 
 var mdp = function mdp(dispatch) {
   return {
-    playSong: function playSong(song) {
-      return dispatch(Object(_actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_2__["playSong"])(song));
+    playSong: function playSong(song, audio) {
+      return dispatch(Object(_actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_2__["playSong"])(song, audio));
     },
     pauseSong: function pauseSong() {
       return dispatch(Object(_actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_2__["pauseSong"])());
@@ -1764,10 +1766,10 @@ function (_React$Component) {
     value: function play(e) {
       if (this.props.playState) {
         this.state.audio.pause();
-        this.props.pauseSong(this.props.song);
+        this.props.pauseSong();
       } else {
         this.state.audio.play();
-        this.props.playSong(this.props.song);
+        this.props.playSong(this.props.song, this.state.audio);
       }
     }
   }, {
@@ -2131,8 +2133,8 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
-    playSong: function playSong(song) {
-      return dispatch(Object(_actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_4__["playSong"])(song));
+    playSong: function playSong(song, audio) {
+      return dispatch(Object(_actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_4__["playSong"])(song, audio));
     },
     pauseSong: function pauseSong() {
       return dispatch(Object(_actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_4__["pauseSong"])());
@@ -2512,7 +2514,8 @@ var intialState = {
   songUrl: null,
   songId: null,
   songList: [],
-  currentSong: null
+  currentSong: null,
+  currentAudio: null
 };
 
 var audioPlayersReducer = function audioPlayersReducer() {
@@ -2527,7 +2530,8 @@ var audioPlayersReducer = function audioPlayersReducer() {
         currentSong: action.currentSong,
         songId: action.songId,
         songUrl: action.songUrl,
-        playState: true
+        playState: true,
+        currentAudio: action.currentAudio
       });
 
     case _actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_0__["PAUSESONG"]:
