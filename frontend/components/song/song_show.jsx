@@ -16,7 +16,7 @@ class SongShow extends React.Component {
     toggleDisplay() {
         if (this.props.playState){
             return (
-                <img onClick={this.play} className='orangeplay' src='https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangeplay.png?raw=true' ></img>
+                <img onClick={this.play} className='orangeplay' src='https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangepause.png?raw=true' ></img>
             )
         } else {
             return (
@@ -27,7 +27,11 @@ class SongShow extends React.Component {
 
     play(e) {
         let audio = new Audio(`${this.props.song.song_fileUrl}`);
-        audio.play();
+        if (this.playState){
+            audio.pause();
+        } else {
+            audio.play();
+        }
         this.props.playSong(this.props.song);
     }
 

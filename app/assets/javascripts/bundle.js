@@ -1747,7 +1747,7 @@ function (_React$Component) {
         return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
           onClick: this.play,
           className: "orangeplay",
-          src: "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangeplay.png?raw=true"
+          src: "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangepause.png?raw=true"
         });
       } else {
         return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
@@ -1761,7 +1761,13 @@ function (_React$Component) {
     key: "play",
     value: function play(e) {
       var audio = new Audio("".concat(this.props.song.song_fileUrl));
-      audio.play();
+
+      if (this.playState) {
+        audio.pause();
+      } else {
+        audio.play();
+      }
+
       this.props.playSong(this.props.song);
     }
   }, {
