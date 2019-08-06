@@ -16,8 +16,10 @@ class AudioPlayer extends React.Component {
 
     toggle(){
         if(this.state.playing){
+            this.props.currentAudio.pause(); 
             this.props.pauseSong();
         } else {
+            this.props.currentAudio.play();
             this.props.resume();
         }
 
@@ -51,9 +53,9 @@ class AudioPlayer extends React.Component {
             )
         } else {
             return (
-                <div>
-                    <div><img src={currentSong.album_coverUrl} /></div>
-                    <div>
+                <div >
+                    <div ><img src={currentSong.album_coverUrl} /></div>
+                    <div >
                         <div>{currentSong.title}</div>
                     </div>
                 </div>
@@ -88,8 +90,8 @@ class AudioPlayer extends React.Component {
                     </div>
 
                 </div>
-
                 {this.displaySongThumbnail()}
+
 
             </div>
 

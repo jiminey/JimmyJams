@@ -488,8 +488,10 @@ function (_React$Component) {
     key: "toggle",
     value: function toggle() {
       if (this.state.playing) {
+        this.props.currentAudio.pause();
         this.props.pauseSong();
       } else {
+        this.props.currentAudio.play();
         this.props.resume();
       }
 
@@ -2526,6 +2528,10 @@ var audioPlayersReducer = function audioPlayersReducer() {
 
   switch (action.type) {
     case _actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_0__["PLAYSONG"]:
+      if (oldState.currentAudio !== action.currentAudio && oldState.currentAudio !== null) {
+        oldState.currentAudio.pause();
+      }
+
       return Object.assign(newState, {
         currentSong: action.currentSong,
         songId: action.songId,

@@ -8,6 +8,9 @@ const audioPlayersReducer = (oldState = intialState, action) => {
     let newState = Object.assign({} , oldState);
     switch (action.type) {
         case PLAYSONG:
+            if (oldState.currentAudio !== action.currentAudio && oldState.currentAudio !== null) {
+                oldState.currentAudio.pause();
+            }
             return Object.assign(newState, { currentSong: action.currentSong, songId: action.songId, songUrl: action.songUrl, playState: true, currentAudio: action.currentAudio } )
         case PAUSESONG:
             return Object.assign(newState, {playState: false})
