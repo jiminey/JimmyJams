@@ -12,6 +12,19 @@ class SongShow extends React.Component {
 
     };
 
+
+    toggleDisplay() {
+        if (this.props.playState){
+            return (
+                <img onClick={this.play} className='orangeplay' src='https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangeplay.png?raw=true' ></img>
+            )
+        } else {
+            return (
+                <img onClick={this.play} className='orangeplay' src='https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangeplay.png?raw=true' ></img>
+            )
+        }
+    }
+
     play(e) {
         let audio = new Audio(`${this.props.song.song_fileUrl}`);
         audio.play();
@@ -93,8 +106,8 @@ class SongShow extends React.Component {
 
                        <div className='show-top-left'>
                            <div className='show-top-left-2'> 
-                                <img onClick={this.play} className='orangeplay' src='https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangeplay.png?raw=true' ></img>
-                                
+                                {/* <img onClick={this.play} className='orangeplay' src='https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangeplay.png?raw=true' ></img> */}
+                                {this.toggleDisplay()}
                                     <div className='top-words'>
                                         <div className='top-artist'>{this.props.song.artist}</div>
                                         <div className='top-title'>{this.props.song.title}</div>

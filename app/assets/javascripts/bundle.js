@@ -1741,6 +1741,23 @@ function (_React$Component) {
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(SongShow, [{
+    key: "toggleDisplay",
+    value: function toggleDisplay() {
+      if (this.props.playState) {
+        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
+          onClick: this.play,
+          className: "orangeplay",
+          src: "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangeplay.png?raw=true"
+        });
+      } else {
+        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
+          onClick: this.play,
+          className: "orangeplay",
+          src: "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangeplay.png?raw=true"
+        });
+      }
+    }
+  }, {
     key: "play",
     value: function play(e) {
       var audio = new Audio("".concat(this.props.song.song_fileUrl));
@@ -1817,11 +1834,7 @@ function (_React$Component) {
         className: "show-top-left"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "show-top-left-2"
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
-        onClick: this.play,
-        className: "orangeplay",
-        src: "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangeplay.png?raw=true"
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      }, this.toggleDisplay(), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "top-words"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "top-artist"
