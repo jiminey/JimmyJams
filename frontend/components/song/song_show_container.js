@@ -4,6 +4,7 @@ import { fetchSong } from '../../actions/song_actions';
 import SongShow from '../song/song_show'
 import {deleteSong, updateSong} from '../../actions/song_actions'
 import {openModal} from '../../actions/modal_actions'
+import {playSong} from '../../actions/audioplayer_actions'
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -12,12 +13,17 @@ const mapStateToProps = (state, ownProps) => {
     let songId = ownProps.match.params.songId;
     let song = state.entities.songs[songId];
     return ({
+        songUrl: state.player.songUrl,
+        playState: state.player.playState,
+        songList: state.player.songList,
         song,
-        currentUser: state.session.currentUser
+        currentUser: state.session.currentUser,
+        currentSong: state.entities.songs[state.player.songId],
     })
 };
 
 const mapDispatchToProps = dispatch => ({
+    playSong: (songUrl) => dispatch(playSong(songUrl)),
     fetchSong: (id) => dispatch(fetchSong(id)),
     deleteSong: id => dispatch(deleteSong(id)),
     updateSong: song => dispatch(updateSong(song)),

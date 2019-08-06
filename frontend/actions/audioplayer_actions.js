@@ -5,7 +5,8 @@ export const RESUME = "RESUME"
 export const playSong = (song) => ({
     type: PLAYSONG,
     songUrl: song.song_fileUrl, 
-    songId : song.id
+    songId: song.id,
+    currentSong: song,
 })
 
 export const pauseSong = () => ({

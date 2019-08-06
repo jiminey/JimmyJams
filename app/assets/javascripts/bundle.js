@@ -108,7 +108,8 @@ var playSong = function playSong(song) {
   return {
     type: PLAYSONG,
     songUrl: song.song_fileUrl,
-    songId: song.id
+    songId: song.id,
+    currentSong: song
   };
 };
 var pauseSong = function pauseSong() {
@@ -1670,7 +1671,6 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
         to: "/songs/".concat(this.props.song.id)
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
-        onClick: this.play,
         className: "pic-splash",
         src: this.props.song.album_coverUrl
       }))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
@@ -1736,10 +1736,18 @@ function (_React$Component) {
     _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(SongShow).call(this, props));
     _this.state = _this.props.song;
     _this.handleDelete = _this.handleDelete.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
+    _this.play = _this.play.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     return _this;
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(SongShow, [{
+    key: "play",
+    value: function play(e) {
+      var audio = new Audio("".concat(this.props.song.song_fileUrl));
+      audio.play();
+      this.props.playSong(this.props.song);
+    }
+  }, {
     key: "componentDidMount",
     value: function componentDidMount() {
       var songId = this.props.match.params.songId;
@@ -1810,6 +1818,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "show-top-left-2"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
+        onClick: this.play,
         className: "orangeplay",
         src: "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangeplay.png?raw=true"
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
@@ -2080,6 +2089,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_song_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../actions/song_actions */ "./frontend/actions/song_actions.js");
 /* harmony import */ var _song_song_show__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../song/song_show */ "./frontend/components/song/song_show.jsx");
 /* harmony import */ var _actions_modal_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/modal_actions */ "./frontend/actions/modal_actions.js");
+/* harmony import */ var _actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../actions/audioplayer_actions */ "./frontend/actions/audioplayer_actions.js");
+
 
 
 
@@ -2090,13 +2101,20 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
   var songId = ownProps.match.params.songId;
   var song = state.entities.songs[songId];
   return {
+    songUrl: state.player.songUrl,
+    playState: state.player.playState,
+    songList: state.player.songList,
     song: song,
-    currentUser: state.session.currentUser
+    currentUser: state.session.currentUser,
+    currentSong: state.entities.songs[state.player.songId]
   };
 };
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
+    playSong: function playSong(songUrl) {
+      return dispatch(Object(_actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_4__["playSong"])(songUrl));
+    },
     fetchSong: function fetchSong(id) {
       return dispatch(Object(_actions_song_actions__WEBPACK_IMPORTED_MODULE_1__["fetchSong"])(id));
     },
@@ -2471,7 +2489,8 @@ var intialState = {
   playState: false,
   songUrl: null,
   songId: null,
-  songList: []
+  songList: [],
+  currentSong: null
 };
 
 var audioPlayersReducer = function audioPlayersReducer() {
@@ -2483,10 +2502,9 @@ var audioPlayersReducer = function audioPlayersReducer() {
   switch (action.type) {
     case _actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_0__["PLAYSONG"]:
       return Object.assign(newState, {
-        songId: action.songId
-      }, {
-        songUrl: action.song_fileUrl
-      }, {
+        currentSong: action.currentSong,
+        songId: action.songId,
+        songUrl: action.songUrl,
         playState: true
       });
 

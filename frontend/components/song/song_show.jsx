@@ -8,9 +8,16 @@ class SongShow extends React.Component {
 
         this.state = this.props.song
         this.handleDelete = this.handleDelete.bind(this)
-
+        this.play = this.play.bind(this)
 
     };
+
+    play(e) {
+        let audio = new Audio(`${this.props.song.song_fileUrl}`);
+        audio.play();
+        this.props.playSong(this.props.song);
+    }
+
 
     componentDidMount() {
         let songId = this.props.match.params.songId ;
@@ -86,7 +93,7 @@ class SongShow extends React.Component {
 
                        <div className='show-top-left'>
                            <div className='show-top-left-2'> 
-                                <img className='orangeplay' src='https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangeplay.png?raw=true' ></img>
+                                <img onClick={this.play} className='orangeplay' src='https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangeplay.png?raw=true' ></img>
                                 
                                     <div className='top-words'>
                                         <div className='top-artist'>{this.props.song.artist}</div>

@@ -23,7 +23,7 @@ class SongIndexItem extends React.Component {
                 <div >
                     <div>
                         <Link to={`/songs/${this.props.song.id}`}>
-                            <img onClick={this.play} className='pic-splash' src={this.props.song.album_coverUrl}/>
+                            <img className='pic-splash' src={this.props.song.album_coverUrl}/>
                         </Link>
                             
                     </div>
