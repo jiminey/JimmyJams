@@ -4,7 +4,7 @@ import { fetchSong } from '../../actions/song_actions';
 import SongShow from '../song/song_show'
 import {deleteSong, updateSong} from '../../actions/song_actions'
 import {openModal} from '../../actions/modal_actions'
-import {playSong} from '../../actions/audioplayer_actions'
+import {playSong, pauseSong} from '../../actions/audioplayer_actions'
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -23,7 +23,8 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-    playSong: (songUrl) => dispatch(playSong(songUrl)),
+    playSong: (song) => dispatch(playSong(song)),
+    pauseSong: () => dispatch(pauseSong()), 
     fetchSong: (id) => dispatch(fetchSong(id)),
     deleteSong: id => dispatch(deleteSong(id)),
     updateSong: song => dispatch(updateSong(song)),

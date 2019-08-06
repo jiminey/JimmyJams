@@ -12,7 +12,7 @@ const msp = state => ({
 
 const mdp = dispatch => ({
 
-    playSong: (songUrl) => dispatch(playSong(songUrl)),
+    playSong: (song) => dispatch(playSong(song)),
     pauseSong: () => dispatch(pauseSong()), 
     resume: () => dispatch(resume())
 });

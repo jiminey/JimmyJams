@@ -7,10 +7,12 @@ export const playSong = (song) => ({
     songUrl: song.song_fileUrl, 
     songId: song.id,
     currentSong: song,
+
 })
 
 export const pauseSong = () => ({
-    type: PAUSESONG
+    type: PAUSESONG,
+
 })
 
 export const resume = () => ({

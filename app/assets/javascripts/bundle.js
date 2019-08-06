@@ -587,8 +587,8 @@ var msp = function msp(state) {
 
 var mdp = function mdp(dispatch) {
   return {
-    playSong: function playSong(songUrl) {
-      return dispatch(Object(_actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_2__["playSong"])(songUrl));
+    playSong: function playSong(song) {
+      return dispatch(Object(_actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_2__["playSong"])(song));
     },
     pauseSong: function pauseSong() {
       return dispatch(Object(_actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_2__["pauseSong"])());
@@ -1762,13 +1762,13 @@ function (_React$Component) {
     value: function play(e) {
       var audio = new Audio("".concat(this.props.song.song_fileUrl));
 
-      if (this.playState) {
+      if (this.props.playState) {
         audio.pause();
+        this.props.pauseSong(this.props.song);
       } else {
         audio.play();
+        this.props.playSong(this.props.song);
       }
-
-      this.props.playSong(this.props.song);
     }
   }, {
     key: "componentDidMount",
@@ -2131,8 +2131,11 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
-    playSong: function playSong(songUrl) {
-      return dispatch(Object(_actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_4__["playSong"])(songUrl));
+    playSong: function playSong(song) {
+      return dispatch(Object(_actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_4__["playSong"])(song));
+    },
+    pauseSong: function pauseSong() {
+      return dispatch(Object(_actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_4__["pauseSong"])());
     },
     fetchSong: function fetchSong(id) {
       return dispatch(Object(_actions_song_actions__WEBPACK_IMPORTED_MODULE_1__["fetchSong"])(id));

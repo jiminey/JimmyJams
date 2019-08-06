@@ -9,7 +9,6 @@ class SongShow extends React.Component {
         this.state = this.props.song
         this.handleDelete = this.handleDelete.bind(this)
         this.play = this.play.bind(this)
-
     };
 
 
@@ -27,12 +26,13 @@ class SongShow extends React.Component {
 
     play(e) {
         let audio = new Audio(`${this.props.song.song_fileUrl}`);
-        if (this.playState){
+        if (this.props.playState){
             audio.pause();
+            this.props.pauseSong(this.props.song)
         } else {
             audio.play();
+            this.props.playSong(this.props.song);
         }
-        this.props.playSong(this.props.song);
     }
 
 
@@ -53,7 +53,6 @@ class SongShow extends React.Component {
         if (!this.props.song){
             return null;
         }
-
      
 
         return (
