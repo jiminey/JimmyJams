@@ -1,19 +1,18 @@
-
-
-export const PLAYSONG = 'PLAYSONG'
-export const PAUSE = 'PAUSE'
-export const RESUME = 'RESUME'
+export const PLAYSONG = "PLAYSONG"
+export const PAUSESONG= "PAUSESONG"
+export const RESUME = "RESUME"
 
 export const playSong = (song) => ({
-    type: PLAYSONG, 
-    song_fileUrl: song.song_fileUrl
+    type: PLAYSONG,
+    songUrl: song.song_fileUrl, 
+    songId : song.id
 })
 
+export const pauseSong = () => ({
+    type: PAUSESONG
+})
 
 export const resume = () => ({
-    type: RESUME,
-});
+    type: RESUME
+})
 
-export const pauseSong = () => ({
-    type: PAUSE,
-});
