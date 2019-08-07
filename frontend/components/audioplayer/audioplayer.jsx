@@ -10,9 +10,57 @@ class AudioPlayer extends React.Component {
         }; 
 
         this.toggle = this.toggle.bind(this)
-
+        this.updateProgress = this.updateProgress.bind(this) //bind ctx
+        this.calculateCurrentValue = this.calculateCurrentValue.bind(this)
+        this.calculateTotalValue = this.calculateTotalValue.bind(this)
 
     }
+
+    calculateTotalValue(length) {
+        let minutes = Math.floor(length / 60),
+            seconds_int = length - minutes * 60,
+            seconds_str = seconds_int.toString(),
+            seconds = seconds_str.substr(0, 2),
+            time = minutes + ':' + seconds
+
+        return time;
+    }
+
+    calculateCurrentValue(currentTime) {
+        let current_minute = parseInt(currentTime / 60) % 60,
+            current_seconds_long = currentTime % 60,
+            current_seconds = current_seconds_long.toFixed(),
+            current_time = (current_minute < 10 ? "0" + current_minute : current_minute) + ":" + (current_seconds < 10 ? "0" + current_seconds : current_seconds);
+
+        return current_time;
+    }
+
+
+
+
+    updateProgress() {
+        let player = this.props.currentAudio
+        let length = player.duration
+        let current_time = player.currentTime;
+
+        let totalLength = this.calculateTotalValue(length)
+        // document.getElementById("end-time").innerHTML = totalLength;
+
+        let currentTime = this.calculateCurrentValue(current_time);
+        // document.getElementById("start-time").innerHTML = currentTime;
+
+        let progressbar = document.getElementById('seekbar');
+
+        progressbar.value = (player.currentTime / player.duration);
+        progressbar.addEventListener("click", seek);
+
+        function seek(event) {
+            let percent = event.offsetX / this.offsetWidth;
+            player.currentTime = percent * player.duration;
+            progressbar.value = percent / 100;
+        }
+    };
+
 
     toggle(){
         if(this.state.playing){
@@ -47,15 +95,17 @@ class AudioPlayer extends React.Component {
 
         if (currentSong === undefined) {
             return (
-                <div>
+                <div className="thumbnail">
 
                 </div>
             )
         } else {
             return (
-                <div >
+                <div className="thumbnail">
                     <div>< img src={currentSong.album_coverUrl} className="playbarimg" /></div>
-                    <div>
+
+                    <div className="subthumbnail">
+                        <div>{currentSong.artist}</div>
                         <div>{currentSong.title}</div>
                     </div>
                 </div>
@@ -65,6 +115,10 @@ class AudioPlayer extends React.Component {
 
 
     render() {
+
+        if (this.props.currentAudio) {
+            this.props.currentAudio.ontimeupdate = () => { this.updateProgress() } 
+        }
         return (
 
             <div className='playbar'>
@@ -84,13 +138,19 @@ class AudioPlayer extends React.Component {
                         <div className='p3'>
                             <i class="fa fa-step-forward" aria-hidden="true"></i>
                         </div>
+                    </div>
 
-                      
+                    <div className='playbar-mid'>
+                        
+                        <progress className="seekbar" id="seekbar" value="0" max="1"></progress>
+                        {/* <small style="float: left; position: relative; left: 15px;" id="start-time"></small>
+                        <small style="float: right; position: relative; right: 20px;" id="end-time"></small> */}
 
                     </div>
 
+                    {this.displaySongThumbnail()}
+
                 </div>
-                {this.displaySongThumbnail()}
 
 
             </div>

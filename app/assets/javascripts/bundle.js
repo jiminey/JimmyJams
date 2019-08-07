@@ -481,10 +481,53 @@ function (_React$Component) {
       loop: true
     };
     _this.toggle = _this.toggle.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
+    _this.updateProgress = _this.updateProgress.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this)); //bind ctx
+
+    _this.calculateCurrentValue = _this.calculateCurrentValue.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
+    _this.calculateTotalValue = _this.calculateTotalValue.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     return _this;
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(AudioPlayer, [{
+    key: "calculateTotalValue",
+    value: function calculateTotalValue(length) {
+      var minutes = Math.floor(length / 60),
+          seconds_int = length - minutes * 60,
+          seconds_str = seconds_int.toString(),
+          seconds = seconds_str.substr(0, 2),
+          time = minutes + ':' + seconds;
+      return time;
+    }
+  }, {
+    key: "calculateCurrentValue",
+    value: function calculateCurrentValue(currentTime) {
+      var current_minute = parseInt(currentTime / 60) % 60,
+          current_seconds_long = currentTime % 60,
+          current_seconds = current_seconds_long.toFixed(),
+          current_time = (current_minute < 10 ? "0" + current_minute : current_minute) + ":" + (current_seconds < 10 ? "0" + current_seconds : current_seconds);
+      return current_time;
+    }
+  }, {
+    key: "updateProgress",
+    value: function updateProgress() {
+      var player = this.props.currentAudio;
+      var length = player.duration;
+      var current_time = player.currentTime;
+      var totalLength = this.calculateTotalValue(length); // document.getElementById("end-time").innerHTML = totalLength;
+
+      var currentTime = this.calculateCurrentValue(current_time); // document.getElementById("start-time").innerHTML = currentTime;
+
+      var progressbar = document.getElementById('seekbar');
+      progressbar.value = player.currentTime / player.duration;
+      progressbar.addEventListener("click", seek);
+
+      function seek(event) {
+        var percent = event.offsetX / this.offsetWidth;
+        player.currentTime = percent * player.duration;
+        progressbar.value = percent / 100;
+      }
+    }
+  }, {
     key: "toggle",
     value: function toggle() {
       if (this.state.playing) {
@@ -526,17 +569,31 @@ function (_React$Component) {
       var currentSong = this.props.currentSong;
 
       if (currentSong === undefined) {
-        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null);
+        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+          className: "thumbnail"
+        });
       } else {
-        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
+        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+          className: "thumbnail"
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
           src: currentSong.album_coverUrl,
           className: "playbarimg"
-        })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, currentSong.title)));
+        })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+          className: "subthumbnail"
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, currentSong.artist), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, currentSong.title)));
       }
     }
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
+      if (this.props.currentAudio) {
+        this.props.currentAudio.ontimeupdate = function () {
+          _this2.updateProgress();
+        };
+      }
+
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "playbar"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
@@ -553,7 +610,14 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
         "class": "fa fa-step-forward",
         "aria-hidden": "true"
-      })))), this.displaySongThumbnail());
+      }))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "playbar-mid"
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("progress", {
+        className: "seekbar",
+        id: "seekbar",
+        value: "0",
+        max: "1"
+      })), this.displaySongThumbnail()));
     }
   }]);
 
