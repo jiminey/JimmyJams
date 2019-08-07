@@ -12,6 +12,9 @@
 
 .playbar-mid {
     margin: 0 auto;
+    display: flex;
+    padding: 10px;
+    justify-content: space-around
 }
 .seekbar {
     width: 450px;
@@ -19,8 +22,12 @@
 
 }
 
-.timestamp {
-    
+.timestampleft {
+    padding: 4px;
+
+}
+.timestampright {
+    padding: 4px;
 }
 
 progress {

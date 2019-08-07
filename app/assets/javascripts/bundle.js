@@ -613,7 +613,7 @@ function (_React$Component) {
       })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "playbar-mid"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("small", {
-        className: "timestamp",
+        className: "timestampleft",
         id: "start-time"
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("progress", {
         className: "seekbar",
@@ -621,7 +621,7 @@ function (_React$Component) {
         value: "0",
         max: "1"
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("small", {
-        className: "timestamp",
+        className: "timestampright",
         id: "end-time"
       }))), this.displaySongThumbnail()));
     }
