@@ -44,10 +44,10 @@ class AudioPlayer extends React.Component {
         let current_time = player.currentTime;
 
         let totalLength = this.calculateTotalValue(length)
-        // document.getElementById("end-time").innerHTML = totalLength;
+        document.getElementById("end-time").innerHTML = totalLength;
 
         let currentTime = this.calculateCurrentValue(current_time);
-        // document.getElementById("start-time").innerHTML = currentTime;
+        document.getElementById("start-time").innerHTML = currentTime;
 
         let progressbar = document.getElementById('seekbar');
 
@@ -96,7 +96,11 @@ class AudioPlayer extends React.Component {
         if (currentSong === undefined) {
             return (
                 <div className="thumbnail">
-
+                    <p></p>
+                    <p>
+                        <p></p>
+                        <p></p>                        
+                    </p>
                 </div>
             )
         } else {
@@ -138,13 +142,15 @@ class AudioPlayer extends React.Component {
                         <div className='p3'>
                             <i class="fa fa-step-forward" aria-hidden="true"></i>
                         </div>
-                    </div>
 
-                    <div className='playbar-mid'>
-                        
-                        <progress className="seekbar" id="seekbar" value="0" max="1"></progress>
-                        {/* <small style="float: left; position: relative; left: 15px;" id="start-time"></small>
-                        <small style="float: right; position: relative; right: 20px;" id="end-time"></small> */}
+                        <div className='playbar-mid'>
+                            <small className="timestamp"  id="start-time"></small>
+                            
+                            <progress className="seekbar" id="seekbar" value="0" max="1"></progress>
+
+                            <small className="timestamp" id="end-time"></small>
+
+                        </div>
 
                     </div>
 

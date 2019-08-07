@@ -513,10 +513,10 @@ function (_React$Component) {
       var player = this.props.currentAudio;
       var length = player.duration;
       var current_time = player.currentTime;
-      var totalLength = this.calculateTotalValue(length); // document.getElementById("end-time").innerHTML = totalLength;
-
-      var currentTime = this.calculateCurrentValue(current_time); // document.getElementById("start-time").innerHTML = currentTime;
-
+      var totalLength = this.calculateTotalValue(length);
+      document.getElementById("end-time").innerHTML = totalLength;
+      var currentTime = this.calculateCurrentValue(current_time);
+      document.getElementById("start-time").innerHTML = currentTime;
       var progressbar = document.getElementById('seekbar');
       progressbar.value = player.currentTime / player.duration;
       progressbar.addEventListener("click", seek);
@@ -571,7 +571,7 @@ function (_React$Component) {
       if (currentSong === undefined) {
         return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
           className: "thumbnail"
-        });
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", null), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", null), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", null)));
       } else {
         return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
           className: "thumbnail"
@@ -610,14 +610,20 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
         "class": "fa fa-step-forward",
         "aria-hidden": "true"
-      }))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "playbar-mid"
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("progress", {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("small", {
+        className: "timestamp",
+        id: "start-time"
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("progress", {
         className: "seekbar",
         id: "seekbar",
         value: "0",
         max: "1"
-      })), this.displaySongThumbnail()));
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("small", {
+        className: "timestamp",
+        id: "end-time"
+      }))), this.displaySongThumbnail()));
     }
   }]);
 
