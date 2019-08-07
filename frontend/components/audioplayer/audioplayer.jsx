@@ -54,8 +54,8 @@ class AudioPlayer extends React.Component {
         } else {
             return (
                 <div >
-                    <div ><img src={currentSong.album_coverUrl} /></div>
-                    <div >
+                    <div>< img src={currentSong.album_coverUrl} className="playbarimg" /></div>
+                    <div>
                         <div>{currentSong.title}</div>
                     </div>
                 </div>

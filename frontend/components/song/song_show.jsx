@@ -15,10 +15,12 @@ class SongShow extends React.Component {
     };
 
     toggleDisplay() {
-        if (this.props.playState){
+        if (this.props.playState && this.props.currentSong.title === this.props.song.title){
+            //pause 
             return (
                 <img onClick={this.play} className='orangeplay' src='https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangepause.png?raw=true' ></img>
             )
+            //play
         } else {
             return (
                 <img onClick={this.play} className='orangeplay' src='https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangeplay.png?raw=true' ></img>
@@ -27,7 +29,7 @@ class SongShow extends React.Component {
     }
 
     play(e) {
-        if (this.props.playState){
+        if (this.props.playState && this.props.currentSong.title === this.props.song.title){
             this.state.audio.pause();
             this.props.pauseSong()
         } else {

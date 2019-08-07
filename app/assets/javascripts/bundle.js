@@ -529,7 +529,8 @@ function (_React$Component) {
         return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null);
       } else {
         return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
-          src: currentSong.album_coverUrl
+          src: currentSong.album_coverUrl,
+          className: "playbarimg"
         })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, currentSong.title)));
       }
     }
@@ -1749,12 +1750,13 @@ function (_React$Component) {
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(SongShow, [{
     key: "toggleDisplay",
     value: function toggleDisplay() {
-      if (this.props.playState) {
+      if (this.props.playState && this.props.currentSong.title === this.props.song.title) {
+        //pause 
         return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
           onClick: this.play,
           className: "orangeplay",
           src: "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangepause.png?raw=true"
-        });
+        }); //play
       } else {
         return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
           onClick: this.play,
@@ -1766,7 +1768,7 @@ function (_React$Component) {
   }, {
     key: "play",
     value: function play(e) {
-      if (this.props.playState) {
+      if (this.props.playState && this.props.currentSong.title === this.props.song.title) {
         this.state.audio.pause();
         this.props.pauseSong();
       } else {
