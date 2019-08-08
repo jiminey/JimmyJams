@@ -484,7 +484,8 @@ function (_React$Component) {
     _this.updateProgress = _this.updateProgress.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this)); //bind ctx
 
     _this.calculateCurrentValue = _this.calculateCurrentValue.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
-    _this.calculateTotalValue = _this.calculateTotalValue.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
+    _this.calculateTotalValue = _this.calculateTotalValue.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this)); // this.updateVolume = this.updateProgress.bind(this)
+
     return _this;
   }
 
@@ -506,7 +507,14 @@ function (_React$Component) {
           current_seconds = current_seconds_long.toFixed(),
           current_time = current_minute + ":" + (current_seconds < 10 ? "0" + current_seconds : current_seconds);
       return current_time;
-    }
+    } // updateVolume() {
+    //     let volumeslider = document.getElementById('vslider')
+    //     if (volumeslider && this.props.currentAudio) {
+    //         this.setSate({volume: volumeslider.value})
+    //         this.props.currentAudio.volume = this.state.volume;
+    //     }
+    // }
+
   }, {
     key: "updateProgress",
     value: function updateProgress() {
@@ -517,21 +525,19 @@ function (_React$Component) {
 
       if (this.props.currentAudio) {
         document.getElementById("end-time").innerHTML = totalLength;
-      } else {
-        document.getElementById("end-time").innerHTML = "0:00";
       }
 
       var currentTime = this.calculateCurrentValue(current_time);
 
       if (this.props.currentAudio) {
         document.getElementById("start-time").innerHTML = currentTime;
-      } else {
-        document.getElementById("start-time").innerHTML = "0:00";
       }
 
       var progressbar = document.getElementById('seekbar');
+      var volumeslider = document.getElementById('vslider');
       progressbar.value = player.currentTime / player.duration;
       progressbar.addEventListener("click", seek);
+      player.volume = volumeslider.value / 100;
 
       function seek(event) {
         var percent = event.offsetX / this.offsetWidth;
@@ -594,7 +600,7 @@ function (_React$Component) {
           className: "subthumbnail"
         }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
           className: "stn1"
-        }, currentSong.artist), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, currentSong.title)));
+        }, currentSong.artist.slice(0, 20)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, currentSong.title.slice(0, 20))));
       }
     }
   }, {
@@ -641,8 +647,12 @@ function (_React$Component) {
       }, "0:00"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
         "class": "fas fa-volume-up"
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
+        id: "vslider",
         className: "vol",
-        type: "range"
+        type: "range",
+        min: "1",
+        max: "100",
+        step: "1"
       }))), this.displaySongThumbnail()));
     }
   }]);
@@ -2410,9 +2420,7 @@ function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      var songs = this.props.songs.slice(0, 12).sort(function () {
-        return 0.5 - Math.random();
-      }).map(function (song) {
+      var songs = this.props.songs.slice(0, 12).map(function (song) {
         return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
           key: song.id
         }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_song_song_index_item__WEBPACK_IMPORTED_MODULE_9__["default"], {

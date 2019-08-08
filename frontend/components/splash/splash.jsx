@@ -22,7 +22,7 @@ class Splash extends React.Component {
     
     render() {
         
-        let songs = this.props.songs.slice(0, 12).sort(function () { return 0.5 - Math.random() }).map( song => {
+        let songs = this.props.songs.slice(0, 12).map( song => {
             return (
                 <div key={song.id}>
                     <SongIndexItem key={song.id} path={this.props.location.pathname} song={song} users={this.props.users} />

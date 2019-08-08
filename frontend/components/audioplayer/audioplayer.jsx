@@ -6,13 +6,14 @@ class AudioPlayer extends React.Component {
         this.state = {
             url: null,
             playing: this.props.playState,
-            loop: true
+            loop: true,
         }; 
 
         this.toggle = this.toggle.bind(this)
         this.updateProgress = this.updateProgress.bind(this) //bind ctx
         this.calculateCurrentValue = this.calculateCurrentValue.bind(this)
         this.calculateTotalValue = this.calculateTotalValue.bind(this)
+        // this.updateVolume = this.updateProgress.bind(this)
 
     }
 
@@ -38,6 +39,14 @@ class AudioPlayer extends React.Component {
     }
 
 
+    // updateVolume() {
+    //     let volumeslider = document.getElementById('vslider')
+    //     if (volumeslider && this.props.currentAudio) {
+    //         this.setSate({volume: volumeslider.value})
+    //         this.props.currentAudio.volume = this.state.volume;
+    //     }
+    // }
+
 
 
     updateProgress() {
@@ -48,26 +57,25 @@ class AudioPlayer extends React.Component {
         let totalLength = this.calculateTotalValue(length)
         if (this.props.currentAudio){
             document.getElementById("end-time").innerHTML = totalLength;
-        } else {
-            document.getElementById("end-time").innerHTML = "0:00";
         }
 
         let currentTime = this.calculateCurrentValue(current_time);
         if (this.props.currentAudio){
             document.getElementById("start-time").innerHTML = currentTime;
-        } else {
-            document.getElementById("start-time").innerHTML = "0:00";
         }
 
         let progressbar = document.getElementById('seekbar');
-
+        let volumeslider = document.getElementById('vslider')
+        
         progressbar.value = (player.currentTime / player.duration);
         progressbar.addEventListener("click", seek);
+
+        player.volume = volumeslider.value/100;
 
         function seek(event) {
             let percent = event.offsetX / this.offsetWidth;
             player.currentTime = percent * player.duration;
-            progressbar.value = percent / 100;
+            progressbar.value = percent / 100;            
         }
     };
 
@@ -119,8 +127,8 @@ class AudioPlayer extends React.Component {
                     <div>< img src={currentSong.album_coverUrl} className="playbarimg" /></div>
 
                     <div className="subthumbnail">
-                        <div className="stn1">{currentSong.artist}</div>
-                        <div>{currentSong.title}</div>
+                        <div className="stn1">{currentSong.artist.slice(0,20)}</div>
+                        <div>{currentSong.title.slice(0,20)}</div>
                     </div>
                 </div>
             )
@@ -163,7 +171,7 @@ class AudioPlayer extends React.Component {
                             
                             <i class="fas fa-volume-up"></i>
 
-                            <input className="vol" type="range"/>
+                            <input id='vslider' className="vol" type="range" min="1" max="100" step="1" />
 
                         </div>
 
