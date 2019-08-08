@@ -504,7 +504,7 @@ function (_React$Component) {
       var current_minute = parseInt(currentTime / 60) % 60,
           current_seconds_long = currentTime % 60,
           current_seconds = current_seconds_long.toFixed(),
-          current_time = (current_minute < 10 ? "0" + current_minute : current_minute) + ":" + (current_seconds < 10 ? "0" + current_seconds : current_seconds);
+          current_time = current_minute + ":" + (current_seconds < 10 ? "0" + current_seconds : current_seconds);
       return current_time;
     }
   }, {
@@ -514,9 +514,21 @@ function (_React$Component) {
       var length = player.duration;
       var current_time = player.currentTime;
       var totalLength = this.calculateTotalValue(length);
-      document.getElementById("end-time").innerHTML = totalLength;
+
+      if (this.props.currentAudio) {
+        document.getElementById("end-time").innerHTML = totalLength;
+      } else {
+        document.getElementById("end-time").innerHTML = "0:00";
+      }
+
       var currentTime = this.calculateCurrentValue(current_time);
-      document.getElementById("start-time").innerHTML = currentTime;
+
+      if (this.props.currentAudio) {
+        document.getElementById("start-time").innerHTML = currentTime;
+      } else {
+        document.getElementById("start-time").innerHTML = "0:00";
+      }
+
       var progressbar = document.getElementById('seekbar');
       progressbar.value = player.currentTime / player.duration;
       progressbar.addEventListener("click", seek);
@@ -580,7 +592,9 @@ function (_React$Component) {
           className: "playbarimg"
         })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
           className: "subthumbnail"
-        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, currentSong.artist), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, currentSong.title)));
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+          className: "stn1"
+        }, currentSong.artist), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, currentSong.title)));
       }
     }
   }, {
@@ -615,7 +629,8 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("small", {
         className: "timestampleft",
         id: "start-time"
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("progress", {
+      }, "0:00"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("progress", {
+        type: "range",
         className: "seekbar",
         id: "seekbar",
         value: "0",
@@ -623,6 +638,11 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("small", {
         className: "timestampright",
         id: "end-time"
+      }, "0:00"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
+        "class": "fas fa-volume-up"
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
+        className: "vol",
+        type: "range"
       }))), this.displaySongThumbnail()));
     }
   }]);

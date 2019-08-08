@@ -17,6 +17,7 @@ class AudioPlayer extends React.Component {
     }
 
     calculateTotalValue(length) {
+
         let minutes = Math.floor(length / 60),
             seconds_int = length - minutes * 60,
             seconds_str = seconds_int.toString(),
@@ -27,10 +28,11 @@ class AudioPlayer extends React.Component {
     }
 
     calculateCurrentValue(currentTime) {
+
         let current_minute = parseInt(currentTime / 60) % 60,
             current_seconds_long = currentTime % 60,
             current_seconds = current_seconds_long.toFixed(),
-            current_time = (current_minute < 10 ? "0" + current_minute : current_minute) + ":" + (current_seconds < 10 ? "0" + current_seconds : current_seconds);
+            current_time = current_minute + ":" + (current_seconds < 10 ? "0" + current_seconds : current_seconds);
 
         return current_time;
     }
@@ -44,10 +46,18 @@ class AudioPlayer extends React.Component {
         let current_time = player.currentTime;
 
         let totalLength = this.calculateTotalValue(length)
-        document.getElementById("end-time").innerHTML = totalLength;
+        if (this.props.currentAudio){
+            document.getElementById("end-time").innerHTML = totalLength;
+        } else {
+            document.getElementById("end-time").innerHTML = "0:00";
+        }
 
         let currentTime = this.calculateCurrentValue(current_time);
-        document.getElementById("start-time").innerHTML = currentTime;
+        if (this.props.currentAudio){
+            document.getElementById("start-time").innerHTML = currentTime;
+        } else {
+            document.getElementById("start-time").innerHTML = "0:00";
+        }
 
         let progressbar = document.getElementById('seekbar');
 
@@ -109,7 +119,7 @@ class AudioPlayer extends React.Component {
                     <div>< img src={currentSong.album_coverUrl} className="playbarimg" /></div>
 
                     <div className="subthumbnail">
-                        <div>{currentSong.artist}</div>
+                        <div className="stn1">{currentSong.artist}</div>
                         <div>{currentSong.title}</div>
                     </div>
                 </div>
@@ -144,13 +154,19 @@ class AudioPlayer extends React.Component {
                         </div>
 
                         <div className='playbar-mid'>
-                            <small className="timestampleft"  id="start-time"></small>
+                            <small className="timestampleft"  id="start-time">0:00</small>
                             
-                            <progress className="seekbar" id="seekbar" value="0" max="1"></progress>
+                            <progress type="range" className="seekbar" id="seekbar" value="0" max="1"></progress>
 
-                            <small className="timestampright" id="end-time"></small>
+                            <small className="timestampright" id="end-time">0:00</small>
+
+                            
+                            <i class="fas fa-volume-up"></i>
+
+                            <input className="vol" type="range"/>
 
                         </div>
+
 
                     </div>
 

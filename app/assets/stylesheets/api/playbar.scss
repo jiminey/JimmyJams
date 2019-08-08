@@ -24,15 +24,17 @@
 
 .timestampleft {
     padding: 4px;
+    margin-left: 8px;
 
 }
 .timestampright {
     padding: 4px;
+    margin-right: 8px;
 }
 
 progress {
   border-radius: 2px; 
-  height: 2px;
+  height: 3.5px;
   margin: 0 auto;
 }
 progress::-webkit-progress-bar {
@@ -40,7 +42,7 @@ progress::-webkit-progress-bar {
 
 }
 progress::-webkit-progress-value {
- background-color: orange;
+ background-color: #f50;
 
 
 }
@@ -85,13 +87,29 @@ progress::-webkit-progress-value {
 
 .thumbnail {
     display:flex;
-    margin: auto 0; 
+    margin: auto 0;
 }
 
 .subthumbnail {
+    margin-left: 4px;
     display:flex; 
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: flex-start;
+    font-size:12px;
+}
+
+.vol {
+    margin-top: 1px;
+    margin-left: 5px;
+    width: 105px;
+}
+
+
+
+
+.stn1 {
+    color: #999;
 }
 
 
