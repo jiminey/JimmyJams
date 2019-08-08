@@ -1761,6 +1761,7 @@ function (_React$Component) {
 
     _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(SongIndexItem).call(this, props));
     _this.play = _this.play.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
+    _this.toggleDisplay = _this.toggleDisplay.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     return _this;
   }
 
@@ -1771,14 +1772,34 @@ function (_React$Component) {
       audio.play();
     }
   }, {
+    key: "toggleDisplay",
+    value: function toggleDisplay() {
+      if (this.props.playState && this.props.currentSong.title === this.props.song.title) {
+        //pause 
+        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
+          onClick: this.play,
+          className: "orangeplay1",
+          src: "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangepause.png?raw=true"
+        }); //play
+      } else {
+        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
+          onClick: this.play,
+          className: "orangeplay1",
+          src: "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangeplay.png?raw=true"
+        });
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "shrinkdiv"
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
         to: "/songs/".concat(this.props.song.id)
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
         className: "pic-splash",
         src: this.props.song.album_coverUrl
-      }))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      })), this.toggleDisplay()), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "pic-content"
       }, this.props.song.artist.slice(0, 16)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "pic-content-body"

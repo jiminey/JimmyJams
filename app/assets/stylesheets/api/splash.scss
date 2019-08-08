@@ -8,7 +8,7 @@ body {
     margin: 0 auto;
     height:375px;
     width: 960px;
-    z-index: 1;
+    z-index: 10;
     background-image: url('https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/coverphoto.jpg?raw=true');
     background-size: 100% 100%;
     
@@ -396,7 +396,20 @@ body {
     background-size: 100% 100%;
     margin-right: 20px;
     cursor: pointer;
+    position: relative;
     margin-top: 20px;
+    z-index: 1; 
+
+}
+
+
+.orangeplay1 {
+    height: 55px;
+    width: 55px;
+    z-index: 3;
+    position: relative;
+    left: 34px;
+    bottom: 87px;
 }
 
 .splash-trending-btn {
@@ -421,12 +434,20 @@ body {
     margin-top: 30px;
     line-height: 24px;
     vertical-align: baseline;
+    z-index: 5;
 }
+
+.shrinkdiv {
+    height: 150px;
+    width: 150px;
+}
+
 
 .bottom-content{
     height: 100%;
     width: 100%;
     background-image: url('https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/iphone.png?raw=true');
     background-size: cover;
+    z-index: -1;
 }
 
