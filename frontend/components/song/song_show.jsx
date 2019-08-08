@@ -10,6 +10,7 @@ class SongShow extends React.Component {
         this.state = {
             audio: new Audio(`${this.props.song.song_fileUrl}`)
         }
+        
         this.handleDelete = this.handleDelete.bind(this)
         this.play = this.play.bind(this)
     };

@@ -1767,10 +1767,7 @@ function (_React$Component) {
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(SongIndexItem, [{
     key: "play",
-    value: function play(e) {
-      var audio = new Audio("".concat(this.props.song.song_fileUrl));
-      audio.play();
-    }
+    value: function play(e) {}
   }, {
     key: "toggleDisplay",
     value: function toggleDisplay() {
@@ -2399,6 +2396,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _greeting_greeting_container__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./greeting/greeting_container */ "./frontend/components/splash/greeting/greeting_container.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _song_song_index_item__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../song/song_index_item */ "./frontend/components/song/song_index_item.jsx");
+/* harmony import */ var _audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../audioplayer/audioplayer_container */ "./frontend/components/audioplayer/audioplayer_container.js");
+
 
 
 
@@ -2508,7 +2507,7 @@ function (_React$Component) {
         }
       }, "Explore trending playlists"))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "bottom-content"
-      }));
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_10__["default"], null));
     }
   }]);
 

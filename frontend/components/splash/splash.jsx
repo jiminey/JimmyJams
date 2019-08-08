@@ -2,6 +2,8 @@ import React from 'react'
 import GreetingContainer from './greeting/greeting_container'
 import {Route} from 'react-router-dom'
 import SongIndexItem from '../song/song_index_item'
+import AudioPlayerContainer from '../audioplayer/audioplayer_container'
+
 
 
 class Splash extends React.Component {
@@ -85,7 +87,7 @@ class Splash extends React.Component {
                         
                     </div>
                 
-
+                <AudioPlayerContainer/>
             </div>
 
         )

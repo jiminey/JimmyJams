@@ -11,9 +11,7 @@ class SongIndexItem extends React.Component {
 
 
     play(e) {
-        
-        let audio = new Audio(`${this.props.song.song_fileUrl}`);
-        audio.play()
+      
     }
 
     toggleDisplay() {
