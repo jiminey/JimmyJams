@@ -392,24 +392,34 @@ body {
 .pic-splash {
     width: 124.97px;
     height: 124.97px;
-    background-repeat:no-repeat;
-    background-size: 100% 100%;
+
     margin-right: 20px;
-    cursor: pointer;
     position: relative;
-    margin-top: 20px;
+    // margin-top: 20px;
     z-index: 1; 
 
 }
 
 
 .orangeplay1 {
+    display:none;
     height: 55px;
     width: 55px;
     z-index: 3;
     position: relative;
     left: 34px;
-    bottom: 87px;
+    bottom: 90px;
+    cursor: pointer;
+}
+
+.shrinkdiv:hover img{
+    display:block;
+    // height: 55px;
+    // width: 55px;
+    // z-index: 3;
+    // position: relative;
+    // left: 34px;
+    // bottom: 87px;
 }
 
 .splash-trending-btn {
@@ -438,8 +448,8 @@ body {
 }
 
 .shrinkdiv {
-    height: 150px;
-    width: 150px;
+    height: 140px;
+    width: 140px;
 }
 
 
