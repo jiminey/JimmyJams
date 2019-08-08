@@ -25,16 +25,19 @@
 .timestampleft {
     padding: 4px;
     margin-left: 8px;
+    font-size: 11px;
+    color: #ff5500;
 
 }
 .timestampright {
     padding: 4px;
     margin-right: 8px;
+    font-size:11px;
 }
 
 progress {
   border-radius: 2px; 
-  height: 3.5px;
+  height: 2px;
   margin: 0 auto;
 }
 progress::-webkit-progress-bar {
