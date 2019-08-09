@@ -18,15 +18,33 @@ class CreateSong extends React.Component {
         let songs2 = this.props.songs.map(song => {
             return (
                 <div key={song.id}>
-                    <SongIndexItem key={song.id} path={this.props.location.pathname} song={song} users={this.props.users} />
+                    <SongIndexItem
+                        key={song.id}
+                        path={this.props.location.pathname}
+                        song={song} users={this.props.users}
+                        playSong={this.props.playSong}
+                        pauseSong={this.props.pauseSong}
+                        playState={this.props.playState}
+                        currentSong={this.props.currentSong}
+                        currentAudio={this.props.currentAudio}
+                    />
                 </div>
             )
         });
         
-        let songs1 = this.props.songs.sort(function () { return 0.5 - Math.random() }).slice(0, 6).map(song => {
+        let songs1 = this.props.songs.slice(6, 12).map(song => {
             return (
                 <div key={song.id}>
-                    <SongIndexItem key={song.id} path={this.props.location.pathname} song={song} users={this.props.users} />
+                    <SongIndexItem
+                        key={song.id}
+                        path={this.props.location.pathname}
+                        song={song} users={this.props.users}
+                        playSong={this.props.playSong}
+                        pauseSong={this.props.pauseSong}
+                        playState={this.props.playState}
+                        currentSong={this.props.currentSong}
+                        currentAudio={this.props.currentAudio}
+                    />
                 </div>
             )
         });

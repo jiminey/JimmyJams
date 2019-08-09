@@ -23,26 +23,53 @@ class Main extends React.Component {
 
     render() {
         
-        let songs1 = this.props.songs.sort(function () { return 0.5 - Math.random() }).slice(0, 4).map(song => {
+        let songs1 = this.props.songs.slice(4, 8).map(song => {
             return (
                 <div key={song.id}>
-                    <SongIndexItem key={song.id} path={this.props.location.pathname} song={song} users={this.props.users} />
+                    <SongIndexItem
+                        key={song.id}
+                        path={this.props.location.pathname}
+                        song={song} users={this.props.users}
+                        playSong={this.props.playSong}
+                        pauseSong={this.props.pauseSong}
+                        playState={this.props.playState}
+                        currentSong={this.props.currentSong}
+                        currentAudio={this.props.currentAudio}
+                    />
                 </div>
             )
         });
 
-        let songs2 = this.props.songs.sort(function () { return 0.5 - Math.random() }).slice(0, 4).map(song => {
+        let songs2 = this.props.songs.slice(8, 12).map(song => {
             return (
                 <div key={song.id}>
-                    <SongIndexItem key={song.id} path={this.props.location.pathname} song={song} users={this.props.users} />
+                    <SongIndexItem
+                        key={song.id}
+                        path={this.props.location.pathname}
+                        song={song} users={this.props.users}
+                        playSong={this.props.playSong}
+                        pauseSong={this.props.pauseSong}
+                        playState={this.props.playState}
+                        currentSong={this.props.currentSong}
+                        currentAudio={this.props.currentAudio}
+                    />
                 </div>
             )
         });
 
-        let songs3 = this.props.songs.sort(function () { return 0.5 - Math.random() }).slice(0, 4).map(song => {
+        let songs3 = this.props.songs.slice(0, 4).map(song => {
             return (
                 <div key={song.id}>
-                    <SongIndexItem key={song.id} path={this.props.location.pathname} song={song} users={this.props.users} />
+                    <SongIndexItem
+                        key={song.id}
+                        path={this.props.location.pathname}
+                        song={song} users={this.props.users}
+                        playSong={this.props.playSong}
+                        pauseSong={this.props.pauseSong}
+                        playState={this.props.playState}
+                        currentSong={this.props.currentSong}
+                        currentAudio={this.props.currentAudio}
+                    />
                 </div>
             )
         });

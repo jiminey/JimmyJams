@@ -771,19 +771,27 @@ function (_React$Component) {
           key: song.id,
           path: _this.props.location.pathname,
           song: song,
-          users: _this.props.users
+          users: _this.props.users,
+          playSong: _this.props.playSong,
+          pauseSong: _this.props.pauseSong,
+          playState: _this.props.playState,
+          currentSong: _this.props.currentSong,
+          currentAudio: _this.props.currentAudio
         }));
       });
-      var songs1 = this.props.songs.sort(function () {
-        return 0.5 - Math.random();
-      }).slice(0, 6).map(function (song) {
+      var songs1 = this.props.songs.slice(6, 12).map(function (song) {
         return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
           key: song.id
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_song_song_index_item__WEBPACK_IMPORTED_MODULE_7__["default"], {
           key: song.id,
           path: _this.props.location.pathname,
           song: song,
-          users: _this.props.users
+          users: _this.props.users,
+          playSong: _this.props.playSong,
+          pauseSong: _this.props.pauseSong,
+          playState: _this.props.playState,
+          currentSong: _this.props.currentSong,
+          currentAudio: _this.props.currentAudio
         }));
       });
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("header", {
@@ -876,6 +884,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _library_library__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../library/library */ "./frontend/components/library/library.jsx");
 /* harmony import */ var _actions_song_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/song_actions */ "./frontend/actions/song_actions.js");
 /* harmony import */ var _actions_user_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/user_actions */ "./frontend/actions/user_actions.js");
+/* harmony import */ var _actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../actions/audioplayer_actions */ "./frontend/actions/audioplayer_actions.js");
+
 
 
 
@@ -884,12 +894,21 @@ __webpack_require__.r(__webpack_exports__);
 var mapStateToProps = function mapStateToProps(state) {
   return {
     songs: Object.values(state.entities.songs),
-    users: state.entities.users
+    users: state.entities.users,
+    playState: state.player.playState,
+    currentSong: state.player.currentSong,
+    currentAudio: state.player.currentAudio
   };
 };
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
+    playSong: function playSong(song, audio) {
+      return dispatch(Object(_actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_4__["playSong"])(song, audio));
+    },
+    pauseSong: function pauseSong() {
+      return dispatch(Object(_actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_4__["pauseSong"])());
+    },
     fetchAllSongs: function fetchAllSongs() {
       return dispatch(Object(_actions_song_actions__WEBPACK_IMPORTED_MODULE_2__["fetchAllSongs"])());
     },
@@ -964,40 +983,49 @@ function (_React$Component) {
     value: function render() {
       var _this = this;
 
-      var songs1 = this.props.songs.sort(function () {
-        return 0.5 - Math.random();
-      }).slice(0, 4).map(function (song) {
+      var songs1 = this.props.songs.slice(4, 8).map(function (song) {
         return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
           key: song.id
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_song_song_index_item__WEBPACK_IMPORTED_MODULE_7__["default"], {
           key: song.id,
           path: _this.props.location.pathname,
           song: song,
-          users: _this.props.users
+          users: _this.props.users,
+          playSong: _this.props.playSong,
+          pauseSong: _this.props.pauseSong,
+          playState: _this.props.playState,
+          currentSong: _this.props.currentSong,
+          currentAudio: _this.props.currentAudio
         }));
       });
-      var songs2 = this.props.songs.sort(function () {
-        return 0.5 - Math.random();
-      }).slice(0, 4).map(function (song) {
+      var songs2 = this.props.songs.slice(8, 12).map(function (song) {
         return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
           key: song.id
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_song_song_index_item__WEBPACK_IMPORTED_MODULE_7__["default"], {
           key: song.id,
           path: _this.props.location.pathname,
           song: song,
-          users: _this.props.users
+          users: _this.props.users,
+          playSong: _this.props.playSong,
+          pauseSong: _this.props.pauseSong,
+          playState: _this.props.playState,
+          currentSong: _this.props.currentSong,
+          currentAudio: _this.props.currentAudio
         }));
       });
-      var songs3 = this.props.songs.sort(function () {
-        return 0.5 - Math.random();
-      }).slice(0, 4).map(function (song) {
+      var songs3 = this.props.songs.slice(0, 4).map(function (song) {
         return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
           key: song.id
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_song_song_index_item__WEBPACK_IMPORTED_MODULE_7__["default"], {
           key: song.id,
           path: _this.props.location.pathname,
           song: song,
-          users: _this.props.users
+          users: _this.props.users,
+          playSong: _this.props.playSong,
+          pauseSong: _this.props.pauseSong,
+          playState: _this.props.playState,
+          currentSong: _this.props.currentSong,
+          currentAudio: _this.props.currentAudio
         }));
       });
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("header", {
@@ -1314,6 +1342,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _main__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./main */ "./frontend/components/main_page/main.jsx");
 /* harmony import */ var _actions_song_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/song_actions */ "./frontend/actions/song_actions.js");
 /* harmony import */ var _actions_user_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/user_actions */ "./frontend/actions/user_actions.js");
+/* harmony import */ var _actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../actions/audioplayer_actions */ "./frontend/actions/audioplayer_actions.js");
+
 
 
 
@@ -1322,12 +1352,21 @@ __webpack_require__.r(__webpack_exports__);
 var mapStateToProps = function mapStateToProps(state) {
   return {
     songs: Object.values(state.entities.songs),
-    users: state.entities.users
+    users: state.entities.users,
+    playState: state.player.playState,
+    currentSong: state.player.currentSong,
+    currentAudio: state.player.currentAudio
   };
 };
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
+    playSong: function playSong(song, audio) {
+      return dispatch(Object(_actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_4__["playSong"])(song, audio));
+    },
+    pauseSong: function pauseSong() {
+      return dispatch(Object(_actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_4__["pauseSong"])());
+    },
     fetchAllSongs: function fetchAllSongs() {
       return dispatch(Object(_actions_song_actions__WEBPACK_IMPORTED_MODULE_2__["fetchAllSongs"])());
     },
