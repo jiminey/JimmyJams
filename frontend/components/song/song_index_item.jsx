@@ -14,9 +14,9 @@ class SongIndexItem extends React.Component {
 
 
     play(e) {
-        if (this.props.playState && this.props.currentSong) {
+        if (this.props.playState && this.props.currentSong.title === this.props.song.title) {
             this.props.pauseSong()
-            this.props.localAudio.pause();
+            this.props.currentAudio.pause();
         } else {
             this.props.playSong(this.props.song, this.state.localAudio);
             this.state.localAudio.play();

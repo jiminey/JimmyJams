@@ -1771,9 +1771,9 @@ function (_React$Component) {
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(SongIndexItem, [{
     key: "play",
     value: function play(e) {
-      if (this.props.playState && this.props.currentSong) {
+      if (this.props.playState && this.props.currentSong.title === this.props.song.title) {
         this.props.pauseSong();
-        this.props.localAudio.pause();
+        this.props.currentAudio.pause();
       } else {
         this.props.playSong(this.props.song, this.state.localAudio);
         this.state.localAudio.play();
@@ -2466,11 +2466,11 @@ function (_React$Component) {
           path: _this2.props.location.pathname,
           song: song,
           users: _this2.props.users,
-          currentAudio: _this2.props.currentAudio,
           playSong: _this2.props.playSong,
           pauseSong: _this2.props.pauseSong,
           playState: _this2.props.playState,
-          currentSong: _this2.props.currentSong
+          currentSong: _this2.props.currentSong,
+          currentAudio: _this2.props.currentAudio
         }));
       });
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {

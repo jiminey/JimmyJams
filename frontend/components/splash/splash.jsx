@@ -33,11 +33,11 @@ class Splash extends React.Component {
                         key={song.id}
                         path={this.props.location.pathname}
                         song={song} users={this.props.users} 
-                        currentAudio={this.props.currentAudio}
                         playSong={this.props.playSong}
                         pauseSong={this.props.pauseSong}
                         playState={this.props.playState} 
                         currentSong={this.props.currentSong}
+                        currentAudio={this.props.currentAudio}
                         />
                 </div>
             )
