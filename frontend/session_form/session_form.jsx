@@ -67,11 +67,45 @@ class SessionForm extends React.Component {
         document.getElementById('session-submit-btn').click();
     }
 
+
+    toggleAction() {
+        if (this.props.formType === "Create Account") {
+            return(
+                <div>
+                    <p className='fine-print'>
+                        If you already have an account with us you are able to {this.props.formType} here.
+                        We may use your email and devices for updates and tips on 
+                        JimmyJams's products and services, and for activities notifications. 
+                        You can unsubscribe for free at any time in your notification settings.</p>
+                    <br />
+                    <p className='fine-print'>We may use information you provide us in
+                    order to show you targeted ads as described
+                        in our <span className='blue-hyperlink'>Privacy Policy.</span></p>
+                </div>
+            )
+
+        } else {
+            return (
+                <div>
+                    <p className='fine-print'>
+                        If you do not already have an account with us you are able to {this.props.formType} here.
+                            We may use your email and devices for updates and tips on
+                            JimmyJams's products and services, and for activities notifications.
+                            You can unsubscribe for free at any time in your notification settings.</p>
+                    <br />
+                    <p className='fine-print'>We may use information you provide us in
+                    order to show you targeted ads as described
+                            in our <span className='blue-hyperlink'>Privacy Policy.</span></p>
+                </div>
+            )
+        }
+    }
+
     render() {
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box" >
-                    <button className='facebook-btn' onClick={this.demoLogin}>Continue with Facebook</button>
+                    <button className='facebook-btn' >Continue with Facebook</button>
                     <br />
                     <button className='demologin-btn'onClick={this.demoLogin}>Continue with Demo</button>
                     <br />
@@ -112,19 +146,9 @@ class SessionForm extends React.Component {
                                  id='session-submit-btn'/>
                     </div>
                     <br/> 
-                    <p className='blue-hyperlink-help'>Need help?</p>
+                    <p className='blue-hyperlink-help'>{this.props.otherForm}</p>
                     <br />
-                        <p className='fine-print'>
-                        We may use your email and devices 
-                        for updates and tips on SoundCloud's 
-                        products and services,
-                        and for activities notifications. 
-                        You can unsubscribe for free at any time in your 
-                        notification settings.</p> 
-                        <br /> 
-                        <p className='fine-print'>We may use information you provide us in 
-                        order to show you targeted ads as described 
-                        in our <span className='blue-hyperlink'>Privacy Policy.</span></p>
+                        {this.toggleAction()}
                 </form>
             </div>
         );

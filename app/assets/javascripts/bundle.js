@@ -3163,8 +3163,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     otherForm: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
       onClick: function onClick() {
         return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_3__["openModal"])('signup'));
-      }
-    }, "Signup"),
+      },
+      className: "blue-hyperlink-help"
+    }, "Create Account"),
     closeModal: function closeModal() {
       return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_3__["closeModal"])());
     }
@@ -3357,6 +3358,27 @@ function (_React$Component) {
       return demoLogin;
     }()
   }, {
+    key: "toggleAction",
+    value: function toggleAction() {
+      if (this.props.formType === "Create Account") {
+        return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
+          className: "fine-print"
+        }, "If you already have an account with us you are able to ", this.props.formType, " here. We may use your email and devices for updates and tips on JimmyJams's products and services, and for activities notifications. You can unsubscribe for free at any time in your notification settings."), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
+          className: "fine-print"
+        }, "We may use information you provide us in order to show you targeted ads as described in our ", react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", {
+          className: "blue-hyperlink"
+        }, "Privacy Policy.")));
+      } else {
+        return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
+          className: "fine-print"
+        }, "If you do not already have an account with us you are able to ", this.props.formType, " here. We may use your email and devices for updates and tips on JimmyJams's products and services, and for activities notifications. You can unsubscribe for free at any time in your notification settings."), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
+          className: "fine-print"
+        }, "We may use information you provide us in order to show you targeted ads as described in our ", react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", {
+          className: "blue-hyperlink"
+        }, "Privacy Policy.")));
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
@@ -3365,8 +3387,7 @@ function (_React$Component) {
         onSubmit: this.handleSubmit,
         className: "login-form-box"
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("button", {
-        className: "facebook-btn",
-        onClick: this.demoLogin
+        className: "facebook-btn"
       }, "Continue with Facebook"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("button", {
         className: "demologin-btn",
         onClick: this.demoLogin
@@ -3395,13 +3416,7 @@ function (_React$Component) {
         id: "session-submit-btn"
       })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
         className: "blue-hyperlink-help"
-      }, "Need help?"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
-        className: "fine-print"
-      }, "We may use your email and devices for updates and tips on SoundCloud's products and services, and for activities notifications. You can unsubscribe for free at any time in your notification settings."), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
-        className: "fine-print"
-      }, "We may use information you provide us in order to show you targeted ads as described in our ", react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", {
-        className: "blue-hyperlink"
-      }, "Privacy Policy."))));
+      }, this.props.otherForm), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), this.toggleAction()));
     }
   }]);
 
@@ -3449,8 +3464,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     otherForm: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
       onClick: function onClick() {
         return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_3__["openModal"])('login'));
-      }
-    }, "Login"),
+      },
+      className: "blue-hyperlink-help"
+    }, "Sign In"),
     closeModal: function closeModal() {
       return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_3__["closeModal"])());
     }
