@@ -7,10 +7,20 @@ class SongIndexItem extends React.Component {
         super(props);
         this.play = this.play.bind(this)
         this.toggleDisplay = this.toggleDisplay.bind(this)
+        this.state = {
+            localAudio: new Audio(`${this.props.song.song_fileUrl}`)
+        }
     };
 
 
     play(e) {
+        if (this.props.playState && this.props.currentSong) {
+            this.props.pauseSong()
+            this.props.localAudio.pause();
+        } else {
+            this.props.playSong(this.props.song, this.state.localAudio);
+            this.state.localAudio.play();
+        }
       
     }
 
@@ -18,12 +28,12 @@ class SongIndexItem extends React.Component {
         if (this.props.playState && this.props.currentSong.title === this.props.song.title) {
             //pause 
             return (
-                <img onClick={this.play} className='orangeplay1' src='https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangepause.png?raw=true' ></img>
+                <img onClick={() => this.play()} className='orangeplay1' src='https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangepause.png?raw=true' ></img>
             )
             //play
         } else {
             return (
-                <img onClick={this.play} className='orangeplay1' src='https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangeplay.png?raw=true' ></img>
+                <img onClick={() => this.play()} className='orangeplay1' src='https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangeplay.png?raw=true' ></img>
             )
         }
     }

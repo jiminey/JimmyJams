@@ -1762,25 +1762,42 @@ function (_React$Component) {
     _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(SongIndexItem).call(this, props));
     _this.play = _this.play.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     _this.toggleDisplay = _this.toggleDisplay.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
+    _this.state = {
+      localAudio: new Audio("".concat(_this.props.song.song_fileUrl))
+    };
     return _this;
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(SongIndexItem, [{
     key: "play",
-    value: function play(e) {}
+    value: function play(e) {
+      if (this.props.playState && this.props.currentSong) {
+        this.props.pauseSong();
+        this.props.localAudio.pause();
+      } else {
+        this.props.playSong(this.props.song, this.state.localAudio);
+        this.state.localAudio.play();
+      }
+    }
   }, {
     key: "toggleDisplay",
     value: function toggleDisplay() {
+      var _this2 = this;
+
       if (this.props.playState && this.props.currentSong.title === this.props.song.title) {
         //pause 
         return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
-          onClick: this.play,
+          onClick: function onClick() {
+            return _this2.play();
+          },
           className: "orangeplay1",
           src: "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangepause.png?raw=true"
         }); //play
       } else {
         return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
-          onClick: this.play,
+          onClick: function onClick() {
+            return _this2.play();
+          },
           className: "orangeplay1",
           src: "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangeplay.png?raw=true"
         });
@@ -2441,13 +2458,19 @@ function (_React$Component) {
       var _this2 = this;
 
       var songs = this.props.songs.slice(0, 12).map(function (song) {
+        // this.props.audio = new Audio(`${song.song_fileUrl}`)
         return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
           key: song.id
         }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_song_song_index_item__WEBPACK_IMPORTED_MODULE_9__["default"], {
           key: song.id,
           path: _this2.props.location.pathname,
           song: song,
-          users: _this2.props.users
+          users: _this2.props.users,
+          currentAudio: _this2.props.currentAudio,
+          playSong: _this2.props.playSong,
+          pauseSong: _this2.props.pauseSong,
+          playState: _this2.props.playState,
+          currentSong: _this2.props.currentSong
         }));
       });
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
@@ -2532,6 +2555,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _splash__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./splash */ "./frontend/components/splash/splash.jsx");
 /* harmony import */ var _actions_song_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/song_actions */ "./frontend/actions/song_actions.js");
 /* harmony import */ var _actions_user_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../actions/user_actions */ "./frontend/actions/user_actions.js");
+/* harmony import */ var _actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../actions/audioplayer_actions */ "./frontend/actions/audioplayer_actions.js");
+
 
 
 
@@ -2541,12 +2566,21 @@ __webpack_require__.r(__webpack_exports__);
 var mapStateToProps = function mapStateToProps(state) {
   return {
     songs: Object.values(state.entities.songs),
-    users: state.entities.users
+    users: state.entities.users,
+    playState: state.player.playState,
+    currentSong: state.player.currentSong,
+    currentAudio: state.player.currentAudio
   };
 };
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
+    playSong: function playSong(song, audio) {
+      return dispatch(Object(_actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_5__["playSong"])(song, audio));
+    },
+    pauseSong: function pauseSong() {
+      return dispatch(Object(_actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_5__["pauseSong"])());
+    },
     openModal: function openModal(modal) {
       return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_1__["openModal"])(modal));
     },
