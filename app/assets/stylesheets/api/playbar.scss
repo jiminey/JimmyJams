@@ -39,6 +39,7 @@ progress {
   border-radius: 2px; 
   height: 3px;
   margin: 0 auto;
+  cursor: pointer;
 }
 progress::-webkit-progress-bar {
  background-color: #999;
