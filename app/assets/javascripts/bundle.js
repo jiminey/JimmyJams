@@ -1771,9 +1771,19 @@ function (_React$Component) {
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(SongIndexItem, [{
     key: "play",
     value: function play(e) {
-      if (this.props.playState && this.props.currentSong.title === this.props.song.title) {
+      // if (this.props.playState && this.props.currentSong.title === this.props.song.title) {
+      //     this.props.pauseSong()
+      //     this.props.currentAudio.pause();
+      // } else {
+      //     this.props.playSong(this.props.song, this.state.localAudio);
+      //     this.state.localAudio.play();
+      // }
+      if (this.props.playState && this.props.currentSong.title === this.props.song.title && this.props.currentAudio) {
         this.props.pauseSong();
         this.props.currentAudio.pause();
+      } else if (this.props.currentAudio && this.props.playState === false) {
+        this.props.playSong(this.props.song, this.props.currentAudio);
+        this.props.currentAudio.play();
       } else {
         this.props.playSong(this.props.song, this.state.localAudio);
         this.state.localAudio.play();
@@ -1875,7 +1885,7 @@ function (_React$Component) {
 
     _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(SongShow).call(this, props));
     _this.state = {
-      audio: new Audio("".concat(_this.props.song.song_fileUrl))
+      localAudio: new Audio("".concat(_this.props.song.song_fileUrl))
     };
     _this.handleDelete = _this.handleDelete.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     _this.play = _this.play.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
@@ -1903,12 +1913,15 @@ function (_React$Component) {
   }, {
     key: "play",
     value: function play(e) {
-      if (this.props.playState && this.props.currentSong.title === this.props.song.title) {
-        this.state.audio.pause();
+      if (this.props.playState && this.props.currentSong.title === this.props.song.title && this.props.currentAudio) {
         this.props.pauseSong();
+        this.props.currentAudio.pause();
+      } else if (this.props.currentAudio && this.props.playState === false) {
+        this.props.playSong(this.props.song, this.props.currentAudio);
+        this.props.currentAudio.play();
       } else {
-        this.state.audio.play();
-        this.props.playSong(this.props.song, this.state.audio);
+        this.props.playSong(this.props.song, this.state.localAudio);
+        this.state.localAudio.play();
       }
     }
   }, {
@@ -2266,7 +2279,8 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
     songList: state.player.songList,
     song: song,
     currentUser: state.session.currentUser,
-    currentSong: state.entities.songs[state.player.songId]
+    currentSong: state.entities.songs[state.player.songId],
+    currentAudio: state.player.currentAudio
   };
 };
 

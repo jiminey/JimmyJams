@@ -14,11 +14,22 @@ class SongIndexItem extends React.Component {
 
 
     play(e) {
-        if (this.props.playState && this.props.currentSong.title === this.props.song.title) {
+        // if (this.props.playState && this.props.currentSong.title === this.props.song.title) {
+        //     this.props.pauseSong()
+        //     this.props.currentAudio.pause();
+        // } else {
+        //     this.props.playSong(this.props.song, this.state.localAudio);
+        //     this.state.localAudio.play();
+        // }
+
+        if (this.props.playState && this.props.currentSong.title === this.props.song.title && this.props.currentAudio) {
             this.props.pauseSong()
             this.props.currentAudio.pause();
+        } else if (this.props.currentAudio && this.props.playState === false) {
+            this.props.playSong(this.props.song, this.props.currentAudio);
+            this.props.currentAudio.play();
         } else {
-            this.props.playSong(this.props.song, this.state.localAudio);
+            this.props.playSong(this.props.song, this.state.localAudio)
             this.state.localAudio.play();
         }
       

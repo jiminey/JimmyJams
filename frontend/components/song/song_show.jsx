@@ -8,7 +8,7 @@ class SongShow extends React.Component {
 
 
         this.state = {
-            audio: new Audio(`${this.props.song.song_fileUrl}`)
+            localAudio: new Audio(`${this.props.song.song_fileUrl}`)
         }
         
         this.handleDelete = this.handleDelete.bind(this)
@@ -30,12 +30,15 @@ class SongShow extends React.Component {
     }
 
     play(e) {
-        if (this.props.playState && this.props.currentSong.title === this.props.song.title){
-            this.state.audio.pause();
+        if (this.props.playState && this.props.currentSong.title === this.props.song.title && this.props.currentAudio) {
             this.props.pauseSong()
+            this.props.currentAudio.pause();
+        } else if (this.props.currentAudio && this.props.playState === false) {
+            this.props.playSong(this.props.song, this.props.currentAudio);
+            this.props.currentAudio.play();
         } else {
-            this.state.audio.play();
-            this.props.playSong(this.props.song, this.state.audio);
+            this.props.playSong(this.props.song, this.state.localAudio)
+            this.state.localAudio.play();
         }
     }
 
