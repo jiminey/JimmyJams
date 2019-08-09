@@ -50,7 +50,7 @@ class NavBar extends React.Component {
                         <div className='upload'>
                             <Link className='upload' to='/upload'>Upload</Link>
                         </div>
-                        <div className='username'>{this.props.currentUser.username}</div>
+                        <div className='username'>Jimmy Nguyen</div>
                         <div className='linked'> </div>
                         <div className='mail'> </div>
                         <div className='dropdown'> . . .</div>

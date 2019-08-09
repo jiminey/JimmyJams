@@ -1467,7 +1467,7 @@ function (_React$Component) {
         to: "/upload"
       }, "Upload")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "username"
-      }, this.props.currentUser.username), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      }, "Jimmy Nguyen"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "linked"
       }, " "), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "mail"
