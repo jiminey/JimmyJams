@@ -393,6 +393,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _song_song_form_create_song_container__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./song/song_form/create_song_container */ "./frontend/components/song/song_form/create_song_container.js");
 /* harmony import */ var _library_library_container__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./library/library_container */ "./frontend/components/library/library_container.js");
 /* harmony import */ var _song_song_show_container__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./song/song_show_container */ "./frontend/components/song/song_show_container.js");
+/* harmony import */ var _user_user_show_container__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./user/user_show_container */ "./frontend/components/user/user_show_container.js");
+
 
 
 
@@ -407,6 +409,10 @@ var App = function App() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "splash"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modal_modal__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_3__["AuthRoute"], {
+    exact: true,
+    path: "/users/:userId",
+    component: _user_user_show_container__WEBPACK_IMPORTED_MODULE_9__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_3__["AuthRoute"], {
     exact: true,
     path: "/songs/:songId",
     component: _song_song_show_container__WEBPACK_IMPORTED_MODULE_8__["default"]
@@ -1966,10 +1972,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../audioplayer/audioplayer_container */ "./frontend/components/audioplayer/audioplayer_container.js");
-/* harmony import */ var _navbar_navbar_container__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../navbar/navbar_container */ "./frontend/components/navbar/navbar_container.js");
-
+/* harmony import */ var _audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../audioplayer/audioplayer_container */ "./frontend/components/audioplayer/audioplayer_container.js");
+/* harmony import */ var _navbar_navbar_container__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../navbar/navbar_container */ "./frontend/components/navbar/navbar_container.js");
 
 
 
@@ -2051,7 +2055,7 @@ function (_React$Component) {
         return null;
       }
 
-      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_navbar_navbar_container__WEBPACK_IMPORTED_MODULE_9__["default"], null), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_navbar_navbar_container__WEBPACK_IMPORTED_MODULE_8__["default"], null), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "show-body"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "show-top"
@@ -2302,7 +2306,7 @@ function (_React$Component) {
         className: "go-mobile"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "wtf-title"
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", null, "Go mobile"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", null, "View All"))))))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_8__["default"], null));
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", null, "Go mobile"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", null, "View All"))))))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_7__["default"], null));
     }
   }]);
 
@@ -2673,6 +2677,17 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_splash__WEBPACK_IMPORTED_MODULE_2__["default"]));
+
+/***/ }),
+
+/***/ "./frontend/components/user/user_show_container.js":
+/*!*********************************************************!*\
+  !*** ./frontend/components/user/user_show_container.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/frontend/components/user/user_show_container.js: Identifier 'fetchSong' has already been declared (8:8)\n\n\u001b[0m \u001b[90m  6 | \u001b[39m\u001b[36mimport\u001b[39m { openModal } from \u001b[32m'../../actions/modal_actions'\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  7 | \u001b[39m\u001b[36mimport\u001b[39m { playSong\u001b[33m,\u001b[39m pauseSong } from \u001b[32m'../../actions/audioplayer_actions'\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 | \u001b[39m\u001b[36mimport\u001b[39m {fetchSong} from \u001b[32m'../../actions/song_actions'\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  9 | \u001b[39m\u001b[36mimport\u001b[39m {fetchUser} from \u001b[32m'../../actions/user_actions'\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 10 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 11 | \u001b[39m\u001b[0m\n    at Object.raise (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:6344:17)\n    at ScopeHandler.checkRedeclarationInScope (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:3757:12)\n    at ScopeHandler.declareName (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:3723:12)\n    at Object.checkLVal (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:8034:22)\n    at Object.parseImportSpecifier (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:11206:10)\n    at Object.parseNamedImportSpecifiers (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:11191:12)\n    at Object.parseImport (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:11130:39)\n    at Object.parseStatementContent (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:9886:27)\n    at Object.parseStatement (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:9788:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:10364:25)\n    at Object.parseBlockBody (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:10351:10)\n    at Object.parseTopLevel (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:9717:10)\n    at Object.parse (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:11233:17)\n    at parse (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:11269:38)\n    at parser (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/core/lib/transformation/normalize-file.js:170:34)\n    at normalizeFile (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/core/lib/transformation/normalize-file.js:138:11)\n    at runSync (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/core/lib/transformation/index.js:44:43)\n    at runAsync (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/core/lib/transformation/index.js:35:14)\n    at process.nextTick (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/core/lib/transform.js:34:34)\n    at process._tickCallback (internal/process/next_tick.js:61:11)");
 
 /***/ }),
 

@@ -57,7 +57,7 @@ body {
     color: #999;
     border: 1px solid black;
     border-radius:1px;
-    cursor: pointer;
+    cursor: not-allowed;
     
     
 }
@@ -116,7 +116,7 @@ body {
     color: #f70;
     float: left;
     font: 100 14px/1.5 "Interstate","Lucida Grande",Arial,sans-serif;
-    cursor: pointer;
+    cursor: not-allowed;
 }
 
 .upload {
@@ -147,7 +147,6 @@ body {
     background-image: url('https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/notification.png?raw=true');
     background-size: 25px 25px;
     cursor: pointer;
-   
 }
 .mail {
     background-repeat: no-repeat;
