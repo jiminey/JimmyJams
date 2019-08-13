@@ -1,16 +1,13 @@
 import { connect } from 'react-redux';
-import { fetchSong } from '../../actions/song_actions';
-import UsrShow from '../user/user_show'
+import UserShow from '../user/user_show'
 
 import { deleteSong, updateSong } from '../../actions/song_actions'
 import { openModal } from '../../actions/modal_actions'
 import { playSong, pauseSong } from '../../actions/audioplayer_actions'
-import {fetchSong} from '../../actions/song_actions'
 import {fetchUser} from '../../actions/user_actions'
 
 
 const mapStateToProps = (state, ownProps) => {
-
     return ({
         user: state.entities.users[ownProps.match.params.userId],
         songs: Object.values(state.entities.songs).filter(song => song.uploader == ownProps.match.params.userId),
@@ -33,4 +30,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(SongShow);
+)(UserShow);
