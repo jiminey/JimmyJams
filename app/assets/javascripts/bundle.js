@@ -1413,9 +1413,125 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   !*** ./frontend/components/navbar/navbar.jsx ***!
   \***********************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/frontend/components/navbar/navbar.jsx: Unexpected token (9:18)\n\n\u001b[0m \u001b[90m  7 | \u001b[39m        \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mmove \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mmove\u001b[33m.\u001b[39mbind(\u001b[36mthis\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m  8 | \u001b[39m        \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mstate \u001b[33m=\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 | \u001b[39m            value \u001b[33m=\u001b[39m \u001b[32m\"\"\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 10 | \u001b[39m            \u001b[0m\n\u001b[0m \u001b[90m 11 | \u001b[39m        }\u001b[0m\n\u001b[0m \u001b[90m 12 | \u001b[39m    }\u001b[0m\n    at Object.raise (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:6344:17)\n    at Object.unexpected (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:7659:16)\n    at Object.parseMaybeAssign (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:8242:12)\n    at Object.parseMaybeAssign (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:8239:25)\n    at Object.parseExpression (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:8148:23)\n    at Object.parseStatementContent (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:9917:23)\n    at Object.parseStatement (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:9788:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:10364:25)\n    at Object.parseBlockBody (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:10351:10)\n    at Object.parseBlock (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:10335:10)\n    at Object.parseFunctionBody (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:9408:24)\n    at Object.parseFunctionBodyAndFinish (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:9378:10)\n    at Object.parseMethod (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:9332:10)\n    at Object.pushClassMethod (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:10767:30)\n    at Object.parseClassMemberWithIsStatic (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:10692:12)\n    at Object.parseClassMember (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:10631:10)\n    at withTopicForbiddingContext (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:10586:14)\n    at Object.withTopicForbiddingContext (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:9683:14)\n    at Object.parseClassBody (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:10563:10)\n    at Object.parseClass (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:10537:22)\n    at Object.parseStatementContent (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:9830:21)\n    at Object.parseStatement (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:9788:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:10364:25)\n    at Object.parseBlockBody (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:10351:10)\n    at Object.parseTopLevel (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:9717:10)\n    at Object.parse (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:11233:17)\n    at parse (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/parser/lib/index.js:11269:38)\n    at parser (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/core/lib/transformation/normalize-file.js:170:34)\n    at normalizeFile (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/core/lib/transformation/normalize-file.js:138:11)\n    at runSync (/Users/jiminey/Desktop/appacademy/fullstackproject/JimmyJams/node_modules/@babel/core/lib/transformation/index.js:44:43)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _search_search_container__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../search/search_container */ "./frontend/components/search/search_container.js");
+
+
+
+
+
+
+
+
+
+
+var NavBar =
+/*#__PURE__*/
+function (_React$Component) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(NavBar, _React$Component);
+
+  function NavBar(props) {
+    var _this;
+
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, NavBar);
+
+    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(NavBar).call(this, props));
+    _this.move = _this.move.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
+    return _this;
+  }
+
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(NavBar, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.fetchAllUsers();
+    }
+  }, {
+    key: "move",
+    value: function move() {
+      this.props.history.push('/');
+    }
+  }, {
+    key: "search",
+    value: function search() {}
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("header", {
+        className: "main-navbar"
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "main-left"
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "header-logo",
+        onClick: function onClick() {
+          return _this2.move();
+        }
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+        className: "home"
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
+        className: "home2",
+        to: "/main"
+      }, "Home")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+        className: "stream"
+      }, "Stream"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+        className: "library"
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
+        to: "/library"
+      }, "Library"))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "main-middle"
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
+        className: "search",
+        type: "search",
+        placeholder: "Search",
+        onChange: function onChange() {
+          return _this2.search();
+        }
+      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "main-right"
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "upgrade"
+      }, "Upgrade"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "upload"
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
+        className: "upload",
+        to: "/upload"
+      }, "Upload")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "username"
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
+        to: "/users/".concat(this.props.currentUser.id)
+      }, "Jimmy Nguyen")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "linked"
+      }, " "), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "mail"
+      }, " "), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "dropdown"
+      }, " . . ."))));
+    }
+  }]);
+
+  return NavBar;
+}(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (NavBar);
 
 /***/ }),
 
@@ -1481,6 +1597,198 @@ var Root = function Root(_ref) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Root);
+
+/***/ }),
+
+/***/ "./frontend/components/search/search.jsx":
+/*!***********************************************!*\
+  !*** ./frontend/components/search/search.jsx ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
+
+
+
+
+
+
+
+
+var Search =
+/*#__PURE__*/
+function (_React$Component) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(Search, _React$Component);
+
+  function Search(props) {
+    var _this;
+
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Search);
+
+    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Search).call(this, props));
+    _this.state = {
+      value: '',
+      loggedIn: _this.props.loggedIn
+    };
+    _this.handleSearch = _this.handleSearch.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
+    _this.handleResultClick = _this.handleResultClick.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
+    return _this;
+  }
+
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Search, [{
+    key: "handleSearch",
+    value: function handleSearch(e) {
+      e.preventDefault();
+      this.setState({
+        value: e.target.value
+      });
+      this.props.receiveSearchResults(e.target.value);
+    }
+  }, {
+    key: "handleClick",
+    value: function handleClick(e) {
+      e.preventDefault();
+    }
+  }, {
+    key: "handleResultClick",
+    value: function handleResultClick(e) {
+      e.preventDefault();
+      this.setState({
+        value: ''
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var results;
+
+      if (this.props.results.length && this.state.value !== '') {
+        results = this.props.results.map(function (result) {
+          return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
+            className: "result-li",
+            key: result.id,
+            onClick: _this2.handleResultClick
+          }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
+            to: "/teams/".concat(result.id),
+            style: {
+              textDecoration: 'none',
+              color: 'black'
+            },
+            id: "search-link"
+          }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+            id: "search-result-team"
+          }, result.title)));
+        });
+      }
+
+      if (this.props.results.length === 0 && this.state.value !== '') {
+        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
+          className: "main-middle"
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
+          onClick: this.handleClick,
+          onChange: this.handleSearch,
+          type: "search",
+          placeholder: "Search by song title",
+          className: "search-input",
+          value: this.state.value
+        })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ul", {
+          className: "result-drop-ul"
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
+          className: "result-li"
+        }, "No results found")));
+      }
+
+      if (this.props.results.length > 0 && this.state.value === '') {
+        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
+          className: "main-middle"
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
+          onClick: this.handleClick,
+          onChange: this.handleSearch,
+          type: "search",
+          placeholder: "Search by song title",
+          className: "search-input",
+          value: this.state.value
+        })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ul", {
+          className: "result-drop-ul"
+        }));
+      }
+
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "main-middle"
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
+        className: "main-middle"
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
+        onClick: this.handleClick,
+        onChange: this.handleSearch,
+        type: "search",
+        placeholder: "Search by team",
+        className: "search-input",
+        value: this.state.value
+      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ul", {
+        className: "result-drop-ul"
+      }, results));
+    }
+  }]);
+
+  return Search;
+}(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (Search);
+
+/***/ }),
+
+/***/ "./frontend/components/search/search_container.js":
+/*!********************************************************!*\
+  !*** ./frontend/components/search/search_container.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _actions_search_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../actions/search_actions */ "./frontend/actions/search_actions.js");
+/* harmony import */ var _search__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./search */ "./frontend/components/search/search.jsx");
+
+
+
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    results: state.results,
+    loggedIn: Boolean(state.session.id)
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    receiveSearchResults: function receiveSearchResults(results) {
+      return dispatch(Object(_actions_search_actions__WEBPACK_IMPORTED_MODULE_1__["receiveSearchResults"])(results));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_search__WEBPACK_IMPORTED_MODULE_2__["default"]));
 
 /***/ }),
 

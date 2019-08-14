@@ -5,10 +5,6 @@ class NavBar extends React.Component {
     constructor(props) {
         super(props)
         this.move = this.move.bind(this)
-        this.state = {
-            value = "",
-            
-        }
     }
 
 
