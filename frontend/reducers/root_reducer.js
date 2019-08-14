@@ -4,6 +4,7 @@ import entitiesReducer from '../reducers/entities_reducer'
 import sessionReducer from '../reducers/session_reducer'
 import uiReducer from '../reducers/ui_reducer'
 import audioPlayerReducer from '../reducers/audio_player_reducer'
+import searchReducer from '../reducers/search_reducer'
 
 const rootReducer = combineReducers({
     entities: entitiesReducer,
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
     errors: errorsReducer,
     ui: uiReducer,
     player: audioPlayerReducer,
+    results: searchReducer,
 
 
 })

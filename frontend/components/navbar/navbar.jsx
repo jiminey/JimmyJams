@@ -1,10 +1,14 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-
+import SearchContainer from '../search/search_container'
 class NavBar extends React.Component {
     constructor(props) {
         super(props)
         this.move = this.move.bind(this)
+        this.state = {
+            value = "",
+            
+        }
     }
 
 
@@ -14,6 +18,10 @@ class NavBar extends React.Component {
 
     move() {
         this.props.history.push('/');
+    }
+
+    search() {
+
     }
 
     render() {
@@ -38,7 +46,7 @@ class NavBar extends React.Component {
                     </div>
 
                     <div className='main-middle'>
-                        <input className='search' type="search" placeholder="Search" />
+                        <input className='search' type="search" placeholder="Search" onChange={() => this.search()} />
                     </div>
 
                     <div>

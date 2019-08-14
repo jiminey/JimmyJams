@@ -6,11 +6,10 @@ class Api::SearchController < ApplicationController
             return
         end
 
-        @songs = Song.where("name LIKE (?)",  "%#{@input}%").with_attached_album_cover
+        @songs = Song.where("title ILIKE (?)",  "%#{@input}%").with_attached_album_cover
         
         render :index
     end
-
 
     private
     
