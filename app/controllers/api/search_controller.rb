@@ -1,5 +1,4 @@
-class Api::SearchControllerController < ApplicationController
-
+class Api::SearchController < ApplicationController
      def index
         @input = search_params[:input]
         if @input.empty?
@@ -18,6 +17,4 @@ class Api::SearchControllerController < ApplicationController
     def search_params
         params.require(:search).permit(:input)
     end
-
-
 end
