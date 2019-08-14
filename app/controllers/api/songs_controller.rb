@@ -14,7 +14,7 @@ class Api::SongsController < ApplicationController
     end  
 
     def index
-        @songs = Song.all.sample(16)
+        @songs = Song.all
         render 'api/songs/index' 
     end  
 
