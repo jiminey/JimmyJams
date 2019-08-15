@@ -54,7 +54,7 @@ class Search extends React.Component {
                     </form>
                     <ul className="result-drop-ul">
                         <li className="result-li">
-                            No results found
+                            <div id="search-result-song">No results found </div>
                         </li>
                     </ul>
                 </div>

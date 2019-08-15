@@ -1701,7 +1701,9 @@ function (_React$Component) {
           className: "result-drop-ul"
         }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
           className: "result-li"
-        }, "No results found")));
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+          id: "search-result-song"
+        }, "No results found "))));
       }
 
       if (this.props.results.length > 0 && this.state.value === '') {

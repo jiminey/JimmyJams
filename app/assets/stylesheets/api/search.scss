@@ -15,23 +15,38 @@
     padding-bottom: 7px;
     margin-top: 10px;
     margin-bottom: 10px;
-    font-size: medium;
+    font-size: 12px;
+    color: white
+
+ }
+
+ #search-result-song {
+     color:white;
+     font-size: 12px;
  }
 
 
 .result-drop-ul {
-  background: white;
-  border-radius: .625rem;
-  border-color: #a8bac9;
+    background: white;
+    border-color: #a8bac9;
+    border-radius:2px;
     box-shadow: 0 0 10px #a8bac9;
     z-index: 2;
     position: absolute;
+    width: 260px;
+    margin-left: 10px;
+    background: #333; 
+    color: white;
+    font-size: 12px;
+
 }
 
 .result-li:hover {
-  transition-duration: .5s;
-  color: #1673e6;
-  font-weight: bolder;
-   z-index: 2;
+    transition-duration: .5s;
+    color: #1673e6;
+    font-weight: bolder;
+    z-index: 2;
+    color: white
+
 
 }
