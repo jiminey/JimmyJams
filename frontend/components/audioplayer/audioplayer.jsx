@@ -96,13 +96,13 @@ class AudioPlayer extends React.Component {
         if (this.props.playState) {
             return (
                 <div onClick={this.toggle} className='p2'>
-                    <i class="fa fa-pause" aria-hidden="true"></i>
+                    <i class="fa fa-pause fa-sm" aria-hidden="true"></i>
                 </div>
             )
         } else {
             return (
                 <div onClick={this.toggle} className='p2'>
-                    <i class="fa fa-play" aria-hidden="true" ></i>
+                    <i class="fa fa-play fa-sm" aria-hidden="true" ></i>
                 </div>
             )
         }
@@ -150,7 +150,7 @@ class AudioPlayer extends React.Component {
                     
 
                         <div className='p1'>
-                            <i class="fa fa-step-backward" aria-hidden="true"></i>
+                            <i class="fa fa-step-backward fa-sm" aria-hidden="true"></i>
                         </div>
                         {/* if state is playing than pause button else play button */}
 
@@ -158,7 +158,15 @@ class AudioPlayer extends React.Component {
                            
             
                         <div className='p3'>
-                            <i class="fa fa-step-forward" aria-hidden="true"></i>
+                            <i class="fa fa-step-forward fa-sm" aria-hidden="true"></i>
+                        </div>
+
+                        <div className='p3'>
+                            <i class="fa fa-random fa-sm" aria-hidden="true"></i>
+                        </div>
+                        
+                        <div className='p3'>
+                            <i class="fa fa-undo fa-sm" aria-hidden="true"></i>
                         </div>
 
                         <div className='playbar-mid'>
