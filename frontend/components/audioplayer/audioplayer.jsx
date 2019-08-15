@@ -164,7 +164,9 @@ class AudioPlayer extends React.Component {
                         <div className='playbar-mid'>
                             <small className="timestampleft"  id="start-time">0:00</small>
                             
-                            <progress type="range" className="seekbar" id="seekbar" value="0" max="1"></progress>
+                            <div className="click-progress" id="seekbar">
+                                <progress type="range" className="seekbar" id="seekbar" value="0" max="1"></progress>
+                            </div>
 
                             <small className="timestampright" id="end-time">0:00</small>
 

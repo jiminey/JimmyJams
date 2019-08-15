@@ -669,13 +669,16 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("small", {
         className: "timestampleft",
         id: "start-time"
-      }, "0:00"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("progress", {
+      }, "0:00"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "click-progress",
+        id: "seekbar"
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("progress", {
         type: "range",
         className: "seekbar",
         id: "seekbar",
         value: "0",
         max: "1"
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("small", {
+      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("small", {
         className: "timestampright",
         id: "end-time"
       }, "0:00"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
