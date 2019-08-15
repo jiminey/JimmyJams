@@ -690,8 +690,7 @@ function (_React$Component) {
         className: "timestampleft",
         id: "start-time"
       }, "0:00"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "click-progress",
-        id: "seekbar"
+        className: "click-progress"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("progress", {
         type: "range",
         className: "seekbar",
@@ -2141,9 +2140,17 @@ function (_React$Component) {
         this.props.pauseSong();
         this.props.currentAudio.pause();
       } else if (this.props.currentAudio && this.props.playState === false) {
-        this.props.playSong(this.props.song, this.props.currentAudio);
+        if (this.props.currentAudio) {
+          this.props.currentAudio.currentTime = 0;
+        }
+
         this.props.currentAudio.play();
+        this.props.playSong(this.props.song, this.props.currentAudio);
       } else {
+        if (this.props.currentAudio) {
+          this.props.currentAudio.currentTime = 0;
+        }
+
         this.props.playSong(this.props.song, this.state.localAudio);
         this.state.localAudio.play();
       }
