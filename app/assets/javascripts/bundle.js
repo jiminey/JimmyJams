@@ -634,7 +634,17 @@ function (_React$Component) {
           className: "subthumbnail"
         }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
           className: "stn1"
-        }, currentSong.artist.slice(0, 20)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, currentSong.title.slice(0, 20))));
+        }, currentSong.artist.slice(0, 14)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, currentSong.title.slice(0, 14))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+          className: "icon-playbar"
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
+          className: "heartt",
+          "class": "fa fa-heart fa-xs",
+          "aria-hidden": "true"
+        }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
+          className: "bars",
+          "class": "fa fa-bars",
+          "aria-hidden": "true"
+        })));
       }
     }
   }, {

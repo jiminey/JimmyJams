@@ -127,9 +127,15 @@ class AudioPlayer extends React.Component {
                     <div>< img src={currentSong.album_coverUrl} className="playbarimg" /></div>
 
                     <div className="subthumbnail">
-                        <div className="stn1">{currentSong.artist.slice(0,20)}</div>
-                        <div>{currentSong.title.slice(0,20)}</div>
+                        <div className="stn1">{currentSong.artist.slice(0,14)}</div>
+                        <div>{currentSong.title.slice(0,14)}</div>
                     </div>
+                    <div className="icon-playbar">
+                        <i className="heartt" class="fa fa-heart fa-xs" aria-hidden="true"></i>
+                        <i className="bars"class="fa fa-bars" aria-hidden="true"></i>
+                    </div>
+
+                    
                 </div>
             )
         }
