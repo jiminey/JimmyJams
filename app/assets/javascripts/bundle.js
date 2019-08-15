@@ -1675,14 +1675,21 @@ function (_React$Component) {
             key: result.id,
             onClick: _this2.handleResultClick
           }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
-            to: "/songs/".concat(result.id)
-          }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, result.title)));
+            to: "/songs/".concat(result.id),
+            style: {
+              textDecoration: 'none',
+              color: 'black'
+            },
+            id: "search-link"
+          }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+            id: "search-result-song"
+          }, result.title)));
         });
       }
 
       if (this.props.results.length === 0 && this.state.value !== '') {
         return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
-          className: "main-middle"
+          className: "search-form"
         }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
           onClick: this.handleClick,
           onChange: this.handleSearch,
@@ -1690,12 +1697,16 @@ function (_React$Component) {
           placeholder: "Search by song title",
           className: "search",
           value: this.state.value
-        })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", null, "No results found")));
+        })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ul", {
+          className: "result-drop-ul"
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
+          className: "result-li"
+        }, "No results found")));
       }
 
       if (this.props.results.length > 0 && this.state.value === '') {
         return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
-          className: "main-middle"
+          className: "search-form"
         }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
           onClick: this.handleClick,
           onChange: this.handleSearch,
@@ -1703,11 +1714,15 @@ function (_React$Component) {
           placeholder: "Search by song title",
           className: "search",
           value: this.state.value
-        })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ul", null, results));
+        })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ul", {
+          className: "result-drop-ul"
+        }));
       }
 
-      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
-        className: "main-middle"
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "default-searchbar-div"
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
+        className: "search-form"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
         onClick: this.handleClick,
         onChange: this.handleSearch,
@@ -1715,7 +1730,9 @@ function (_React$Component) {
         placeholder: "Search by song title",
         className: "search",
         value: this.state.value
-      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ul", null, results));
+      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ul", {
+        className: "result-drop-ul"
+      }, results));
     }
   }]);
 

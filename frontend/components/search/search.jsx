@@ -34,8 +34,8 @@ class Search extends React.Component {
             results = this.props.results.map(result => {
                 return (
                     <li className="result-li" key={result.id} onClick={this.handleResultClick}>
-                        <Link to={`/songs/${result.id}`}>
-                            <div>{result.title}</div>
+                        <Link to={`/songs/${result.id}`} style={{ textDecoration: 'none', color: 'black' }} id="search-link">
+                            <div id="search-result-song">{result.title}</div>
                         </Link>
                     </li>
                 )
@@ -45,15 +45,15 @@ class Search extends React.Component {
         if (this.props.results.length === 0 && this.state.value !== '') {
             return (
                 <div>
-                    <form className="main-middle">
+                    <form className="search-form">
                         <input onClick={this.handleClick}
                             onChange={this.handleSearch}
                             type="search" placeholder="Search by song title"
                             className="search"
                             value={this.state.value} />
                     </form>
-                    <ul>
-                        <li>
+                    <ul className="result-drop-ul">
+                        <li className="result-li">
                             No results found
                         </li>
                     </ul>
@@ -64,35 +64,35 @@ class Search extends React.Component {
         if (this.props.results.length > 0 && this.state.value === '') {
             return (
                 <div>
-                    <form className="main-middle">
+                    <form className="search-form">
                         <input onClick={this.handleClick}
                             onChange={this.handleSearch}
                             type="search" placeholder="Search by song title"
                             className="search"
                             value={this.state.value} />
                     </form>
-                    <ul>
-                        {results}
+                    <ul className="result-drop-ul">
                     </ul>
                 </div>
             )
         }
 
         return (
-            <div>
-                <form className="main-middle">
+            <div className="default-searchbar-div">
+                <form className="search-form">
                     <input onClick={this.handleClick}
                         onChange={this.handleSearch}
                         type="search" placeholder="Search by song title"
                         className="search"
                         value={this.state.value} />
                 </form>
-                <ul>
+                <ul className="result-drop-ul">
                     {results}
                 </ul>
             </div>
         )
     }
 }
+
 
 export default Search;

@@ -1,3 +1,37 @@
 // Place all the styles related to the api/search controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+ .search-input:focus {
+   outline: none;
+   border-color: #9ecaed;
+ }
+
+ .result-li {
+    margin-left: 19px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: medium;
+ }
+
+
+.result-drop-ul {
+  background: white;
+  border-radius: .625rem;
+  border-color: #a8bac9;
+    box-shadow: 0 0 10px #a8bac9;
+    z-index: 2;
+    position: absolute;
+}
+
+.result-li:hover {
+  transition-duration: .5s;
+  color: #1673e6;
+  font-weight: bolder;
+   z-index: 2;
+
+}
