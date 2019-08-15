@@ -159,36 +159,29 @@ var closeModal = function closeModal() {
 /*!********************************************!*\
   !*** ./frontend/actions/search_actions.js ***!
   \********************************************/
-/*! exports provided: RECEIVE_SEARCH_RESULTS, CLEAR_SEARCH, receiveSearchResults, fetchSearchResults, clearSearch */
+/*! exports provided: RECEIVE_RESULT, getSearchResults */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_SEARCH_RESULTS", function() { return RECEIVE_SEARCH_RESULTS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CLEAR_SEARCH", function() { return CLEAR_SEARCH; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveSearchResults", function() { return receiveSearchResults; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchSearchResults", function() { return fetchSearchResults; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clearSearch", function() { return clearSearch; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_RESULT", function() { return RECEIVE_RESULT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getSearchResults", function() { return getSearchResults; });
 /* harmony import */ var _util_search_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/search_api_util */ "./frontend/util/search_api_util.js");
 
-var RECEIVE_SEARCH_RESULTS = "RECEIVE_SEARCH_RESULTS";
-var CLEAR_SEARCH = "CLEAR_SEARCH";
-var receiveSearchResults = function receiveSearchResults(results) {
+var RECEIVE_RESULT = "RECEIVE_RESULT";
+
+var receiveResult = function receiveResult(results) {
   return {
-    type: RECEIVE_SEARCH_RESULTS,
+    type: RECEIVE_RESULT,
     results: results
   };
 };
-var fetchSearchResults = function fetchSearchResults(input) {
+
+var getSearchResults = function getSearchResults(str) {
   return function (dispatch) {
-    return _util_search_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchSearchResults"](input).then(function (results) {
-      return dispatch(receiveSearchResults(results));
+    return _util_search_api_util__WEBPACK_IMPORTED_MODULE_0__["getSearchResults"](str).then(function (results) {
+      return dispatch(receiveResult(results));
     });
-  };
-};
-var clearSearch = function clearSearch() {
-  return {
-    type: CLEAR_SEARCH
   };
 };
 
@@ -1498,14 +1491,7 @@ function (_React$Component) {
         to: "/library"
       }, "Library"))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "main-middle"
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
-        className: "search",
-        type: "search",
-        placeholder: "Search",
-        onChange: function onChange() {
-          return _this2.search();
-        }
-      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_search_search_container__WEBPACK_IMPORTED_MODULE_8__["default"], null)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "main-right"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "upgrade"
@@ -1660,7 +1646,7 @@ function (_React$Component) {
       this.setState({
         value: e.target.value
       });
-      this.props.receiveSearchResults(e.target.value);
+      this.props.getSearchResults(e.target.value);
     }
   }, {
     key: "handleClick",
@@ -1689,15 +1675,8 @@ function (_React$Component) {
             key: result.id,
             onClick: _this2.handleResultClick
           }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
-            to: "/teams/".concat(result.id),
-            style: {
-              textDecoration: 'none',
-              color: 'black'
-            },
-            id: "search-link"
-          }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-            id: "search-result-team"
-          }, result.title)));
+            to: "/songs/".concat(result.id)
+          }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, result.title)));
         });
       }
 
@@ -1709,13 +1688,9 @@ function (_React$Component) {
           onChange: this.handleSearch,
           type: "search",
           placeholder: "Search by song title",
-          className: "search-input",
+          className: "search",
           value: this.state.value
-        })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ul", {
-          className: "result-drop-ul"
-        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
-          className: "result-li"
-        }, "No results found")));
+        })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", null, "No results found")));
       }
 
       if (this.props.results.length > 0 && this.state.value === '') {
@@ -1726,27 +1701,21 @@ function (_React$Component) {
           onChange: this.handleSearch,
           type: "search",
           placeholder: "Search by song title",
-          className: "search-input",
+          className: "search",
           value: this.state.value
-        })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ul", {
-          className: "result-drop-ul"
-        }));
+        })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ul", null, results));
       }
 
-      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "main-middle"
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
         className: "main-middle"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
         onClick: this.handleClick,
         onChange: this.handleSearch,
         type: "search",
-        placeholder: "Search by team",
-        className: "search-input",
+        placeholder: "Search by song title",
+        className: "search",
         value: this.state.value
-      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ul", {
-        className: "result-drop-ul"
-      }, results));
+      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ul", null, results));
     }
   }]);
 
@@ -1782,8 +1751,8 @@ var mapStateToProps = function mapStateToProps(state) {
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
-    receiveSearchResults: function receiveSearchResults(results) {
-      return dispatch(Object(_actions_search_actions__WEBPACK_IMPORTED_MODULE_1__["receiveSearchResults"])(results));
+    getSearchResults: function getSearchResults(results) {
+      return dispatch(Object(_actions_search_actions__WEBPACK_IMPORTED_MODULE_1__["getSearchResults"])(results));
     }
   };
 };
@@ -3576,22 +3545,18 @@ var rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])(
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_search_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/search_actions */ "./frontend/actions/search_actions.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_1__);
-
 
 
 var searchReducer = function searchReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var action = arguments.length > 1 ? arguments[1] : undefined;
   Object.freeze(state);
+  var newState = Object.assign({}, state);
 
   switch (action.type) {
-    case _actions_search_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_SEARCH_RESULTS"]:
-      return Object(lodash__WEBPACK_IMPORTED_MODULE_1__["merge"])({}, action.results);
-
-    case _actions_search_actions__WEBPACK_IMPORTED_MODULE_0__["CLEAR_SEARCH"]:
-      return {};
+    case _actions_search_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_RESULT"]:
+      newState = action.results;
+      return newState;
 
     default:
       return state;
@@ -4291,18 +4256,18 @@ var ProtectedRoute = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["withR
 /*!******************************************!*\
   !*** ./frontend/util/search_api_util.js ***!
   \******************************************/
-/*! exports provided: fetchSearchResults */
+/*! exports provided: getSearchResults */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchSearchResults", function() { return fetchSearchResults; });
-var fetchSearchResults = function fetchSearchResults(search) {
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getSearchResults", function() { return getSearchResults; });
+var getSearchResults = function getSearchResults(str) {
   return $.ajax({
-    method: 'GET',
-    url: 'api/search',
+    method: "get",
+    url: "/api/search",
     data: {
-      search: search
+      str: str
     }
   });
 };

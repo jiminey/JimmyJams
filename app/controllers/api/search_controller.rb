@@ -1,19 +1,17 @@
 class Api::SearchController < ApplicationController
-     def index
-        @input = search_params[:input]
-        if @input.empty?
-            render json: {}
-            return
-        end
 
-        @songs = Song.where("title ILIKE (?)",  "%#{@input}%").with_attached_album_cover
-        
-        render :index
+    def search
+        @search = Song.where(
+            "title ILIKE ?",
+            "%#{params["str"]}%"
+            # "%#{params["str"]}%" ## might have to remove this one
+        )
+        render json: @search
     end
 
+
     private
-    
     def search_params
-        params.require(:search).permit(:input)
+        params.require(:search).permit(:str)
     end
 end

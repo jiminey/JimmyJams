@@ -16,7 +16,7 @@ class Search extends React.Component {
     handleSearch(e) {
         e.preventDefault();
         this.setState({ value: e.target.value });
-        this.props.receiveSearchResults(e.target.value)
+        this.props.getSearchResults(e.target.value)
     }
 
     handleClick(e) {
@@ -34,8 +34,8 @@ class Search extends React.Component {
             results = this.props.results.map(result => {
                 return (
                     <li className="result-li" key={result.id} onClick={this.handleResultClick}>
-                        <Link to={`/teams/${result.id}`} style={{ textDecoration: 'none', color: 'black' }} id="search-link">
-                            <div id="search-result-team">{result.title}</div>
+                        <Link to={`/songs/${result.id}`}>
+                            <div>{result.title}</div>
                         </Link>
                     </li>
                 )
@@ -49,11 +49,11 @@ class Search extends React.Component {
                         <input onClick={this.handleClick}
                             onChange={this.handleSearch}
                             type="search" placeholder="Search by song title"
-                            className="search-input"
+                            className="search"
                             value={this.state.value} />
                     </form>
-                    <ul className="result-drop-ul">
-                        <li className="result-li">
+                    <ul>
+                        <li>
                             No results found
                         </li>
                     </ul>
@@ -68,27 +68,26 @@ class Search extends React.Component {
                         <input onClick={this.handleClick}
                             onChange={this.handleSearch}
                             type="search" placeholder="Search by song title"
-                            className="search-input"
+                            className="search"
                             value={this.state.value} />
                     </form>
-                    <ul className="result-drop-ul">
-                        {/* <li className="result-li">
-                        </li> */}
+                    <ul>
+                        {results}
                     </ul>
                 </div>
             )
         }
 
         return (
-            <div className="main-middle">
+            <div>
                 <form className="main-middle">
                     <input onClick={this.handleClick}
                         onChange={this.handleSearch}
-                        type="search" placeholder="Search by team"
-                        className="search-input"
+                        type="search" placeholder="Search by song title"
+                        className="search"
                         value={this.state.value} />
                 </form>
-                <ul className="result-drop-ul">
+                <ul>
                     {results}
                 </ul>
             </div>

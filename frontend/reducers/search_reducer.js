@@ -1,23 +1,15 @@
-import {
-    RECEIVE_SEARCH_RESULTS,
-    CLEAR_SEARCH
-} from '../actions/search_actions';
-
-import { merge } from 'lodash';
-
+import { RECEIVE_RESULT } from "../actions/search_actions";
 
 const searchReducer = (state = {}, action) => {
     Object.freeze(state);
-
+    let newState = Object.assign({}, state);
     switch (action.type) {
-        case RECEIVE_SEARCH_RESULTS:
-            return merge({}, action.results);
-        case CLEAR_SEARCH:
-            return {};
+        case RECEIVE_RESULT:
+            newState = action.results
+            return newState;
         default:
-            return state;
+            return state
     }
 }
 
-
-export default searchReducer
+export default searchReducer;

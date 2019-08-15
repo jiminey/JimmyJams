@@ -1,7 +1,8 @@
-export const fetchSearchResults = (search) => (
-    $.ajax({
-        method: 'GET',
-        url: 'api/search',
-        data: { search }
-    })
-);
+export const getSearchResults = (str) => {
+    return (
+        $.ajax({
+            method: "get",
+            url: `/api/search`,
+            data: { str }
+        }))
+}

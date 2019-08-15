@@ -1,6 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import SearchContainer from '../search/search_container'
+
+
 class NavBar extends React.Component {
     constructor(props) {
         super(props)
@@ -42,7 +44,8 @@ class NavBar extends React.Component {
                     </div>
 
                     <div className='main-middle'>
-                        <input className='search' type="search" placeholder="Search" onChange={() => this.search()} />
+                        {/* <input className='search' type="search" placeholder="Search" onChange={() => this.search()} /> */}
+                        <SearchContainer/>
                     </div>
 
                     <div>
