@@ -17,6 +17,8 @@ class AudioPlayer extends React.Component {
 
     }
 
+   
+
     calculateTotalValue(length) {
 
         let minutes = Math.floor(length / 60),
@@ -96,13 +98,13 @@ class AudioPlayer extends React.Component {
     toggleDisplay() {
         if (this.props.playState) {
             return (
-                <div onClick={this.toggle} className='p2'>
+                <div onClick={this.toggle} className='p3'>
                     <i class="fa fa-pause fa-sm" aria-hidden="true"></i>
                 </div>
             )
         } else {
             return (
-                <div onClick={this.toggle} className='p2'>
+                <div onClick={this.toggle} className='p3'>
                     <i class="fa fa-play fa-sm" aria-hidden="true" ></i>
                 </div>
             )
@@ -164,15 +166,15 @@ class AudioPlayer extends React.Component {
                         {this.toggleDisplay()}
                            
             
-                        <div className='p3'>
+                        <div className='p1'>
                             <i class="fa fa-step-forward fa-sm" aria-hidden="true"></i>
                         </div>
 
-                        <div className='p3'>
+                        <div className='p1'>
                             <i class="fa fa-random fa-sm" aria-hidden="true"></i>
                         </div>
                         
-                        <div className='p3'>
+                        <div className='p1'>
                             <i class="fa fa-undo fa-sm" aria-hidden="true"></i>
                         </div>
 
@@ -185,10 +187,12 @@ class AudioPlayer extends React.Component {
 
                             <small className="timestampright" id="end-time">0:00</small>
 
-                            
-                            <i class="fas fa-volume-up"></i>
 
-                            <input id='vslider' className="vol" type="range" min="1" max="100" step="1" />
+                                <i class="fas fa-volume-up"></i>
+
+                                <input id='vslider' className="vol" type="range" min="1" max="100" step="1" />
+
+
 
                         </div>
 

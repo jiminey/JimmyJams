@@ -601,7 +601,7 @@ function (_React$Component) {
       if (this.props.playState) {
         return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
           onClick: this.toggle,
-          className: "p2"
+          className: "p3"
         }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
           "class": "fa fa-pause fa-sm",
           "aria-hidden": "true"
@@ -609,7 +609,7 @@ function (_React$Component) {
       } else {
         return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
           onClick: this.toggle,
-          className: "p2"
+          className: "p3"
         }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
           "class": "fa fa-play fa-sm",
           "aria-hidden": "true"
@@ -671,17 +671,17 @@ function (_React$Component) {
         "class": "fa fa-step-backward fa-sm",
         "aria-hidden": "true"
       })), this.toggleDisplay(), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "p3"
+        className: "p1"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
         "class": "fa fa-step-forward fa-sm",
         "aria-hidden": "true"
       })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "p3"
+        className: "p1"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
         "class": "fa fa-random fa-sm",
         "aria-hidden": "true"
       })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "p3"
+        className: "p1"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
         "class": "fa fa-undo fa-sm",
         "aria-hidden": "true"

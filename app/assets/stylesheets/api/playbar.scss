@@ -117,6 +117,7 @@ progress::-webkit-progress-value {
     margin-top: 1px;
     margin-left: 5px;
     width: 105px;
+    cursor: pointer;
 }
 
 
@@ -138,12 +139,14 @@ progress::-webkit-progress-value {
 
 .p1 {
     padding:5px;
+    cursor: not-allowed;
 }
 .p2 {
     padding:5px;
 }
 .p3 {
     padding:5px;
+    cursor: pointer;
 }
 
 
@@ -157,4 +160,39 @@ progress::-webkit-progress-value {
 
 .vol-icon {
     margin-top: 17px;
+}
+
+// .volume {
+//     margin-bottom: 10px;
+// }
+// .heartt:focus {
+//     color: red;
+// }
+
+@font-face {font-family: "Interstate";
+    src: url("//db.onlinewebfonts.com/t/52eb6cf4774d0a37d693b9cccc565891.eot");
+    src: url("//db.onlinewebfonts.com/t/52eb6cf4774d0a37d693b9cccc565891.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/52eb6cf4774d0a37d693b9cccc565891.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/52eb6cf4774d0a37d693b9cccc565891.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/52eb6cf4774d0a37d693b9cccc565891.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/52eb6cf4774d0a37d693b9cccc565891.svg#Interstate") format("svg");
+}
+
+
+@font-face {font-family: "Interstate-thin";
+    src: url("//db.onlinewebfonts.com/t/67c875133a76f1dc00e6beab89cd7329.eot");
+    src: url("//db.onlinewebfonts.com/t/67c875133a76f1dc00e6beab89cd7329.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/67c875133a76f1dc00e6beab89cd7329.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/67c875133a76f1dc00e6beab89cd7329.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/67c875133a76f1dc00e6beab89cd7329.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/67c875133a76f1dc00e6beab89cd7329.svg#Interstate") format("svg");
+}
+
+@font-face {font-family: "InterstateLight";
+    src: url("//db.onlinewebfonts.com/t/5d7571268a2cc4dcdd56140df04d77d0.eot");
+    src: url("//db.onlinewebfonts.com/t/5d7571268a2cc4dcdd56140df04d77d0.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/5d7571268a2cc4dcdd56140df04d77d0.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/5d7571268a2cc4dcdd56140df04d77d0.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/5d7571268a2cc4dcdd56140df04d77d0.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/5d7571268a2cc4dcdd56140df04d77d0.svg#InterstateLight") format("svg");
 }
