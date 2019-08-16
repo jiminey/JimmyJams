@@ -2448,15 +2448,19 @@ function (_React$Component) {
         className: "main-page-content"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "music-content"
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
-        onSubmit: this.handleSubmit
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "commentbox"
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, "Avatar"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
+        onSubmit: this.handleSubmit,
+        className: "comment-input-container"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
+        className: "comment-input",
         type: "text",
         maxLength: "75",
         placeholder: "Write a Comment",
         onChange: this.handleComment,
         value: this.state.body
-      }))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      })))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "main-col"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "who-to-follow"

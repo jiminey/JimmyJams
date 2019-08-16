@@ -153,10 +153,12 @@ class SongShow extends React.Component {
     
                 <div className='music-content'>
 
-                                <form onSubmit={this.handleSubmit} >
-
-                                        <input type="text" maxLength='75' placeholder='Write a Comment' onChange={this.handleComment} value={this.state.body} />
+                            <div className="commentbox">
+                                <div>Avatar</div>
+                                <form onSubmit={this.handleSubmit} className="comment-input-container">
+                                        <input className="comment-input" type="text" maxLength='75' placeholder='Write a Comment' onChange={this.handleComment} value={this.state.body} />
                                 </form>
+                            </div>
 
                                 {/* <div>  {comment_item} </div> */}
 
