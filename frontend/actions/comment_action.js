@@ -5,7 +5,7 @@ export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 
 const receiveComment = comment => ({
     type: RECEIVE_COMMENT,
-    comment
+    comment,
 });
 
 const removeComment = commentId => ({

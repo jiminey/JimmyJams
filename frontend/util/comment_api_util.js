@@ -10,6 +10,8 @@ export const createComment = (comment, song_id) => (
         method: 'post',
         url: `/api/songs/${song_id}/comments`,
         data: { comment },
+        contentType: false,
+        processData: false,
 
     })
 )

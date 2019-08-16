@@ -6,9 +6,10 @@ Rails.application.routes.draw do
     get '/search', to: 'search#search'
     resources :users, only: [:create , :index, :show]
     resource :session, only: [:create, :new, :destroy]
-    resources :songs, only: [:create, :destroy, :show, :update, :index ]
-    resources :comments, only: [:create]
-  end 
+    resources :songs, only: [:create, :destroy, :show, :update, :index ] do
+      resources :comments, only: [:create]
+    end 
     resources :comments, only: [:destroy]
+  end 
 
 end

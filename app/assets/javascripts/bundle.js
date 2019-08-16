@@ -4446,7 +4446,9 @@ var createComment = function createComment(comment, song_id) {
     url: "/api/songs/".concat(song_id, "/comments"),
     data: {
       comment: comment
-    }
+    },
+    contentType: false,
+    processData: false
   });
 };
 
