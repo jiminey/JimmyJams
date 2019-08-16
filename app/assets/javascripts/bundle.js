@@ -4131,6 +4131,7 @@ function (_React$Component) {
         className: "login-form"
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("input", {
         type: "text",
+        spellCheck: "false",
         placeholder: "Your username or Profile URL *",
         value: this.state.username,
         onChange: this.update('username'),

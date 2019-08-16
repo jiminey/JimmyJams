@@ -120,6 +120,7 @@ class SessionForm extends React.Component {
                         <label>
                             <input 
                                 type="text" 
+                                spellCheck="false"
                                 placeholder="Your username or Profile URL *"
                                 value={this.state.username}
                                 onChange={this.update('username')}
