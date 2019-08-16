@@ -570,7 +570,8 @@ function (_React$Component) {
       var progressbar = document.getElementById('seekbar');
       var volumeslider = document.getElementById('vslider');
       progressbar.value = player.currentTime / player.duration;
-      progressbar.addEventListener("click", seek);
+      document.getElementById("div").addEventListener("click", seek); // progressbar.addEventListener("click", seek);
+
       player.volume = volumeslider.value / 100;
 
       function seek(event) {
@@ -690,7 +691,8 @@ function (_React$Component) {
         className: "timestampleft",
         id: "start-time"
       }, "0:00"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "click-progress"
+        className: "click-progress",
+        id: "div"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("progress", {
         type: "range",
         className: "seekbar",

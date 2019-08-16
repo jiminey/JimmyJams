@@ -15,7 +15,8 @@
     margin: 0 auto;
     display: flex;
     padding: 10px;
-    justify-content: space-around
+    justify-content: space-around;
+    position: relative;
 }
 .seekbar {
     width: 450px;
@@ -26,7 +27,10 @@
 
 .click-progress{
     width: 450px;
-    margin: 0 auto;
+    margin-top: -18px;
+    height: 30px;
+    bottom: 2px;
+    cursor: pointer;
 }
 
 .timestampleft {

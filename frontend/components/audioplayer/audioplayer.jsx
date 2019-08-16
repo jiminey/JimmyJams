@@ -68,7 +68,8 @@ class AudioPlayer extends React.Component {
         let volumeslider = document.getElementById('vslider')
         
         progressbar.value = (player.currentTime / player.duration);
-        progressbar.addEventListener("click", seek);
+        document.getElementById("div").addEventListener("click", seek);
+        // progressbar.addEventListener("click", seek);
 
         player.volume = volumeslider.value/100;
 
@@ -178,7 +179,7 @@ class AudioPlayer extends React.Component {
                         <div className='playbar-mid'>
                             <small className="timestampleft"  id="start-time">0:00</small>
                             
-                            <div className="click-progress">
+                            <div className="click-progress" id="div">
                                 <progress type="range" className="seekbar" id="seekbar" value="0" max="1"></progress>
                             </div>
 
