@@ -8,12 +8,26 @@ class SongShow extends React.Component {
 
 
         this.state = {
-            localAudio: new Audio(`${this.props.song.song_fileUrl}`)
+            localAudio: new Audio(`${this.props.song.song_fileUrl}`),
+            body: ""
         }
         
         this.handleDelete = this.handleDelete.bind(this)
         this.play = this.play.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleComment = this.handleComment.bind(this)
     };
+
+    handleSubmit(e) {
+        e.preventDefault();
+        let songId = this.props.match.params.songId;
+        this.props.createComment(this.state, songId).then(() => this.setState({ body: '' }));
+    }
+
+    handleComment(e) {
+        e.preventDefault();
+        this.setState({ body: e.target.value });
+    }
 
     toggleDisplay() {
         if (this.props.playState && this.props.currentSong.title === this.props.song.title){
@@ -45,7 +59,7 @@ class SongShow extends React.Component {
 
     componentDidMount() {
         let songId = this.props.match.params.songId ;
-        this.props.fetchSong(songId);
+        this.props.fetchAllUsers().then(() => this.props.fetchSong(songId));
     }
 
 
@@ -60,7 +74,30 @@ class SongShow extends React.Component {
         if (!this.props.song){
             return null;
         }
-     
+
+        if (this.props.song === undefined) {
+            return (
+                <div></div>
+            )
+        }
+        else {
+            
+
+            let comments;
+            
+            if (this.props.comments) {
+                comments = Object.values(this.props.comments);
+            }
+
+            let comment_item = comments.map(comment => {
+                return (
+                    <div className='parentcomment' key={el.id}>
+                        <CommentIndexItem currentUser={this.props.currentUser} comment={comment} users={this.props.users} deleteComment={this.props.deleteComment} />
+
+                    </div>
+                )
+            })
+        }
 
         return (
             <div>
@@ -116,6 +153,12 @@ class SongShow extends React.Component {
     
                 <div className='music-content'>
 
+                                <form onSubmit={this.handleSubmit} >
+
+                                        <input type="text" maxLength='75' placeholder='Write a Comment' onChange={this.handleComment} value={this.state.body} />
+                                </form>
+
+                                {/* <div>  {comment_item} </div> */}
 
                     
                 

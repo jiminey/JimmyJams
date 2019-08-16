@@ -2300,14 +2300,38 @@ function (_React$Component) {
 
     _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(SongShow).call(this, props));
     _this.state = {
-      localAudio: new Audio("".concat(_this.props.song.song_fileUrl))
+      localAudio: new Audio("".concat(_this.props.song.song_fileUrl)),
+      body: ""
     };
     _this.handleDelete = _this.handleDelete.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     _this.play = _this.play.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
+    _this.handleSubmit = _this.handleSubmit.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
+    _this.handleComment = _this.handleComment.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     return _this;
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(SongShow, [{
+    key: "handleSubmit",
+    value: function handleSubmit(e) {
+      var _this2 = this;
+
+      e.preventDefault();
+      var songId = this.props.match.params.songId;
+      this.props.createComment(this.state, songId).then(function () {
+        return _this2.setState({
+          body: ''
+        });
+      });
+    }
+  }, {
+    key: "handleComment",
+    value: function handleComment(e) {
+      e.preventDefault();
+      this.setState({
+        body: e.target.value
+      });
+    }
+  }, {
     key: "toggleDisplay",
     value: function toggleDisplay() {
       if (this.props.playState && this.props.currentSong.title === this.props.song.title) {
@@ -2342,8 +2366,12 @@ function (_React$Component) {
   }, {
     key: "componentDidMount",
     value: function componentDidMount() {
+      var _this3 = this;
+
       var songId = this.props.match.params.songId;
-      this.props.fetchSong(songId);
+      this.props.fetchAllUsers().then(function () {
+        return _this3.props.fetchSong(songId);
+      });
     }
   }, {
     key: "handleDelete",
@@ -2355,8 +2383,32 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this4 = this;
+
       if (!this.props.song) {
         return null;
+      }
+
+      if (this.props.song === undefined) {
+        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null);
+      } else {
+        var comments;
+
+        if (this.props.comments) {
+          comments = Object.values(this.props.comments);
+        }
+
+        var comment_item = comments.map(function (comment) {
+          return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+            className: "parentcomment",
+            key: el.id
+          }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(CommentIndexItem, {
+            currentUser: _this4.props.currentUser,
+            comment: comment,
+            users: _this4.props.users,
+            deleteComment: _this4.props.deleteComment
+          }));
+        });
       }
 
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_navbar_navbar_container__WEBPACK_IMPORTED_MODULE_8__["default"], null), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
@@ -2396,7 +2448,15 @@ function (_React$Component) {
         className: "main-page-content"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "music-content"
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
+        onSubmit: this.handleSubmit
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
+        type: "text",
+        maxLength: "75",
+        placeholder: "Write a Comment",
+        onChange: this.handleComment,
+        value: this.state.body
+      }))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "main-col"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "who-to-follow"
@@ -2636,6 +2696,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _song_song_show__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../song/song_show */ "./frontend/components/song/song_show.jsx");
 /* harmony import */ var _actions_modal_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/modal_actions */ "./frontend/actions/modal_actions.js");
 /* harmony import */ var _actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../actions/audioplayer_actions */ "./frontend/actions/audioplayer_actions.js");
+/* harmony import */ var _actions_comment_action__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../actions/comment_action */ "./frontend/actions/comment_action.js");
+/* harmony import */ var _actions_user_actions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../actions/user_actions */ "./frontend/actions/user_actions.js");
+
+
 
 
 
@@ -2647,18 +2711,23 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
   var songId = ownProps.match.params.songId;
   var song = state.entities.songs[songId];
   return {
+    users: state.entities.users,
     songUrl: state.player.songUrl,
     playState: state.player.playState,
     songList: state.player.songList,
     song: song,
     currentUser: state.session.currentUser,
     currentSong: state.entities.songs[state.player.songId],
-    currentAudio: state.player.currentAudio
+    currentAudio: state.player.currentAudio,
+    comments: state.entities.comments
   };
 };
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
+    fetchAllUsers: function fetchAllUsers() {
+      return dispatch(Object(_actions_user_actions__WEBPACK_IMPORTED_MODULE_6__["fetchAllUsers"])());
+    },
     playSong: function playSong(song, audio) {
       return dispatch(Object(_actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_4__["playSong"])(song, audio));
     },
@@ -2676,6 +2745,12 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     },
     openModal: function openModal(type, song) {
       return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_3__["openModal"])(type, song));
+    },
+    createComment: function createComment(comment, songId) {
+      return dispatch(Object(_actions_comment_action__WEBPACK_IMPORTED_MODULE_5__["createComment"])(comment, songId));
+    },
+    deleteComment: function deleteComment(id) {
+      return dispatch(Object(_actions_comment_action__WEBPACK_IMPORTED_MODULE_5__["deleteComment"])(id));
     }
   };
 };
