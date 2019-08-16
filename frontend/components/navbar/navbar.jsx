@@ -59,7 +59,8 @@ class NavBar extends React.Component {
                         </div>
 
                         <div className='username'>
-                            <Link to={`/users/${this.props.currentUser.id}`}>Jimmy Nguyen</Link>
+                            {/* <Link to={`/users/${this.props.currentUser.id}`}>Jimmy Nguyen</Link> */}
+                            Jimmy Nguyen
                         </div>
 
                         <div className='linked'> </div>

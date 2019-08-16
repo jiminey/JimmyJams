@@ -1526,9 +1526,7 @@ function (_React$Component) {
         to: "/upload"
       }, "Upload")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "username"
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
-        to: "/users/".concat(this.props.currentUser.id)
-      }, "Jimmy Nguyen")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      }, "Jimmy Nguyen"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "linked"
       }, " "), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "mail"
