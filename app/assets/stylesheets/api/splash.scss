@@ -225,7 +225,7 @@ body {
     height: 40px;
     width: 400px;
     border-radius: 4px;
-    font-family: "Interstate-thin","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    font-family: "Interstate-light","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
 }
 
 .demologin-btn {
@@ -238,7 +238,7 @@ body {
     height: 40px;
     border-radius: 4px;
     width: 400px;
-    font-family: "Interstate-thin","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    font-family: "Interstate-light","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
 }
 
 .session-submit {
@@ -251,15 +251,16 @@ body {
     height: 40px;
     width: 400px;
     border-radius: 3px;
-    font-family: "Interstate-thin","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    font-family: "Interstate-light","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
 }
 
 .fine-print {
     font-size: 12px; 
     color: gray;
-    font-family: "Interstate-thin","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    font-family: "Interstate-light","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
     flex-wrap: wrap;
     overflow-wrap: break-word;
+    line-height: 14px;
 }
 
 .modal-escape {
@@ -296,7 +297,7 @@ body {
     color:blue;
     text-decoration:underline;
     font-size: 12px; 
-    font-family: "Interstate-thin","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    font-family: "Interstate-light","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
     flex-wrap: wrap;
     overflow-wrap: break-word;
     display: flex;
