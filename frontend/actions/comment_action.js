@@ -20,11 +20,3 @@ export const createComment = (comment, songId) => dispatch => (
 export const deleteComment = commentId => dispatch => (
     APICommentUtil.deleteComment(commentId).then(commentId => dispatch(removeComment(commentId)))
 );
-
-
-
-
-
-
-
-)
