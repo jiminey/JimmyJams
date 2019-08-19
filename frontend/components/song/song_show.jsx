@@ -16,7 +16,14 @@ class SongShow extends React.Component {
         this.play = this.play.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleComment = this.handleComment.bind(this)
+        this.handleX = this.handleX.bind(this)
     };
+
+    handleX(e) {
+        e.preventDefault();
+        let commentId = this.props.comments.params.match.commentId
+        this.props.removeComment(commentId)
+    }
 
     handleSubmit(e) {
         e.preventDefault();
@@ -102,7 +109,10 @@ class SongShow extends React.Component {
 
         let frontcomments = this.props.comments.map (comment => {
             return (
-                <p className='comms'>  {comment} </p>
+                <div className="div-c">
+                    <p className='comms'>  {comment} </p>
+                    {/* <i onClick={this.handleX} className="x" class="fa fa-times" aria-hidden="true"></i> */}
+                </div>
             )
         })
 

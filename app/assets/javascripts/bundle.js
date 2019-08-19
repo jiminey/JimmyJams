@@ -2288,10 +2288,18 @@ function (_React$Component) {
     _this.play = _this.play.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     _this.handleComment = _this.handleComment.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
+    _this.handleX = _this.handleX.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     return _this;
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(SongShow, [{
+    key: "handleX",
+    value: function handleX(e) {
+      e.preventDefault();
+      var commentId = this.props.comments.params.match.commentId;
+      this.props.removeComment(commentId);
+    }
+  }, {
     key: "handleSubmit",
     value: function handleSubmit(e) {
       e.preventDefault();
@@ -2382,9 +2390,11 @@ function (_React$Component) {
       }
 
       var frontcomments = this.props.comments.map(function (comment) {
-        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+          className: "div-c"
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
           className: "comms"
-        }, "  ", comment, " ");
+        }, "  ", comment, " "));
       });
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_navbar_navbar_container__WEBPACK_IMPORTED_MODULE_8__["default"], null), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "show-body"
@@ -2730,8 +2740,8 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     createComment: function createComment(comment, songId) {
       return dispatch(Object(_actions_comment_action__WEBPACK_IMPORTED_MODULE_5__["createComment"])(comment, songId));
     },
-    deleteComment: function deleteComment(id) {
-      return dispatch(Object(_actions_comment_action__WEBPACK_IMPORTED_MODULE_5__["deleteComment"])(id));
+    removeComment: function removeComment(id) {
+      return dispatch(Object(_actions_comment_action__WEBPACK_IMPORTED_MODULE_5__["removeComment"])(id));
     }
   };
 };
@@ -3611,7 +3621,9 @@ var commentsReducer = function commentsReducer() {
       });
 
     case _actions_comment_action__WEBPACK_IMPORTED_MODULE_1__["REMOVE_COMMENT"]:
-      delete newState[action.commentId.id];
+      newState = newState.comments.filter(function (el) {
+        return el !== action.commentId;
+      });
       return newState;
 
     case _actions_song_actions__WEBPACK_IMPORTED_MODULE_2__["RECEIVE_SONG"]:

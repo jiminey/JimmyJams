@@ -11,7 +11,7 @@ const commentsReducer = (oldState = initialState, action) => {
         case CREATE_COMMENT:
             return Object.assign(newState, {comments: [...newState.comments, action.comment] });
         case REMOVE_COMMENT:
-            delete newState[action.commentId.id];
+            newState = newState.comments.filter( el => el !== action.commentId)
             return newState;
         case RECEIVE_SONG:
             if (action.payload.comments === undefined) {
