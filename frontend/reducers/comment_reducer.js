@@ -1,14 +1,15 @@
-import { RECEIVE_COMMENT, REMOVE_COMMENT } from '../actions/comment_action';
+import { CREATE_COMMENT, REMOVE_COMMENT } from '../actions/comment_action';
 import { RECEIVE_SONG } from '../actions/song_actions';
 import { merge } from 'lodash'
 
-
-const commentsReducer = (oldState = {}, action) => {
+const  initialState = {comments:[]}
+const commentsReducer = (oldState = initialState, action) => {
     Object.freeze(oldState);
     let newState = Object.assign({}, oldState);
+
     switch (action.type) {
-        case RECEIVE_COMMENT:
-            return Object.assign(newState, { [action.comment.id]: action.comment });
+        case CREATE_COMMENT:
+            return Object.assign(newState, {comments: [...newState.comments, action.comment] });
         case REMOVE_COMMENT:
             delete newState[action.commentId.id];
             return newState;

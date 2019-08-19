@@ -130,46 +130,27 @@ var resume = function resume() {
 /*!********************************************!*\
   !*** ./frontend/actions/comment_action.js ***!
   \********************************************/
-/*! exports provided: RECEIVE_COMMENT, REMOVE_COMMENT, createComment, deleteComment */
+/*! exports provided: CREATE_COMMENT, REMOVE_COMMENT, createComment, removeComment */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_COMMENT", function() { return RECEIVE_COMMENT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CREATE_COMMENT", function() { return CREATE_COMMENT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "REMOVE_COMMENT", function() { return REMOVE_COMMENT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createComment", function() { return createComment; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteComment", function() { return deleteComment; });
-/* harmony import */ var _util_comment_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/comment_api_util */ "./frontend/util/comment_api_util.js");
-
-var RECEIVE_COMMENT = 'RECEIVE_COMMENT';
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeComment", function() { return removeComment; });
+var CREATE_COMMENT = 'CREATE_COMMENT';
 var REMOVE_COMMENT = 'REMOVE_COMMENT';
-
-var receiveComment = function receiveComment(comment) {
+var createComment = function createComment(comment) {
   return {
-    type: RECEIVE_COMMENT,
+    type: CREATE_COMMENT,
     comment: comment
   };
 };
-
 var removeComment = function removeComment(commentId) {
   return {
     type: REMOVE_COMMENT,
     commentId: commentId
-  };
-};
-
-var createComment = function createComment(comment, songId) {
-  return function (dispatch) {
-    return _util_comment_api_util__WEBPACK_IMPORTED_MODULE_0__["createComment"](comment, songId).then(function (comment) {
-      return dispatch(receiveComment(comment));
-    });
-  };
-};
-var deleteComment = function deleteComment(commentId) {
-  return function (dispatch) {
-    return _util_comment_api_util__WEBPACK_IMPORTED_MODULE_0__["deleteComment"](commentId).then(function (commentId) {
-      return dispatch(removeComment(commentId));
-    });
   };
 };
 
@@ -2300,8 +2281,8 @@ function (_React$Component) {
 
     _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(SongShow).call(this, props));
     _this.state = {
-      localAudio: new Audio("".concat(_this.props.song.song_fileUrl)),
-      body: ""
+      body: "",
+      localAudio: new Audio("".concat(_this.props.song.song_fileUrl))
     };
     _this.handleDelete = _this.handleDelete.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     _this.play = _this.play.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
@@ -2313,14 +2294,10 @@ function (_React$Component) {
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(SongShow, [{
     key: "handleSubmit",
     value: function handleSubmit(e) {
-      var _this2 = this;
-
       e.preventDefault();
-      var songId = this.props.match.params.songId;
-      this.props.createComment(this.state, songId).then(function () {
-        return _this2.setState({
-          body: ''
-        });
+      this.props.createComment(this.state.body);
+      this.setState({
+        body: ''
       });
     }
   }, {
@@ -2366,11 +2343,11 @@ function (_React$Component) {
   }, {
     key: "componentDidMount",
     value: function componentDidMount() {
-      var _this3 = this;
+      var _this2 = this;
 
       var songId = this.props.match.params.songId;
       this.props.fetchAllUsers().then(function () {
-        return _this3.props.fetchSong(songId);
+        return _this2.props.fetchSong(songId);
       });
     }
   }, {
@@ -2383,8 +2360,6 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this4 = this;
-
       if (!this.props.song) {
         return null;
       }
@@ -2401,16 +2376,16 @@ function (_React$Component) {
         var comment_item = comments.map(function (comment) {
           return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
             className: "parentcomment",
-            key: el.id
-          }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(CommentIndexItem, {
-            currentUser: _this4.props.currentUser,
-            comment: comment,
-            users: _this4.props.users,
-            deleteComment: _this4.props.deleteComment
-          }));
+            key: comment.id
+          });
         });
       }
 
+      var frontcomments = this.props.comments.map(function (comment) {
+        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+          className: "comms"
+        }, "  ", comment, " ");
+      });
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_navbar_navbar_container__WEBPACK_IMPORTED_MODULE_8__["default"], null), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "show-body"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
@@ -2450,7 +2425,7 @@ function (_React$Component) {
         className: "music-content"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "commentbox"
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, "Avatar"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         className: "comment-input-container"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
@@ -2460,7 +2435,9 @@ function (_React$Component) {
         placeholder: "Write a Comment",
         onChange: this.handleComment,
         value: this.state.body
-      })))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      }))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "comment-container"
+      }, frontcomments)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "main-col"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "who-to-follow"
@@ -2723,7 +2700,7 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
     currentUser: state.session.currentUser,
     currentSong: state.entities.songs[state.player.songId],
     currentAudio: state.player.currentAudio,
-    comments: state.entities.comments
+    comments: state.entities.comments.comments
   };
 };
 
@@ -3607,8 +3584,8 @@ var audioPlayersReducer = function audioPlayersReducer() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/toConsumableArray.js");
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _actions_comment_action__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/comment_action */ "./frontend/actions/comment_action.js");
 /* harmony import */ var _actions_song_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../actions/song_actions */ "./frontend/actions/song_actions.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
@@ -3617,16 +3594,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var initialState = {
+  comments: []
+};
 
 var commentsReducer = function commentsReducer() {
-  var oldState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var oldState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
   var action = arguments.length > 1 ? arguments[1] : undefined;
   Object.freeze(oldState);
   var newState = Object.assign({}, oldState);
 
   switch (action.type) {
-    case _actions_comment_action__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_COMMENT"]:
-      return Object.assign(newState, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({}, action.comment.id, action.comment));
+    case _actions_comment_action__WEBPACK_IMPORTED_MODULE_1__["CREATE_COMMENT"]:
+      return Object.assign(newState, {
+        comments: [].concat(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default()(newState.comments), [action.comment])
+      });
 
     case _actions_comment_action__WEBPACK_IMPORTED_MODULE_1__["REMOVE_COMMENT"]:
       delete newState[action.commentId.id];
@@ -4423,37 +4405,6 @@ var configureStore = function configureStore() {
 
 /***/ }),
 
-/***/ "./frontend/util/comment_api_util.js":
-/*!*******************************************!*\
-  !*** ./frontend/util/comment_api_util.js ***!
-  \*******************************************/
-/*! exports provided: deleteComment, createComment */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteComment", function() { return deleteComment; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createComment", function() { return createComment; });
-var deleteComment = function deleteComment(id) {
-  return $.ajax({
-    method: 'delete',
-    url: "/api/comments/".concat(id)
-  });
-};
-var createComment = function createComment(comment, song_id) {
-  return $.ajax({
-    method: 'post',
-    url: "/api/songs/".concat(song_id, "/comments"),
-    data: {
-      comment: comment
-    },
-    contentType: false,
-    processData: false
-  });
-};
-
-/***/ }),
-
 /***/ "./frontend/util/route.util.jsx":
 /*!**************************************!*\
   !*** ./frontend/util/route.util.jsx ***!
@@ -4653,6 +4604,27 @@ var fetchUser = function fetchUser(id) {
     url: "/api/users/".concat(id)
   });
 };
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/arrayWithoutHoles.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/arrayWithoutHoles.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) {
+    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
+      arr2[i] = arr[i];
+    }
+
+    return arr2;
+  }
+}
+
+module.exports = _arrayWithoutHoles;
 
 /***/ }),
 
@@ -4950,6 +4922,36 @@ module.exports = _inheritsLoose;
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime/helpers/iterableToArray.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/iterableToArray.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _iterableToArray(iter) {
+  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
+}
+
+module.exports = _iterableToArray;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/nonIterableSpread.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/nonIterableSpread.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance");
+}
+
+module.exports = _nonIterableSpread;
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js":
 /*!**************************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js ***!
@@ -4990,6 +4992,27 @@ function _setPrototypeOf(o, p) {
 }
 
 module.exports = _setPrototypeOf;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/toConsumableArray.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/toConsumableArray.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var arrayWithoutHoles = __webpack_require__(/*! ./arrayWithoutHoles */ "./node_modules/@babel/runtime/helpers/arrayWithoutHoles.js");
+
+var iterableToArray = __webpack_require__(/*! ./iterableToArray */ "./node_modules/@babel/runtime/helpers/iterableToArray.js");
+
+var nonIterableSpread = __webpack_require__(/*! ./nonIterableSpread */ "./node_modules/@babel/runtime/helpers/nonIterableSpread.js");
+
+function _toConsumableArray(arr) {
+  return arrayWithoutHoles(arr) || iterableToArray(arr) || nonIterableSpread();
+}
+
+module.exports = _toConsumableArray;
 
 /***/ }),
 

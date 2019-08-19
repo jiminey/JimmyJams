@@ -8,8 +8,8 @@ class SongShow extends React.Component {
 
 
         this.state = {
+            body: "",
             localAudio: new Audio(`${this.props.song.song_fileUrl}`),
-            body: ""
         }
         
         this.handleDelete = this.handleDelete.bind(this)
@@ -20,13 +20,13 @@ class SongShow extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        let songId = this.props.match.params.songId;
-        this.props.createComment(this.state, songId).then(() => this.setState({ body: '' }));
+        this.props.createComment(this.state.body)
+        this.setState({ body: '' })
     }
 
     handleComment(e) {
         e.preventDefault();
-        this.setState({ body: e.target.value });
+        this.setState( { body: e.target.value } );
     }
 
     toggleDisplay() {
@@ -91,18 +91,24 @@ class SongShow extends React.Component {
 
             let comment_item = comments.map(comment => {
                 return (
-                    <div className='parentcomment' key={el.id}>
-                        <CommentIndexItem currentUser={this.props.currentUser} comment={comment} users={this.props.users} deleteComment={this.props.deleteComment} />
+                    <div className='parentcomment' key={comment.id}>
+                        {/* <CommentIndexItem currentUser={this.props.currentUser} comment={comment} users={this.props.users} deleteComment={this.props.deleteComment} /> */}
 
                     </div>
                 )
             })
         }
 
+
+        let frontcomments = this.props.comments.map (comment => {
+            return (
+                <p className='comms'>  {comment} </p>
+            )
+        })
+
         return (
             <div>
                 <NavBarContainer /> 
-
                 <div className='show-body'>
 
 
@@ -154,16 +160,21 @@ class SongShow extends React.Component {
                 <div className='music-content'>
 
                             <div className="commentbox">
-                                <div>Avatar</div>
+                                <div></div>
                                 <form onSubmit={this.handleSubmit} className="comment-input-container">
-                                        <input className="comment-input" type="text" maxLength='75' placeholder='Write a Comment' onChange={this.handleComment} value={this.state.body} />
+                                        <input className="comment-input" 
+                                                type="text" maxLength='75' 
+                                                placeholder='Write a Comment' 
+                                                onChange={this.handleComment} 
+                                                value={this.state.body} />
                                 </form>
                             </div>
 
                                 {/* <div> {comment_item} </div> */}
 
-                    
-                
+                                <div className="comment-container">
+                                    {frontcomments}
+                                </div>
                 </div>
                 {/* music content */}
 

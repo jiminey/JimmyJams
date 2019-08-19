@@ -23,7 +23,7 @@ const mapStateToProps = (state, ownProps) => {
         currentUser: state.session.currentUser,
         currentSong: state.entities.songs[state.player.songId],
         currentAudio: state.player.currentAudio,
-        comments: state.entities.comments
+        comments: state.entities.comments.comments
     })
 };
 
