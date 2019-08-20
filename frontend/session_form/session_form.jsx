@@ -41,6 +41,10 @@ class SessionForm extends React.Component {
     async demoLogin(e) {
         e.preventDefault();
 
+        if (this.props.formType === "Create Account") {
+            this.props.openModal();
+        } 
+
         const demoUser = {
             username: 'jimmythanhnguyen',
             password: 'pleasehireme'

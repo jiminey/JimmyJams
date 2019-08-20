@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import AudioPlayerContainer from '../../audioplayer/audioplayer_container'
-
+import NavBarContainer from '../../navbar/navbar_container'
 class CreateSong extends React.Component {
     constructor(props){
         super(props)
@@ -99,37 +99,8 @@ class CreateSong extends React.Component {
     render () {
         return (
             <div>
-                <header className='main-navbar'>
-
-                    <div className='main-left'>
-                        <div className='header-logo'>
-                            <Link className='home2' to='/'></Link>
-                        </div>
-                        <button className='home'>
-                            <Link to='/main'>Home</Link>
-                        </button>
-                        <button className='stream'>Stream</button>
-                        <button className='library'>
-                            <Link to='/library'>Library</Link>
-                        </button>
-                    </div>
-
-                    <div className='main-middle'>
-                        <input className='search' type="text" placeholder="Search" />
-                    </div>
-
-                    <div className='main-right'>
-                        <div className='upgrade' >Upgrade</div>
-                        <div className='upload'>
-                            <Link className='upload' to='/upload'>Upload</Link>
-                        </div>
-                        <div className='username'>Jimmy Nguyen</div>
-                        <div className='bell'> </div>
-                        <div className='mail'> </div>
-                        <div className='dropdown'> . . .</div>
-
-                    </div>
-                </header>
+                
+                <NavBarContainer/>
 
                 <div className='upload-main'>
                     <div className='upload-size'>

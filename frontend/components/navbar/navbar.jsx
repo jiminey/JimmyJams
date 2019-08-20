@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import SearchContainer from '../search/search_container'
+import { withRouter } from 'react-router'
 
 
 class NavBar extends React.Component {
@@ -15,7 +16,7 @@ class NavBar extends React.Component {
     }
 
     move() {
-        this.props.history.push('/');
+        // this.props.history.push('/');
     }
 
     search() {
@@ -29,8 +30,7 @@ class NavBar extends React.Component {
                 <header className='main-navbar'>
 
                     <div className='main-left'>
-                        <div className='header-logo' onClick={() => this.move()}>
-
+                        <div className='header-logo' onClick={this.move}>
                         </div>
 
                         <button className='home'>
@@ -63,7 +63,7 @@ class NavBar extends React.Component {
                             Jimmy Nguyen
                         </div>
 
-                        <div className='linked'> </div>
+                        <div className='bell'> </div>
                         <div className='mail'> </div>
                         <div className='dropdown'> . . .</div>
 
@@ -77,4 +77,4 @@ class NavBar extends React.Component {
 }
 
 
-export default NavBar
+export default withRouter(NavBar)

@@ -1480,6 +1480,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _search_search_container__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../search/search_container */ "./frontend/components/search/search_container.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+
 
 
 
@@ -1512,8 +1514,7 @@ function (_React$Component) {
     }
   }, {
     key: "move",
-    value: function move() {
-      this.props.history.push('/');
+    value: function move() {// this.props.history.push('/');
     }
   }, {
     key: "search",
@@ -1521,17 +1522,13 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
-
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("header", {
         className: "main-navbar"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "main-left"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "header-logo",
-        onClick: function onClick() {
-          return _this2.move();
-        }
+        onClick: this.move
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         className: "home"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
@@ -1557,7 +1554,7 @@ function (_React$Component) {
       }, "Upload")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "username"
       }, "Jimmy Nguyen"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "linked"
+        className: "bell"
       }, " "), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "mail"
       }, " "), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
@@ -1569,7 +1566,7 @@ function (_React$Component) {
   return NavBar;
 }(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (NavBar);
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router__WEBPACK_IMPORTED_MODULE_9__["withRouter"])(NavBar));
 
 /***/ }),
 
@@ -1859,6 +1856,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../audioplayer/audioplayer_container */ "./frontend/components/audioplayer/audioplayer_container.js");
+/* harmony import */ var _navbar_navbar_container__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../navbar/navbar_container */ "./frontend/components/navbar/navbar_container.js");
+
 
 
 
@@ -1987,49 +1986,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("header", {
-        className: "main-navbar"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "main-left"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "header-logo"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["Link"], {
-        className: "home2",
-        to: "/"
-      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
-        className: "home"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["Link"], {
-        to: "/main"
-      }, "Home")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
-        className: "stream"
-      }, "Stream"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
-        className: "library"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["Link"], {
-        to: "/library"
-      }, "Library"))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "main-middle"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
-        className: "search",
-        type: "text",
-        placeholder: "Search"
-      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "main-right"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "upgrade"
-      }, "Upgrade"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "upload"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["Link"], {
-        className: "upload",
-        to: "/upload"
-      }, "Upload")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "username"
-      }, "Jimmy Nguyen"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "bell"
-      }, " "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "mail"
-      }, " "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "dropdown"
-      }, " . . ."))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_navbar_navbar_container__WEBPACK_IMPORTED_MODULE_10__["default"], null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "upload-main"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "upload-size"
@@ -4191,6 +4148,11 @@ function (_React$Component) {
             switch (_context.prev = _context.next) {
               case 0:
                 e.preventDefault();
+
+                if (this.props.formType === "Create Account") {
+                  this.props.openModal();
+                }
+
                 demoUser = {
                   username: 'jimmythanhnguyen',
                   password: 'pleasehireme'
@@ -4205,56 +4167,56 @@ function (_React$Component) {
                 document.getElementById('username').focus();
                 i = 1;
 
-              case 5:
+              case 6:
                 if (!(i <= demoUser.username.length)) {
-                  _context.next = 12;
+                  _context.next = 13;
                   break;
                 }
 
                 this.setState({
                   username: demoUser.username.substr(0, i)
                 });
-                _context.next = 9;
+                _context.next = 10;
                 return sleep(50);
 
-              case 9:
+              case 10:
                 i++;
-                _context.next = 5;
+                _context.next = 6;
                 break;
 
-              case 12:
-                _context.next = 14;
+              case 13:
+                _context.next = 15;
                 return sleep(250);
 
-              case 14:
+              case 15:
                 document.getElementById('password').focus();
                 _i = 1;
 
-              case 16:
+              case 17:
                 if (!(_i <= demoUser.password.length)) {
-                  _context.next = 23;
+                  _context.next = 24;
                   break;
                 }
 
                 this.setState({
                   password: demoUser.password.substr(0, _i)
                 });
-                _context.next = 20;
+                _context.next = 21;
                 return sleep(50);
 
-              case 20:
+              case 21:
                 _i++;
-                _context.next = 16;
+                _context.next = 17;
                 break;
 
-              case 23:
-                _context.next = 25;
+              case 24:
+                _context.next = 26;
                 return sleep(250);
 
-              case 25:
+              case 26:
                 document.getElementById('session-submit-btn').click();
 
-              case 26:
+              case 27:
               case "end":
                 return _context.stop();
             }
@@ -4370,6 +4332,9 @@ var mapStateToProps = function mapStateToProps(_ref) {
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
+    openModal: function openModal() {
+      return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_3__["openModal"])('login'));
+    },
     processForm: function processForm(user) {
       return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__["signup"])(user));
     },

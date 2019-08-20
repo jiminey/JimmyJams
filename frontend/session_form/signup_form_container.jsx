@@ -14,6 +14,7 @@ const mapStateToProps = ({ errors }) => {
 
 const mapDispatchToProps = dispatch => {
     return {
+        openModal: () => dispatch(openModal('login')),
         processForm: (user) => dispatch(signup(user)),
         otherForm: (
             <button onClick={() => dispatch(openModal('login'))} className='blue-hyperlink-help'>
