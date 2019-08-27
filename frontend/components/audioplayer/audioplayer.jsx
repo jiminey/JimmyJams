@@ -99,13 +99,13 @@ class AudioPlayer extends React.Component {
         if (this.props.playState) {
             return (
                 <div onClick={this.toggle} className='p3'>
-                    <i class="fa fa-pause fa-sm" aria-hidden="true"></i>
+                    <i className="fa fa-pause fa-sm" aria-hidden="true"></i>
                 </div>
             )
         } else {
             return (
                 <div onClick={this.toggle} className='p3'>
-                    <i class="fa fa-play fa-sm" aria-hidden="true" ></i>
+                    <i className="fa fa-play fa-sm" aria-hidden="true" ></i>
                 </div>
             )
         }
@@ -117,14 +117,15 @@ class AudioPlayer extends React.Component {
         if (currentSong === undefined) {
             return (
                 <div className="thumbnail">
-                    <p></p>
-                    <p>
-                        <p></p>
-                        <p></p>                        
-                    </p>
+                    <div></div>
+                    <div>
+                        <div></div>
+                        <div></div>                        
+                    </div>
                 </div>
             )
         } else {
+
             return (
                 <div className="thumbnail">
                     <div>< img src={currentSong.album_coverUrl} className="playbarimg" /></div>
@@ -134,8 +135,8 @@ class AudioPlayer extends React.Component {
                         <div>{currentSong.title.slice(0,14)}</div>
                     </div>
                     <div className="icon-playbar">
-                        <i className="heartt" class="fa fa-heart fa-xs" aria-hidden="true"></i>
-                        <i className="bars"class="fa fa-bars" aria-hidden="true"></i>
+                        <i className="heartt" className="fa fa-heart fa-xs" aria-hidden="true"></i>
+                        <i className="bars"className="fa fa-bars" aria-hidden="true"></i>
                     </div>
 
                     
@@ -159,7 +160,7 @@ class AudioPlayer extends React.Component {
                     
 
                         <div className='p1'>
-                            <i class="fa fa-step-backward fa-sm" aria-hidden="true"></i>
+                            <i className="fa fa-step-backward fa-sm" aria-hidden="true"></i>
                         </div>
                         {/* if state is playing than pause button else play button */}
 
@@ -167,15 +168,15 @@ class AudioPlayer extends React.Component {
                            
             
                         <div className='p1'>
-                            <i class="fa fa-step-forward fa-sm" aria-hidden="true"></i>
+                            <i className="fa fa-step-forward fa-sm" aria-hidden="true"></i>
                         </div>
 
                         <div className='p1'>
-                            <i class="fa fa-random fa-sm" aria-hidden="true"></i>
+                            <i className="fa fa-random fa-sm" aria-hidden="true"></i>
                         </div>
                         
                         <div className='p1'>
-                            <i class="fa fa-undo fa-sm" aria-hidden="true"></i>
+                            <i className="fa fa-undo fa-sm" aria-hidden="true"></i>
                         </div>
 
                         <div className='playbar-mid'>
@@ -188,7 +189,7 @@ class AudioPlayer extends React.Component {
                             <small className="timestampright" id="end-time">0:00</small>
 
 
-                                <i class="fas fa-volume-up"></i>
+                            <i className="fas fa-volume-up"></i>
 
                                 <input id='vslider' className="vol" type="range" min="1" max="100" step="1" />
 
