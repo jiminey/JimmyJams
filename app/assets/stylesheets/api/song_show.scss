@@ -15,6 +15,7 @@
     height: 340.99px; 
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 .show-top-left-2 {
@@ -164,4 +165,13 @@
 
 .x{
     margin-top: 15px;
+}
+
+.waveform {
+    position: absolute;
+    top: 120px;
+    cursor: not-allowed;
+    width: 500px;
+    height: 173px;
+    left: 52px;
 }
