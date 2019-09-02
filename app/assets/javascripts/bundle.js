@@ -2375,7 +2375,10 @@ function (_React$Component) {
         className: "top-artist"
       }, this.props.song.artist), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "top-title"
-      }, this.props.song.title))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+      }, this.props.song.title), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+        src: "",
+        alt: ""
+      }))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
         onClick: this.handleDelete
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
         className: "fa fa-trash",
@@ -3571,7 +3574,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var initialState = {
-  comments: []
+  comments: ['this is a hella dope song!', 'sweeeet ear candy', 'this is a comment and you are awesome']
 };
 
 var commentsReducer = function commentsReducer() {
