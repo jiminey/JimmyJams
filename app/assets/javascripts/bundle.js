@@ -2376,8 +2376,8 @@ function (_React$Component) {
       }, this.props.song.artist), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "top-title"
       }, this.props.song.title), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
-        src: "",
-        alt: ""
+        className: "waveform",
+        src: "waveform.png"
       }))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
         onClick: this.handleDelete
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
@@ -47929,7 +47929,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
