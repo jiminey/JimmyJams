@@ -133,7 +133,9 @@ class SongShow extends React.Component {
                                     <div className='top-words'>
                                         <div className='top-artist'>{this.props.song.artist}</div>
                                         <div className='top-title'>{this.props.song.title}</div>
-                                        <img className='waveform' src='waveform.png'></img>
+                                        <div>
+                                            <img className='waveform' src='waveform.png'></img>
+                                        </div>
                                     </div>
 
 
