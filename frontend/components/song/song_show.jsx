@@ -28,7 +28,8 @@ class SongShow extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.createComment(this.state.body)
+        
+        this.props.createComment(this.state.body
         this.setState({ body: '' })
     }
 

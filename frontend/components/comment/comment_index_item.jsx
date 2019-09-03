@@ -28,7 +28,6 @@ const CommentIndexItem = (props) => {
         <div className='commentitem'>
             <div className='leftside'>
                 {/* <img src={user.photoUrl} alt="" /> */}
-                <div className='commentindexinfo'>
                     <div className='username'>{user.username}</div>
                     <div className='commentbody'>{props.comment.body}</div>
                 </div>

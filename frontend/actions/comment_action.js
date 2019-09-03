@@ -1,14 +1,23 @@
-export const CREATE_COMMENT = 'CREATE_COMMENT';
+import * as APICommentUtil from '../util/comment_api_util'
+
+export const RECEIVE_COMMENT = 'RECEIVE_COMMENT';
 export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 
-export const createComment = (comment) => ({
-    type: CREATE_COMMENT,
-    comment,
+const receiveComment = comment => ({
+    type: RECEIVE_COMMENT,
+    comment
 });
 
-export const removeComment = commentId => ({
+const removeComment = comment => ({
     type: REMOVE_COMMENT,
-    commentId
+    comment
 });
 
+export const createComment = (comment, songId) => dispatch => (
+    APICommentUtil.createComment(comment, songId).then(comment => dispatch(receiveComment(comment)))
+);
+
+export const deleteComment = comment => dispatch => (
+    APICommentUtil.deleteComment(comment).then(comment => dispatch(removeComment(comment)))
+);
 

@@ -1,8 +1,6 @@
 import { connect } from 'react-redux';
-
-import { fetchSong } from '../../actions/song_actions';
 import SongShow from '../song/song_show'
-import {deleteSong, updateSong} from '../../actions/song_actions'
+import {deleteSong, updateSong, fetchSong} from '../../actions/song_actions'
 import {openModal} from '../../actions/modal_actions'
 import {playSong, pauseSong} from '../../actions/audioplayer_actions'
 import { createComment, removeComment } from '../../actions/comment_action';
@@ -23,20 +21,23 @@ const mapStateToProps = (state, ownProps) => {
         currentUser: state.session.currentUser,
         currentSong: state.entities.songs[state.player.songId],
         currentAudio: state.player.currentAudio,
-        comments: state.entities.comments.comments
+
+        comments: state.entities.comments
     })
 };
 
 const mapDispatchToProps = dispatch => ({
-    fetchAllUsers: () => dispatch(fetchAllUsers()),
     playSong: (song, audio) => dispatch(playSong(song, audio)),
     pauseSong: () => dispatch(pauseSong()), 
-    fetchSong: (id) => dispatch(fetchSong(id)),
     deleteSong: id => dispatch(deleteSong(id)),
     updateSong: song => dispatch(updateSong(song)),
     openModal: (type, song) => dispatch(openModal(type, song)),
+
     createComment: (comment, songId) => dispatch(createComment(comment, songId)),
-    removeComment: (id) => dispatch(removeComment(id))
+    removeComment: (id) => dispatch(removeComment(id)),
+    fetchSong: (id) => dispatch(fetchSong(id)),
+    fetchAllUsers: () => dispatch(fetchAllUsers()),
+
 });
 
 export default connect(
