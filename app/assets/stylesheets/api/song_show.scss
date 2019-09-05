@@ -125,11 +125,11 @@
 }
 
 .comment-input-container {
-    width: 638px;
+    width: 604px;
     background: #ccc;
     height: 44px;
     margin-top: 10px;
-    margin-left: 20px;
+    margin-left: 22px;
 }
 
 .comms {
@@ -202,7 +202,9 @@
 }
 
 .comment-delete {
-    padding: 5px;
+    margin-top: 18px;
+    font-size: 11px;
+    cursor: pointer;
 }
 
 .comment-words div:first-child {
@@ -211,4 +213,11 @@
 
 .comment-words div:nth-child(2) {
     margin-top: 5px;
+}
+
+.comment-input-pic {
+    height: 44px;
+    width: 44px;
+    margin: 10px;
+    margin-right: -20px;
 }

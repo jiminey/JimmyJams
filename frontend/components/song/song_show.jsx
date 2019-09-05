@@ -179,7 +179,9 @@ class SongShow extends React.Component {
                 <div className='music-content'>
 
                             <div className="commentbox">
-                                <div></div>
+                                <div>
+                                    <img className='comment-input-pic' src={this.props.currentUser.photoUrl} alt="" />
+                                </div>
                                 <form onSubmit={this.handleSubmit} className="comment-input-container">
                                         <input className="comment-input" 
                                                 type="text" maxLength='75' 

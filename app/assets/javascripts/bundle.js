@@ -2494,7 +2494,11 @@ function (_React$Component) {
         className: "music-content"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "commentbox"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("form", {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+        className: "comment-input-pic",
+        src: this.props.currentUser.photoUrl,
+        alt: ""
+      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         className: "comment-input-container"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
