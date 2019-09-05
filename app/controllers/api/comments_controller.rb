@@ -5,7 +5,7 @@ class Api::CommentsController < ApplicationController
         @comment.user_id = current_user.id 
         @comment.song_id = params[:song_id]
         if @comment.save
-            render 'api/comments/show'
+            render '/api/comments/show'
         else
             render json: @comment.errors.full_messages, status: 422
         end
@@ -14,7 +14,7 @@ class Api::CommentsController < ApplicationController
     def destroy
         @comment = Comment.find(params[:id])
         @comment.destroy
-        render 'api/comments/show'
+        render '/api/comments/show'
     end
 
     private

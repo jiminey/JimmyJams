@@ -11,6 +11,7 @@ require 'open-uri'
 User.destroy_all
 
 user1 = User.create(username: "jimmythanhnguyen", password: "pleasehireme")
+user1.photo.attach(io: open('https://seed-jimmyjams.s3-us-west-1.amazonaws.com/headshot.jpg'), filename: 'headshot.jpg')
 
 Song.destroy_all
 
@@ -27,6 +28,8 @@ song10 = Song.create(title: 'Come Back To Earth', artist: 'Mac Miller', uploader
 song11 = Song.create(title: 'Is It Love', artist: '3LAU feat. Yeah Boy', uploader_id: user1.id)
 song12 = Song.create(title: 'Sunday Morning', artist: 'Maroon 5', uploader_id: user1.id)
 song13 = Song.create(title: 'Waiting for Love', artist: 'Avicii', uploader_id: user1.id)
+
+
 
 
 

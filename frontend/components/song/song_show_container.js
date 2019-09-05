@@ -3,7 +3,7 @@ import SongShow from '../song/song_show'
 import {deleteSong, updateSong, fetchSong} from '../../actions/song_actions'
 import {openModal} from '../../actions/modal_actions'
 import {playSong, pauseSong} from '../../actions/audioplayer_actions'
-import { createComment, removeComment } from '../../actions/comment_action';
+import { createComment, deleteComment } from '../../actions/comment_action';
 import {fetchAllUsers} from '../../actions/user_actions'
 
 
@@ -34,7 +34,7 @@ const mapDispatchToProps = dispatch => ({
     openModal: (type, song) => dispatch(openModal(type, song)),
 
     createComment: (comment, songId) => dispatch(createComment(comment, songId)),
-    removeComment: (id) => dispatch(removeComment(id)),
+    deleteComment: (id) => dispatch(deleteComment(id)),
     fetchSong: (id) => dispatch(fetchSong(id)),
     fetchAllUsers: () => dispatch(fetchAllUsers()),
 

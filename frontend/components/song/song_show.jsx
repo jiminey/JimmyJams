@@ -1,6 +1,7 @@
 import React from 'react'
 import AudioPlayerContainer from '../audioplayer/audioplayer_container'
 import NavBarContainer from '../navbar/navbar_container'
+import CommentIndexItem from '../comment/comment_index_item'
 
 
 class SongShow extends React.Component {
@@ -28,9 +29,8 @@ class SongShow extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        
-        this.props.createComment(this.state.body
-        this.setState({ body: '' })
+        let songId = this.props.match.params.songId;
+        this.props.createComment({body: this.state.body}, songId).then(() => this.setState({ body: '' }));
     }
 
     handleComment(e) {
@@ -79,7 +79,7 @@ class SongShow extends React.Component {
     }
 
     render() {
-
+        let showcomments;
         if (!this.props.song){
             return null;
         }
@@ -90,33 +90,37 @@ class SongShow extends React.Component {
             )
         }
         else {
-            
+            // let owner = this.props.users[this.props.song.uploader]
+            let currentUser = this.props.currentUser;
+            let comments = this.props.comments
+           
 
-            let comments;
-            
             if (this.props.comments) {
                 comments = Object.values(this.props.comments);
             }
-
-            let comment_item = comments.map(comment => {
-                return (
-                    <div className='parentcomment' key={comment.id}>
-                        {/* <CommentIndexItem currentUser={this.props.currentUser} comment={comment} users={this.props.users} deleteComment={this.props.deleteComment} /> */}
-
-                    </div>
-                )
+            
+            showcomments = comments.map(comment => {
+                if (comment.song_id === this.props.song.id) {
+                    return (
+                        <div key={comment.id}>
+                            <CommentIndexItem currentUser={this.props.currentUser} comment={comment} users={this.props.users} deleteComment={this.props.deleteComment} />
+                        </div>
+                    )
+                }
             })
         }
+        
+        
 
 
-        let frontcomments = this.props.comments.map (comment => {
-            return (
-                <div className="div-c">
-                    <p className='comms'>  {comment} </p>
-                    {/* <i onClick={this.handleX} className="x" className="fa fa-times" aria-hidden="true"></i> */}
-                </div>
-            )
-        })
+        // let frontcomments = this.props.comments.map (comment => {
+        //     return (
+        //         <div className="div-c">
+        //             <p className='comms'>  {comment} </p>
+        //             {/* <i onClick={this.handleX} className="x" className="fa fa-times" aria-hidden="true"></i> */}
+        //         </div>
+        //     )
+        // })
 
         return (
             <div>
@@ -188,7 +192,7 @@ class SongShow extends React.Component {
                                 {/* <div> {comment_item} </div> */}
 
                                 <div className="comment-container">
-                                    {frontcomments}
+                                    {showcomments}
                                 </div>
                 </div>
                 {/* music content */}
