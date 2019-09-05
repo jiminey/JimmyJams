@@ -122,6 +122,14 @@ class SongShow extends React.Component {
         //     )
         // })
 
+
+        let pic;
+        if (this.props.currentUser.photoUrl) {
+            pic = this.props.currentUser.photoUrl
+        } else {
+            pic = 'https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/profilepic.png?raw=true'
+        }
+
         return (
             <div>
                 <NavBarContainer /> 
@@ -180,7 +188,7 @@ class SongShow extends React.Component {
 
                             <div className="commentbox">
                                 <div>
-                                    <img className='comment-input-pic' src={this.props.currentUser.photoUrl} alt="" />
+                                    <img className='comment-input-pic' src={pic} alt="" />
                                 </div>
                                 <form onSubmit={this.handleSubmit} className="comment-input-container">
                                         <input className="comment-input" 

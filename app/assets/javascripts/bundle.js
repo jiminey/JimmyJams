@@ -833,7 +833,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var CommentIndexItem = function CommentIndexItem(props) {
   var user = props.users[props.comment.user_id];
-  var currentUser = props.currentUser; //shows the delete button
+  var currentUser = props.currentUser;
+  var pic; //shows the delete button
 
   function displayDelete() {
     if (user.id === currentUser.id) {
@@ -845,13 +846,19 @@ var CommentIndexItem = function CommentIndexItem(props) {
     }
   }
 
+  if (user.photoUrl) {
+    pic = user.photoUrl;
+  } else {
+    pic = 'https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/profilepic.png?raw=true';
+  }
+
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "comment-main"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "comment-body"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "comment-pic",
-    src: user.photoUrl,
+    src: pic,
     alt: ""
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "comment-words"
@@ -2452,6 +2459,14 @@ function (_React$Component) {
       // })
 
 
+      var pic;
+
+      if (this.props.currentUser.photoUrl) {
+        pic = this.props.currentUser.photoUrl;
+      } else {
+        pic = 'https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/profilepic.png?raw=true';
+      }
+
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_navbar_navbar_container__WEBPACK_IMPORTED_MODULE_9__["default"], null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "show-body"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -2496,7 +2511,7 @@ function (_React$Component) {
         className: "commentbox"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
         className: "comment-input-pic",
-        src: this.props.currentUser.photoUrl,
+        src: pic,
         alt: ""
       })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("form", {
         onSubmit: this.handleSubmit,

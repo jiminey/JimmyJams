@@ -6,6 +6,7 @@ const CommentIndexItem = (props) => {
 
     let user = props.users[props.comment.user_id];
     let currentUser = props.currentUser;
+    let pic;
 
     //shows the delete button
 
@@ -23,16 +24,18 @@ const CommentIndexItem = (props) => {
         }
     }
 
-
-
+    if (user.photoUrl) {
+        pic = user.photoUrl
+    } else {
+        pic = 'https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/profilepic.png?raw=true'
+    }
 
     return (
         <div>
             <div className="comment-main">
                 
                 <div className="comment-body">
-                    <img className='comment-pic' src={user.photoUrl} alt="" />
-
+                    <img className='comment-pic' src={pic} alt='' />
                     <div className='comment-words'>
                         <div>{user.username}</div>
                         <div>{props.comment.body}</div>
