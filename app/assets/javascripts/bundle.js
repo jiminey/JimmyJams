@@ -1562,6 +1562,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _search_search_container__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../search/search_container */ "./frontend/components/search/search_container.js");
 /* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var _splash_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../splash/greeting/greeting_container */ "./frontend/components/splash/greeting/greeting_container.js");
+
+
 
 
 
@@ -1603,6 +1606,14 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var pic;
+
+      if (this.props.currentUser.photoUrl) {
+        pic = this.props.currentUser.photoUrl;
+      } else {
+        pic = "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/profilepic.png";
+      }
+
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("header", {
         className: "main-navbar"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
@@ -1632,15 +1643,15 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
         className: "upload",
         to: "/upload"
-      }, "Upload")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      }, "Upload")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
+        className: "prof-pic",
+        src: pic,
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "username"
-      }, "Jimmy Nguyen"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "bell"
-      }, " "), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "mail"
-      }, " "), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "dropdown"
-      }, " . . ."))));
+      }, this.props.currentUser.username), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "header-group"
+      }))));
     }
   }]);
 

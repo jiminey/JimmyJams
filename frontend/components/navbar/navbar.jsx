@@ -2,6 +2,10 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import SearchContainer from '../search/search_container'
 import { withRouter } from 'react-router'
+import { Route } from 'react-router-dom'
+
+import GreetingContainer from '../splash/greeting/greeting_container'
+
 
 
 class NavBar extends React.Component {
@@ -24,6 +28,13 @@ class NavBar extends React.Component {
     }
 
     render() {
+        let pic;
+
+        if (this.props.currentUser.photoUrl) {
+            pic = this.props.currentUser.photoUrl
+        } else {
+            pic = "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/profilepic.png"
+        }
         return(
             <div>
 
@@ -57,15 +68,18 @@ class NavBar extends React.Component {
                         <div className='upload'>
                             <Link className='upload' to='/upload'>Upload</Link>
                         </div>
+                        
+                        <img className='prof-pic' src={pic} alt=""/>
+
 
                         <div className='username'>
-                            {/* <Link to={`/users/${this.props.currentUser.id}`}>Jimmy Nguyen</Link> */}
-                            Jimmy Nguyen
+                            {this.props.currentUser.username}
                         </div>
+                        
 
-                        <div className='bell'> </div>
-                        <div className='mail'> </div>
-                        <div className='dropdown'> . . .</div>
+                        <div className="header-group">
+                            
+                        </div>
 
                     </div>
 
