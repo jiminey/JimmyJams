@@ -99,7 +99,7 @@ class SongShow extends React.Component {
                 comments = Object.values(this.props.comments);
             }
             
-            showcomments = comments.map(comment => {
+            showcomments = comments.slice(0).reverse().map(comment => {
                 if (comment.song_id === this.props.song.id) {
                     return (
                         <div key={comment.id}>

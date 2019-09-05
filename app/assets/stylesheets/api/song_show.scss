@@ -153,9 +153,9 @@
     flex-direction: column;
     align-items: flex-start;
     margin-left: 51px;
-    background: #ccca;
     margin-top: 20px;
     width: 607px;
+    border-top: 1px solid lightgray; 
 }
 
 .div-c {
@@ -174,4 +174,41 @@
     width: 500px;
     height: 173px;
     left: 52px;
+}
+
+.comment-body {
+    display: flex;
+    width: 575px;
+    padding: 5px;
+    margin-top: 15px;
+}
+
+.comment-main {
+    display:flex;
+    justify-content: space-between;
+
+}
+
+.comment-pic {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    margin-right: 8px;
+}
+
+.comment-words {
+    display:flex;
+    flex-direction: column;
+}
+
+.comment-delete {
+    padding: 5px;
+}
+
+.comment-words div:first-child {
+    color: #999;
+}
+
+.comment-words div:nth-child(2) {
+    margin-top: 5px;
 }

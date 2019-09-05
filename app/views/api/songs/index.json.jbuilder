@@ -1,6 +1,6 @@
 @songs.each do |song|
     json.set! song.id do 
-        json.extract! song, :id, :title, :artist
+        json.extract! song, :id, :title, :artist, :uploader_id
 
         if song.album_cover.attached? 
             json.album_coverUrl url_for(song.album_cover)

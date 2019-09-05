@@ -834,24 +834,34 @@ __webpack_require__.r(__webpack_exports__);
 var CommentIndexItem = function CommentIndexItem(props) {
   var user = props.users[props.comment.user_id];
   var currentUser = props.currentUser; //shows the delete button
-  // function displayButton() {
-  //     if (user.id === currentUser.id) {
-  //         return (
-  //             <div>
-  //                 <i className="fas fa-times"></i>
-  //             </div>
-  //         )
-  //     } else {
-  //         return (
-  //             <div></div>
-  //         )
-  //     }
-  // }
 
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  function displayDelete() {
+    if (user.id === currentUser.id) {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-times"
+      }));
+    } else {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null);
+    }
+  }
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "comment-main"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "comment-body"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "comment-pic",
     src: user.photoUrl,
     alt: ""
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, user.username), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, props.comment.body))));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "comment-words"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, user.username), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, props.comment.body))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "comment-delete"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    onClick: function onClick() {
+      return props.deleteComment(props.comment.id);
+    }
+  }, displayDelete()))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (CommentIndexItem);
@@ -2420,7 +2430,7 @@ function (_React$Component) {
           comments = Object.values(this.props.comments);
         }
 
-        showcomments = comments.map(function (comment) {
+        showcomments = comments.slice(0).reverse().map(function (comment) {
           if (comment.song_id === _this4.props.song.id) {
             return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
               key: comment.id

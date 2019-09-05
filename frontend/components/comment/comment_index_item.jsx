@@ -9,37 +9,41 @@ const CommentIndexItem = (props) => {
 
     //shows the delete button
 
-    // function displayButton() {
-    //     if (user.id === currentUser.id) {
-    //         return (
-    //             <div>
-    //                 <i className="fas fa-times"></i>
-    //             </div>
-    //         )
-    //     } else {
-    //         return (
-    //             <div></div>
-    //         )
-    //     }
-    // }
+    function displayDelete() {
+        if (user.id === currentUser.id) {
+            return (
+                <div>
+                    <i className="fas fa-times"></i>
+                </div>
+            )
+        } else {
+            return (
+                <div></div>
+            )
+        }
+    }
 
 
 
 
     return (
         <div>
-            <div>   
+            <div className="comment-main">
+                
+                <div className="comment-body">
+                    <img className='comment-pic' src={user.photoUrl} alt="" />
 
-                    <img src={user.photoUrl} alt="" />
-
-                    <div>
-                    <div>{user.username}</div>
-                    <div>{props.comment.body}</div>
-
+                    <div className='comment-words'>
+                        <div>{user.username}</div>
+                        <div>{props.comment.body}</div>
                     </div>
+                </div>
+
+                <div className="comment-delete">
+                    <div onClick={() => props.deleteComment(props.comment.id)} >{displayDelete()}</div>
+                </div>
 
             </div>
-            {/* <div className='deletecomment' onClick={() => props.deleteComment(props.comment.id)} >{displayButton()}</div> */}
         </div>
     )
 }
