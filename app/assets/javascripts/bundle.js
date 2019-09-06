@@ -308,7 +308,7 @@ var logout = function logout() {
 /*!******************************************!*\
   !*** ./frontend/actions/song_actions.js ***!
   \******************************************/
-/*! exports provided: RECEIVE_ALL_SONGS, RECEIVE_SONG, REMOVE_SONG, RECEIVE_SONG_ERRORS, fetchAllSongs, fetchSong, createSong, updateSong, deleteSong */
+/*! exports provided: RECEIVE_ALL_SONGS, RECEIVE_SONG, REMOVE_SONG, RECEIVE_SONG_ERRORS, RECEIVE_SONG_COMMENTS, fetchAllSongs, fetchSong, createSong, updateSong, deleteSong */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -317,6 +317,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_SONG", function() { return RECEIVE_SONG; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "REMOVE_SONG", function() { return REMOVE_SONG; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_SONG_ERRORS", function() { return RECEIVE_SONG_ERRORS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_SONG_COMMENTS", function() { return RECEIVE_SONG_COMMENTS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchAllSongs", function() { return fetchAllSongs; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchSong", function() { return fetchSong; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createSong", function() { return createSong; });
@@ -328,6 +329,14 @@ var RECEIVE_ALL_SONGS = 'RECEIVE_ALL_SONGS';
 var RECEIVE_SONG = 'RECEIVE_ONE_SONG';
 var REMOVE_SONG = 'REMOVE_SONG';
 var RECEIVE_SONG_ERRORS = 'RECEIVE_SONG_ERRORS';
+var RECEIVE_SONG_COMMENTS = 'RECEIVE_SONG_COMMENTS';
+
+var receiveSongComments = function receiveSongComments(payload) {
+  return {
+    type: RECEIVE_SONG_COMMENTS,
+    payload: payload
+  };
+};
 
 var receiveAllSongs = function receiveAllSongs(songs) {
   return {
@@ -367,7 +376,7 @@ var fetchAllSongs = function fetchAllSongs() {
 var fetchSong = function fetchSong(id) {
   return function (dispatch) {
     return _util_song_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchSong"](id).then(function (song) {
-      return dispatch(receiveSong(song));
+      return dispatch(receiveSongComments(song));
     });
   };
 };
@@ -3704,6 +3713,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _actions_comment_action__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/comment_action */ "./frontend/actions/comment_action.js");
+/* harmony import */ var _actions_song_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../actions/song_actions */ "./frontend/actions/song_actions.js");
+
 
 
 
@@ -3720,6 +3731,15 @@ var commentsReducer = function commentsReducer() {
     case _actions_comment_action__WEBPACK_IMPORTED_MODULE_1__["REMOVE_COMMENT"]:
       delete newState[action.comment.id];
       return newState;
+
+    case _actions_song_actions__WEBPACK_IMPORTED_MODULE_2__["RECEIVE_SONG_COMMENTS"]:
+      if (action.payload.comments === undefined) {
+        return {};
+      } else {
+        return Object.assign({}, action.payload.comments);
+      }
+
+      ;
 
     default:
       return oldState;
@@ -4015,6 +4035,10 @@ var songsReducer = function songsReducer() {
     case _actions_song_actions__WEBPACK_IMPORTED_MODULE_1__["REMOVE_SONG"]:
       delete newState[action.songId];
       return newState;
+
+    case _actions_song_actions__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_SONG_COMMENTS"]:
+      debugger;
+      return Object.assign(newState, action.payload.song);
 
     default:
       return oldState;

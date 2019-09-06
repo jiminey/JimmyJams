@@ -5,6 +5,14 @@ export const RECEIVE_SONG = 'RECEIVE_ONE_SONG'
 export const REMOVE_SONG = 'REMOVE_SONG'
 export const RECEIVE_SONG_ERRORS = 'RECEIVE_SONG_ERRORS';
 
+export const RECEIVE_SONG_COMMENTS = 'RECEIVE_SONG_COMMENTS';
+
+
+const receiveSongComments = payload => ({
+    type: RECEIVE_SONG_COMMENTS,
+    payload
+});
+
 
 const receiveAllSongs = (songs) => ({
     type: RECEIVE_ALL_SONGS,
@@ -35,7 +43,7 @@ export const fetchAllSongs = () => dispatch => (
 
 export const fetchSong = (id) => dispatch =>  (
     APISongUtil.fetchSong(id)
-    .then (song => dispatch(receiveSong(song)))
+    .then (song => dispatch(receiveSongComments(song)))
 )
 
 export const createSong = (song) => dispatch => (

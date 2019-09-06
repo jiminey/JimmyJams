@@ -1,4 +1,5 @@
 import { RECEIVE_COMMENT, REMOVE_COMMENT } from '../actions/comment_action';
+import { RECEIVE_SONG_COMMENTS} from '../actions/song_actions';
 
 
 
@@ -13,6 +14,12 @@ const commentsReducer = (oldState = {}, action) => {
         case REMOVE_COMMENT:
             delete newState[action.comment.id];
             return newState;
+        case RECEIVE_SONG_COMMENTS:
+            if (action.payload.comments === undefined) {
+                return {};
+            } else {
+                return Object.assign({}, action.payload.comments);
+            };
         default:
             return oldState;
     }

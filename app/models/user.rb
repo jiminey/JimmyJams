@@ -24,6 +24,10 @@ class User < ApplicationRecord
   has_many :uploaded_songs,
     foreign_key: :uploader_id,
     class_name: :Song
+
+  has_many :comments,
+    foreign_key: :user_id,
+    class_name: :Comment
   
 
   after_initialize :ensure_session_token
