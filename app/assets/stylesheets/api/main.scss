@@ -22,7 +22,7 @@ body {
     justify-content: center;
     font: 100 14px/1.5 Arial,sans-serif;
     background: #333;
-    height: 28.75px;
+    height: 36px;
     transition: height .2s ease-in-out;
     border-bottom: 1px black solid;
     
@@ -50,8 +50,9 @@ body {
 }
 
 .stream {
-    // width: 103.99px;
-    // height: 45.98px;
+    width: 81.25px;
+    font-size: 12px;
+    height:100%;
     text-align: center;
     background: #333;
     color: #999;
@@ -64,8 +65,9 @@ body {
 
 .library {
     cursor: pointer;
-    // width: 103.99px;
-    // height: 45.98px;
+    width: 81.25px;
+    font-size: 12px;
+    height:100%;
     text-align: center;
     border: 1px solid black;
     background: #333;
