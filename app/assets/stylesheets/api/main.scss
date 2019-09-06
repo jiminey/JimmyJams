@@ -134,7 +134,9 @@ body {
     color: #ccc;
     display:flex;
     justify-content:space-around;
-    // cursor: pointer;
+    cursor: not-allowed;
+    margin-left: 8px;
+
 }
 .bell {
     // width: 45.98px;
@@ -361,7 +363,7 @@ input[type="search"] {
     font-size: 12px;
     display: flex;
     margin-top: -5px;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 
 
@@ -381,4 +383,8 @@ input[type="search"] {
     position: absolute;
     top: 9px;
     right: 5px;
+}
+
+#search-result-song {
+    font-family: sans-serif;
 }

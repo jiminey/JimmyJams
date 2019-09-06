@@ -1604,23 +1604,20 @@ function (_React$Component) {
   }, {
     key: "logout",
     value: function logout() {
-      var _this2 = this;
-
-      this.props.logout().then(function () {
-        return _this2.props.history.push('/');
-      });
+      this.props.history.push('/');
+      this.props.logout();
     }
   }, {
     key: "render",
     value: function render() {
-      var _this3 = this;
+      var _this2 = this;
 
       var pic;
 
       if (this.props.currentUser.photoUrl) {
         pic = this.props.currentUser.photoUrl;
       } else {
-        pic = "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/profilepic.png";
+        pic = "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/profilepic.png?raw=true";
       }
 
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("header", {
@@ -1667,7 +1664,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         className: "logout-btn",
         onClick: function onClick() {
-          return _this3.logout();
+          return _this2.logout();
         }
       }, "Log out"))))));
     }

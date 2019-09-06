@@ -24,8 +24,8 @@ class NavBar extends React.Component {
     }
 
     logout() {
+        this.props.history.push('/')
         this.props.logout()
-            .then(() => this.props.history.push('/'))
     }
 
     render() {
@@ -34,7 +34,7 @@ class NavBar extends React.Component {
         if (this.props.currentUser.photoUrl) {
             pic = this.props.currentUser.photoUrl
         } else {
-            pic = "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/profilepic.png"
+            pic = "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/profilepic.png?raw=true"
         }
         return(
             <div>

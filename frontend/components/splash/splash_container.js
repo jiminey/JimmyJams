@@ -3,7 +3,6 @@ import { openModal } from '../../actions/modal_actions';
 import Splash from './splash'
 import {fetchAllSongs} from '../../actions/song_actions'
 import {fetchAllUsers} from '../../actions/user_actions'
-
 import {playSong, pauseSong} from '../../actions/audioplayer_actions'
 
 const mapStateToProps = state => {    
