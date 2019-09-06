@@ -19,19 +19,18 @@ body {
     display: flex;
     margin: 0;
     //width: 1101px;
-    height:45.98px;
     justify-content: center;
     font: 100 14px/1.5 Arial,sans-serif;
     background: #333;
-    height: 46px;
+    height: 28.75px;
     transition: height .2s ease-in-out;
     border-bottom: 1px black solid;
     
 }
 
 .main-left {
-    width: 380.98px;
-    height: 45.98px;
+    // width: 380.98px;
+    // height: 45.98px;
     display: flex;
     justify-content: flex-start;
     color: #999;
@@ -39,8 +38,8 @@ body {
 }
 
 .home {
-    width: 103.99px;
-    height: 45.98px;
+    // width: 103.99px;
+    // height: 45.98px;
     text-align: center;
     border: 1px solid black;
     
@@ -50,8 +49,8 @@ body {
 }
 
 .stream {
-    width: 103.99px;
-    height: 45.98px;
+    // width: 103.99px;
+    // height: 45.98px;
     text-align: center;
     background: #333;
     color: #999;
@@ -64,8 +63,8 @@ body {
 
 .library {
     cursor: pointer;
-    width: 103.99px;
-    height: 45.98px;
+    // width: 103.99px;
+    // height: 45.98px;
     text-align: center;
     border: 1px solid black;
     background: #333;
@@ -74,14 +73,14 @@ body {
 }
 
 .main-middle {
-    width: 248.46px;
-    height: 45.98px;
+    // width: 248.46px;
+    // height: 45.98px;
 }
 
 
 .search{
-    height: 28px;
-    width: 100%;
+    // height: 28px;
+    // width: 100%;
     margin-top: 9px;
     display:flex; 
     margin-left: 15px;
@@ -93,8 +92,8 @@ body {
     line-height: 20px;
 }   
 .main-right {
-    width: 450.56px;
-    height: 45.98px;
+    // width: 450.56px;
+    // height: 45.98px;
     display: flex;
     justify-content: flex-start;
     margin-block-start: 1em;
@@ -104,15 +103,9 @@ body {
     padding-inline-start: 40px;
 }
 
-.header-logo {
-    width: 69;
-    height: 45.98px;
-    
-}
-
 .upgrade {
-    width: 73.27px;
-    height: 43.5px;
+    // width: 73.27px;
+    // height: 43.5px;
     color: #f70;
     float: left;
     font: 100 14px/1.5 Arial,sans-serif;
@@ -120,8 +113,8 @@ body {
 }
 
 .upload {
-    width: 64.03px;
-    height: 43.5px;
+    // width: 64.03px;
+    // height: 43.5px;
     color: #ccc;
     cursor: pointer;
 }
@@ -129,16 +122,16 @@ body {
     background-repeat: no-repeat;
     // background-image: url('https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/profilepic.png?raw=true');
     // background-size: 25px 25px;
-    width: 175.31px;
-    height: 43.5px;
+    // width: 175.31px;
+    // height: 43.5px;
     color: #ccc;
     display:flex;
     justify-content:space-around;
     // cursor: pointer;
 }
 .bell {
-    width: 45.98px;
-    height: 45.98px;
+    // width: 45.98px;
+    // height: 45.98px;
     color: #ccc;
     background-repeat: no-repeat;
     background-image: url('https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/notification.png?raw=true');
@@ -150,20 +143,20 @@ body {
     background-image: url('https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/mail.png?raw=true');
     background-size: 25px 25px;
     cursor: not-allowed;
-    width: 45.98px;
-    height: 45.98px;
+    // width: 45.98px;
+    // height: 45.98px;
     color: #ccc;
 }
 .dropdown {
     color: #ccc;
-    width: 45.98px;
-    height: 45.98px;
+    // width: 45.98px;
+    // height: 45.98px;
     cursor: not-allowed;
 }
 
 .header-logo {
-    width: 69px;
-    height: 45.98px;
+    width: 53.75px;
+    height: 100%;
     background-repeat:no-repeat;
     background-image: url('https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/soundcloudlogo.png?raw=true');
     background-size: 100% 100%;
@@ -333,4 +326,11 @@ body {
 .prof-pic {
     height: 20px;
     width: 20px;
+    border-radius: 20px;
+}
+
+
+.main-nav-content {
+    display: flex;
+    width: 959px;
 }

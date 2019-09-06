@@ -35,7 +35,8 @@ class NavBar extends React.Component {
             <div>
 
                 <header className='main-navbar'>
-            
+                    <div className='main-nav-content'>
+
                     <div className='main-left'>
                         <div className='header-logo' onClick={this.move}>
                         </div>
@@ -77,6 +78,7 @@ class NavBar extends React.Component {
 
                         </div>
 
+                    </div>
                     </div>
 
                 </header>

@@ -1615,6 +1615,8 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("header", {
         className: "main-navbar"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "main-nav-content"
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "main-left"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "header-logo",
@@ -1649,7 +1651,7 @@ function (_React$Component) {
         className: "username"
       }, this.props.currentUser.username), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "header-group"
-      }))));
+      })))));
     }
   }]);
 
