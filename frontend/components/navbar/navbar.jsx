@@ -23,6 +23,11 @@ class NavBar extends React.Component {
 
     }
 
+    logout() {
+        this.props.logout()
+            .then(() => this.props.history.push('/'))
+    }
+
     render() {
         let pic;
 
@@ -79,7 +84,7 @@ class NavBar extends React.Component {
                         </div>
 
                         <div className="header-group">
-
+                                <button className='logout-btn' onClick={() => logout() }>Log out</button>
                         </div>
 
                     </div>

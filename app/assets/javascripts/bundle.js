@@ -1602,6 +1602,15 @@ function (_React$Component) {
     key: "search",
     value: function search() {}
   }, {
+    key: "logout",
+    value: function logout() {
+      var _this2 = this;
+
+      this.props.logout().then(function () {
+        return _this2.props.history.push('/');
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       var pic;
@@ -1653,7 +1662,12 @@ function (_React$Component) {
         className: "username"
       }, this.props.currentUser.username)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "header-group"
-      })))));
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+        className: "logout-btn",
+        onClick: function onClick() {
+          return logout();
+        }
+      }, "Log out"))))));
     }
   }]);
 
@@ -1676,6 +1690,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./navbar */ "./frontend/components/navbar/navbar.jsx");
 /* harmony import */ var _actions_user_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/user_actions */ "./frontend/actions/user_actions.js");
+/* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/session_actions */ "./frontend/actions/session_actions.js");
+
 
 
 
@@ -1691,6 +1707,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     fetchAllUsers: function fetchAllUsers() {
       return dispatch(Object(_actions_user_actions__WEBPACK_IMPORTED_MODULE_2__["fetchAllUsers"])());
+    },
+    logout: function logout() {
+      return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_3__["logout"])());
     }
   };
 };
