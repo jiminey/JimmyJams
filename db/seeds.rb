@@ -17,10 +17,10 @@ user2 = User.create(username: "Batman", password: "batman")
 user2.photo.attach(io: open('https://seed-jimmyjams.s3-us-west-1.amazonaws.com/batman.jpg'), filename: 'batman.jpg')
 
 user3 = User.create(username: "Superman", password: "superman")
-user2.photo.attach(io: open('https://seed-jimmyjams.s3-us-west-1.amazonaws.com/superman.jpg'), filename: 'superman.jpg')
+user3.photo.attach(io: open('https://seed-jimmyjams.s3-us-west-1.amazonaws.com/superman.jpeg'), filename: 'superman.jpeg')
 
-user4 = User.create(username: "Flash", password: "flash")
-user2.photo.attach(io: open('https://seed-jimmyjams.s3-us-west-1.amazonaws.com/flash.jpg'), filename: 'flash.jpg')
+user4 = User.create(username: "Flash", password: "flash1")
+user4.photo.attach(io: open('https://seed-jimmyjams.s3-us-west-1.amazonaws.com/flash.jpg'), filename: 'flash.jpg')
 
 
 
