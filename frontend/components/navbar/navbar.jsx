@@ -84,7 +84,7 @@ class NavBar extends React.Component {
                         </div>
 
                         <div className="header-group">
-                                <button className='logout-btn' onClick={() => logout() }>Log out</button>
+                                <button className='logout-btn' onClick={() => this.logout() }>Log out</button>
                         </div>
 
                     </div>

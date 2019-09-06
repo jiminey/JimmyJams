@@ -1613,6 +1613,8 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this3 = this;
+
       var pic;
 
       if (this.props.currentUser.photoUrl) {
@@ -1665,7 +1667,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         className: "logout-btn",
         onClick: function onClick() {
-          return logout();
+          return _this3.logout();
         }
       }, "Log out"))))));
     }
