@@ -78,7 +78,7 @@ class Search extends React.Component {
         }
 
         return (
-            <div className="default-searchbar-div">
+            <div>
                 <form className="search-form">
                     <input onClick={this.handleClick}
                         onChange={this.handleSearch}

@@ -1862,9 +1862,7 @@ function (_React$Component) {
         }));
       }
 
-      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "default-searchbar-div"
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
         className: "search-form"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
         onClick: this.handleClick,
