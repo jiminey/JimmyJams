@@ -10,7 +10,7 @@ require 'open-uri'
 
 User.destroy_all
 
-user1 = User.create(username: "JimmyThanhNguyen", password: "pleasehireme")
+user1 = User.create(username: "jimmythanhnguyen", password: "pleasehireme")
 user1.photo.attach(io: open('https://seed-jimmyjams.s3-us-west-1.amazonaws.com/headshot.jpg'), filename: 'headshot.jpg')
 
 user2 = User.create(username: "Batman", password: "batman")
