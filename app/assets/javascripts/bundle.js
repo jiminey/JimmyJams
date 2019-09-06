@@ -1562,8 +1562,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _search_search_container__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../search/search_container */ "./frontend/components/search/search_container.js");
 /* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var _splash_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../splash/greeting/greeting_container */ "./frontend/components/splash/greeting/greeting_container.js");
-
 
 
 

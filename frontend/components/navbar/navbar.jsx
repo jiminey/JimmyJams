@@ -4,10 +4,6 @@ import SearchContainer from '../search/search_container'
 import { withRouter } from 'react-router'
 import { Route } from 'react-router-dom'
 
-import GreetingContainer from '../splash/greeting/greeting_container'
-
-
-
 class NavBar extends React.Component {
     constructor(props) {
         super(props)
@@ -39,7 +35,7 @@ class NavBar extends React.Component {
             <div>
 
                 <header className='main-navbar'>
-
+            
                     <div className='main-left'>
                         <div className='header-logo' onClick={this.move}>
                         </div>
@@ -78,7 +74,7 @@ class NavBar extends React.Component {
                         
 
                         <div className="header-group">
-                            
+
                         </div>
 
                     </div>
