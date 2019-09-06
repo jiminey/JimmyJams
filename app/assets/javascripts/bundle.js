@@ -1643,13 +1643,15 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
         className: "upload",
         to: "/upload"
-      }, "Upload")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
+      }, "Upload")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "navbar-user"
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
         className: "prof-pic",
         src: pic,
         alt: ""
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "username"
-      }, this.props.currentUser.username), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      }, this.props.currentUser.username)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "header-group"
       })))));
     }

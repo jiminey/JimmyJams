@@ -66,13 +66,17 @@ class NavBar extends React.Component {
                             <Link className='upload' to='/upload'>Upload</Link>
                         </div>
                         
-                        <img className='prof-pic' src={pic} alt=""/>
+
+                        <div className='navbar-user'>
+
+                            <img className='prof-pic' src={pic} alt=""/>
 
 
-                        <div className='username'>
-                            {this.props.currentUser.username}
+                            <div className='username'>
+                                {this.props.currentUser.username}
+                            </div>
+                            
                         </div>
-                        
 
                         <div className="header-group">
 
