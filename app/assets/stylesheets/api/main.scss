@@ -107,23 +107,23 @@ body {
 }
 
 .upgrade {
-    // width: 73.27px;
-    // height: 43.5px;
     color: #f70;
     float: left;
-    font: 100 14px/1.5 Arial,sans-serif;
+    font: 100 12px/1.5 Arial,sans-serif;
     cursor: not-allowed;
     width: 57px;
     height: 100%;
-    margin-left: -14px;
+    margin-left: -32px;
     margin-top: -5px;
 }
 
 .upload {
-    // width: 64.03px;
-    // height: 43.5px;
     color: #ccc;
     cursor: pointer;
+    width: 50px;
+    height: 100%;
+    font-size: 12px;
+    margin-top: -5px;
 }
 .username {
     background-repeat: no-repeat;
