@@ -18,6 +18,7 @@ const App = () => (
     <div className='splash'>
         <Modal /> 
         <Switch >
+
             {/* <Route exact path='/users/:userId' component={UserShowContainer} />  */}
             <AuthRoute exact path='/songs/:songId' component={SongShowContainer}/> 
             <AuthRoute exact path='/library' component={LibraryContainer} />
