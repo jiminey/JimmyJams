@@ -498,7 +498,11 @@ __webpack_require__.r(__webpack_exports__);
 var App = function App() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "splash"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modal_modal__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_3__["AuthRoute"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modal_modal__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Route"], {
+    exact: true,
+    path: "/users/:userId",
+    component: _user_user_show_container__WEBPACK_IMPORTED_MODULE_9__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_3__["AuthRoute"], {
     exact: true,
     path: "/songs/:songId",
     component: _song_song_show_container__WEBPACK_IMPORTED_MODULE_8__["default"]
@@ -1595,6 +1599,7 @@ function (_React$Component) {
 
     _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(NavBar).call(this, props));
     _this.move = _this.move.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
+    _this.buttons = _this.buttons.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     return _this;
   }
 
@@ -1617,8 +1622,8 @@ function (_React$Component) {
       this.props.logout();
     }
   }, {
-    key: "render",
-    value: function render() {
+    key: "buttons",
+    value: function buttons() {
       var _this2 = this;
 
       var pic;
@@ -1629,6 +1634,42 @@ function (_React$Component) {
         pic = "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/profilepic.png?raw=true";
       }
 
+      if (this.props.currentUser) {
+        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+          className: "navbar-user"
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
+          className: "prof-pic",
+          src: pic,
+          alt: ""
+        }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+          className: "username"
+        }, this.props.currentUser.username)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+          className: "header-group"
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+          className: "logout-btn",
+          onClick: function onClick() {
+            return _this2.logout();
+          }
+        }, "Log out")));
+      } else {
+        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("nav", {
+          className: "login-signup"
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+          className: "signin-btn",
+          onClick: function onClick() {
+            return openModal('login');
+          }
+        }, "Sign In"), "\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+          className: "signup-btn",
+          onClick: function onClick() {
+            return openModal('signup');
+          }
+        }, "Create account")));
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("header", {
         className: "main-navbar"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
@@ -1660,22 +1701,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
         className: "upload",
         to: "/upload"
-      }, "Upload")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "navbar-user"
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
-        className: "prof-pic",
-        src: pic,
-        alt: ""
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "username"
-      }, this.props.currentUser.username)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "header-group"
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
-        className: "logout-btn",
-        onClick: function onClick() {
-          return _this2.logout();
-        }
-      }, "Log out"))))));
+      }, "Upload")), this.buttons()))));
     }
   }]);
 
@@ -1699,6 +1725,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./navbar */ "./frontend/components/navbar/navbar.jsx");
 /* harmony import */ var _actions_user_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/user_actions */ "./frontend/actions/user_actions.js");
 /* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/session_actions */ "./frontend/actions/session_actions.js");
+/* harmony import */ var _actions_modal_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../actions/modal_actions */ "./frontend/actions/modal_actions.js");
+
 
 
 
@@ -1718,6 +1746,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     },
     logout: function logout() {
       return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_3__["logout"])());
+    },
+    openModal: function openModal(modal) {
+      return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_4__["openModal"])(modal));
     }
   };
 };
@@ -2235,13 +2266,6 @@ function (_React$Component) {
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(SongIndexItem, [{
     key: "play",
     value: function play(e) {
-      // if (this.props.playState && this.props.currentSong.title === this.props.song.title) {
-      //     this.props.pauseSong()
-      //     this.props.currentAudio.pause();
-      // } else {
-      //     this.props.playSong(this.props.song, this.state.localAudio);
-      //     this.state.localAudio.play();
-      // }
       if (this.props.playState && this.props.currentSong.title === this.props.song.title && this.props.currentAudio) {
         this.props.pauseSong();
         this.props.currentAudio.pause();
@@ -3188,6 +3212,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../audioplayer/audioplayer_container */ "./frontend/components/audioplayer/audioplayer_container.js");
 /* harmony import */ var _navbar_navbar_container__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../navbar/navbar_container */ "./frontend/components/navbar/navbar_container.js");
+/* harmony import */ var _components_song_song_index_item__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/song/song_index_item */ "./frontend/components/song/song_index_item.jsx");
+
 
 
 
@@ -3210,36 +3236,6 @@ function (_React$Component) {
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default()(UserShow, [{
-    key: "toggleDisplay",
-    value: function toggleDisplay() {
-      if (this.props.playState && this.props.currentSong.title === this.props.song.title) {
-        //pause 
-        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
-          onClick: this.play,
-          className: "orangeplay",
-          src: "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangepause.png?raw=true"
-        }); //play
-      } else {
-        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
-          onClick: this.play,
-          className: "orangeplay",
-          src: "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangeplay.png?raw=true"
-        });
-      }
-    } // play(e) {
-    //     if (this.props.playState && this.props.currentSong.title === this.props.song.title && this.props.currentAudio) {
-    //         this.props.pauseSong()
-    //         this.props.currentAudio.pause();
-    //     } else if (this.props.currentAudio && this.props.playState === false) {
-    //         this.props.playSong(this.props.song, this.props.currentAudio);
-    //         this.props.currentAudio.play();
-    //     } else {
-    //         this.props.playSong(this.props.song, this.state.localAudio)
-    //         this.state.localAudio.play();
-    //     }
-    // }
-
-  }, {
     key: "componentDidMount",
     value: function componentDidMount() {
       var userId = this.props.match.params.userId;
@@ -3255,13 +3251,23 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var _React$createElement;
+      var _this = this,
+          _React$createElement;
 
       var song = this.props.songs.map(function (song) {
-        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
-          src: song.album_coverUrl,
-          alt: ""
-        }), song.title, song.artist);
+        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+          key: song.id
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_song_song_index_item__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          key: song.id,
+          path: _this.props.location.pathname,
+          song: song,
+          users: _this.props.users,
+          playSong: _this.props.playSong,
+          pauseSong: _this.props.pauseSong,
+          playState: _this.props.playState,
+          currentSong: _this.props.currentSong,
+          currentAudio: _this.props.currentAudio
+        })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, song.title, song.artist));
       });
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_navbar_navbar_container__WEBPACK_IMPORTED_MODULE_8__["default"], null), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "show-body"
@@ -3271,30 +3277,25 @@ function (_React$Component) {
         className: "show-top-left"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "show-top-left-2"
-      }, this.toggleDisplay(), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
+        className: "user-pic",
+        src: this.props.currentUser.photoUrl,
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "top-words"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "top-artist"
-      }, this.props.currentUser.username))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
-        onClick: this.handleDelete
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
-        className: "fa fa-trash",
-        "aria-hidden": "true"
-      }))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      }, this.props.currentUser.username))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "show-top-right"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "top-right-words"
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "day-ago"
-      }, "20 days ago"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "genre"
-      }, "#JimmyJams sound")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "show-bottom"
-      }, song, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "main-page-content"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "music-content"
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      }, song), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "main-col"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "who-to-follow"
@@ -3542,14 +3543,18 @@ __webpack_require__.r(__webpack_exports__);
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
+    users: state.entities.users,
     user: state.entities.users[ownProps.match.params.userId],
     songs: Object.values(state.entities.songs).filter(function (song) {
-      return song.uploader == ownProps.match.params.userId;
+      return song.uploader_id == ownProps.match.params.userId;
     }),
     errors: state.errors.user,
     currentUser: state.session.currentUser,
     currentAudio: state.player.currentAudio,
-    currentSong: state.player.currentSong
+    currentSong: state.player.currentSong,
+    songUrl: state.player.songUrl,
+    playState: state.player.playState,
+    songList: state.player.songList
   };
 };
 
@@ -4037,7 +4042,6 @@ var songsReducer = function songsReducer() {
       return newState;
 
     case _actions_song_actions__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_SONG_COMMENTS"]:
-      debugger;
       return Object.assign(newState, action.payload.song);
 
     default:

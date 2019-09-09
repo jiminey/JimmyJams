@@ -1,40 +1,12 @@
 import React from 'react'
 import AudioPlayerContainer from '../audioplayer/audioplayer_container'
 import NavBarContainer from '../navbar/navbar_container'
+import SongIndexItem from '../../components/song/song_index_item'
 
 class UserShow extends React.Component {
     constructor(props) {
         super(props)
     };
-
-    toggleDisplay() {
-        if (this.props.playState && this.props.currentSong.title === this.props.song.title) {
-            //pause 
-            return (
-                <img onClick={this.play} className='orangeplay' src='https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangepause.png?raw=true' ></img>
-            )
-            //play
-        } else {
-            return (
-                <img onClick={this.play} className='orangeplay' src='https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangeplay.png?raw=true' ></img>
-            )
-        }
-    }
-
-    // play(e) {
-    //     if (this.props.playState && this.props.currentSong.title === this.props.song.title && this.props.currentAudio) {
-    //         this.props.pauseSong()
-    //         this.props.currentAudio.pause();
-    //     } else if (this.props.currentAudio && this.props.playState === false) {
-    //         this.props.playSong(this.props.song, this.props.currentAudio);
-    //         this.props.currentAudio.play();
-    //     } else {
-    //         this.props.playSong(this.props.song, this.state.localAudio)
-    //         this.state.localAudio.play();
-    //     }
-    // }
-
-
     componentDidMount() {
         let userId = this.props.match.params.userId;
         this.props.fetchUser(userId);
@@ -52,9 +24,22 @@ class UserShow extends React.Component {
         let song = this.props.songs.map(song => {
             return (
                 <div>
-                    <img src={song.album_coverUrl} alt=""/>
-                    {song.title}
-                    {song.artist}
+                    <div key={song.id}>
+                        <SongIndexItem
+                            key={song.id}
+                            path={this.props.location.pathname}
+                            song={song} users={this.props.users}
+                            playSong={this.props.playSong}
+                            pauseSong={this.props.pauseSong}
+                            playState={this.props.playState}
+                            currentSong={this.props.currentSong}
+                            currentAudio={this.props.currentAudio}
+                        />
+                    </div>
+                    <div>
+                        {song.title}
+                        {song.artist}
+                    </div>
                 </div>
             )
         })
@@ -73,33 +58,25 @@ class UserShow extends React.Component {
                         <div className='show-top-left'>
                             <div className='show-top-left-2'>
                                 {/* <img onClick={this.play} className='orangeplay' src='https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangeplay.png?raw=true' ></img> */}
-                                {this.toggleDisplay()}
+                                <img className="user-pic" src={this.props.currentUser.photoUrl} alt=""/>
                                 <div className='top-words'>
                                     <div className='top-artist'>{this.props.currentUser.username}</div>
-                                    {/* <div className='top-title'>{this.props.song.title}</div> */}
                                 </div>
 
 
                             </div>
 
-                            {/* waveform here */}
                             <div>
 
                             </div>
-                            <button onClick={this.handleDelete}>
-                                <i className="fa fa-trash" aria-hidden="true"></i>
-                            </button>
                         </div>
 
 
                         <div className='show-top-right'>
                             <div className='top-right-words'>
-                                <div className='day-ago'>20 days ago</div>
-                                <div className='genre'>#JimmyJams sound</div>
                             </div>
 
                             <div>
-                                {/* <img className='show-pic' src={this.props.song.album_coverUrl} alt="" /> */}
                             </div>
                         </div>
 
@@ -110,13 +87,11 @@ class UserShow extends React.Component {
 
                     <div className='show-bottom'>
 
-
-                        {song}
-
                         <div className='main-page-content'>
 
                             <div className='music-content'>
-    
+
+                                {song}
                                 
 
 

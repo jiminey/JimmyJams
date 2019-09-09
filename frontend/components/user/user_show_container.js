@@ -8,13 +8,18 @@ import {fetchUser} from '../../actions/user_actions'
 
 
 const mapStateToProps = (state, ownProps) => {
+
     return ({
+        users: state.entities.users, 
         user: state.entities.users[ownProps.match.params.userId],
-        songs: Object.values(state.entities.songs).filter(song => song.uploader == ownProps.match.params.userId),
+        songs: Object.values(state.entities.songs).filter(song => song.uploader_id == ownProps.match.params.userId),
         errors: state.errors.user,
         currentUser: state.session.currentUser, 
         currentAudio: state.player.currentAudio,
-        currentSong: state.player.currentSong, 
+        currentSong: state.player.currentSong,
+        songUrl: state.player.songUrl,
+        playState: state.player.playState,
+        songList: state.player.songList,
     })
 };
 

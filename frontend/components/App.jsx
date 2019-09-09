@@ -19,7 +19,7 @@ const App = () => (
         <Modal /> 
         <Switch >
 
-            {/* <Route exact path='/users/:userId' component={UserShowContainer} />  */}
+            <Route exact path='/users/:userId' component={UserShowContainer} /> 
             <AuthRoute exact path='/songs/:songId' component={SongShowContainer}/> 
             <AuthRoute exact path='/library' component={LibraryContainer} />
             <AuthRoute exact path='/upload'component={CreateSongFormContainer} /> 

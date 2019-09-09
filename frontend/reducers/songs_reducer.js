@@ -13,7 +13,6 @@ const songsReducer = (oldState = {}, action) => {
             delete newState[action.songId];
             return newState;
         case RECEIVE_SONG_COMMENTS:
-            debugger
             return Object.assign(newState, action.payload.song);   
         default:
             return oldState;

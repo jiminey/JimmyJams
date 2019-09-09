@@ -8,6 +8,7 @@ class NavBar extends React.Component {
     constructor(props) {
         super(props)
         this.move = this.move.bind(this)
+        this.buttons = this.buttons.bind(this)
     }
 
 
@@ -28,7 +29,7 @@ class NavBar extends React.Component {
         this.props.logout()
     }
 
-    render() {
+    buttons() {
         let pic;
 
         if (this.props.currentUser.photoUrl) {
@@ -36,6 +37,41 @@ class NavBar extends React.Component {
         } else {
             pic = "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/profilepic.png?raw=true"
         }
+
+        if (this.props.currentUser) {
+            return ( 
+                <div>
+                    <div className='navbar-user'>
+
+                        <img className='prof-pic' src={pic} alt="" />
+
+                        <div className='username'>
+                            {this.props.currentUser.username}
+                        </div>
+
+                    </div>
+
+                    <div className="header-group">
+                        <button className='logout-btn' onClick={() => this.logout()}>Log out</button>
+                    </div>
+                </div>
+            )
+        } else {
+            return (
+                <div>
+                    <nav className="login-signup">
+                        <button className='signin-btn' onClick={() => openModal('login')}>Sign In</button>
+                        &nbsp;&nbsp;
+                        <button className='signup-btn' onClick={() => openModal('signup')}>Create account</button>
+                    </nav>
+                </div>
+            )
+        }
+    }
+
+    render() {
+       
+       
         return(
             <div>
 
@@ -71,21 +107,8 @@ class NavBar extends React.Component {
                             <Link className='upload' to='/upload'>Upload</Link>
                         </div>
                         
-
-                        <div className='navbar-user'>
-
-                            <img className='prof-pic' src={pic} alt=""/>
-
-
-                            <div className='username'>
-                                {this.props.currentUser.username}
-                            </div>
-                            
-                        </div>
-
-                        <div className="header-group">
-                                <button className='logout-btn' onClick={() => this.logout() }>Log out</button>
-                        </div>
+                        {this.buttons()}
+                        
 
                     </div>
                     </div>
