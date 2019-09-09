@@ -1,8 +1,8 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
-class SongIndexItem extends React.Component {
+class UserSongItem extends React.Component {
     constructor(props) {
         super(props);
         this.play = this.play.bind(this)
@@ -32,7 +32,7 @@ class SongIndexItem extends React.Component {
             this.props.playSong(this.props.song, this.state.localAudio)
             this.state.localAudio.play();
         }
-      
+
     }
 
     toggleDisplay() {
@@ -54,25 +54,41 @@ class SongIndexItem extends React.Component {
     render() {
         return (
             <div>
-                <div >
 
-                    <div className="shrinkdiv">
-                        <Link to={`/songs/${this.props.song.id}`}>
-                            <img className='pic-splash' src={this.props.song.album_coverUrl}/>
-                        </Link>
-                        {this.toggleDisplay()}
+                <div className='main-user'>
+                    <div className="other-user-song-content">
+
+                        <div className="shrinkdiv">
+                            <Link to={`/songs/${this.props.song.id}`}>
+                                <img className='pic-splash' src={this.props.song.album_coverUrl} />
+                            </Link>
+                            {this.toggleDisplay()}
+                        </div>
+
+
+                        <div className="song-words">
+                            <div className='pic-content'>
+                                {this.props.song.artist}
+                            </div>
+
+                            <div className='pic-content-body'>
+                                {this.props.song.title}
+                            </div>
+                        </div>
+
                     </div>
 
-                    
-                
-                    <div className='pic-content'>
-                        {this.props.song.artist.slice(0,16)}
+                    <div className='userbuttons'>
+                        <button className='user-trash' onClick={this.handleDelete}>
+                            <i className="fa fa-trash2" aria-hidden="true"></i>
+                        </button>
+                        <button className='user-trash' onClick={this.handleDelete}>
+                            <i className="fa fa-trash2" aria-hidden="true"></i>
+                        </button>
+                        <button className='user-trash' onClick={this.handleDelete}>
+                            <i className="fa fa-trash2" aria-hidden="true"></i>
+                        </button>
                     </div>
-
-                    <div className='pic-content-body'>
-                        {this.props.song.title.slice(0,16)}
-                    </div>
-                    
 
                 </div>
             </div>
@@ -80,4 +96,4 @@ class SongIndexItem extends React.Component {
     }
 }
 
-export default SongIndexItem;
+export default UserSongItem;

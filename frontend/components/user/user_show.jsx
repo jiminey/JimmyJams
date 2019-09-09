@@ -1,11 +1,12 @@
 import React from 'react'
 import AudioPlayerContainer from '../audioplayer/audioplayer_container'
 import NavBarContainer from '../navbar/navbar_container'
-import SongIndexItem from '../../components/song/song_index_item'
+import UserSongItem from '../../components/song/user_song_item'
 
 class UserShow extends React.Component {
     constructor(props) {
         super(props)
+        this.handleDelete = this.handleDelete.bind(this)
     };
     componentDidMount() {
         let userId = this.props.match.params.userId;
@@ -16,7 +17,6 @@ class UserShow extends React.Component {
     handleDelete(e) {
         e.preventDefault();
         this.props.deleteSong(this.props.song.id)
-        this.props.history.push('/library')
     }
 
     render() {
@@ -25,7 +25,7 @@ class UserShow extends React.Component {
             return (
                 <div>
                     <div key={song.id}>
-                        <SongIndexItem
+                        <UserSongItem
                             key={song.id}
                             path={this.props.location.pathname}
                             song={song} users={this.props.users}
@@ -36,10 +36,7 @@ class UserShow extends React.Component {
                             currentAudio={this.props.currentAudio}
                         />
                     </div>
-                    <div>
-                        {song.title}
-                        {song.artist}
-                    </div>
+
                 </div>
             )
         })
@@ -49,7 +46,7 @@ class UserShow extends React.Component {
                 <NavBarContainer />
 
                 <div className='show-body'>
-                    {console.log(this.props.songs)}
+                    {/* {this.props.songs} */}
 
 
                     <div className='show-top'>
@@ -91,7 +88,9 @@ class UserShow extends React.Component {
 
                             <div className='music-content'>
 
-                                {song}
+                                <div className='user-song-content'>
+                                    {song}
+                                </div>
                                 
 
 

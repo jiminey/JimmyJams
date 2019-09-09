@@ -11,3 +11,37 @@
     border-radius: 20px;
 }
 
+.user-song-content {
+    margin: 36px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.other-user-song-content{ 
+    display: flex;
+    justify-content: flex-start;
+}
+
+.song-words {
+    display:flex;
+    flex:column; 
+}
+
+.main-user {
+    display: flex;
+    justify-content: space-between;
+}
+
+.userbuttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-trash {
+    font-size:12px;
+}
+
+
