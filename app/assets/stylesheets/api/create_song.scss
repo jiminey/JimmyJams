@@ -37,7 +37,10 @@
     border-radius: 3px;
     margin-top: 10px;
     line-height: 24px;
-    vertical-align: baseline;
+    position: absolute;
+    top: 219px;
+    left: 246px;
+    z-index: 2;
 }
 .upl-btns2 {
     background-color: #f50;
@@ -56,7 +59,10 @@
     border-radius: 3px;
     margin-top: 10px;
     line-height: 24px;
-    vertical-align: baseline;
+    left: 246px;
+    bottom: 155px;
+    z-index: 2;
+    position: absolute;
 }
 
 .upload-size{
@@ -89,9 +95,8 @@
     font-family: 'Open Sans', sans-serif;
     margin: 0 auto; 
     border-radius: 3px;
-    margin-top: 16px;
+    margin-top: 20px;
     line-height: 24px;
-    vertical-align: baseline;
 }
 
 
@@ -106,9 +111,19 @@
 
 .image-btn {
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 13px;
+    width: 305px;
+    font-size: 23px;
+    z-index: 3;
+    opacity: 0;
+    cursor: pointer;
 }
 
 .file-btn {
     margin-bottom: 10px;
+    z-index: 3;
+    width: 305px;
+    font-size: 23px;
+    opacity: 0;
+    cursor: pointer;
 }
