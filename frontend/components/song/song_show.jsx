@@ -158,9 +158,6 @@ class SongShow extends React.Component {
                            <div>
 
                            </div>
-                            <button onClick={this.handleDelete}>
-                                <i className="fa fa-trash" aria-hidden="true"></i>
-                            </button>
                        </div>
 
 

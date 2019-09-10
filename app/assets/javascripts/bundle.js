@@ -2549,12 +2549,7 @@ function (_React$Component) {
       }, this.props.song.title), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
         className: "waveform",
         src: "waveform.png"
-      })))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
-        onClick: this.handleDelete
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-trash",
-        "aria-hidden": "true"
-      }))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      })))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "show-top-right"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "top-right-words"
