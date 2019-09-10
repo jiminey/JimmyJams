@@ -58,7 +58,7 @@ class UserShow extends React.Component {
                                 {/* <img onClick={this.play} className='orangeplay' src='https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangeplay.png?raw=true' ></img> */}
                                 <img className="user-pic" src={this.props.currentUser.photoUrl} alt=""/>
                                 <div className='top-words'>
-                                    <div className='top-artist'>{this.props.currentUser.username}</div>
+                                    <div className='user-top-artist'>{this.props.currentUser.username}</div>
                                 </div>
 
 

@@ -3444,7 +3444,7 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "top-words"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "top-artist"
+        className: "user-top-artist"
       }, this.props.currentUser.username))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "show-top-right"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
