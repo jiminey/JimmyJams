@@ -554,6 +554,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
 
 
 
@@ -583,8 +585,7 @@ function (_React$Component) {
     _this.updateProgress = _this.updateProgress.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default()(_this)); //bind ctx
 
     _this.calculateCurrentValue = _this.calculateCurrentValue.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default()(_this));
-    _this.calculateTotalValue = _this.calculateTotalValue.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default()(_this)); // this.updateVolume = this.updateProgress.bind(this)
-
+    _this.calculateTotalValue = _this.calculateTotalValue.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default()(_this));
     return _this;
   }
 
@@ -606,14 +607,7 @@ function (_React$Component) {
           current_seconds = current_seconds_long.toFixed(),
           current_time = current_minute + ":" + (current_seconds < 10 ? "0" + current_seconds : current_seconds);
       return current_time;
-    } // updateVolume() {
-    //     let volumeslider = document.getElementById('vslider')
-    //     if (volumeslider && this.props.currentAudio) {
-    //         this.setSate({volume: volumeslider.value})
-    //         this.props.currentAudio.volume = this.state.volume;
-    //     }
-    // }
-
+    }
   }, {
     key: "updateProgress",
     value: function updateProgress() {
@@ -635,8 +629,7 @@ function (_React$Component) {
       var progressbar = document.getElementById('seekbar');
       var volumeslider = document.getElementById('vslider');
       progressbar.value = player.currentTime / player.duration;
-      document.getElementById("div").addEventListener("click", seek); // progressbar.addEventListener("click", seek);
-
+      document.getElementById("div").addEventListener("click", seek);
       player.volume = volumeslider.value / 100;
 
       function seek(event) {
@@ -695,14 +688,22 @@ function (_React$Component) {
 
         return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
           className: "thumbnail"
-        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["Link"], {
+          to: "/songs/".concat(currentSong.id)
+        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
           src: currentSong.album_coverUrl,
           className: "playbarimg"
-        })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        }))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
           className: "subthumbnail"
+        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["Link"], {
+          to: "/songs/".concat(currentSong.id)
         }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
           className: "stn1"
-        }, currentSong.artist.slice(0, 14)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, currentSong.title.slice(0, 14))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        }, currentSong.artist.slice(0, 14))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["Link"], {
+          to: "/songs/".concat(currentSong.id)
+        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          className: "stn2"
+        }, currentSong.title.slice(0, 14)))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
           className: "icon-playbar"
         }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", (_React$createElement = {
           className: "heartt"
@@ -3875,8 +3876,6 @@ __webpack_require__.r(__webpack_exports__);
  // import {login, logout, signup} from './actions/session_actions'
 
 document.addEventListener('DOMContentLoaded', function () {
-  var root = document.getElementById('root');
-  var store = Object(_store_store__WEBPACK_IMPORTED_MODULE_3__["default"])(preloadedState);
   var preloadedState;
 
   if (window.currentUser) {
@@ -3887,6 +3886,8 @@ document.addEventListener('DOMContentLoaded', function () {
     };
   }
 
+  var root = document.getElementById('root');
+  var store = Object(_store_store__WEBPACK_IMPORTED_MODULE_3__["default"])(preloadedState);
   window.getState = store.getState; // window.dispatch = store.dispatch;
   // window.store = store;
   // window.login = login; 

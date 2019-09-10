@@ -169,6 +169,24 @@ progress::-webkit-progress-value {
 //     color: red;
 // }
 
+.fa-heart {
+    cursor: pointer;
+}
+
+.stn1:hover {
+    color: black;
+}
+
+.stn2 {
+    color: rgb(63, 63, 63)
+}
+.stn2:hover {
+    color: black;
+}
+.fa-heart:hover {
+    color: red;
+}
+
 @font-face {font-family: "Interstate";
     src: url("//db.onlinewebfonts.com/t/52eb6cf4774d0a37d693b9cccc565891.eot");
     src: url("//db.onlinewebfonts.com/t/52eb6cf4774d0a37d693b9cccc565891.eot?#iefix") format("embedded-opentype"),

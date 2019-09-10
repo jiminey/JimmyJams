@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 class AudioPlayer extends React.Component {
     constructor(props){
@@ -13,11 +14,7 @@ class AudioPlayer extends React.Component {
         this.updateProgress = this.updateProgress.bind(this) //bind ctx
         this.calculateCurrentValue = this.calculateCurrentValue.bind(this)
         this.calculateTotalValue = this.calculateTotalValue.bind(this)
-        // this.updateVolume = this.updateProgress.bind(this)
-
     }
-
-   
 
     calculateTotalValue(length) {
 
@@ -40,17 +37,6 @@ class AudioPlayer extends React.Component {
         return current_time;
     }
 
-
-    // updateVolume() {
-    //     let volumeslider = document.getElementById('vslider')
-    //     if (volumeslider && this.props.currentAudio) {
-    //         this.setSate({volume: volumeslider.value})
-    //         this.props.currentAudio.volume = this.state.volume;
-    //     }
-    // }
-
-
-
     updateProgress() {
         let player = this.props.currentAudio
         let length = player.duration
@@ -71,7 +57,6 @@ class AudioPlayer extends React.Component {
         
         progressbar.value = (player.currentTime / player.duration);
         document.getElementById("div").addEventListener("click", seek);
-        // progressbar.addEventListener("click", seek);
 
         player.volume = volumeslider.value/100;
 
@@ -128,18 +113,26 @@ class AudioPlayer extends React.Component {
 
             return (
                 <div className="thumbnail">
-                    <div>< img src={currentSong.album_coverUrl} className="playbarimg" /></div>
+
+                    <div>
+                        <Link to={`/songs/${currentSong.id}`}>
+                            < img src={currentSong.album_coverUrl} className="playbarimg" />
+                        </Link>
+                    </div>
 
                     <div className="subthumbnail">
-                        <div className="stn1">{currentSong.artist.slice(0,14)}</div>
-                        <div>{currentSong.title.slice(0,14)}</div>
+                        <Link to={`/songs/${currentSong.id}`}>
+                            <div className="stn1">{currentSong.artist.slice(0,14)}</div>
+                        </Link>
+                        <Link to={`/songs/${currentSong.id}`}>
+                            <div className="stn2">{currentSong.title.slice(0,14)}</div>
+                        </Link>
                     </div>
                     <div className="icon-playbar">
                         <i className="heartt" className="fa fa-heart fa-xs" aria-hidden="true"></i>
                         <i className="bars"className="fa fa-bars" aria-hidden="true"></i>
                     </div>
 
-                    
                 </div>
             )
         }
