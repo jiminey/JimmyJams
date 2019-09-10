@@ -3000,11 +3000,11 @@ function (_React$Component) {
         className: "pic-splash",
         src: this.props.song.album_coverUrl
       })), this.toggleDisplay()), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "song-words"
+        className: "user-song-words"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "pic-content"
+        className: "user-artist"
       }, this.props.song.artist), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "pic-content-body"
+        className: "user-title"
       }, this.props.song.title))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "userbuttons"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {

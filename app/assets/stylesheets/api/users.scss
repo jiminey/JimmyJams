@@ -25,11 +25,6 @@
     justify-content: flex-start;
 }
 
-.song-words {
-    display:flex;
-    flex:column; 
-}
-
 .main-user {
     display: flex;
     justify-content: space-between;
@@ -45,3 +40,12 @@
 }
 
 
+.user-song-words {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+
+.user-title {
+    color: gray
+}

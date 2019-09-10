@@ -66,12 +66,12 @@ class UserSongItem extends React.Component {
                         </div>
 
 
-                        <div className="song-words">
-                            <div className='pic-content'>
+                        <div className="user-song-words">
+                            <div className='user-artist'>
                                 {this.props.song.artist}
                             </div>
 
-                            <div className='pic-content-body'>
+                            <div className='user-title'>
                                 {this.props.song.title}
                             </div>
                         </div>
