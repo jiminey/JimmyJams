@@ -104,6 +104,8 @@ class CreateSong extends React.Component {
 
                 <div className='upload-main'>
                     <div className='upload-size'>
+                        <input type="submit" value="Upload a track cover" className='upl-btns'/>
+                        <input type="submit" value="Upload an audio file" className='upl-btns2'/>
                         
                     <form onSubmit={this.handleSubmit} >
                         <div className='form-content' >
@@ -130,14 +132,13 @@ class CreateSong extends React.Component {
                             </label>
                             <br />
                             <input  
-
                                 className='image-btn'
                                 onChange={this.handleAlbumCover}
                                 type="file"
                                 accept='image/*'
                                 />
                             <input
-                                
+                                className='file-btn'
                                 onChange={this.handleSongFile}
                                 type="file"
                                 accept='audio/*'
@@ -151,6 +152,7 @@ class CreateSong extends React.Component {
                         </div>
                      
                     </form>
+
                 </div>
             </div>
 

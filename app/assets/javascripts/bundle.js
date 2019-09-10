@@ -2144,7 +2144,15 @@ function (_React$Component) {
         className: "upload-main"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "upload-size"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("form", {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+        type: "submit",
+        value: "Upload a track cover",
+        className: "upl-btns"
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+        type: "submit",
+        value: "Upload an audio file",
+        className: "upl-btns2"
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("form", {
         onSubmit: this.handleSubmit
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "form-content"
@@ -2166,6 +2174,7 @@ function (_React$Component) {
         type: "file",
         accept: "image/*"
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+        className: "file-btn",
         onChange: this.handleSongFile,
         type: "file",
         accept: "audio/*"
