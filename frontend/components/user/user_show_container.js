@@ -12,7 +12,7 @@ const mapStateToProps = (state, ownProps) => {
     return ({
         users: state.entities.users, 
         user: state.entities.users[ownProps.match.params.userId],
-        songs: Object.values(state.entities.songs).filter(song => song.uploader_id == ownProps.match.params.userId),
+        songs: Object.values(state.entities.songs).filter(song => song.uploader_id == ownProps.match.params.userId).reverse(),
         errors: state.errors.user,
         currentUser: state.session.currentUser, 
         currentAudio: state.player.currentAudio,

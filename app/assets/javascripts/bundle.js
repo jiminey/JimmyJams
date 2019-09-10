@@ -2933,6 +2933,7 @@ function (_React$Component) {
     _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(UserSongItem).call(this, props));
     _this.play = _this.play.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     _this.toggleDisplay = _this.toggleDisplay.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
+    _this.handleDelete = _this.handleDelete.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     _this.state = {
       localAudio: new Audio("".concat(_this.props.song.song_fileUrl))
     };
@@ -2940,6 +2941,12 @@ function (_React$Component) {
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(UserSongItem, [{
+    key: "handleDelete",
+    value: function handleDelete(e) {
+      e.preventDefault();
+      this.props.deleteSong(this.props.song.id);
+    }
+  }, {
     key: "play",
     value: function play(e) {
       if (this.props.playState && this.props.currentSong.title === this.props.song.title && this.props.currentAudio) {
@@ -3011,19 +3018,13 @@ function (_React$Component) {
         className: "user-trash",
         onClick: this.handleDelete
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
-        className: "fa fa-trash2",
+        className: "fa fa-trash",
         "aria-hidden": "true"
       })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         className: "user-trash",
         onClick: this.handleDelete
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
-        className: "fa fa-trash2",
-        "aria-hidden": "true"
-      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
-        className: "user-trash",
-        onClick: this.handleDelete
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
-        className: "fa fa-trash2",
+        className: "fa fa-trash",
         "aria-hidden": "true"
       })))));
     }
@@ -3411,9 +3412,9 @@ function (_React$Component) {
 
       var song = this.props.songs.map(function (song) {
         return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-          key: song.id
+          key: song.title
         }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_song_user_song_item__WEBPACK_IMPORTED_MODULE_10__["default"], {
-          key: song.id,
+          key: song.title,
           path: _this2.props.location.pathname,
           song: song,
           users: _this2.props.users,
@@ -3421,7 +3422,8 @@ function (_React$Component) {
           pauseSong: _this2.props.pauseSong,
           playState: _this2.props.playState,
           currentSong: _this2.props.currentSong,
-          currentAudio: _this2.props.currentAudio
+          currentAudio: _this2.props.currentAudio,
+          deleteSong: _this2.props.deleteSong
         })));
       });
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_navbar_navbar_container__WEBPACK_IMPORTED_MODULE_9__["default"], null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -3704,7 +3706,7 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
     user: state.entities.users[ownProps.match.params.userId],
     songs: Object.values(state.entities.songs).filter(function (song) {
       return song.uploader_id == ownProps.match.params.userId;
-    }),
+    }).reverse(),
     errors: state.errors.user,
     currentUser: state.session.currentUser,
     currentAudio: state.player.currentAudio,

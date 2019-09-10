@@ -24,9 +24,9 @@ class UserShow extends React.Component {
         let song = this.props.songs.map(song => {
             return (
                 <div>
-                    <div key={song.id}>
+                    <div key={song.title}>
                         <UserSongItem
-                            key={song.id}
+                            key={song.title}
                             path={this.props.location.pathname}
                             song={song} users={this.props.users}
                             playSong={this.props.playSong}
@@ -34,6 +34,7 @@ class UserShow extends React.Component {
                             playState={this.props.playState}
                             currentSong={this.props.currentSong}
                             currentAudio={this.props.currentAudio}
+                            deleteSong =  {this.props.deleteSong}
                         />
                     </div>
 

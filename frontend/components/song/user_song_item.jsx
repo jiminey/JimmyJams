@@ -7,10 +7,16 @@ class UserSongItem extends React.Component {
         super(props);
         this.play = this.play.bind(this)
         this.toggleDisplay = this.toggleDisplay.bind(this)
+        this.handleDelete = this.handleDelete.bind(this)
         this.state = {
             localAudio: new Audio(`${this.props.song.song_fileUrl}`)
         }
     };
+
+    handleDelete(e) {
+        e.preventDefault();
+        this.props.deleteSong(this.props.song.id)
+    }
 
 
     play(e) {
@@ -79,15 +85,15 @@ class UserSongItem extends React.Component {
                     </div>
 
                     <div className='userbuttons'>
+
                         <button className='user-trash' onClick={this.handleDelete}>
-                            <i className="fa fa-trash2" aria-hidden="true"></i>
+                            <i className="fa fa-trash" aria-hidden="true"></i>
                         </button>
+
                         <button className='user-trash' onClick={this.handleDelete}>
-                            <i className="fa fa-trash2" aria-hidden="true"></i>
+                            <i className="fa fa-trash" aria-hidden="true"></i>
                         </button>
-                        <button className='user-trash' onClick={this.handleDelete}>
-                            <i className="fa fa-trash2" aria-hidden="true"></i>
-                        </button>
+
                     </div>
 
                 </div>
