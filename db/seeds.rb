@@ -26,12 +26,12 @@ user4.photo.attach(io: open('https://seed-jimmyjams.s3-us-west-1.amazonaws.com/f
 
 Song.destroy_all
 
-song1 = Song.create(title: 'Sunflower', artist: 'Post Malone & Swae Lee', uploader_id: user1.id)
+song1 = Song.create(title: 'Sunflower', artist: 'Post Malone & Swae Lee', uploader_id: user3.id)
 song2 = Song.create(title: 'No Role Modelz', artist: 'J. Cole', uploader_id: user2.id)
 song3 = Song.create(title: 'Call Me Maybe', artist: 'Carly R. Jepsen', uploader_id: user3.id)
 song4 = Song.create(title: 'Hey Soul Sister', artist: 'Train', uploader_id: user4.id)
-song5 = Song.create(title: "Firestone", artist: 'Kygo  ft. Conrad Sewell', uploader_id: user1.id)
-song6 = Song.create(title: 'Best Part', artist: 'Daniel Caesar', uploader_id: user1.id)
+song5 = Song.create(title: "Firestone", artist: 'Kygo  ft. Conrad Sewell', uploader_id: user2.id)
+song6 = Song.create(title: 'Best Part', artist: 'Daniel Caesar', uploader_id: user4.id)
 song7 = Song.create(title: '1-800-273-8255', artist: 'Logic ft. Alessia Cara & Khalid', uploader_id: user2.id)
 song8 = Song.create(title: 'My Girl', artist: 'The Temptations', uploader_id: user2.id)
 song9 = Song.create(title: 'Honesty', artist: 'Pink$weat', uploader_id: user3.id)
