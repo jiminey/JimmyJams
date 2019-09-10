@@ -137,7 +137,7 @@ class Main extends React.Component {
                 <div className='display-threes'>
                     <div className='small-pic'> 
                         <p className='small-title'>
-                        Logic
+                            Logic
                         </p>
                         <p className='small-body'>
                             1-800-273-8255 (feat. A..)

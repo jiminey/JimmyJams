@@ -3779,7 +3779,7 @@ document.addEventListener('DOMContentLoaded', function () {
         users: _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({}, window.currentUser.id, window.currentUser)
       },
       session: {
-        id: window.currentUser.id
+        currentUser: window.currentUser
       }
     };
     store = Object(_store_store__WEBPACK_IMPORTED_MODULE_4__["default"])(preloadedState);

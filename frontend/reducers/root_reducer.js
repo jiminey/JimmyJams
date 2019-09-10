@@ -13,8 +13,6 @@ const rootReducer = combineReducers({
     ui: uiReducer,
     player: audioPlayerReducer,
     results: searchReducer,
-
-
 })
 
 export default rootReducer
