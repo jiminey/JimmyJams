@@ -11,7 +11,14 @@ class Search extends React.Component {
         }
         this.handleSearch = this.handleSearch.bind(this);
         this.handleResultClick = this.handleResultClick.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        return false;
+    }
+
 
     handleSearch(e) {
         e.preventDefault();
@@ -45,7 +52,7 @@ class Search extends React.Component {
         if (this.props.results.length === 0 && this.state.value !== '') {
             return (
                 <div>
-                    <form className="search-form">
+                    <form className="search-form" onSubmit={this.handleSubmit}>
                         <input onClick={this.handleClick}
                             onChange={this.handleSearch}
                             type="search" placeholder="Search by song title"
@@ -64,7 +71,7 @@ class Search extends React.Component {
         if (this.props.results.length > 0 && this.state.value === '') {
             return (
                 <div>
-                    <form className="search-form">
+                    <form className="search-form" onSubmit={this.handleSubmit}>
                         <input onClick={this.handleClick}
                             onChange={this.handleSearch}
                             type="search" placeholder="Search by song title"
@@ -79,7 +86,7 @@ class Search extends React.Component {
 
         return (
             <div>
-                <form className="search-form">
+                <form className="search-form" onSubmit={this.handleSubmit}>
                     <input onClick={this.handleClick}
                         onChange={this.handleSearch}
                         type="search" placeholder="Search by song title"

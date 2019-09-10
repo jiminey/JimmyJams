@@ -1598,7 +1598,6 @@ function (_React$Component) {
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, NavBar);
 
     _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(NavBar).call(this, props));
-    _this.move = _this.move.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     _this.buttons = _this.buttons.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     return _this;
   }
@@ -1608,13 +1607,6 @@ function (_React$Component) {
     value: function componentDidMount() {
       this.props.fetchAllUsers();
     }
-  }, {
-    key: "move",
-    value: function move() {// this.props.history.push('/');
-    }
-  }, {
-    key: "search",
-    value: function search() {}
   }, {
     key: "logout",
     value: function logout() {
@@ -1641,7 +1633,8 @@ function (_React$Component) {
           className: "prof-pic",
           src: pic,
           alt: ""
-        }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
+          to: "/users/".concat(this.props.currentUser.id),
           className: "username"
         }, this.props.currentUser.username)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
           className: "header-group"
@@ -1837,10 +1830,17 @@ function (_React$Component) {
     };
     _this.handleSearch = _this.handleSearch.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     _this.handleResultClick = _this.handleResultClick.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
+    _this.handleSubmit = _this.handleSubmit.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     return _this;
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Search, [{
+    key: "handleSubmit",
+    value: function handleSubmit(e) {
+      e.preventDefault();
+      return false;
+    }
+  }, {
     key: "handleSearch",
     value: function handleSearch(e) {
       e.preventDefault();
@@ -1890,7 +1890,8 @@ function (_React$Component) {
 
       if (this.props.results.length === 0 && this.state.value !== '') {
         return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
-          className: "search-form"
+          className: "search-form",
+          onSubmit: this.handleSubmit
         }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
           onClick: this.handleClick,
           onChange: this.handleSearch,
@@ -1909,7 +1910,8 @@ function (_React$Component) {
 
       if (this.props.results.length > 0 && this.state.value === '') {
         return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
-          className: "search-form"
+          className: "search-form",
+          onSubmit: this.handleSubmit
         }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
           onClick: this.handleClick,
           onChange: this.handleSearch,
@@ -1923,7 +1925,8 @@ function (_React$Component) {
       }
 
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
-        className: "search-form"
+        className: "search-form",
+        onSubmit: this.handleSubmit
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
         onClick: this.handleClick,
         onChange: this.handleSearch,

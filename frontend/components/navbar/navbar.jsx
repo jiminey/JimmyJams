@@ -7,21 +7,11 @@ import { Route } from 'react-router-dom'
 class NavBar extends React.Component {
     constructor(props) {
         super(props)
-        this.move = this.move.bind(this)
         this.buttons = this.buttons.bind(this)
     }
 
-
     componentDidMount() {
         this.props.fetchAllUsers();
-    }
-
-    move() {
-        // this.props.history.push('/');
-    }
-
-    search() {
-
     }
 
     logout() {
@@ -45,9 +35,10 @@ class NavBar extends React.Component {
 
                         <img className='prof-pic' src={pic} alt="" />
 
-                        <div className='username'>
+                        <Link to={`/users/${this.props.currentUser.id}`} className='username'>
                             {this.props.currentUser.username}
-                        </div>
+                        </Link>
+
 
                     </div>
 
@@ -93,7 +84,6 @@ class NavBar extends React.Component {
                     </div>
 
                     <div className='main-middle'>
-                        {/* <input className='search' type="search" placeholder="Search" onChange={() => this.search()} /> */}
                         <SearchContainer/>
                     </div>
 
