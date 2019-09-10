@@ -19,6 +19,7 @@ class CreateSong extends React.Component {
         this.handleAlbumCover = this.handleAlbumCover.bind(this);
         this.handleSongFile = this.handleSongFile.bind(this);
         this.loading = this.loading.bind(this);
+        this.showname = this.showname.bind(this);
 
     }
 
@@ -55,6 +56,10 @@ class CreateSong extends React.Component {
             reader.readAsDataURL(file);
         } 
 
+        var name = document.getElementById('fileInput');
+        alert('Selected file name: ' + name.files.item(0).name);
+        alert('Selected file type: ' + name.files.item(0).type);
+
     }
 
     handleSongFile(e) {
@@ -67,6 +72,10 @@ class CreateSong extends React.Component {
         if (file) {
             reader.readAsDataURL(file);
         }
+
+        var name = document.getElementById('fileInput');
+        alert('Selected file: ' + name.files.item(0).name);
+        alert('Selected file: ' + name.files.item(0).type);
     
     }
 
@@ -93,7 +102,9 @@ class CreateSong extends React.Component {
         }
     }
 
-
+    showname() {
+        
+    };
 
 
     render () {
@@ -105,6 +116,7 @@ class CreateSong extends React.Component {
                 <div className='upload-main'>
                     <div className='upload-size'>
                         <input type="submit" value="Upload a track cover" className='upl-btns'/>
+                        
                         <input type="submit" value="Upload an audio file" className='upl-btns2'/>
                         
                     <form onSubmit={this.handleSubmit} >
@@ -136,12 +148,14 @@ class CreateSong extends React.Component {
                                 onChange={this.handleAlbumCover}
                                 type="file"
                                 accept='image/*'
+                                id="fileInput"
                                 />
                             <input
                                 className='file-btn'
                                 onChange={this.handleSongFile}
                                 type="file"
                                 accept='audio/*'
+                                id="fileInput"
                                 />
                             
                             

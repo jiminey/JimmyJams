@@ -2047,6 +2047,7 @@ function (_React$Component) {
     _this.handleAlbumCover = _this.handleAlbumCover.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default()(_this));
     _this.handleSongFile = _this.handleSongFile.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default()(_this));
     _this.loading = _this.loading.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default()(_this));
+    _this.showname = _this.showname.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default()(_this));
     return _this;
   }
 
@@ -2093,6 +2094,10 @@ function (_React$Component) {
       if (file) {
         reader.readAsDataURL(file);
       }
+
+      var name = document.getElementById('fileInput');
+      alert('Selected file name: ' + name.files.item(0).name);
+      alert('Selected file type: ' + name.files.item(0).type);
     }
   }, {
     key: "handleSongFile",
@@ -2112,6 +2117,10 @@ function (_React$Component) {
       if (file) {
         reader.readAsDataURL(file);
       }
+
+      var name = document.getElementById('fileInput');
+      alert('Selected file: ' + name.files.item(0).name);
+      alert('Selected file: ' + name.files.item(0).type);
     }
   }, {
     key: "handleChange",
@@ -2137,6 +2146,9 @@ function (_React$Component) {
         })));
       }
     }
+  }, {
+    key: "showname",
+    value: function showname() {}
   }, {
     key: "render",
     value: function render() {
@@ -2172,12 +2184,14 @@ function (_React$Component) {
         className: "image-btn",
         onChange: this.handleAlbumCover,
         type: "file",
-        accept: "image/*"
+        accept: "image/*",
+        id: "fileInput"
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         className: "file-btn",
         onChange: this.handleSongFile,
         type: "file",
-        accept: "audio/*"
+        accept: "audio/*",
+        id: "fileInput"
       }), this.loading())))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_9__["default"], null));
     }
   }]);
