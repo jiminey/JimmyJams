@@ -1,8 +1,8 @@
 import React from 'react' 
 import GreetingContainer from './greeting/greeting_container'
 import {Route} from 'react-router-dom'
-import SongIndexItem from '../song/song_index_item'
 import AudioPlayerContainer from '../audioplayer/audioplayer_container'
+import SplashSongItem from '../song/splash_song_item'
 
 
 
@@ -10,26 +10,18 @@ class Splash extends React.Component {
 
     constructor(props){
         super(props)
-        this.move = this.move.bind(this)
-        
     }
 
     componentDidMount() {
         this.props.fetchAllSongs();
         this.props.fetchAllUsers();
     }
-
-    move(e) {
-        this.props.history.push('/library')
-    }
     
     render() {
-        
         let songs = this.props.songs.slice(0, 12).map( song => {
-            // this.props.audio = new Audio(`${song.song_fileUrl}`)
             return (
                 <div key={song.id}>
-                    <SongIndexItem 
+                    <SplashSongItem 
                         key={song.id}
                         path={this.props.location.pathname}
                         song={song} users={this.props.users} 
@@ -42,7 +34,6 @@ class Splash extends React.Component {
                 </div>
             )
         });
-
 
         return ( 
                 <div className='main-content'>
@@ -64,7 +55,7 @@ class Splash extends React.Component {
                                 gives <br /> you space to create, find your fans, and
                                 connect with other <br /> artists.</h3>
 
-                    <button className='splash-upload-btn' onClick={() => this.props.openModal('login')} >Start uploading today</button>
+                        <button className='splash-upload-btn' onClick={() => this.props.openModal('login')} >Start uploading today</button>
                     </div>
 
                     <div className='body-content'>
@@ -75,7 +66,7 @@ class Splash extends React.Component {
 
                             <div className='or'>or</div>
 
-                        <button className='splash-yourown-btn' onClick={() => this.props.openModal('login')} >Upload your own</button>
+                            <button className='splash-yourown-btn' onClick={() => this.props.openModal('login')} >Upload your own</button>
                         </div>
 
                         <div className='body-text'>
@@ -88,9 +79,7 @@ class Splash extends React.Component {
                                 {songs}
                             </div>
 
-                        <button className='splash-trending-btn' onClick={() => this.props.openModal('login')} >Explore trending playlists</button>
-
-
+                            <button className='splash-trending-btn' onClick={() => this.props.openModal('login')} >Explore trending playlists</button>
                         </div>
                     </div>
 
@@ -100,7 +89,6 @@ class Splash extends React.Component {
                 
                 <AudioPlayerContainer/>
             </div>
-
         )
     }
 }

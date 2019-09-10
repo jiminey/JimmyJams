@@ -8,37 +8,20 @@ import configureStore from './store/store';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    // const root = document.getElementById('root');
-    // let store;
-    // if (window.currentUser) {
-    //     const preloadedState = {
-    //         entities: {
-    //             users: { [window.currentUser.id]: window.currentUser }
-    //         },
-    //         session: { currentUser: window.currentUser }
-    //     };
-    //     store = configureStore(preloadedState);
-    //     delete window.currentUser;
-    // } else {
-    //     store = configureStore();
-    // }
+    const root = document.getElementById('root');
+    const store = configureStore(preloadedState);
 
-
-    let preloadedState;
-    debugger
+    let preloadedState
     if (window.currentUser) {
         preloadedState = {
             session: { currentUser: window.currentUser },
         };
     }
-    const root = document.getElementById('root');
-    const store = configureStore(preloadedState);
 
 
     window.getState = store.getState;
     // window.dispatch = store.dispatch;
     // window.store = store;
-
     // window.login = login; 
     // window.signup = signup;
     // window.logout = logout;
