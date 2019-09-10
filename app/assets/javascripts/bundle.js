@@ -3006,11 +3006,15 @@ function (_React$Component) {
         src: this.props.song.album_coverUrl
       })), this.toggleDisplay()), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "user-song-words"
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "user-artist"
       }, this.props.song.artist), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "user-title"
-      }, this.props.song.title))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      }, this.props.song.title)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
+        className: "user-wave",
+        src: "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/userwaveform.png?raw=true",
+        alt: ""
+      })))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "userbuttons"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         className: "user-trash",

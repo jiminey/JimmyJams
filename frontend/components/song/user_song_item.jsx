@@ -73,12 +73,18 @@ class UserSongItem extends React.Component {
 
 
                         <div className="user-song-words">
-                            <div className='user-artist'>
-                                {this.props.song.artist}
+                            <div>
+                                <div className='user-artist'>
+                                    {this.props.song.artist}
+                                </div>
+
+                                <div className='user-title'>
+                                    {this.props.song.title}
+                                </div>
                             </div>
 
-                            <div className='user-title'>
-                                {this.props.song.title}
+                            <div >
+                                <img className="user-wave" src="https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/userwaveform.png?raw=true" alt=""/>
                             </div>
                         </div>
 

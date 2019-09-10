@@ -43,10 +43,13 @@ body {
     height:100%;
     text-align: center;
     border: 1px solid black;
-    
     color: #999;
     background: #333;
     border-radius:1px;
+}
+
+.home:hover {
+    color: rgb(189, 189, 189);
 }
 
 .stream {
@@ -58,9 +61,11 @@ body {
     color: #999;
     border: 1px solid black;
     border-radius:1px;
-    cursor: not-allowed;
-    
-    
+    cursor: not-allowed;   
+}
+
+.stream:hover {
+    color: rgb(189, 189, 189);
 }
 
 .library {
@@ -75,14 +80,11 @@ body {
     border-radius:1px;
 }
 
-.main-middle {
-    // width: 248.46px;
-    // height: 45.98px;
+.library:hover {
+    color: rgb(189, 189, 189);
 }
 
-
 .search{
-    // height: 28px;
     width: 100%;
     margin-top: 9px;
     display:flex; 
@@ -93,10 +95,9 @@ body {
     font-weight: 100;
     font-size: 14px;
     line-height: 20px;
-}   
+}
+
 .main-right {
-    // width: 450.56px;
-    // height: 45.98px;
     display: flex;
     justify-content: flex-start;
     margin-block-start: 1em;
@@ -125,6 +126,11 @@ body {
     font-size: 12px;
     margin-top: -5px;
 }
+
+.upload:hover {
+    color: rgb(231, 231, 231);
+}
+
 .username {
     background-repeat: no-repeat;
     // background-image: url('https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/profilepic.png?raw=true');

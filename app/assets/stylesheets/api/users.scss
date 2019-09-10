@@ -45,9 +45,17 @@
 .user-song-words {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 24px;
     font-size: 12px;
 }
 
 .user-title {
     color: gray
+}
+
+
+.user-wave {
+    width: 95%;
+    cursor: not-allowed;
 }
