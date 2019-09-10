@@ -3726,7 +3726,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
       return dispatch(Object(_actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_4__["playSong"])(song, audio));
     },
     pauseSong: function pauseSong() {
-      return dispatch(_actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_4__["pauseSong"]);
+      return dispatch(Object(_actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_4__["pauseSong"])());
     },
     fetchUser: function fetchUser(id) {
       return dispatch(Object(_actions_user_actions__WEBPACK_IMPORTED_MODULE_5__["fetchUser"])(id));

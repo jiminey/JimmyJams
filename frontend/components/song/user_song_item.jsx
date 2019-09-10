@@ -21,7 +21,7 @@ class UserSongItem extends React.Component {
 
     play(e) {
 
-        if (this.props.playState && this.props.currentSong.title === this.props.song.title && this.props.currentAudio) {
+        if (this.props.playState && (this.props.currentSong.title === this.props.song.title) && this.props.currentAudio) {
             this.props.pauseSong()
             this.props.currentAudio.pause();
 

@@ -25,7 +25,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => ({
     playSong: (song, audio) => dispatch(playSong(song,audio)),
-    pauseSong: () => dispatch(pauseSong),
+    pauseSong: () => dispatch(pauseSong()),
     fetchUser: id => dispatch(fetchUser(id)),
     deleteSong: id => dispatch(deleteSong(id)),
     updateSong: song => dispatch(updateSong(song)),
