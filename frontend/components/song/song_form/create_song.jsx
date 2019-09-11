@@ -57,9 +57,7 @@ class CreateSong extends React.Component {
         } 
 
         var name = document.getElementById('fileInput');
-        alert('Selected file name: ' + name.files.item(0).name + '     ' + name.files.item(0).type);
-
-
+        alert('Selected file name: ' + e.currentTarget.files.item(0).name + ' ' + e.currentTarget.files.item(0).type)
     }
 
     handleSongFile(e) {
@@ -74,8 +72,7 @@ class CreateSong extends React.Component {
         }
 
         var name = document.getElementById('fileInput');
-        alert('Selected file name: ' + name.files.item(0).name + '     ' + name.files.item(0).type);
-    
+        alert('Selected file: ' + e.currentTarget.files.item(0).name + '  ' + e.currentTarget.files.item(0).type)
     }
 
     handleChange(field) {
