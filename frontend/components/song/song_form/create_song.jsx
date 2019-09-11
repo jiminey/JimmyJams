@@ -177,6 +177,25 @@ class CreateSong extends React.Component {
                         ⁃ <span className='blue-hyperlink-upload'> Terms of Use </span>
                         and you don't infringe anyone else's rights.
                     </p>
+
+                    <p className='fine-print-under2'>
+                        <span> Legal </span> 
+                        ⁃
+                        <span> Privacy </span>
+                        ⁃
+                        <span> Cookies </span>
+                        ⁃
+                        <span> Imprints </span>
+                        ⁃
+                        <span> Charts </span>
+                        ⁃
+                        <span> Popular searches </span>
+                    </p>
+
+                    <p  className='fine-print-under3' > 
+                        <span className='blue-hyperlink-upload'>Language: </span>
+                         English (US)
+                    </p>
             </div>
 
                 <AudioPlayerContainer /> 

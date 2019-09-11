@@ -2205,7 +2205,13 @@ function (_React$Component) {
         className: "fine-print-under1"
       }, "By uploading, you confirm that your sounds comply with our \u2043 ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
         className: "blue-hyperlink-upload"
-      }, " Terms of Use "), "and you don't infringe anyone else's rights.")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_9__["default"], null));
+      }, " Terms of Use "), "and you don't infringe anyone else's rights."), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        className: "fine-print-under2"
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, " Legal "), "\u2043", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, " Privacy "), "\u2043", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, " Cookies "), "\u2043", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, " Imprints "), "\u2043", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, " Charts "), "\u2043", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, " Popular searches ")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        className: "fine-print-under3"
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+        className: "blue-hyperlink-upload"
+      }, "Language: "), "English (US)")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_9__["default"], null));
     }
   }]);
 
