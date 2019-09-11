@@ -1417,16 +1417,19 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", null, "About the creator "), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", null, "View All"))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "linkedin"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
+        className: "q",
         href: "https://www.linkedin.com/in/jimmy-nguyen-984302138/",
         target: "_blank"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
         className: "fab fa-linkedin-in"
       })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
+        className: "q2",
         href: "https://www.jimmynguyen.dev",
         target: "_blank"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
         "class": "fas fa-portrait"
       })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
+        className: "q3",
         href: "https://github.com/jiminey",
         target: "_blank"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {

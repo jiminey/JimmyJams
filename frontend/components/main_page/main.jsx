@@ -294,15 +294,15 @@ class Main extends React.Component {
 
                 <div className='linkedin'>
 
-                    <a href='https://www.linkedin.com/in/jimmy-nguyen-984302138/' target="_blank">
+                    <a className="q" href='https://www.linkedin.com/in/jimmy-nguyen-984302138/' target="_blank">
                         <i className="fab fa-linkedin-in"></i>
                     </a>
 
-                    <a href='https://www.jimmynguyen.dev' target="_blank">
+                    <a className='q2' href='https://www.jimmynguyen.dev' target="_blank">
                         <i class="fas fa-portrait"></i>
                     </a>
 
-                    <a href='https://github.com/jiminey' target="_blank">
+                    <a className='q3' href='https://github.com/jiminey' target="_blank">
                         <i class="fab fa-github-square"></i>
                     </a>
                 
