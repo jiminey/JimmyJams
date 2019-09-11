@@ -2096,8 +2096,7 @@ function (_React$Component) {
       }
 
       var name = document.getElementById('fileInput');
-      alert('Selected file name: ' + name.files.item(0).name + '  ' + name.files.item(0).type);
-
+      alert('Selected file name: ' + name.files.item(0).name + '     ' + name.files.item(0).type);
     }
   }, {
     key: "handleSongFile",
@@ -2119,8 +2118,7 @@ function (_React$Component) {
       }
 
       var name = document.getElementById('fileInput');
-      alert('Selected file: ' + name.files.item(0).name + '  ' + name.files.item(0).type);
-
+      alert('Selected file name: ' + name.files.item(0).name + '     ' + name.files.item(0).type);
     }
   }, {
     key: "handleChange",
