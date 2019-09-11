@@ -2096,8 +2096,8 @@ function (_React$Component) {
       }
 
       var name = document.getElementById('fileInput');
-      alert('Selected file name: ' + name.files.item(0).name);
-      alert('Selected file type: ' + name.files.item(0).type);
+      alert('Selected file name: ' + name.files.item(0).name + '  ' + name.files.item(0).type);
+
     }
   }, {
     key: "handleSongFile",
@@ -2119,8 +2119,8 @@ function (_React$Component) {
       }
 
       var name = document.getElementById('fileInput');
-      alert('Selected file: ' + name.files.item(0).name);
-      alert('Selected file: ' + name.files.item(0).type);
+      alert('Selected file: ' + name.files.item(0).name + '  ' + name.files.item(0).type);
+
     }
   }, {
     key: "handleChange",
@@ -2414,7 +2414,7 @@ function (_React$Component) {
     _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(SongShow).call(this, props));
     _this.state = {
       body: "",
-      localAudio: new Audio("".concat(_this.props.song.song_fileUrl))
+      localAudio: ''
     };
     _this.handleDelete = _this.handleDelete.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default()(_this));
     _this.play = _this.play.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default()(_this));
@@ -2494,6 +2494,10 @@ function (_React$Component) {
       var songId = this.props.match.params.songId;
       this.props.fetchAllUsers().then(function () {
         return _this3.props.fetchSong(songId);
+      }).then(function () {
+        return _this3.setState({
+          localAudio: new Audio("".concat(_this3.props.song.song_fileUrl))
+        });
       });
     }
   }, {
@@ -2518,7 +2522,6 @@ function (_React$Component) {
       if (this.props.song === undefined) {
         return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null);
       } else {
-        // let owner = this.props.users[this.props.song.uploader]
         var currentUser = this.props.currentUser;
         var comments = this.props.comments;
 
@@ -2538,15 +2541,7 @@ function (_React$Component) {
             }));
           }
         });
-      } // let frontcomments = this.props.comments.map (comment => {
-      //     return (
-      //         <div className="div-c">
-      //             <p className='comms'>  {comment} </p>
-      //             {/* <i onClick={this.handleX} className="x" className="fa fa-times" aria-hidden="true"></i> */}
-      //         </div>
-      //     )
-      // })
-
+      }
 
       var pic;
 

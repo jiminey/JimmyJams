@@ -7,11 +7,9 @@ import CommentIndexItem from '../comment/comment_index_item'
 class SongShow extends React.Component {
     constructor(props){
         super(props)
-
-
         this.state = {
             body: "",
-            localAudio: new Audio(`${this.props.song.song_fileUrl}`),
+            localAudio: '',
         }
         
         this.handleDelete = this.handleDelete.bind(this)
@@ -68,7 +66,12 @@ class SongShow extends React.Component {
 
     componentDidMount() {
         let songId = this.props.match.params.songId ;
-        this.props.fetchAllUsers().then(() => this.props.fetchSong(songId));
+        this.props.fetchAllUsers().then(() => this.props.fetchSong(songId))
+        .then( () => 
+            this.setState({
+                localAudio: new Audio(`${this.props.song.song_fileUrl}`)
+            })
+        )
     }
 
 
@@ -90,7 +93,6 @@ class SongShow extends React.Component {
             )
         }
         else {
-            // let owner = this.props.users[this.props.song.uploader]
             let currentUser = this.props.currentUser;
             let comments = this.props.comments
            
@@ -109,19 +111,6 @@ class SongShow extends React.Component {
                 }
             })
         }
-        
-        
-
-
-        // let frontcomments = this.props.comments.map (comment => {
-        //     return (
-        //         <div className="div-c">
-        //             <p className='comms'>  {comment} </p>
-        //             {/* <i onClick={this.handleX} className="x" className="fa fa-times" aria-hidden="true"></i> */}
-        //         </div>
-        //     )
-        // })
-
 
         let pic;
         if (this.props.currentUser.photoUrl) {
@@ -141,7 +130,6 @@ class SongShow extends React.Component {
 
                        <div className='show-top-left'>
                            <div className='show-top-left-2'> 
-                                {/* <img onClick={this.play} className='orangeplay' src='https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangeplay.png?raw=true' ></img> */}
                                 {this.toggleDisplay()}
                                     <div className='top-words'>
                                         <div className='top-artist'>{this.props.song.artist}</div>
@@ -150,11 +138,7 @@ class SongShow extends React.Component {
                                             <img className='waveform' src='waveform.png'></img>
                                         </div>
                                     </div>
-
-
                            </div>
-
-                            {/* waveform here */}
                            <div>
 
                            </div>
@@ -195,16 +179,11 @@ class SongShow extends React.Component {
                                                 value={this.state.body} />
                                 </form>
                             </div>
-
-                                {/* <div> {comment_item} </div> */}
-
                                 <div className="comment-container">
                                     {showcomments}
                                 </div>
                 </div>
                 {/* music content */}
-
-
 
             <div className='main-col'>
                 
