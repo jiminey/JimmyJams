@@ -1414,7 +1414,24 @@ function (_React$Component) {
         className: "go-mobile"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "wtf-title"
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", null, "Go mobile"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", null, "View All"))))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_9__["default"], null));
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", null, "About the creator "), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", null, "View All"))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "linkedin"
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
+        to: "https://www.linkedin.com/in/jimmy-nguyen-984302138/",
+        target: "_blank"
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
+        className: "fab fa-linkedin-in"
+      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
+        to: "https://www.jimmynguyen.dev",
+        target: "_blank"
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
+        "class": "fas fa-portrait"
+      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
+        to: "https://jiminey.github.io",
+        target: "_blank"
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
+        "class": "fab fa-github-square"
+      }))))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_9__["default"], null));
     }
   }]);
 

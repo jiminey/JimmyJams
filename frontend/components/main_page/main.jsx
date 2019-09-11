@@ -287,9 +287,25 @@ class Main extends React.Component {
 
                 <div className='go-mobile'>
                     <div className='wtf-title'>
-                        <p>Go mobile</p>
+                        <p>About the creator </p>
                         <p>View All</p>
                     </div>
+                </div>
+
+                <div className='linkedin'>
+
+                    <Link to='https://www.linkedin.com/in/jimmy-nguyen-984302138/' target="_blank">
+                        <i className="fab fa-linkedin-in"></i>
+                    </Link>
+
+                    <Link to='https://www.jimmynguyen.dev' target="_blank">
+                        <i class="fas fa-portrait"></i>
+                    </Link>
+
+                    <Link to='https://jiminey.github.io' target="_blank">
+                        <i class="fab fa-github-square"></i>
+                    </Link>
+                
                 </div>
 
             </div>
