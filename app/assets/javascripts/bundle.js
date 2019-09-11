@@ -2201,7 +2201,11 @@ function (_React$Component) {
         className: "blue-hyperlink-upload"
       }, " Upload troubleshooting tips  "), "\u2043 ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
         className: "blue-hyperlink-upload"
-      }, " Copyright FAQs "))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_9__["default"], null));
+      }, " Copyright FAQs ")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        className: "fine-print-under1"
+      }, "By uploading, you confirm that your sounds comply with our \u2043 ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+        className: "blue-hyperlink-upload"
+      }, " Terms of Use "), "and you don't infringe anyone else's rights.")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_9__["default"], null));
     }
   }]);
 

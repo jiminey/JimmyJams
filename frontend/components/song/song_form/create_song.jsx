@@ -172,6 +172,11 @@ class CreateSong extends React.Component {
                         ⁃ <span className='blue-hyperlink-upload'> Upload troubleshooting tips  </span>
                         ⁃ <span className='blue-hyperlink-upload'> Copyright FAQs </span>
                     </p>
+                    <p className='fine-print-under1'>
+                        By uploading, you confirm that your sounds comply with our
+                        ⁃ <span className='blue-hyperlink-upload'> Terms of Use </span>
+                        and you don't infringe anyone else's rights.
+                    </p>
             </div>
 
                 <AudioPlayerContainer /> 
