@@ -96,9 +96,9 @@ class UserSongItem extends React.Component {
                             <i className="fa fa-trash" aria-hidden="true"></i>
                         </button>
 
-                        <button className='user-trash' onClick={this.handleDelete}>
+                        {/* <button className='user-trash' onClick={this.handleDelete}>
                             <i className="fa fa-trash" aria-hidden="true"></i>
-                        </button>
+                        </button> */}
 
                     </div>
 

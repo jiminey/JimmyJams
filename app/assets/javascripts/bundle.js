@@ -2117,7 +2117,6 @@ function (_React$Component) {
         reader.readAsDataURL(file);
       }
 
-      var name = document.getElementById('fileInput');
       alert('Selected file: ' + e.currentTarget.files.item(0).name + '  ' + e.currentTarget.files.item(0).type);
     }
   }, {
@@ -2190,7 +2189,19 @@ function (_React$Component) {
         type: "file",
         accept: "audio/*",
         id: "fileInput"
-      }), this.loading())))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_9__["default"], null));
+      }), this.loading())), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        className: "fine-print-upload"
+      }, "Provide FLAC, WAV, ALAC or AIFF for best audio quality. ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+        className: "blue-hyperlink-upload"
+      }, " Learn more about high quality audio (HQ)."))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        className: "fine-print-under"
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+        className: "blue-hyperlink-upload"
+      }, " Supported file types and sizes "), "\u2043 ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+        className: "blue-hyperlink-upload"
+      }, " Upload troubleshooting tips  "), "\u2043 ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+        className: "blue-hyperlink-upload"
+      }, " Copyright FAQs "))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_9__["default"], null));
     }
   }]);
 
@@ -3155,12 +3166,6 @@ function (_React$Component) {
       })))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "userbuttons"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
-        className: "user-trash",
-        onClick: this.handleDelete
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
-        className: "fa fa-trash",
-        "aria-hidden": "true"
-      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         className: "user-trash",
         onClick: this.handleDelete
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {

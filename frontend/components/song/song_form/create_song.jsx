@@ -70,8 +70,6 @@ class CreateSong extends React.Component {
         if (file) {
             reader.readAsDataURL(file);
         }
-
-        var name = document.getElementById('fileInput');
         alert('Selected file: ' + e.currentTarget.files.item(0).name + '  ' + e.currentTarget.files.item(0).type)
     }
 
@@ -162,8 +160,18 @@ class CreateSong extends React.Component {
                         </div>
                      
                     </form>
-
+                    
+                    <p className='fine-print-upload'>
+                            Provide FLAC, WAV, ALAC or AIFF for best audio quality. <span className='blue-hyperlink-upload'> Learn more about high quality audio (HQ).</span>
+                    </p>
+    
                 </div>
+
+                    <p className='fine-print-under'>
+                        <span className='blue-hyperlink-upload'> Supported file types and sizes </span>
+                        ⁃ <span className='blue-hyperlink-upload'> Upload troubleshooting tips  </span>
+                        ⁃ <span className='blue-hyperlink-upload'> Copyright FAQs </span>
+                    </p>
             </div>
 
                 <AudioPlayerContainer /> 
