@@ -1416,18 +1416,18 @@ function (_React$Component) {
         className: "wtf-title"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", null, "About the creator "), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", null, "View All"))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "linkedin"
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
-        to: "https://www.linkedin.com/in/jimmy-nguyen-984302138/",
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
+        href: "https://www.linkedin.com/in/jimmy-nguyen-984302138/",
         target: "_blank"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
         className: "fab fa-linkedin-in"
-      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
-        to: "https://www.jimmynguyen.dev",
+      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
+        href: "https://www.jimmynguyen.dev",
         target: "_blank"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
         "class": "fas fa-portrait"
-      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
-        to: "https://jiminey.github.io",
+      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
+        href: "https://github.com/jiminey",
         target: "_blank"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
         "class": "fab fa-github-square"
