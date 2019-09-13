@@ -294,7 +294,7 @@ class Main extends React.Component {
 
                 <div className='linkedin'>
 
-                    <a className="q" href='https://www.linkedin.com/in/jimmy-nguyen-984302138/' target="_blank">
+                    <a className="q" href='https://www.linkedin.com/in/jimmythanhnguyen/' target="_blank">
                         <i className="fab fa-linkedin-in"></i>
                     </a>
 

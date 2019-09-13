@@ -1418,7 +1418,7 @@ function (_React$Component) {
         className: "linkedin"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
         className: "q",
-        href: "https://www.linkedin.com/in/jimmy-nguyen-984302138/",
+        href: "https://www.linkedin.com/in/jimmythanhnguyen/",
         target: "_blank"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
         className: "fab fa-linkedin-in"
