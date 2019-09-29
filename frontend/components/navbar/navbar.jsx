@@ -22,7 +22,7 @@ class NavBar extends React.Component {
     buttons() {
         let pic;
 
-        if (this.props.currentUser.photoUrl) {
+        if (this.props.currentUser) {
             pic = this.props.currentUser.photoUrl
         } else {
             pic = "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/profilepic.png?raw=true"
@@ -50,10 +50,10 @@ class NavBar extends React.Component {
         } else {
             return (
                 <div>
-                    <nav className="login-signup">
-                        <button className='signin-btn' onClick={() => openModal('login')}>Sign In</button>
+                    <nav className="login-signup2">
+                        <button className='signin-btn2' onClick={() => this.props.openModal('login')}>Sign In</button>
                         &nbsp;&nbsp;
-                        <button className='signup-btn' onClick={() => openModal('signup')}>Create account</button>
+                        <button className='signup-btn2' onClick={() => this.props.openModal('signup')}>Create account</button>
                     </nav>
                 </div>
             )

@@ -113,7 +113,7 @@ class SongShow extends React.Component {
         }
 
         let pic;
-        if (this.props.currentUser.photoUrl) {
+        if (this.props.currentUser) {
             pic = this.props.currentUser.photoUrl
         } else {
             pic = 'https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/profilepic.png?raw=true'

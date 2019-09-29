@@ -11,12 +11,15 @@ const CommentIndexItem = (props) => {
     //shows the delete button
 
     function displayDelete() {
-        if (user.id === currentUser.id) {
-            return (
-                <div>
+        if (currentUser) {
+            if (user.id === currentUser.id){
+
+                return (
+                    <div>
                     <i className="fas fa-times"></i>
-                </div>
-            )
+                    </div>
+                )
+            }
         } else {
             return (
                 <div></div>

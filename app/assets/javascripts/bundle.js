@@ -851,10 +851,12 @@ var CommentIndexItem = function CommentIndexItem(props) {
   var pic; //shows the delete button
 
   function displayDelete() {
-    if (user.id === currentUser.id) {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-times"
-      }));
+    if (currentUser) {
+      if (user.id === currentUser.id) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+          className: "fas fa-times"
+        }));
+      }
     } else {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null);
     }
@@ -1641,7 +1643,7 @@ function (_React$Component) {
 
       var pic;
 
-      if (this.props.currentUser.photoUrl) {
+      if (this.props.currentUser) {
         pic = this.props.currentUser.photoUrl;
       } else {
         pic = "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/profilepic.png?raw=true";
@@ -1667,16 +1669,16 @@ function (_React$Component) {
         }, "Log out")));
       } else {
         return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("nav", {
-          className: "login-signup"
+          className: "login-signup2"
         }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
-          className: "signin-btn",
+          className: "signin-btn2",
           onClick: function onClick() {
-            return openModal('login');
+            return _this2.props.openModal('login');
           }
         }, "Sign In"), "\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
-          className: "signup-btn",
+          className: "signup-btn2",
           onClick: function onClick() {
-            return openModal('signup');
+            return _this2.props.openModal('signup');
           }
         }, "Create account")));
       }
@@ -2584,7 +2586,7 @@ function (_React$Component) {
 
       var pic;
 
-      if (this.props.currentUser.photoUrl) {
+      if (this.props.currentUser) {
         pic = this.props.currentUser.photoUrl;
       } else {
         pic = 'https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/profilepic.png?raw=true';
@@ -3327,6 +3329,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../audioplayer/audioplayer_container */ "./frontend/components/audioplayer/audioplayer_container.js");
 /* harmony import */ var _song_splash_song_item__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../song/splash_song_item */ "./frontend/components/song/splash_song_item.jsx");
+/* harmony import */ var _song_song_index_item__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../song/song_index_item */ "./frontend/components/song/song_index_item.jsx");
+
 
 
 
@@ -3363,7 +3367,7 @@ function (_React$Component) {
       var songs = this.props.songs.slice(0, 12).map(function (song) {
         return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
           key: song.id
-        }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_song_splash_song_item__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_song_song_index_item__WEBPACK_IMPORTED_MODULE_10__["default"], {
           key: song.id,
           path: _this.props.location.pathname,
           song: song,

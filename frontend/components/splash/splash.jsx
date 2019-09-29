@@ -3,7 +3,7 @@ import GreetingContainer from './greeting/greeting_container'
 import {Route} from 'react-router-dom'
 import AudioPlayerContainer from '../audioplayer/audioplayer_container'
 import SplashSongItem from '../song/splash_song_item'
-
+import SongIndexItem from '../song/song_index_item'
 
 
 class Splash extends React.Component {
@@ -21,7 +21,7 @@ class Splash extends React.Component {
         let songs = this.props.songs.slice(0, 12).map( song => {
             return (
                 <div key={song.id}>
-                    <SplashSongItem 
+                    <SongIndexItem
                         key={song.id}
                         path={this.props.location.pathname}
                         song={song} users={this.props.users} 
