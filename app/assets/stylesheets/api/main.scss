@@ -25,7 +25,9 @@ body {
     height: 36px;
     transition: height .2s ease-in-out;
     border-bottom: 1px black solid;
-    
+    position: fixed;
+    z-index: 10;
+    top: 0;
 }
 
 .main-left {
@@ -211,6 +213,7 @@ body {
     background: 0 0;
     margin: 0 auto;
     width: 960px;
+    margin-top: 36px;
     
 }
 
@@ -255,11 +258,11 @@ body {
 
 
 .main-col {
-
     width: 370px;
     display: flex;
     flex-direction: column; 
     justify-content: flex-start;
+    margin-top: 36px;
 }
 
 .who-to-follow {
