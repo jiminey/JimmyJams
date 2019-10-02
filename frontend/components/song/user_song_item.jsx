@@ -8,6 +8,7 @@ class UserSongItem extends React.Component {
         this.play = this.play.bind(this)
         this.toggleDisplay = this.toggleDisplay.bind(this)
         this.handleDelete = this.handleDelete.bind(this)
+        this.displayX = this.displayX.bind(this);
         this.state = {
             localAudio: new Audio(`${this.props.song.song_fileUrl}`)
         }
@@ -18,6 +19,28 @@ class UserSongItem extends React.Component {
         this.props.deleteSong(this.props.song.id)
     }
 
+    displayX(e) {
+        let currentUser = this.props.currentUser || 0
+        let user = this.props.user || -1
+        if (currentUser.id === user.id) {
+            return (
+                <div className='userbuttons'>
+
+                    <button className='user-trash' onClick={this.handleDelete}>
+                        <i className="fa fa-trash" aria-hidden="true"></i>
+                    </button>
+
+                </div>
+            )
+        } else {
+            return (
+                <div>
+                    <div></div>
+                </div>
+            )
+        }
+
+    }
 
     play(e) {
 
@@ -90,17 +113,7 @@ class UserSongItem extends React.Component {
 
                     </div>
 
-                    <div className='userbuttons'>
-
-                        <button className='user-trash' onClick={this.handleDelete}>
-                            <i className="fa fa-trash" aria-hidden="true"></i>
-                        </button>
-
-                        {/* <button className='user-trash' onClick={this.handleDelete}>
-                            <i className="fa fa-trash" aria-hidden="true"></i>
-                        </button> */}
-
-                    </div>
+                    {this.displayX()}
 
                 </div>
             </div>

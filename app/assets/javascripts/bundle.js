@@ -2929,6 +2929,7 @@ function (_React$Component) {
     _this.play = _this.play.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     _this.toggleDisplay = _this.toggleDisplay.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     _this.handleDelete = _this.handleDelete.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
+    _this.displayX = _this.displayX.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     _this.state = {
       localAudio: new Audio("".concat(_this.props.song.song_fileUrl))
     };
@@ -2940,6 +2941,26 @@ function (_React$Component) {
     value: function handleDelete(e) {
       e.preventDefault();
       this.props.deleteSong(this.props.song.id);
+    }
+  }, {
+    key: "displayX",
+    value: function displayX(e) {
+      var currentUser = this.props.currentUser || 0;
+      var user = this.props.user || -1;
+
+      if (currentUser.id === user.id) {
+        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+          className: "userbuttons"
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+          className: "user-trash",
+          onClick: this.handleDelete
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
+          className: "fa fa-trash",
+          "aria-hidden": "true"
+        })));
+      } else {
+        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null));
+      }
     }
   }, {
     key: "play",
@@ -3011,15 +3032,7 @@ function (_React$Component) {
         className: "user-wave",
         src: "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/userwaveform.png?raw=true",
         alt: ""
-      })))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "userbuttons"
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
-        className: "user-trash",
-        onClick: this.handleDelete
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
-        className: "fa fa-trash",
-        "aria-hidden": "true"
-      })))));
+      })))), this.displayX()));
     }
   }]);
 
@@ -3465,9 +3478,13 @@ function (_React$Component) {
           playState: _this2.props.playState,
           currentSong: _this2.props.currentSong,
           currentAudio: _this2.props.currentAudio,
-          deleteSong: _this2.props.deleteSong
+          deleteSong: _this2.props.deleteSong,
+          currentUser: _this2.props.currentUser,
+          user: _this2.props.user
         })));
       });
+      var userId = this.props.match.params.userId;
+      var user = this.props.users[userId];
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_navbar_navbar_container__WEBPACK_IMPORTED_MODULE_9__["default"], null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "show-body"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -3478,13 +3495,13 @@ function (_React$Component) {
         className: "show-top-left-2"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
         className: "user-pic",
-        src: this.props.currentUser.photoUrl,
+        src: user.photoUrl,
         alt: ""
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "top-words"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "user-top-artist"
-      }, this.props.currentUser.username))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, user.username))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "show-top-right"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "top-right-words"

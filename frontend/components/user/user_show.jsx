@@ -35,12 +35,18 @@ class UserShow extends React.Component {
                             currentSong={this.props.currentSong}
                             currentAudio={this.props.currentAudio}
                             deleteSong =  {this.props.deleteSong}
+                            currentUser = {this.props.currentUser}
+                            user = {this.props.user}
                         />
                     </div>
 
                 </div>
             )
         })
+
+
+        let userId = this.props.match.params.userId
+        let user = this.props.users[userId]
 
         return (
             <div>
@@ -55,10 +61,9 @@ class UserShow extends React.Component {
 
                         <div className='show-top-left'>
                             <div className='show-top-left-2'>
-                                {/* <img onClick={this.play} className='orangeplay' src='https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/orangeplay.png?raw=true' ></img> */}
-                                <img className="user-pic" src={this.props.currentUser.photoUrl} alt=""/>
+                                <img className="user-pic" src={user.photoUrl} alt=""/>
                                 <div className='top-words'>
-                                    <div className='user-top-artist'>{this.props.currentUser.username}</div>
+                                    <div className='user-top-artist'>{user.username}</div>
                                 </div>
 
 
