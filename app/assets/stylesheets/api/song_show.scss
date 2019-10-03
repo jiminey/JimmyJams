@@ -46,16 +46,16 @@
 }
 
 .top-artist {
-    width: 100%;
+    width: fit-content;
     height: 100%;
     color: #cccc;
     background-color: rgba(0,0,0,.8);
     font-size: 14px;
     font-family:  Verdana, Tahoma, sans-serif;
     padding-top: 6px;
-    padding-left: 4px;
+    padding-left: 12px;
     padding-bottom: 6px;
-    padding-right: 4px;
+    padding-right: 12px;
     text-align: center;
     border-radius: 2px;
 }
@@ -74,7 +74,7 @@
 .top-title {
     margin-top: 5px;
     font-size: 24px;
-    width: 100%;
+    width: fit-content;
     height: 37px; 
     color:White;
     background-color: rgba(0,0,0,.8);
