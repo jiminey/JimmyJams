@@ -18,24 +18,7 @@ class SongIndexItem extends React.Component {
         if (this.props.playState && this.props.currentSong.title === this.props.song.title && this.props.currentAudio) {
             this.props.pauseSong()
             this.props.currentAudio.pause();
-
-        } else if (this.props.currentAudio && this.props.playState === false) {
-            let playPromise = this.props.currentAudio.play();
-            if (playPromise !== undefined) {
-                playPromise.then(_ => {
-                })
-                    .catch(error => {
-                        "Cannot catch interrupted play promise"
-                    });
-            }
-
-        
-
-            this.props.playSong(this.props.song, this.props.currentAudio);
         } else {
-            if (this.props.currentAudio) {
-                this.props.currentAudio.currentTime = 0;
-            }
             this.props.playSong(this.props.song, this.state.localAudio)
             this.state.localAudio.play();
         }
