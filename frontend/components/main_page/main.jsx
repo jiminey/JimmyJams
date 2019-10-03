@@ -11,6 +11,7 @@ class Main extends React.Component {
     constructor(props){
         super(props)
         this.toggleSongsRight = this.toggleSongsRight.bind(this);
+        this.toggleSongsLeft = this.toggleSongsLeft.bind(this);
         this.state = {
             right: 0,
         }
@@ -27,7 +28,17 @@ class Main extends React.Component {
     set1.style.right = "530px"
     this.setState( prevState => {
         return ({
-            right: prevState.right + 1
+            right: prevState.right + 1 
+        })
+    })
+   }
+
+   toggleSongsLeft(e) {
+    let set1 = document.getElementById('set1')
+    set1.style.right = "0px"
+    this.setState( prevState => {
+        return ({
+            right: prevState.right - 1
         })
     })
    }
@@ -35,8 +46,17 @@ class Main extends React.Component {
    renderLeft1(e) {
        if (this.state.right > 0) {
            return (
-               <div className="car-arrow-left" onClick={this.toggleSongsRight}>
+               <div className="car-arrow-left" onClick={this.toggleSongsLeft}>
                    <i className="fa fa-arrow-left" aria-hidden="true"></i>
+               </div>
+           )
+       }
+   }
+   renderRight1(e) {
+       if (this.state.right === 0) {
+           return (
+               <div className="car-arrow" onClick={this.toggleSongsRight}>
+                   <i className="fa fa-arrow-right" aria-hidden="true"></i>
                </div>
            )
        }
@@ -44,7 +64,7 @@ class Main extends React.Component {
 
     render() {
         
-        let songs1 = this.props.songs.map(song => {
+        let songs1 = this.props.songs.slice(4,12).map(song => {
             return (
                 <div key={song.id}>
                     <SongIndexItem
@@ -131,12 +151,8 @@ class Main extends React.Component {
                             
                                 <div className='main-row' id='set1'>
                                     {songs1}
-
                                 </div>
-                                    <div className="car-arrow" onClick={this.toggleSongsRight}>
-                                        <i className="fa fa-arrow-right" aria-hidden="true"></i>
-                                    </div>
-
+                                    {this.renderRight1()}
                                     {this.renderLeft1()}
                             </div>
 

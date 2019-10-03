@@ -1124,6 +1124,7 @@ function (_React$Component) {
 
     _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Main).call(this, props));
     _this.toggleSongsRight = _this.toggleSongsRight.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default()(_this));
+    _this.toggleSongsLeft = _this.toggleSongsLeft.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default()(_this));
     _this.state = {
       right: 0
     };
@@ -1148,14 +1149,38 @@ function (_React$Component) {
       });
     }
   }, {
+    key: "toggleSongsLeft",
+    value: function toggleSongsLeft(e) {
+      var set1 = document.getElementById('set1');
+      set1.style.right = "0px";
+      this.setState(function (prevState) {
+        return {
+          right: prevState.right - 1
+        };
+      });
+    }
+  }, {
     key: "renderLeft1",
     value: function renderLeft1(e) {
       if (this.state.right > 0) {
         return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
           className: "car-arrow-left",
-          onClick: this.toggleSongsRight
+          onClick: this.toggleSongsLeft
         }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
           className: "fa fa-arrow-left",
+          "aria-hidden": "true"
+        }));
+      }
+    }
+  }, {
+    key: "renderRight1",
+    value: function renderRight1(e) {
+      if (this.state.right === 0) {
+        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          className: "car-arrow",
+          onClick: this.toggleSongsRight
+        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+          className: "fa fa-arrow-right",
           "aria-hidden": "true"
         }));
       }
@@ -1166,7 +1191,7 @@ function (_React$Component) {
       var _this2 = this,
           _React$createElement;
 
-      var songs1 = this.props.songs.map(function (song) {
+      var songs1 = this.props.songs.slice(4, 12).map(function (song) {
         return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
           key: song.id
         }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_song_song_index_item__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -1240,13 +1265,7 @@ function (_React$Component) {
       }, "The most played tracks on JimmyJams this week"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "main-row",
         id: "set1"
-      }, songs1), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "car-arrow",
-        onClick: this.toggleSongsRight
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-arrow-right",
-        "aria-hidden": "true"
-      })), this.renderLeft1())), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, songs1), this.renderRight1(), this.renderLeft1())), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "section"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "section-content"
