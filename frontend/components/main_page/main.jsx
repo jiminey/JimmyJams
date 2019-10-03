@@ -9,6 +9,7 @@ class Main extends React.Component {
 
     constructor(props){
         super(props)
+        this.toggleSongsRight = this.toggleSongsRight.bind(this);
     }
 
    componentDidMount() {
@@ -17,9 +18,16 @@ class Main extends React.Component {
    }
 
 
+   toggleSongsRight(e) {
+    let set1 = document.getElementById('set1')
+
+    set1.style.right = "490px"
+
+   }
+
     render() {
         
-        let songs1 = this.props.songs.slice(4, 12).map(song => {
+        let songs1 = this.props.songs.map(song => {
             return (
                 <div key={song.id}>
                     <SongIndexItem
@@ -35,6 +43,8 @@ class Main extends React.Component {
                 </div>
             )
         });
+
+
 
         let songs2 = this.props.songs.slice(8, 12).map(song => {
             return (
@@ -102,19 +112,19 @@ class Main extends React.Component {
                                 <h1 className='section-title'>JimmyJams Charts</h1>
                                     <h3 className='section-body'>The most played tracks on JimmyJams this week</h3>
                             
-                                <div className='main-row'>
+                                <div className='main-row' id='set1'>
                                     {songs1}
 
+                                    <div className="car-arrow" onClick={this.toggleSongsRight}>
+                                        <i className="fa fa-arrow-right" aria-hidden="true"></i>
+                                    </div>
                                 </div>
                             </div>
 
 
                     </div>
 
-                                    <div className="car-arrow">
-                                        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                                    </div>
-                                    
+
                     <div className='section'>
 
                             <div className='section-content'>

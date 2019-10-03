@@ -331,6 +331,7 @@ body {
 
 .main-row {
     display:flex ;
+    position: relative;
 }
 
 
@@ -459,8 +460,12 @@ input[type="search"] {
     z-index: 3;
     color: #999;
     font-size: 25px;
-    padding: 4px;
+    padding: 3px;
     right: 12px;
     top: 117px;
     cursor: pointer;
+    border: .5px solid #999;
+    background: white;
+    height: fit-content;
+    width: fit-content;
 }
