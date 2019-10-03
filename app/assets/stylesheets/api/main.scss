@@ -283,8 +283,9 @@ body {
     padding: 10px;
     width: 90%;
     margin: 0 auto;
-    margin-top: 5px;
+    margin-top: 10px;
     font-size: 12px;
+    margin-bottom: 10px;
 }
 
 .display-threes {
@@ -405,4 +406,11 @@ input[type="search"] {
 
 .login-signup2 {
     margin-top: -18px;
+}
+
+.user_index {
+    display: flex;
+    padding: 5px;
+    margin-left: 15px;
+
 }

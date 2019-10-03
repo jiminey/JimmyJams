@@ -10,7 +10,7 @@ class UserIndexItem extends React.Component {
     render() {
         return (
             <div>
-                <div >
+                <div className="user_index">
 
                     <div>
                         <Link to={`/users/${this.props.user.id}`}>

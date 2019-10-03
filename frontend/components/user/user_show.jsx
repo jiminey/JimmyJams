@@ -45,8 +45,11 @@ class UserShow extends React.Component {
         })
 
 
-        let userId = this.props.match.params.userId
-        let user = this.props.users[userId]
+
+        let userId = this.props.match.params.userId || -1
+        let user = this.props.users[userId] || -1
+
+        
 
         return (
             <div>
