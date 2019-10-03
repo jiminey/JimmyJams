@@ -60,15 +60,15 @@
     border-radius: 2px;
 }
 .user-top-artist {
-    width: 100%;
+    width: fit-content;
     height: 20%;
     color: #cccc;
     background-color: rgba(0,0,0,.8);
     font-size: 14px;
     font-family:  Verdana, Tahoma, sans-serif;
     padding-top: 6px;
-    padding-left: 4px;
-    padding-right: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 .top-title {
