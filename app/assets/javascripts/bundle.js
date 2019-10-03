@@ -1171,7 +1171,7 @@ function (_React$Component) {
           onClick: this.toggleSongsLeft1
         }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
           className: "car-arrow-left",
-          src: "assets/leftarr",
+          src: "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/leftarr.png?raw=true",
           alt: ""
         }));
       }
@@ -1185,7 +1185,7 @@ function (_React$Component) {
           onClick: this.toggleSongsRight1
         }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
           className: "car-arrow",
-          src: "assets/rightarr",
+          src: "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/rightarr.png?raw=true",
           alt: ""
         }));
       }
@@ -1221,7 +1221,7 @@ function (_React$Component) {
           onClick: this.toggleSongsLeft2
         }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
           className: "car-arrow-left",
-          src: "assets/leftarr",
+          src: "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/leftarr.png?raw=true",
           alt: ""
         }));
       }
@@ -1235,7 +1235,7 @@ function (_React$Component) {
           onClick: this.toggleSongsRight2
         }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
           className: "car-arrow",
-          src: "assets/rightarr",
+          src: "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/rightarr.png?raw=true",
           alt: ""
         }));
       }
@@ -1271,7 +1271,7 @@ function (_React$Component) {
           onClick: this.toggleSongsLeft3
         }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
           className: "car-arrow-left",
-          src: "assets/leftarr",
+          src: "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/leftarr.png?raw=true",
           alt: ""
         }));
       }
@@ -1285,7 +1285,7 @@ function (_React$Component) {
           onClick: this.toggleSongsRight3
         }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
           className: "car-arrow",
-          src: "assets/rightarr",
+          src: "https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/rightarr.png?raw=true",
           alt: ""
         }));
       }

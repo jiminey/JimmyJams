@@ -54,7 +54,7 @@ class Main extends React.Component {
                 <div>
                     <div className='arrow-padding-left' onClick={this.toggleSongsLeft1}>
                     </div>
-                        <img className="car-arrow-left" src="assets/leftarr" alt=""/>
+                   <img className="car-arrow-left" src="https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/leftarr.png?raw=true" alt=""/>
 
                 </div>
                 )
@@ -67,7 +67,7 @@ class Main extends React.Component {
 
                <div className='arrow-padding-right' onClick={this.toggleSongsRight1}>
                </div>
-                   <img className="car-arrow" src="assets/rightarr" alt=""/>
+                   <img className="car-arrow" src="https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/rightarr.png?raw=true" alt=""/>
                 </div>
            )
        }
@@ -102,7 +102,7 @@ class Main extends React.Component {
                 <div>
                     <div className='arrow-padding-left' onClick={this.toggleSongsLeft2}>
                     </div>
-                    <img className="car-arrow-left" src="assets/leftarr" alt="" />
+                    <img className="car-arrow-left" src="https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/leftarr.png?raw=true" alt="" />
 
                 </div>
             )
@@ -115,7 +115,7 @@ class Main extends React.Component {
 
                     <div className='arrow-padding-right' onClick={this.toggleSongsRight2}>
                     </div>
-                    <img className="car-arrow" src="assets/rightarr" alt="" />
+                    <img className="car-arrow" src="https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/rightarr.png?raw=true" alt="" />
                 </div>
             )
         }
@@ -148,7 +148,7 @@ class Main extends React.Component {
                 <div>
                     <div className='arrow-padding-left' onClick={this.toggleSongsLeft3}>
                     </div>
-                    <img className="car-arrow-left" src="assets/leftarr" alt="" />
+                    <img className="car-arrow-left" src="https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/leftarr.png?raw=true" alt="" />
 
                 </div>
             )
@@ -161,7 +161,7 @@ class Main extends React.Component {
 
                     <div className='arrow-padding-right' onClick={this.toggleSongsRight3}>
                     </div>
-                    <img className="car-arrow" src="assets/rightarr" alt="" />
+                    <img className="car-arrow" src="https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/rightarr.png?raw=true" alt="" />
                 </div>
             )
         }
