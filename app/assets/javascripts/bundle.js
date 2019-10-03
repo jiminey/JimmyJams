@@ -113,7 +113,7 @@ var playSong = function playSong(song, audio) {
     currentAudio: audio
   };
 };
-var pauseSong = function pauseSong() {
+var pauseSong = function pauseSong(song, audio) {
   return {
     type: PAUSESONG
   };
@@ -2219,11 +2219,14 @@ function (_React$Component) {
         this.props.pauseSong();
         this.props.currentAudio.pause();
       } else if (this.props.currentAudio && this.props.playState === false) {
-        if (this.props.currentAudio) {
-          this.props.currentAudio.currentTime = 0;
+        var playPromise = this.props.currentAudio.play();
+
+        if (playPromise !== undefined) {
+          playPromise.then(function (_) {})["catch"](function (error) {
+            "Cannot catch interrupted play promise";
+          });
         }
 
-        this.props.currentAudio.play();
         this.props.playSong(this.props.song, this.props.currentAudio);
       } else {
         if (this.props.currentAudio) {
@@ -3634,7 +3637,7 @@ var audioPlayersReducer = function audioPlayersReducer() {
 
   switch (action.type) {
     case _actions_audioplayer_actions__WEBPACK_IMPORTED_MODULE_0__["PLAYSONG"]:
-      if (oldState.currentSong !== action.currentSong && oldState.currentAudio !== null) {
+      if (oldState.songId !== action.songId && oldState.currentAudio) {
         oldState.currentAudio.pause();
         action.currentAudio.currentTime = 0;
       }
@@ -3657,7 +3660,7 @@ var audioPlayersReducer = function audioPlayersReducer() {
         playState: true
       });
 
-    case _actions_song_actions__WEBPACK_IMPORTED_MODULE_1__["RECIEVE_ALL_SONGS"]:
+    case _actions_song_actions__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_ALL_SONGS"]:
       return Object.assign(newState, {
         songList: Object.values(action.songs)
       });

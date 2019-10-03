@@ -11,9 +11,9 @@ export const playSong = (song, audio) => ({
 
 })
 
-export const pauseSong = () => ({
+export const pauseSong = (song, audio) => ({
     type: PAUSESONG,
-
+    
 })
 
 export const resume = () => ({
