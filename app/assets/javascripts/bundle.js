@@ -113,7 +113,7 @@ var playSong = function playSong(song, audio) {
     currentAudio: audio
   };
 };
-var pauseSong = function pauseSong(song, audio) {
+var pauseSong = function pauseSong() {
   return {
     type: PAUSESONG
   };

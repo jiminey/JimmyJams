@@ -11,7 +11,7 @@ export const playSong = (song, audio) => ({
 
 })
 
-export const pauseSong = (song, audio) => ({
+export const pauseSong = () => ({
     type: PAUSESONG,
     
 })
