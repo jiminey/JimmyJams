@@ -870,17 +870,19 @@ var CommentIndexItem = function CommentIndexItem(props) {
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "comment-main"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: ""
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "comment-body"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/users/".concat(user.id)
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "comment-pic",
     src: pic,
     alt: ""
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "comment-words"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, user.username), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, props.comment.body))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/users/".concat(user.id)
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, user.username)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, props.comment.body))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "comment-delete"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     onClick: function onClick() {

@@ -38,12 +38,15 @@ const CommentIndexItem = (props) => {
             <div className="comment-main">
                 
 
-                <Link to="">
-                </Link>
+
                 <div className="comment-body">
-                    <img className='comment-pic' src={pic} alt='' />
+                    <Link to={`/users/${user.id}`}>
+                        <img className='comment-pic' src={pic} alt='' />                        
+                    </Link>
                     <div className='comment-words'>
-                        <div>{user.username}</div>
+                        <Link to={`/users/${user.id}`}>
+                            <div>{user.username}</div>
+                        </Link>
                         <div>{props.comment.body}</div>
                     </div>
                 </div>
