@@ -42,6 +42,7 @@
     top: 219px;
     left: 246px;
     z-index: 2;
+    overflow: hidden;
 }
 .upl-btns2 {
     background-color: #f50;
@@ -64,6 +65,7 @@
     bottom: 155px;
     z-index: 2;
     position: absolute;
+    overflow: hidden;
 }
 
 .upload-size{
@@ -98,6 +100,7 @@
     border-radius: 3px;
     margin-top: 11px;
     line-height: 24px;
+    overflow: hidden;
 }
 
 
@@ -118,6 +121,7 @@
     z-index: 3;
     opacity: 0;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .file-btn {
@@ -127,6 +131,7 @@
     font-size: 23px;
     opacity: 0;
     cursor: pointer;
+    overflow: hidden;
 }
 ::-webkit-file-upload-button {
     cursor:pointer;
