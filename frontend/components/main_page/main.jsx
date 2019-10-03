@@ -46,18 +46,24 @@ class Main extends React.Component {
    renderLeft1(e) {
        if (this.state.right > 0) {
            return (
-               <div className="car-arrow-left" onClick={this.toggleSongsLeft}>
-                   <i className="fa fa-arrow-left" aria-hidden="true"></i>
-               </div>
-           )
+                <div>
+                    <div className='arrow-padding-left' onClick={this.toggleSongsLeft}>
+                    </div>
+                        <img className="car-arrow-left" src="assets/leftarr" alt=""/>
+
+                </div>
+                )
        }
    }
    renderRight1(e) {
        if (this.state.right === 0) {
            return (
-               <div className="car-arrow" onClick={this.toggleSongsRight}>
-                   <i className="fa fa-arrow-right" aria-hidden="true"></i>
+                <div>
+
+               <div className='arrow-padding-right' onClick={this.toggleSongsRight}>
                </div>
+                   <img className="car-arrow" src="assets/rightarr" alt=""/>
+                </div>
            )
        }
    }

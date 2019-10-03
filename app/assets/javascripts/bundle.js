@@ -1163,12 +1163,13 @@ function (_React$Component) {
     key: "renderLeft1",
     value: function renderLeft1(e) {
       if (this.state.right > 0) {
-        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-          className: "car-arrow-left",
+        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          className: "arrow-padding-left",
           onClick: this.toggleSongsLeft
-        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-          className: "fa fa-arrow-left",
-          "aria-hidden": "true"
+        }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+          className: "car-arrow-left",
+          src: "assets/leftarr",
+          alt: ""
         }));
       }
     }
@@ -1176,12 +1177,13 @@ function (_React$Component) {
     key: "renderRight1",
     value: function renderRight1(e) {
       if (this.state.right === 0) {
-        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-          className: "car-arrow",
+        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          className: "arrow-padding-right",
           onClick: this.toggleSongsRight
-        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-          className: "fa fa-arrow-right",
-          "aria-hidden": "true"
+        }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+          className: "car-arrow",
+          src: "assets/rightarr",
+          alt: ""
         }));
       }
     }

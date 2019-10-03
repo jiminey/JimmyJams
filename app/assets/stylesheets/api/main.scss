@@ -465,10 +465,10 @@ input[type="search"] {
     right: 8px;
     top: 117px;
     cursor: pointer;
-    border: .5px solid #999;
+    border: .5px solid black;
     background: white;
-    height: fit-content;
-    width: fit-content;
+    height: 27px;
+    width: 27px;
 }
 
 .car-arrow-left {
@@ -480,8 +480,31 @@ input[type="search"] {
     left:0px;
     top: 117px;
     cursor: pointer;
-    border: .5px solid #999;
+    border: .5px solid black;
     background: white;
-    height: fit-content;
-    width: fit-content;
+    height: 27px;
+    width: 27px;
+}
+
+.arrow-padding-left {
+    width: 35px;
+    height: 163px;
+    z-index: 4;
+    opacity: 0;
+    cursor: pointer;
+    background: red;
+    position: absolute;
+    left: 0px;
+    top: 66px;
+}
+.arrow-padding-right {
+    width: 35px;
+    height: 163px;
+    z-index: 4;
+    opacity: 0;
+    cursor: pointer;
+    background: blue;
+    position: absolute;
+    right: 0px;
+    top: 66px;
 }
