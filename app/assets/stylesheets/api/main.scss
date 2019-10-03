@@ -412,5 +412,39 @@ input[type="search"] {
     display: flex;
     padding: 5px;
     margin-left: 15px;
+    position: relative;
+}
 
+.user-words {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 12px;
+    font-family: sans-serif;
+    margin-left: -5px;
+}
+
+.user-icon {
+    font-size:10px;
+    color: #999;
+    padding: 4px;
+    margin-left: -10px;
+
+}
+
+.user-con {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.user-button {
+    font-size: 8px;
+    color: black;
+    width: 44px;
+    height: 16px;
+    position: absolute;
+    right: -63px;
+    top: 21px;
+    cursor: not-allowed;
 }

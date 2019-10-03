@@ -18,9 +18,25 @@ class UserIndexItem extends React.Component {
                         </Link>
                     </div>
 
-                    <div>
-                        {this.props.user.username.slice(0, 16)}
-                    </div>
+
+                        <div className="user-words">
+                            {this.props.user.username.slice(0, 16)}
+                            
+                            <div className="user-con">
+                                <div class='user-icon'>
+                                    <i class="fa fa-users" aria-hidden="true"> 1,337</i>
+                                </div>
+
+                                <div class='user-icon'>
+                                    <i class="fa fa-headphones" aria-hidden="true"> 38</i>
+                                </div>
+
+                                <button className='user-button'>
+                                    Follow
+                                </button>
+                            </div>
+                        </div>
+
 
                 </div>
             </div>

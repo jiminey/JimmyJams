@@ -1178,7 +1178,7 @@ function (_React$Component) {
         users = Object.values(this.props.users);
       }
 
-      var user_index = users.map(function (user) {
+      var user_index = users.slice(0, 4).map(function (user) {
         return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
           key: user.id
         }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_user_user_index_item__WEBPACK_IMPORTED_MODULE_11__["default"], {
@@ -3383,7 +3383,23 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         className: "user-splash",
         src: this.props.user.photoUrl
-      }))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, this.props.user.username.slice(0, 16))));
+      }))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "user-words"
+      }, this.props.user.username.slice(0, 16), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "user-con"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "user-icon"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("i", {
+        "class": "fa fa-users",
+        "aria-hidden": "true"
+      }, " 1,337")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "user-icon"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("i", {
+        "class": "fa fa-headphones",
+        "aria-hidden": "true"
+      }, " 38")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+        className: "user-button"
+      }, "Follow")))));
     }
   }]);
 

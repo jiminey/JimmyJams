@@ -76,7 +76,7 @@ class Main extends React.Component {
             users = Object.values(this.props.users)
         }
 
-        let user_index = users.map (user => {
+        let user_index = users.slice(0,4).map (user => {
             return (
                 <div key={user.id}>
                     <UserIndexItem
