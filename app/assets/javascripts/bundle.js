@@ -870,7 +870,9 @@ var CommentIndexItem = function CommentIndexItem(props) {
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "comment-main"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: ""
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "comment-body"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "comment-pic",
@@ -1127,7 +1129,7 @@ function (_React$Component) {
       var _this = this,
           _React$createElement;
 
-      var songs1 = this.props.songs.slice(4, 8).map(function (song) {
+      var songs1 = this.props.songs.slice(4, 12).map(function (song) {
         return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
           key: song.id
         }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_song_song_index_item__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -1201,6 +1203,11 @@ function (_React$Component) {
       }, "The most played tracks on JimmyJams this week"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "main-row"
       }, songs1))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "car-arrow"
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("i", {
+        "class": "fa fa-arrow-circle-right",
+        "aria-hidden": "true"
+      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "section"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "section-content"

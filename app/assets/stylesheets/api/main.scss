@@ -214,7 +214,7 @@ body {
     margin: 0 auto;
     width: 960px;
     margin-top: 36px;
-    
+    position: relative;
 }
 
 .section-content{
@@ -252,6 +252,10 @@ body {
 .section {
     margin-left: 40px;
     border-bottom: 1px solid #ccc;
+    overflow: hidden;
+    width: 600.93px;
+    height: 244.34px; 
+    position: relative;
 } 
 
 
@@ -447,4 +451,16 @@ input[type="search"] {
     right: -63px;
     top: 21px;
     cursor: not-allowed;
+}
+
+
+.car-arrow {
+    position: absolute;
+    z-index: 3;
+    color: #999;
+    font-size: 25px;
+    padding: 4px;
+    right: 12px;
+    top: 117px;
+    cursor: pointer;
 }

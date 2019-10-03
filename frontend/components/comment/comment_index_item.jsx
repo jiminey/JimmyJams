@@ -37,6 +37,9 @@ const CommentIndexItem = (props) => {
         <div>
             <div className="comment-main">
                 
+
+                <Link to="">
+                </Link>
                 <div className="comment-body">
                     <img className='comment-pic' src={pic} alt='' />
                     <div className='comment-words'>

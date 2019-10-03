@@ -19,7 +19,7 @@ class Main extends React.Component {
 
     render() {
         
-        let songs1 = this.props.songs.slice(4, 8).map(song => {
+        let songs1 = this.props.songs.slice(4, 12).map(song => {
             return (
                 <div key={song.id}>
                     <SongIndexItem
@@ -104,10 +104,17 @@ class Main extends React.Component {
                             
                                 <div className='main-row'>
                                     {songs1}
+
                                 </div>
-                            </div>   
+                            </div>
+
+
                     </div>
 
+                                    <div className="car-arrow">
+                                        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                                    </div>
+                                    
                     <div className='section'>
 
                             <div className='section-content'>
