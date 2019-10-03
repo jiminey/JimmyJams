@@ -2,6 +2,7 @@ import React from 'react'
 import AudioPlayerContainer from '../audioplayer/audioplayer_container'
 import NavBarContainer from '../navbar/navbar_container'
 import UserSongItem from '../../components/song/user_song_item'
+import UserIndexItem from '../user/user_index_item'
 
 class UserShow extends React.Component {
     constructor(props) {
@@ -48,6 +49,23 @@ class UserShow extends React.Component {
 
         let userId = this.props.match.params.userId || -1
         let user = this.props.users[userId] || -1
+
+        let users = this.props.users;
+
+        if (this.props.users) {
+            users = Object.values(this.props.users)
+        }
+
+        let user_index = users.slice(0, 4).map(user => {
+            return (
+                <div key={user.id}>
+                    <UserIndexItem
+                        key={user.id}
+                        user={user}
+                    />
+                </div>
+            )
+        })
 
         
 
@@ -116,167 +134,38 @@ class UserShow extends React.Component {
                                         <p>View All</p>
                                     </div>
 
-                                    <div className='display-threes'>
-                                        <div className='small-pic'>
-                                            <p className='small-title'>
-                                                Logic
-                        </p>
-                                            <p className='small-body'>
-                                                1-800-273-8255 (feat. A..)
-                        </p>
-                                            <p className='icon' >
-                                                <i className="fa fa-play fa-xs" aria-hidden="true" > 61.5M </i>
-                                                <i className="fa fa-heart fa-xs" aria-hidden="true"> 743K </i>
-                                                <i className="fa fa-retweet fa-xs" aria-hidden="true"> 34.1K </i>
-                                                <i className="fa fa-comment fa-xs" aria-hidden="true"> 8,845 </i>
-                                            </p>
-                                        </div>
-                                        <div className='small-pic'>
-                                            <p className='small-title'>
-                                                Logic
-                        </p>
-                                            <p className='small-body'>
-                                                1-800-273-8255 (feat. A..)
-                        </p>
-                                            <p className='icon' >
-                                                <i className="fa fa-play fa-xs" aria-hidden="true" > 61.5M </i>
-                                                <i className="fa fa-heart fa-xs" aria-hidden="true"> 743K </i>
-                                                <i className="fa fa-retweet fa-xs" aria-hidden="true"> 34.1K </i>
-                                                <i className="fa fa-comment fa-xs" aria-hidden="true"> 8,845 </i>
-                                            </p>
-                                        </div>
-                                        <div className='small-pic'>
-                                            <p className='small-title'>
-                                                Logic
-                        </p>
-                                            <p className='small-body'>
-                                                1-800-273-8255 (feat. A..)
-                        </p>
-                                            <p className='icon' >
-                                                <i className="fa fa-play fa-xs" aria-hidden="true" > 61.5M </i>
-                                                <i className="fa fa-heart fa-xs" aria-hidden="true"> 743K </i>
-                                                <i className="fa fa-retweet fa-xs" aria-hidden="true"> 34.1K </i>
-                                                <i className="fa fa-comment fa-xs" aria-hidden="true"> 8,845 </i>
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div className='who-to-follow'>
-                                    <div className='wtf-title'>
-                                        <i className="fa fa-heart" aria-hidden="true"> You might like</i>
-                                        <p>View All</p>
-                                    </div>
-
-                                    <div className='display-threes'>
-                                        <div className='small-pic'>
-                                            <p className='small-title'>
-                                                Logic
-                            </p>
-                                            <p className='small-body'>
-                                                1-800-273-8255 (feat. A..)
-                            </p>
-                                            <p className='icon' >
-                                                <i className="fa fa-play fa-xs" aria-hidden="true" > 61.5M </i>
-                                                <i className="fa fa-heart fa-xs" aria-hidden="true"> 743K </i>
-                                                <i className="fa fa-retweet fa-xs" aria-hidden="true"> 34.1K </i>
-                                                <i className="fa fa-comment fa-xs" aria-hidden="true"> 8,845 </i>
-                                            </p>
-                                        </div>
-                                        <div className='small-pic'>
-                                            <p className='small-title'>
-                                                Logic
-                            </p>
-                                            <p className='small-body'>
-                                                1-800-273-8255 (feat. A..)
-                            </p>
-                                            <p className='icon' >
-                                                <i className="fa fa-play fa-xs" aria-hidden="true" > 61.5M </i>
-                                                <i className="fa fa-heart fa-xs" aria-hidden="true"> 743K </i>
-                                                <i className="fa fa-retweet fa-xs" aria-hidden="true"> 34.1K </i>
-                                                <i className="fa fa-comment fa-xs" aria-hidden="true"> 8,845 </i>
-                                            </p>
-                                        </div>
-                                        <div className='small-pic'>
-                                            <p className='small-title'>
-                                                Logic
-                            </p>
-                                            <p className='small-body'>
-                                                1-800-273-8255 (feat. A..)
-                            </p>
-                                            <p className='icon' >
-                                                <i className="fa fa-play fa-xs" aria-hidden="true" > 61.5M </i>
-                                                <i className="fa fa-heart fa-xs" aria-hidden="true"> 743K </i>
-                                                <i className="fa fa-retweet fa-xs" aria-hidden="true"> 34.1K </i>
-                                                <i className="fa fa-comment fa-xs" aria-hidden="true"> 8,845 </i>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className='who-to-follow'>
-                                    <div className='wtf-title'>
-                                        <i className="fa fa-calendar" aria-hidden="true"> Listening history</i>
-                                        <p>View All</p>
-                                    </div>
-
-                                    <div className='display-threes'>
-                                        <div className='small-pic'>
-                                            <p className='small-title'>
-                                                Logic
-                            </p>
-                                            <p className='small-body'>
-                                                1-800-273-8255 (feat. A..)
-                            </p>
-                                            <p className='icon' >
-                                                <i className="fa fa-play fa-xs" aria-hidden="true" > 61.5M </i>
-                                                <i className="fa fa-heart fa-xs" aria-hidden="true"> 743K </i>
-                                                <i className="fa fa-retweet fa-xs" aria-hidden="true"> 34.1K </i>
-                                                <i className="fa fa-comment fa-xs" aria-hidden="true"> 8,845 </i>
-                                            </p>
-                                        </div>
-                                        <div className='small-pic'>
-                                            <p className='small-title'>
-                                                Logic
-                            </p>
-                                            <p className='small-body'>
-                                                1-800-273-8255 (feat. A..)
-                            </p>
-                                            <p className='icon' >
-                                                <i className="fa fa-play fa-xs" aria-hidden="true" > 61.5M </i>
-                                                <i className="fa fa-heart fa-xs" aria-hidden="true"> 743K </i>
-                                                <i className="fa fa-retweet fa-xs" aria-hidden="true"> 34.1K </i>
-                                                <i className="fa fa-comment fa-xs" aria-hidden="true"> 8,845 </i>
-                                            </p>
-                                        </div>
-                                        <div className='small-pic'>
-                                            <p className='small-title'>
-                                                Logic
-                            </p>
-                                            <p className='small-body'>
-                                                1-800-273-8255 (feat. A..)
-                            </p>
-                                            <p className='icon' >
-                                                <i className="fa fa-play fa-xs" aria-hidden="true" > 61.5M </i>
-                                                <i className="fa fa-heart fa-xs" aria-hidden="true"> 743K </i>
-                                                <i className="fa fa-retweet fa-xs" aria-hidden="true"> 34.1K </i>
-                                                <i className="fa fa-comment fa-xs" aria-hidden="true"> 8,845 </i>
-                                            </p>
-                                        </div>
+                                    <div>
+                                        {user_index}
                                     </div>
                                 </div>
 
                                 <div className='go-mobile'>
                                     <div className='wtf-title'>
-                                        <p>Go mobile</p>
+                                        <p>About the creator </p>
                                         <p>View All</p>
                                     </div>
                                 </div>
 
+                                <div className='linkedin'>
+
+                                    <a className="q" href='https://www.linkedin.com/in/jimmythanhnguyen/' target="_blank">
+                                        <i className="fab fa-linkedin-in"></i>
+                                    </a>
+
+                                    <a className='q2' href='https://www.jimmynguyen.dev' target="_blank">
+                                        <i className="fas fa-portrait"></i>
+                                    </a>
+
+                                    <a className='q3' href='https://github.com/jiminey' target="_blank">
+                                        <i className="fab fa-github-square"></i>
+                                    </a>
+
+                                </div>
+
                             </div>
 
-                        </div>
+                            </div>
+
                         {/* main page content */}
 
                     </div>

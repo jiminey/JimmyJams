@@ -15,7 +15,7 @@ class CreateSong extends React.Component {
 
 
  render() {
-        let songs2 = this.props.songs.map(song => {
+        let songs2 = this.props.songs.slice(0,18).map(song => {
             return (
                 <div key={song.id}>
                     <SongIndexItem

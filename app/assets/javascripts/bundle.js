@@ -947,7 +947,7 @@ function (_React$Component) {
     value: function render() {
       var _this = this;
 
-      var songs2 = this.props.songs.map(function (song) {
+      var songs2 = this.props.songs.slice(0, 18).map(function (song) {
         return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
           key: song.id
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_song_song_index_item__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -2246,6 +2246,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../audioplayer/audioplayer_container */ "./frontend/components/audioplayer/audioplayer_container.js");
 /* harmony import */ var _navbar_navbar_container__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../navbar/navbar_container */ "./frontend/components/navbar/navbar_container.js");
 /* harmony import */ var _comment_comment_index_item__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../comment/comment_index_item */ "./frontend/components/comment/comment_index_item.jsx");
+/* harmony import */ var _user_user_index_item__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../user/user_index_item */ "./frontend/components/user/user_index_item.jsx");
+
 
 
 
@@ -2400,6 +2402,20 @@ function (_React$Component) {
         });
       }
 
+      var users = this.props.users;
+
+      if (this.props.users) {
+        users = Object.values(this.props.users);
+      }
+
+      var user_index = users.slice(0, 4).map(function (user) {
+        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          key: user.id
+        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_user_user_index_item__WEBPACK_IMPORTED_MODULE_11__["default"], {
+          key: user.id,
+          user: user
+        }));
+      });
       var pic;
 
       if (this.props.currentUser) {
@@ -2469,211 +2485,31 @@ function (_React$Component) {
         className: "wtf-title"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", (_React$createElement = {
         className: "wtf-text"
-      }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_React$createElement, "className", "fa fa-users"), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_React$createElement, "aria-hidden", "true"), _React$createElement), " Who to follow"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "View All")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "display-threes"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "small-pic"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-title"
-      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-body"
-      }, "1-800-273-8255 (feat. A..)"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "icon"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-play fa-xs",
-        "aria-hidden": "true"
-      }, " 61.5M "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-heart fa-xs",
-        "aria-hidden": "true"
-      }, " 743K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-retweet fa-xs",
-        "aria-hidden": "true"
-      }, " 34.1K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-comment fa-xs",
-        "aria-hidden": "true"
-      }, " 8,845 "))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "small-pic"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-title"
-      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-body"
-      }, "1-800-273-8255 (feat. A..)"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "icon"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-play fa-xs",
-        "aria-hidden": "true"
-      }, " 61.5M "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-heart fa-xs",
-        "aria-hidden": "true"
-      }, " 743K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-retweet fa-xs",
-        "aria-hidden": "true"
-      }, " 34.1K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-comment fa-xs",
-        "aria-hidden": "true"
-      }, " 8,845 "))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "small-pic"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-title"
-      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-body"
-      }, "1-800-273-8255 (feat. A..)"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "icon"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-play fa-xs",
-        "aria-hidden": "true"
-      }, " 61.5M "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-heart fa-xs",
-        "aria-hidden": "true"
-      }, " 743K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-retweet fa-xs",
-        "aria-hidden": "true"
-      }, " 34.1K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-comment fa-xs",
-        "aria-hidden": "true"
-      }, " 8,845 "))))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "who-to-follow"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "wtf-title"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-heart",
-        "aria-hidden": "true"
-      }, " You might like"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "View All")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "display-threes"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "small-pic"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-title"
-      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-body"
-      }, "1-800-273-8255 (feat. A..)"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "icon"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-play fa-xs",
-        "aria-hidden": "true"
-      }, " 61.5M "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-heart fa-xs",
-        "aria-hidden": "true"
-      }, " 743K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-retweet fa-xs",
-        "aria-hidden": "true"
-      }, " 34.1K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-comment fa-xs",
-        "aria-hidden": "true"
-      }, " 8,845 "))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "small-pic"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-title"
-      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-body"
-      }, "1-800-273-8255 (feat. A..)"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "icon"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-play fa-xs",
-        "aria-hidden": "true"
-      }, " 61.5M "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-heart fa-xs",
-        "aria-hidden": "true"
-      }, " 743K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-retweet fa-xs",
-        "aria-hidden": "true"
-      }, " 34.1K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-comment fa-xs",
-        "aria-hidden": "true"
-      }, " 8,845 "))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "small-pic"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-title"
-      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-body"
-      }, "1-800-273-8255 (feat. A..)"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "icon"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-play fa-xs",
-        "aria-hidden": "true"
-      }, " 61.5M "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-heart fa-xs",
-        "aria-hidden": "true"
-      }, " 743K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-retweet fa-xs",
-        "aria-hidden": "true"
-      }, " 34.1K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-comment fa-xs",
-        "aria-hidden": "true"
-      }, " 8,845 "))))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "who-to-follow"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "wtf-title"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-calendar",
-        "aria-hidden": "true"
-      }, " Listening history"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "View All")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "display-threes"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "small-pic"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-title"
-      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-body"
-      }, "1-800-273-8255 (feat. A..)"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "icon"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-play fa-xs",
-        "aria-hidden": "true"
-      }, " 61.5M "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-heart fa-xs",
-        "aria-hidden": "true"
-      }, " 743K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-retweet fa-xs",
-        "aria-hidden": "true"
-      }, " 34.1K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-comment fa-xs",
-        "aria-hidden": "true"
-      }, " 8,845 "))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "small-pic"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-title"
-      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-body"
-      }, "1-800-273-8255 (feat. A..)"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "icon"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-play fa-xs",
-        "aria-hidden": "true"
-      }, " 61.5M "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-heart fa-xs",
-        "aria-hidden": "true"
-      }, " 743K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-retweet fa-xs",
-        "aria-hidden": "true"
-      }, " 34.1K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-comment fa-xs",
-        "aria-hidden": "true"
-      }, " 8,845 "))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "small-pic"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-title"
-      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-body"
-      }, "1-800-273-8255 (feat. A..)"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "icon"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-play fa-xs",
-        "aria-hidden": "true"
-      }, " 61.5M "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-heart fa-xs",
-        "aria-hidden": "true"
-      }, " 743K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-retweet fa-xs",
-        "aria-hidden": "true"
-      }, " 34.1K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-comment fa-xs",
-        "aria-hidden": "true"
-      }, " 8,845 "))))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_React$createElement, "className", "fa fa-users"), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_React$createElement, "aria-hidden", "true"), _React$createElement), " Who to follow"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "View All")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, user_index)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "go-mobile"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "wtf-title"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "Go mobile"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "View All"))))))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_8__["default"], null));
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "About the creator "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "View All"))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        className: "linkedin"
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        className: "q",
+        href: "https://www.linkedin.com/in/jimmythanhnguyen/",
+        target: "_blank"
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        className: "fab fa-linkedin-in"
+      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        className: "q2",
+        href: "https://www.jimmynguyen.dev",
+        target: "_blank"
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        className: "fas fa-portrait"
+      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        className: "q3",
+        href: "https://github.com/jiminey",
+        target: "_blank"
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        className: "fab fa-github-square"
+      }))))))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_8__["default"], null));
     }
   }]);
 
@@ -3388,14 +3224,14 @@ function (_React$Component) {
       }, this.props.user.username.slice(0, 16), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "user-con"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        "class": "user-icon"
+        className: "user-icon"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("i", {
-        "class": "fa fa-users",
+        className: "fa fa-users",
         "aria-hidden": "true"
       }, " 1,337")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        "class": "user-icon"
+        className: "user-icon"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("i", {
-        "class": "fa fa-headphones",
+        className: "fa fa-headphones",
         "aria-hidden": "true"
       }, " 38")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
         className: "user-button"
@@ -3438,6 +3274,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../audioplayer/audioplayer_container */ "./frontend/components/audioplayer/audioplayer_container.js");
 /* harmony import */ var _navbar_navbar_container__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../navbar/navbar_container */ "./frontend/components/navbar/navbar_container.js");
 /* harmony import */ var _components_song_user_song_item__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../components/song/user_song_item */ "./frontend/components/song/user_song_item.jsx");
+/* harmony import */ var _user_user_index_item__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../user/user_index_item */ "./frontend/components/user/user_index_item.jsx");
+
 
 
 
@@ -3503,6 +3341,20 @@ function (_React$Component) {
       });
       var userId = this.props.match.params.userId || -1;
       var user = this.props.users[userId] || -1;
+      var users = this.props.users;
+
+      if (this.props.users) {
+        users = Object.values(this.props.users);
+      }
+
+      var user_index = users.slice(0, 4).map(function (user) {
+        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          key: user.id
+        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_user_user_index_item__WEBPACK_IMPORTED_MODULE_11__["default"], {
+          key: user.id,
+          user: user
+        }));
+      });
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_navbar_navbar_container__WEBPACK_IMPORTED_MODULE_9__["default"], null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "show-body"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -3539,211 +3391,31 @@ function (_React$Component) {
         className: "wtf-title"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", (_React$createElement = {
         className: "wtf-text"
-      }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_React$createElement, "className", "fa fa-users"), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_React$createElement, "aria-hidden", "true"), _React$createElement), " Who to follow"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "View All")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "display-threes"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "small-pic"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-title"
-      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-body"
-      }, "1-800-273-8255 (feat. A..)"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "icon"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-play fa-xs",
-        "aria-hidden": "true"
-      }, " 61.5M "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-heart fa-xs",
-        "aria-hidden": "true"
-      }, " 743K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-retweet fa-xs",
-        "aria-hidden": "true"
-      }, " 34.1K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-comment fa-xs",
-        "aria-hidden": "true"
-      }, " 8,845 "))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "small-pic"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-title"
-      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-body"
-      }, "1-800-273-8255 (feat. A..)"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "icon"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-play fa-xs",
-        "aria-hidden": "true"
-      }, " 61.5M "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-heart fa-xs",
-        "aria-hidden": "true"
-      }, " 743K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-retweet fa-xs",
-        "aria-hidden": "true"
-      }, " 34.1K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-comment fa-xs",
-        "aria-hidden": "true"
-      }, " 8,845 "))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "small-pic"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-title"
-      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-body"
-      }, "1-800-273-8255 (feat. A..)"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "icon"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-play fa-xs",
-        "aria-hidden": "true"
-      }, " 61.5M "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-heart fa-xs",
-        "aria-hidden": "true"
-      }, " 743K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-retweet fa-xs",
-        "aria-hidden": "true"
-      }, " 34.1K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-comment fa-xs",
-        "aria-hidden": "true"
-      }, " 8,845 "))))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "who-to-follow"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "wtf-title"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-heart",
-        "aria-hidden": "true"
-      }, " You might like"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "View All")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "display-threes"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "small-pic"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-title"
-      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-body"
-      }, "1-800-273-8255 (feat. A..)"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "icon"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-play fa-xs",
-        "aria-hidden": "true"
-      }, " 61.5M "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-heart fa-xs",
-        "aria-hidden": "true"
-      }, " 743K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-retweet fa-xs",
-        "aria-hidden": "true"
-      }, " 34.1K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-comment fa-xs",
-        "aria-hidden": "true"
-      }, " 8,845 "))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "small-pic"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-title"
-      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-body"
-      }, "1-800-273-8255 (feat. A..)"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "icon"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-play fa-xs",
-        "aria-hidden": "true"
-      }, " 61.5M "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-heart fa-xs",
-        "aria-hidden": "true"
-      }, " 743K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-retweet fa-xs",
-        "aria-hidden": "true"
-      }, " 34.1K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-comment fa-xs",
-        "aria-hidden": "true"
-      }, " 8,845 "))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "small-pic"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-title"
-      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-body"
-      }, "1-800-273-8255 (feat. A..)"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "icon"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-play fa-xs",
-        "aria-hidden": "true"
-      }, " 61.5M "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-heart fa-xs",
-        "aria-hidden": "true"
-      }, " 743K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-retweet fa-xs",
-        "aria-hidden": "true"
-      }, " 34.1K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-comment fa-xs",
-        "aria-hidden": "true"
-      }, " 8,845 "))))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "who-to-follow"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "wtf-title"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-calendar",
-        "aria-hidden": "true"
-      }, " Listening history"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "View All")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "display-threes"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "small-pic"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-title"
-      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-body"
-      }, "1-800-273-8255 (feat. A..)"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "icon"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-play fa-xs",
-        "aria-hidden": "true"
-      }, " 61.5M "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-heart fa-xs",
-        "aria-hidden": "true"
-      }, " 743K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-retweet fa-xs",
-        "aria-hidden": "true"
-      }, " 34.1K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-comment fa-xs",
-        "aria-hidden": "true"
-      }, " 8,845 "))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "small-pic"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-title"
-      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-body"
-      }, "1-800-273-8255 (feat. A..)"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "icon"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-play fa-xs",
-        "aria-hidden": "true"
-      }, " 61.5M "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-heart fa-xs",
-        "aria-hidden": "true"
-      }, " 743K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-retweet fa-xs",
-        "aria-hidden": "true"
-      }, " 34.1K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-comment fa-xs",
-        "aria-hidden": "true"
-      }, " 8,845 "))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "small-pic"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-title"
-      }, "Logic"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "small-body"
-      }, "1-800-273-8255 (feat. A..)"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-        className: "icon"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-play fa-xs",
-        "aria-hidden": "true"
-      }, " 61.5M "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-heart fa-xs",
-        "aria-hidden": "true"
-      }, " 743K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-retweet fa-xs",
-        "aria-hidden": "true"
-      }, " 34.1K "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: "fa fa-comment fa-xs",
-        "aria-hidden": "true"
-      }, " 8,845 "))))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_React$createElement, "className", "fa fa-users"), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_React$createElement, "aria-hidden", "true"), _React$createElement), " Who to follow"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "View All")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, user_index)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "go-mobile"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "wtf-title"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "Go mobile"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "View All"))))))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_8__["default"], null));
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "About the creator "), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "View All"))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        className: "linkedin"
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        className: "q",
+        href: "https://www.linkedin.com/in/jimmythanhnguyen/",
+        target: "_blank"
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        className: "fab fa-linkedin-in"
+      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        className: "q2",
+        href: "https://www.jimmynguyen.dev",
+        target: "_blank"
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        className: "fas fa-portrait"
+      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        className: "q3",
+        href: "https://github.com/jiminey",
+        target: "_blank"
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
+        className: "fab fa-github-square"
+      }))))))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_audioplayer_audioplayer_container__WEBPACK_IMPORTED_MODULE_8__["default"], null));
     }
   }]);
 
