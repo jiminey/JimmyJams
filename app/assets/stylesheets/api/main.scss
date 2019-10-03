@@ -333,6 +333,7 @@ body {
     display:flex ;
     position: relative;
     width: 1000px;
+    right: 0;
 }
 
 
@@ -507,4 +508,15 @@ input[type="search"] {
     position: absolute;
     right: 0px;
     top: 66px;
+}
+
+
+#set1 {
+    transition-duration: 0.7s;
+}
+#set2 {
+    transition-duration: 0.7s;
+}
+#set3 {
+    transition-duration: 0.7s;
 }

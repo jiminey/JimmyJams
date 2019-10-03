@@ -4,16 +4,21 @@ import SongIndexItem from '../song/song_index_item'
 import AudioPlayerContainer from '../audioplayer/audioplayer_container'
 import NavBarContainer from '../navbar/navbar_container'
 import UserIndexItem from '../user/user_index_item'
-import { timingSafeEqual } from 'crypto';
 
 class Main extends React.Component {
 
     constructor(props){
         super(props)
-        this.toggleSongsRight = this.toggleSongsRight.bind(this);
-        this.toggleSongsLeft = this.toggleSongsLeft.bind(this);
+        this.toggleSongsRight1 = this.toggleSongsRight1.bind(this);
+        this.toggleSongsLeft1 = this.toggleSongsLeft1.bind(this);
+        this.toggleSongsRight2 = this.toggleSongsRight2.bind(this);
+        this.toggleSongsLeft2 = this.toggleSongsLeft2.bind(this);
+        this.toggleSongsRight3 = this.toggleSongsRight3.bind(this);
+        this.toggleSongsLeft3 = this.toggleSongsLeft3.bind(this);
         this.state = {
-            right: 0,
+            right1: 0,
+            right2: 0,
+            right3: 0,
         }
     }
 
@@ -23,31 +28,31 @@ class Main extends React.Component {
    }
 
 
-   toggleSongsRight(e) {
+   toggleSongsRight1(e) {
     let set1 = document.getElementById('set1')
     set1.style.right = "530px"
     this.setState( prevState => {
         return ({
-            right: prevState.right + 1 
+            right1: prevState.right1 + 1 
         })
     })
    }
 
-   toggleSongsLeft(e) {
+   toggleSongsLeft1(e) {
     let set1 = document.getElementById('set1')
     set1.style.right = "0px"
     this.setState( prevState => {
         return ({
-            right: prevState.right - 1
+            right1: prevState.right1 - 1
         })
     })
    }
 
    renderLeft1(e) {
-       if (this.state.right > 0) {
+       if (this.state.right1 > 0) {
            return (
                 <div>
-                    <div className='arrow-padding-left' onClick={this.toggleSongsLeft}>
+                    <div className='arrow-padding-left' onClick={this.toggleSongsLeft1}>
                     </div>
                         <img className="car-arrow-left" src="assets/leftarr" alt=""/>
 
@@ -56,17 +61,111 @@ class Main extends React.Component {
        }
    }
    renderRight1(e) {
-       if (this.state.right === 0) {
+       if (this.state.right1 === 0) {
            return (
                 <div>
 
-               <div className='arrow-padding-right' onClick={this.toggleSongsRight}>
+               <div className='arrow-padding-right' onClick={this.toggleSongsRight1}>
                </div>
                    <img className="car-arrow" src="assets/rightarr" alt=""/>
                 </div>
            )
        }
    }
+
+
+
+
+    toggleSongsRight2(e) {
+        let set2 = document.getElementById('set2')
+        set2.style.right = "530px"
+        this.setState(prevState => {
+            return ({
+                right2: prevState.right2 + 1
+            })
+        })
+    }
+
+    toggleSongsLeft2(e) {
+        let set2 = document.getElementById('set2')
+        set2.style.right = "0px"
+        this.setState(prevState => {
+            return ({
+                right2: prevState.right2 - 1
+            })
+        })
+    }
+
+    renderLeft2(e) {
+        if (this.state.right2 > 0) {
+            return (
+                <div>
+                    <div className='arrow-padding-left' onClick={this.toggleSongsLeft2}>
+                    </div>
+                    <img className="car-arrow-left" src="assets/leftarr" alt="" />
+
+                </div>
+            )
+        }
+    }
+    renderRight2(e) {
+        if (this.state.right2 === 0) {
+            return (
+                <div>
+
+                    <div className='arrow-padding-right' onClick={this.toggleSongsRight2}>
+                    </div>
+                    <img className="car-arrow" src="assets/rightarr" alt="" />
+                </div>
+            )
+        }
+    }
+
+
+    toggleSongsRight3(e) {
+        let set3 = document.getElementById('set3')
+        set3.style.right = "530px"
+        this.setState(prevState => {
+            return ({
+                right3: prevState.right3 + 1
+            })
+        })
+    }
+
+    toggleSongsLeft3(e) {
+        let set3 = document.getElementById('set3')
+        set3.style.right = "0px"
+        this.setState(prevState => {
+            return ({
+                right3: prevState.right3 - 1
+            })
+        })
+    }
+
+    renderLeft3(e) {
+        if (this.state.right3 > 0) {
+            return (
+                <div>
+                    <div className='arrow-padding-left' onClick={this.toggleSongsLeft3}>
+                    </div>
+                    <img className="car-arrow-left" src="assets/leftarr" alt="" />
+
+                </div>
+            )
+        }
+    }
+    renderRight3(e) {
+        if (this.state.right3 === 0) {
+            return (
+                <div>
+
+                    <div className='arrow-padding-right' onClick={this.toggleSongsRight3}>
+                    </div>
+                    <img className="car-arrow" src="assets/rightarr" alt="" />
+                </div>
+            )
+        }
+    }
 
     render() {
         
@@ -89,7 +188,7 @@ class Main extends React.Component {
 
 
 
-        let songs2 = this.props.songs.slice(8, 12).map(song => {
+        let songs2 = this.props.songs.slice(0,8).reverse().map(song => {
             return (
                 <div key={song.id}>
                     <SongIndexItem
@@ -106,7 +205,7 @@ class Main extends React.Component {
             )
         });
 
-        let songs3 = this.props.songs.slice(0, 4).map(song => {
+        let songs3 = this.props.songs.slice(0, 8).map(song => {
             return (
                 <div key={song.id}>
                     <SongIndexItem
@@ -172,9 +271,11 @@ class Main extends React.Component {
                                 <h1 className='section-title'>JimmyJams Charts</h1>
                                     <h3 className='section-body'>The most played tracks on JimmyJams this week</h3>
                                 
-                                <div className='main-row'>
+                                <div className='main-row' id='set2'>
                                     {songs2}
                                 </div>
+                                    {this.renderRight2()}
+                                    {this.renderLeft2()}
                             </div>   
                     </div>
 
@@ -184,9 +285,11 @@ class Main extends React.Component {
                                 <h1 className='section-title'>JimmyJams Charts</h1>
                                     <h3 className='section-body'>The most played tracks on JimmyJams this week</h3>
                                 
-                                <div className='main-row'>
+                                <div className='main-row' id='set3'>
                                     {songs3}
                                 </div>
+                                    {this.renderRight3()}
+                                    {this.renderLeft3()}
                             </div>   
                     </div>
 
