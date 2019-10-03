@@ -4,12 +4,16 @@ import SongIndexItem from '../song/song_index_item'
 import AudioPlayerContainer from '../audioplayer/audioplayer_container'
 import NavBarContainer from '../navbar/navbar_container'
 import UserIndexItem from '../user/user_index_item'
+import { timingSafeEqual } from 'crypto';
 
 class Main extends React.Component {
 
     constructor(props){
         super(props)
         this.toggleSongsRight = this.toggleSongsRight.bind(this);
+        this.state = {
+            right: 0,
+        }
     }
 
    componentDidMount() {
@@ -20,9 +24,22 @@ class Main extends React.Component {
 
    toggleSongsRight(e) {
     let set1 = document.getElementById('set1')
+    set1.style.right = "530px"
+    this.setState( prevState => {
+        return ({
+            right: prevState.right + 1
+        })
+    })
+   }
 
-    set1.style.right = "490px"
-
+   renderLeft1(e) {
+       if (this.state.right > 0) {
+           return (
+               <div className="car-arrow-left" onClick={this.toggleSongsRight}>
+                   <i className="fa fa-arrow-left" aria-hidden="true"></i>
+               </div>
+           )
+       }
    }
 
     render() {
@@ -115,10 +132,12 @@ class Main extends React.Component {
                                 <div className='main-row' id='set1'>
                                     {songs1}
 
+                                </div>
                                     <div className="car-arrow" onClick={this.toggleSongsRight}>
                                         <i className="fa fa-arrow-right" aria-hidden="true"></i>
                                     </div>
-                                </div>
+
+                                    {this.renderLeft1()}
                             </div>
 
 

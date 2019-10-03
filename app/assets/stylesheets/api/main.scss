@@ -332,6 +332,7 @@ body {
 .main-row {
     display:flex ;
     position: relative;
+    width: 1000px;
 }
 
 
@@ -458,10 +459,25 @@ input[type="search"] {
 .car-arrow {
     position: absolute;
     z-index: 3;
-    color: #999;
+    color:black;
     font-size: 25px;
     padding: 3px;
-    right: 12px;
+    right: 8px;
+    top: 117px;
+    cursor: pointer;
+    border: .5px solid #999;
+    background: white;
+    height: fit-content;
+    width: fit-content;
+}
+
+.car-arrow-left {
+    position: absolute;
+    z-index: 3;
+    color:black;
+    font-size: 25px;
+    padding: 3px;
+    left:0px;
     top: 117px;
     cursor: pointer;
     border: .5px solid #999;
