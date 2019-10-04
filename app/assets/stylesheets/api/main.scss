@@ -6,6 +6,7 @@
     background:white;
     display:flex;
     justify-content: center;
+    position: relative;
 }
 
 body {
@@ -18,7 +19,6 @@ body {
     width: 100%;
     display: flex;
     margin: 0;
-    //width: 1101px;
     justify-content: center;
     font: 100 14px/1.5 Arial,sans-serif;
     background: #333;
@@ -31,8 +31,6 @@ body {
 }
 
 .main-left {
-    // width: 380.98px;
-    // height: 45.98px;
     display: flex;
     justify-content: flex-start;
     color: #999;
@@ -270,11 +268,15 @@ body {
 
 
 .main-col {
-    width: 370px;
+    right: 20%;
+    width: 267px;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: flex-start;
     margin-top: 86px;
+    position: fixed;
+    margin-top: 86px;
+    height: 100%;
 }
 
 .who-to-follow {

@@ -311,6 +311,17 @@ class Main extends React.Component {
                         {user_index}
                     </div>
                 </div>
+{/* 
+                <div className='who-to-follow'>
+                    <div className='wtf-title'>
+                        <i className='wtf-text' className="fa fa-users" aria-hidden="true"> Listening history</i>
+                        <p>View All</p>
+                    </div>
+
+                    <div>
+                        {user_index}
+                    </div>
+                </div> */}
 
                 <div className='go-mobile'>
                     <div className='wtf-title'>
