@@ -986,7 +986,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "music-content"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "section"
+        className: "section-lib"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "section-content"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
@@ -996,7 +996,7 @@ function (_React$Component) {
       }, "Our recently featured tracks "), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "main-row"
       }, songs1))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "section"
+        className: "section-lib"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "section-content"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {

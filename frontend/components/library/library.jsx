@@ -62,7 +62,7 @@ class CreateSong extends React.Component {
 
                     <div className='music-content'>
 
-                        <div className='section'>
+                        <div className='section-lib'>
 
                             <div className='section-content'>
                                 <h1 className='section-title'>JimmyJams Featured Hits</h1>
@@ -74,7 +74,7 @@ class CreateSong extends React.Component {
                             </div>
                         </div>
 
-                        <div className='section'>
+                        <div className='section-lib'>
 
                             <div className='section-content'>
                                 <h1 className='section-title'>All of the JimmyJams</h1>
