@@ -3702,6 +3702,7 @@ function (_React$Component) {
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, WaveForm);
 
     _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(WaveForm).call(this, props));
+    _this.waveRef = react__WEBPACK_IMPORTED_MODULE_5___default.a.createRef();
     _this.state = {
       width: 600,
       loaderPosition: 0
@@ -3712,25 +3713,17 @@ function (_React$Component) {
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(WaveForm, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      var wave = this.refs.waveform;
+      var wave = this.waveRef.current;
       this.wavesurfer = wavesurfer_js__WEBPACK_IMPORTED_MODULE_6___default.a.create({
         container: wave,
         waveColor: '#F2F2F2',
         progressColor: '#F65502',
         barWidth: 2,
-        height: 200,
-        fillParent: true,
-        cursorWidth: 0,
-        interact: true,
-        autoCenter: true,
-        closeAudioContext: true,
-        hideScrollbar: true,
-        partialRender: true,
-        removeMediaElementOnDestroy: true
+        height: 200
       });
-      this.wavesurfer.load(this.props.song);
+      this.wavesurfer.load(this.props.song.song_fileUrl);
       this.wavesurfer.on('ready', function () {
-        wavesurfer.play();
+        this.wavesurfer.play();
       });
     }
   }, {
@@ -3739,12 +3732,8 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         id: "waveform",
         className: "waveform",
-        ref: "waveform"
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "outer-loader"
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "inner-loader"
-      })));
+        ref: this.waveRef
+      });
     }
   }]);
 
@@ -48200,7 +48189,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
