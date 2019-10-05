@@ -2606,7 +2606,8 @@ function (_React$Component) {
       }, this.props.song.title), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(!(function webpackMissingModule() { var e = new Error("Cannot find module '../waveform'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), {
         song: this.props.song,
         currentSong: this.props.currentSong,
-        currentAudio: this.props.currentAudio
+        currentAudio: this.props.currentAudio,
+        playState: this.props.playState
       })))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "show-top-right"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
