@@ -2410,7 +2410,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _navbar_navbar_container__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../navbar/navbar_container */ "./frontend/components/navbar/navbar_container.js");
 /* harmony import */ var _comment_comment_index_item__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../comment/comment_index_item */ "./frontend/components/comment/comment_index_item.jsx");
 /* harmony import */ var _user_user_index_item__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../user/user_index_item */ "./frontend/components/user/user_index_item.jsx");
-/* harmony import */ var _waveform_waveform_jsx__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../waveform/waveform.jsx */ "./frontend/components/waveform/waveform.jsx");
+/* harmony import */ var _waveform_waveform__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../waveform/waveform */ "./frontend/components/waveform/waveform.jsx");
 
 
 
@@ -2603,7 +2603,7 @@ function (_React$Component) {
         className: "top-artist"
       }, this.props.song.artist), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "top-title"
-      }, this.props.song.title), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_waveform_waveform_jsx__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      }, this.props.song.title), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_waveform_waveform__WEBPACK_IMPORTED_MODULE_12__["default"], {
         song: this.props.song,
         currentSong: this.props.currentSong,
         currentAudio: this.props.currentAudio,
