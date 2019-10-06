@@ -277,6 +277,20 @@ body {
     position: fixed;
     margin-top: 86px;
     height: 100%;
+    z-index: 5;
+    background: white;
+}
+
+.main-col2 {
+    right: 0;
+    position: absolute;
+    width: 267px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 86px;
+    margin-top: 86px;
+    height: 100%;
 }
 
 .who-to-follow {

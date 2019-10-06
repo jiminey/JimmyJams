@@ -211,7 +211,7 @@ class SongShow extends React.Component {
                 </div>
                 {/* music content */}
 
-                            <div className='main-col'>
+                            <div className='main-col2'>
 
                                 <div className='who-to-follow'>
                                     <div className='wtf-title'>
