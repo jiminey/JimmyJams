@@ -7,7 +7,7 @@ class WaveForm extends React.Component {
         this.waveRef = React.createRef();
         this.state = {
             width: 600,
-            loaderPosition: 0,
+            loading: false,
         }
     }
 
@@ -19,20 +19,45 @@ class WaveForm extends React.Component {
             waveColor: '#F2F2F2',
             progressColor: '#F65502',
             barWidth: 2,
-            height: 200,
+            height: 180,
         });
+
 
         this.wavesurfer.load(this.props.song.song_fileUrl);
 
-        this.wavesurfer.on('ready', function () {
-            this.wavesurfer.play();
-        });
+
+        if (this.props.currentSong) {
+            if (this.props.currentSong.id === this.props.song.id) {
+                this.wavesurfer.load(this.props.currentAudio)
+             } 
+    
+            this.wavesurfer.on('ready', function () {
+                this.state.loading = true;
+            });
+        }
         
     }
 
+    handleClick() {
+        this.wavesurfer.on('seek', this.handleChange);
+    }
+
+    handleChange() {
+        if (this.props.currentSong.id === this.props.song.id) {
+            // this.wavesurfer.seekTo()
+        }
+        this.waveSurfer.un('seek', this.handleChange);
+    }
+
+    componentWillUnmount() {
+        this.wavesurfer.un('ready');
+        this.wavesurfer.destroy();
+    }
+
+
     render() {
         return(
-            <div id='waveform' className='waveform' ref={this.waveRef}>
+            <div onClick={() => this.handleClick()} onChange={() => this.handleChange()} id='waveform' className='waveform' ref={this.waveRef}>
         
             </div>
         )

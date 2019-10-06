@@ -3705,7 +3705,7 @@ function (_React$Component) {
     _this.waveRef = react__WEBPACK_IMPORTED_MODULE_5___default.a.createRef();
     _this.state = {
       width: 600,
-      loaderPosition: 0
+      loading: false
     };
     return _this;
   }
@@ -3719,17 +3719,51 @@ function (_React$Component) {
         waveColor: '#F2F2F2',
         progressColor: '#F65502',
         barWidth: 2,
-        height: 200
+        height: 180
       });
       this.wavesurfer.load(this.props.song.song_fileUrl);
-      this.wavesurfer.on('ready', function () {
-        this.wavesurfer.play();
-      });
+
+      if (this.props.currentSong) {
+        if (this.props.currentSong.id === this.props.song.id) {
+          this.wavesurfer.load(this.props.currentAudio);
+        }
+
+        this.wavesurfer.on('ready', function () {
+          this.state.loading = true;
+        });
+      }
+    }
+  }, {
+    key: "handleClick",
+    value: function handleClick() {
+      this.wavesurfer.on('seek', this.handleChange);
+    }
+  }, {
+    key: "handleChange",
+    value: function handleChange() {
+      if (this.props.currentSong.id === this.props.song.id) {// this.wavesurfer.seekTo()
+      }
+
+      this.waveSurfer.un('seek', this.handleChange);
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      this.wavesurfer.un('ready');
+      this.wavesurfer.destroy();
     }
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        onClick: function onClick() {
+          return _this2.handleClick();
+        },
+        onChange: function onChange() {
+          return _this2.handleChange();
+        },
         id: "waveform",
         className: "waveform",
         ref: this.waveRef
