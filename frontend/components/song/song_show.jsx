@@ -154,13 +154,13 @@ class SongShow extends React.Component {
                                         <div className='top-artist'>{this.props.song.artist}</div>
                                         <div className='top-title'>{this.props.song.title}</div>
                                         <div>
-                                            {/* <img className='waveform' src='waveform.png'></img> */}
-                                            <WaveForm 
+                                            <img className='waveform' src='waveform.png'></img>
+                                            {/* <WaveForm 
                                             song={this.props.song} 
                                             currentSong={this.props.currentSong} 
                                             currentAudio={this.props.currentAudio} 
                                             playState={this.props.playState} 
-                                            />
+                                            /> */}
 
                                         </div>
                                     </div>

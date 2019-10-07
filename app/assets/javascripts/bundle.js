@@ -2603,11 +2603,9 @@ function (_React$Component) {
         className: "top-artist"
       }, this.props.song.artist), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "top-title"
-      }, this.props.song.title), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_waveform_waveform_jsx__WEBPACK_IMPORTED_MODULE_12__["default"], {
-        song: this.props.song,
-        currentSong: this.props.currentSong,
-        currentAudio: this.props.currentAudio,
-        playState: this.props.playState
+      }, this.props.song.title), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+        className: "waveform",
+        src: "waveform.png"
       })))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "show-top-right"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
