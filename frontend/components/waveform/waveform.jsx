@@ -1,5 +1,6 @@
 import React from 'react'
-import WaveSurfer from 'wavesurfer.js'
+// import WaveSurfer from 'wavesurfer.js'
+const WaveSurfer = require('wavesurfer.js/dist/wavesurfer');
 
 class WaveForm extends React.Component {
     constructor(props) {
