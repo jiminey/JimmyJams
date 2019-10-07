@@ -2410,7 +2410,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _navbar_navbar_container__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../navbar/navbar_container */ "./frontend/components/navbar/navbar_container.js");
 /* harmony import */ var _comment_comment_index_item__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../comment/comment_index_item */ "./frontend/components/comment/comment_index_item.jsx");
 /* harmony import */ var _user_user_index_item__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../user/user_index_item */ "./frontend/components/user/user_index_item.jsx");
-/* harmony import */ var _waveform_waveform__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../waveform/waveform */ "./frontend/components/waveform/waveform.jsx");
+/* harmony import */ var _waveform_waveform_jsx__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../waveform/waveform.jsx */ "./frontend/components/waveform/waveform.jsx");
 
 
 
@@ -2603,7 +2603,7 @@ function (_React$Component) {
         className: "top-artist"
       }, this.props.song.artist), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "top-title"
-      }, this.props.song.title), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_waveform_waveform__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      }, this.props.song.title), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_waveform_waveform_jsx__WEBPACK_IMPORTED_MODULE_12__["default"], {
         song: this.props.song,
         currentSong: this.props.currentSong,
         currentAudio: this.props.currentAudio,
@@ -3677,12 +3677,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
 /* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var wavesurfer_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! wavesurfer.js */ "./node_modules/wavesurfer.js/dist/wavesurfer.min.js");
-/* harmony import */ var wavesurfer_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(wavesurfer_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var wavesurfer_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! wavesurfer.js */ "./node_modules/wavesurfer.js/dist/wavesurfer.min.js");
+/* harmony import */ var wavesurfer_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(wavesurfer_js__WEBPACK_IMPORTED_MODULE_7__);
+
 
 
 
@@ -3694,7 +3697,7 @@ __webpack_require__.r(__webpack_exports__);
 var WaveForm =
 /*#__PURE__*/
 function (_React$Component) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(WaveForm, _React$Component);
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(WaveForm, _React$Component);
 
   function WaveForm(props) {
     var _this;
@@ -3702,11 +3705,12 @@ function (_React$Component) {
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, WaveForm);
 
     _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(WaveForm).call(this, props));
-    _this.waveRef = react__WEBPACK_IMPORTED_MODULE_5___default.a.createRef();
+    _this.waveRef = react__WEBPACK_IMPORTED_MODULE_6___default.a.createRef();
     _this.state = {
       width: 600,
-      loading: false
+      loading: true
     };
+    _this.updateProgress = _this.updateProgress.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     return _this;
   }
 
@@ -3714,12 +3718,20 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       var wave = this.waveRef.current;
-      this.wavesurfer = wavesurfer_js__WEBPACK_IMPORTED_MODULE_6___default.a.create({
+      this.wavesurfer = wavesurfer_js__WEBPACK_IMPORTED_MODULE_7___default.a.create({
         container: wave,
         waveColor: '#F2F2F2',
         progressColor: '#F65502',
         barWidth: 2,
-        height: 180
+        height: 180,
+        fillParent: true,
+        cursorWidth: 0,
+        interact: true,
+        autoCenter: true,
+        closeAudioContext: true,
+        hideScrollbar: true,
+        partialRender: true,
+        removeMediaElementOnDestroy: true
       });
       this.wavesurfer.load(this.props.song.song_fileUrl);
 
@@ -3729,22 +3741,26 @@ function (_React$Component) {
         }
 
         this.wavesurfer.on('ready', function () {
-          this.state.loading = true;
+          this.setState({
+            loading: false
+          });
         });
       }
     }
   }, {
-    key: "handleClick",
-    value: function handleClick() {
-      this.wavesurfer.on('seek', this.handleChange);
-    }
-  }, {
-    key: "handleChange",
-    value: function handleChange() {
-      if (this.props.currentSong.id === this.props.song.id) {// this.wavesurfer.seekTo()
-      }
+    key: "updateProgress",
+    value: function updateProgress() {
+      var player = this.props.currentAudio; // let progressbar = document.getElementById('waveform');
 
-      this.waveSurfer.un('seek', this.handleChange);
+      var progressbar = this.waveRef.current;
+      progressbar.seekTo(player.currentTime / player.duration);
+      document.getElementById("div2").addEventListener("click", seek);
+
+      function seek(event) {
+        var percent = event.offsetX / this.offsetWidth;
+        player.currentTime = percent * player.duration;
+        progressbar.seekTo(percent / 100);
+      }
     }
   }, {
     key: "componentWillUnmount",
@@ -3757,22 +3773,24 @@ function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        onClick: function onClick() {
-          return _this2.handleClick();
-        },
-        onChange: function onChange() {
-          return _this2.handleChange();
-        },
+      if (this.props.currentAudio) {
+        this.props.currentAudio.ontimeupdate = function () {
+          _this2.updateProgress();
+        };
+      }
+
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        id: "div2"
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         id: "waveform",
         className: "waveform",
         ref: this.waveRef
-      });
+      }));
     }
   }]);
 
   return WaveForm;
-}(react__WEBPACK_IMPORTED_MODULE_5___default.a.Component);
+}(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (WaveForm);
 

@@ -3,7 +3,7 @@ import AudioPlayerContainer from '../audioplayer/audioplayer_container'
 import NavBarContainer from '../navbar/navbar_container'
 import CommentIndexItem from '../comment/comment_index_item'
 import UserIndexItem from '../user/user_index_item'
-import WaveForm from '../waveform/waveform'
+import WaveForm from '../waveform/waveform.jsx'
 
 
 class SongShow extends React.Component {

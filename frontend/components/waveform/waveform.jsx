@@ -7,8 +7,10 @@ class WaveForm extends React.Component {
         this.waveRef = React.createRef();
         this.state = {
             width: 600,
-            loading: false,
+            loading: true,
         }
+
+        this.updateProgress = this.updateProgress.bind(this); 
     }
 
 
@@ -20,6 +22,14 @@ class WaveForm extends React.Component {
             progressColor: '#F65502',
             barWidth: 2,
             height: 180,
+            fillParent: true,
+            cursorWidth: 0,
+            interact: true,
+            autoCenter: true,
+            closeAudioContext: true,
+            hideScrollbar: true,
+            partialRender: true,
+            removeMediaElementOnDestroy: true,
         });
 
 
@@ -32,21 +42,27 @@ class WaveForm extends React.Component {
              } 
     
             this.wavesurfer.on('ready', function () {
-                this.state.loading = true;
+                this.setState({loading: false})
             });
-        }
-        
+        }   
     }
 
-    handleClick() {
-        this.wavesurfer.on('seek', this.handleChange);
-    }
 
-    handleChange() {
-        if (this.props.currentSong.id === this.props.song.id) {
-            // this.wavesurfer.seekTo()
+
+    updateProgress() {
+        let player = this.props.currentAudio
+
+        // let progressbar = document.getElementById('waveform');
+        const progressbar = this.waveRef.current
+
+        progressbar.seekTo(player.currentTime / player.duration);
+        document.getElementById("div2").addEventListener("click", seek);
+
+        function seek(event) {
+            let percent = event.offsetX / this.offsetWidth;
+            player.currentTime = percent * player.duration;
+            progressbar.seekTo(percent / 100);
         }
-        this.waveSurfer.un('seek', this.handleChange);
     }
 
     componentWillUnmount() {
@@ -56,9 +72,15 @@ class WaveForm extends React.Component {
 
 
     render() {
+
+        if (this.props.currentAudio) {
+            this.props.currentAudio.ontimeupdate = () => { this.updateProgress() }
+        }
+
         return(
-            <div onClick={() => this.handleClick()} onChange={() => this.handleChange()} id='waveform' className='waveform' ref={this.waveRef}>
-        
+            <div id='div2'>
+                <div id='waveform' className='waveform' ref={this.waveRef}>
+                </div>
             </div>
         )
     }
