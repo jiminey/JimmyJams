@@ -6,13 +6,12 @@ class WaveForm extends React.Component {
         super(props)
         this.waveRef = React.createRef();
         this.state = {
-            width: 600,
-            loading: true,
+            ready: false,
         }
-
+        this.wavesurfer = null;
         this.updateProgress = this.updateProgress.bind(this); 
+        this.player = this.props.currentAudio        
     }
-
 
     componentDidMount() {
         const wave = this.waveRef.current
@@ -22,46 +21,43 @@ class WaveForm extends React.Component {
             progressColor: '#F65502',
             barWidth: 2,
             height: 180,
-            fillParent: true,
-            cursorWidth: 0,
-            interact: true,
-            autoCenter: true,
-            closeAudioContext: true,
-            hideScrollbar: true,
-            partialRender: true,
-            removeMediaElementOnDestroy: true,
+            backend: 'MediaElement'
         });
 
 
         this.wavesurfer.load(this.props.song.song_fileUrl);
 
+        this.wavesurfer.on('ready', () => {
+            this.setState({ ready: true })
+        })
+    }
 
-        if (this.props.currentSong) {
-            if (this.props.currentSong.id === this.props.song.id) {
-                this.wavesurfer.load(this.props.currentAudio)
-             } 
-    
-            this.wavesurfer.on('ready', function () {
-                this.setState({loading: false})
-            });
-        }   
+    componentDidUpdate() {
+        // if (this.props.currentAudio && this.props.playState && this.props.song.id === this.props.currentSong.id) {
+        //     this.wavesurfer.seekTo(this.player.currentTime / this.player.duration);
+        // } else {
+        //     this.wavesurfer.seekTo(0);
+        // }
     }
 
 
-
     updateProgress() {
-        let player = this.props.currentAudio
-
+        // let player = this.props.currentAudio
         // let progressbar = document.getElementById('waveform');
-        const progressbar = this.waveRef.current
+        // const progressbar = this.waveRef.current
+        
+        if(this.props.song.id === this.props.currentSong.id){
+            this.wavesurfer.seekTo(this.player.currentTime / this.player.duration);
+        } else {
+            this.wavesurfer.seekTo(0)
+        }
 
-        progressbar.seekTo(player.currentTime / player.duration);
         document.getElementById("div2").addEventListener("click", seek);
 
         function seek(event) {
-            let percent = event.offsetX / this.offsetWidth;
-            player.currentTime = percent * player.duration;
-            progressbar.seekTo(percent / 100);
+            let percent = event.offsetX / event.offsetWidth;
+            this.player.currentTime = percent * this.player.duration;
+            this.wavesurfer.seekTo(percent / 100);
         }
     }
 

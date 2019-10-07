@@ -3,7 +3,7 @@ import AudioPlayerContainer from '../audioplayer/audioplayer_container'
 import NavBarContainer from '../navbar/navbar_container'
 import CommentIndexItem from '../comment/comment_index_item'
 import UserIndexItem from '../user/user_index_item'
-// import WaveForm from '../waveform/waveform.jsx'
+import WaveForm from '../waveform/waveform.jsx'
 
 
 class SongShow extends React.Component {
@@ -154,13 +154,13 @@ class SongShow extends React.Component {
                                         <div className='top-artist'>{this.props.song.artist}</div>
                                         <div className='top-title'>{this.props.song.title}</div>
                                         <div>
-                                            <img className='waveform' src='waveform.png'></img>
-                                            {/* <WaveForm 
+                                            {/* <img className='waveform' src='waveform.png'></img> */}
+                                            <WaveForm 
                                             song={this.props.song} 
                                             currentSong={this.props.currentSong} 
                                             currentAudio={this.props.currentAudio} 
                                             playState={this.props.playState} 
-                                            /> */}
+                                            />
 
                                         </div>
                                     </div>

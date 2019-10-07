@@ -299,7 +299,7 @@ class Main extends React.Component {
 
 
 
-            <div className='main-col'>
+            <div className='main-col2'>
 
                 <div className='who-to-follow'>
                     <div className='wtf-title'>
