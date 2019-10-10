@@ -12,7 +12,8 @@ class WaveForm extends React.Component {
         }
         this.wavesurfer = null;
         this.updateProgress = this.updateProgress.bind(this); 
-        this.player = this.props.currentAudio        
+        this.player = this.props.currentAudio      
+        this.seek = this.seek.bind(this)  
     }
 
     componentDidMount() {
@@ -30,19 +31,19 @@ class WaveForm extends React.Component {
         });
 
 
-        this.wavesurfer.load(this.props.song.song_fileUrl, null, 'auto');
+        this.wavesurfer.load(this.props.song.song_fileUrl, null, 'auto')
 
-        this.wavesurfer.on('ready', () => {
-            this.setState({ ready: true })
-        })
         
-
         const frameloop = () => { 
             this.frame = requestAnimationFrame(frameloop);
             this.updateProgress();   
         }
         
-        frameloop();
+
+        this.wavesurfer.on('ready', () => {
+                frameloop();
+        })
+        
     }
 
     componentDidUpdate() {
@@ -50,9 +51,6 @@ class WaveForm extends React.Component {
 
 
     updateProgress() {
-        // let player = this.props.currentAudio
-        // let progressbar = document.getElementById('waveform');
-        // const progressbar = this.waveRef.current
         if (!this.props.currentAudio) return;
         let percentage = percentage || 0; 
         percentage = this.props.currentAudio.currentTime/this.props.currentAudio.duration
@@ -66,29 +64,31 @@ class WaveForm extends React.Component {
         } else {
             this.wavesurfer.seekTo(0)
         }
+        
+        document.getElementById("div2").addEventListener("click" , this.seek );
 
-        document.getElementById("div2").addEventListener("click" , seek.bind(this) );
+        
+    }
 
-        function seek(event) {
-            let percent = event.offsetX / event.currentTarget.offsetWidth;
-            this.props.currentAudio.currentTime = percent * this.props.currentAudio.duration;
-            console.log(percent)
-            this.wavesurfer.seekTo(percent);
-        }
+    seek(event) {
+    let percent = event.offsetX / 500;
+        percent = percent.toString()
+        percent = percent.slice(percent.indexOf('.'), (percent.indexOf('.')) + 3);
+        percent = parseFloat(percent);
+
+    this.props.currentAudio.currentTime = percent * this.props.currentAudio.duration;
+    this.wavesurfer.seekTo(percent);
     }
 
     componentWillUnmount() {
         cancelAnimationFrame(this.frame);
+        document.getElementById("div2").removeEventListener("click", this.seek);
         this.wavesurfer.un('ready');
         this.wavesurfer.destroy();
     }
 
 
     render() {
-        // if (this.props.playState) {
-        //     this.props.currentAudio.ontimeupdate = () => { this.updateProgress() }
-        // } 
-        //requestAnimationFrame
         return(
             <div id='div2'>
                 <div id='waveform' className='waveform' ref={this.waveRef}>

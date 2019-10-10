@@ -3714,6 +3714,7 @@ function (_React$Component) {
     _this.wavesurfer = null;
     _this.updateProgress = _this.updateProgress.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     _this.player = _this.props.currentAudio;
+    _this.seek = _this.seek.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     return _this;
   }
 
@@ -3734,11 +3735,6 @@ function (_React$Component) {
         preload: true
       });
       this.wavesurfer.load(this.props.song.song_fileUrl, null, 'auto');
-      this.wavesurfer.on('ready', function () {
-        _this2.setState({
-          ready: true
-        });
-      });
 
       var frameloop = function frameloop() {
         _this2.frame = requestAnimationFrame(frameloop);
@@ -3746,7 +3742,9 @@ function (_React$Component) {
         _this2.updateProgress();
       };
 
-      frameloop();
+      this.wavesurfer.on('ready', function () {
+        frameloop();
+      });
     }
   }, {
     key: "componentDidUpdate",
@@ -3754,9 +3752,6 @@ function (_React$Component) {
   }, {
     key: "updateProgress",
     value: function updateProgress() {
-      // let player = this.props.currentAudio
-      // let progressbar = document.getElementById('waveform');
-      // const progressbar = this.waveRef.current
       if (!this.props.currentAudio) return;
       var percentage = percentage || 0;
       percentage = this.props.currentAudio.currentTime / this.props.currentAudio.duration;
@@ -3770,29 +3765,29 @@ function (_React$Component) {
         this.wavesurfer.seekTo(0);
       }
 
-      document.getElementById("div2").addEventListener("click", seek.bind(this));
-
-      function seek(event) {
-        var percent = event.offsetX / event.currentTarget.offsetWidth;
-        this.props.currentAudio.currentTime = percent * this.props.currentAudio.duration;
-        console.log(percent);
-        this.wavesurfer.seekTo(percent);
-      }
+      document.getElementById("div2").addEventListener("click", this.seek);
+    }
+  }, {
+    key: "seek",
+    value: function seek(event) {
+      var percent = event.offsetX / 500;
+      percent = percent.toString();
+      percent = percent.slice(percent.indexOf('.'), percent.indexOf('.') + 3);
+      percent = parseFloat(percent);
+      this.props.currentAudio.currentTime = percent * this.props.currentAudio.duration;
+      this.wavesurfer.seekTo(percent);
     }
   }, {
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
       cancelAnimationFrame(this.frame);
+      document.getElementById("div2").removeEventListener("click", this.seek);
       this.wavesurfer.un('ready');
       this.wavesurfer.destroy();
     }
   }, {
     key: "render",
     value: function render() {
-      // if (this.props.playState) {
-      //     this.props.currentAudio.ontimeupdate = () => { this.updateProgress() }
-      // } 
-      //requestAnimationFrame
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         id: "div2"
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
