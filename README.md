@@ -25,11 +25,11 @@ JimmyJams is a full stack replica of the popular online music distribution platf
 
 ### <u>User authorization </u>
 
-Users can create an account or use the demo login functionality. I implemented user authentication with indicative validation errors that utilizes BCrypt salts in which resulted in strengthened security.
+Users can create an account or use the demo login functionality to try out the site. I implemented user authentication with indicative validation errors that utilizes BCrypt salts in which resulted in strengthened security.
 
 ### <u> Song interaction </u>
 
-Users can upload, delete, and listen to songs on the site (SONG CRUD). I constructed top-level music player that integrated Redux’s global store with conditional logic and AWS S3 to fetch audio data in the form of JSON objects, thus ensuring for persistent music streaming during navigation. 
+Users can upload, delete, and listen to songs on the site (Song CRUD). I constructed a top-level music player that integrated Redux’s global store with conditional logic and AWS S3 to fetch audio data in the form of JSON objects, thus ensuring for persistent music streaming during navigation. 
 
 ### <u> Music player interaction </u>
 
