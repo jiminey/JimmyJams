@@ -28,10 +28,14 @@ class SongShow extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    let songId = this.props.match.params.songId;
-    this.props
-      .createComment({ body: this.state.body }, songId)
-      .then(() => this.setState({ body: "" }));
+    if (!this.props.currentUser) {
+      this.props.openModal("login");
+    } else {
+      let songId = this.props.match.params.songId;
+      this.props
+        .createComment({ body: this.state.body }, songId)
+        .then(() => this.setState({ body: "" }));
+    }
   }
 
   handleComment(e) {

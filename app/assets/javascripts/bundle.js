@@ -2460,14 +2460,19 @@ function (_React$Component) {
       var _this2 = this;
 
       e.preventDefault();
-      var songId = this.props.match.params.songId;
-      this.props.createComment({
-        body: this.state.body
-      }, songId).then(function () {
-        return _this2.setState({
-          body: ""
+
+      if (!this.props.currentUser) {
+        this.props.openModal("login");
+      } else {
+        var songId = this.props.match.params.songId;
+        this.props.createComment({
+          body: this.state.body
+        }, songId).then(function () {
+          return _this2.setState({
+            body: ""
+          });
         });
-      });
+      }
     }
   }, {
     key: "handleComment",
