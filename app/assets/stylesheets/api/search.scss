@@ -2,50 +2,43 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.search-input:focus {
+  outline: none;
+  border-color: #9ecaed;
+}
 
+.result-li {
+  margin-left: 19px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: white;
+}
 
- .search-input:focus {
-   outline: none;
-   border-color: #9ecaed;
- }
-
- .result-li {
-    margin-left: 19px;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 12px;
-    color: white
-
- }
-
- #search-result-song {
-     color:white;
-     font-size: 12px;
- }
-
+#search-result-song {
+  color: white;
+  font-size: 12px;
+}
 
 .result-drop-ul {
-    background: white;
-    border-color: #a8bac9;
-    border-radius:2px;
-    z-index: 2;
-    position: absolute;
-    width: 260px;
-    margin-left: 10px;
-    background: #333; 
-    color: white;
-    font-size: 12px;
-
+  background: white;
+  border-color: #a8bac9;
+  border-radius: 2px;
+  z-index: 2;
+  position: absolute;
+  width: 260px;
+  margin-left: 10px;
+  background: #333;
+  color: white;
+  font-size: 12px;
 }
 
 .result-li:hover {
-    transition-duration: .5s;
-    color: #1673e6;
-    font-weight: bolder;
-    z-index: 2;
-    color: white
-
-
+  transition-duration: 0.5s;
+  color: #1673e6;
+  font-weight: bolder;
+  z-index: 2;
+  color: white;
 }

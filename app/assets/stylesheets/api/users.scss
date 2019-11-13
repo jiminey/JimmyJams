@@ -2,60 +2,54 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-
-
 .user-pic {
-    height: 156px;
-    width: 156px;
-    border-radius: 100px;
-    margin-left: 20px;
+  height: 156px;
+  width: 156px;
+  border-radius: 100px;
+  margin-left: 20px;
 }
 
 .user-song-content {
-    margin: 36px;
-    display: flex;
-    flex-direction: column;
+  margin: 36px;
+  display: flex;
+  flex-direction: column;
 }
 
-
-
-
-.other-user-song-content{ 
-    display: flex;
-    justify-content: flex-start;
+.other-user-song-content {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .main-user {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .userbuttons {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .user-trash {
-    font-size:12px;
-    margin: 5px; 
+  font-size: 12px;
+  margin: 5px;
+  position: absolute;
+  right: 295px;
 }
 
-
 .user-song-words {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-bottom: 24px;
-    font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 24px;
+  font-size: 12px;
 }
 
 .user-title {
-    color: gray
+  color: gray;
 }
 
-
 .user-wave {
-    width: 65%;
-    cursor: not-allowed;
+  width: 65%;
+  cursor: not-allowed;
 }

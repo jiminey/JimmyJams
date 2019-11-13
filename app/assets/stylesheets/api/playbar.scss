@@ -1,67 +1,63 @@
 .playbar {
-    width: 100%;
-    height: 50px;
-    background: rgb(224, 223, 223);
-    display: flex;
-    position:fixed;
-    bottom:0;
-    left: 0;
-    margin: 0 auto;
-    z-index:6;
-
+  width: 100%;
+  height: 50px;
+  background: rgb(224, 223, 223);
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  z-index: 6;
 }
 
 .playbar-mid {
-    margin: 0 auto;
-    display: flex;
-    padding: 10px;
-    justify-content: space-around;
-    position: relative;
+  margin: 0 auto;
+  display: flex;
+  padding: 10px;
+  justify-content: space-around;
+  position: relative;
 }
 .seekbar {
-    width: 450px;
-    margin: 0 auto;
-    position:absolute;
-    bottom: 20px; 
+  width: 450px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 20px;
 }
 
-.click-progress{
-    width: 450px;
-    margin-top: -18px;
-    height: 30px;
-    bottom: 2px;
-    cursor: pointer;
+.click-progress {
+  width: 450px;
+  margin-top: -18px;
+  height: 30px;
+  bottom: 2px;
+  cursor: pointer;
 }
 
 .timestampleft {
-    padding: 4px;
-    margin-left: 8px;
-    font-size: 11px;
-    color: #ff5500;
-
+  padding: 4px;
+  margin-left: 8px;
+  font-size: 11px;
+  color: #ff5500;
 }
 .timestampright {
-    padding: 4px;
-    margin-right: 8px;
-    font-size:11px;
+  padding: 4px;
+  margin-right: 8px;
+  font-size: 11px;
 }
 
 progress {
-  border-radius: 2px; 
+  border-radius: 2px;
   height: 3px;
   margin: 0 auto;
   cursor: pointer;
 }
 progress::-webkit-progress-bar {
- background-color: #999;
-
+  background-color: #999;
 }
 progress::-webkit-progress-value {
- background-color: #f50;
+  background-color: #f50;
 }
 
-
-.dot { 
+.dot {
   height: 25px;
   width: 25px;
   background-color: #bbb;
@@ -69,97 +65,86 @@ progress::-webkit-progress-value {
   display: inline-block;
 }
 
-
 .playbarimg {
-    height: 30px;
-    width: 30px;
-
+  height: 30px;
+  width: 30px;
 }
 
 .playbar-left {
-    margin-left: 20px;
-    font-size: 14px;
-    margin-top: 14px;
-    display: flex;
-    width: 200px;
-    padding: 4px;
+  margin-left: 20px;
+  font-size: 14px;
+  margin-top: 14px;
+  display: flex;
+  width: 200px;
+  padding: 4px;
 }
 
-
 .playbar-sub {
-    width: 960px;
-    margin: 0 auto;
-    display: flex; 
-    justify-content: space-between;
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .progress-bar {
-    border-top: 1px solid black;
-    width: 500px;
-    margin-left: 130px;
+  border-top: 1px solid black;
+  width: 500px;
+  margin-left: 130px;
 }
 
 .thumbnail {
-    display:flex;
-    margin: auto 0;
+  display: flex;
+  margin: auto 0;
 }
 
 .subthumbnail {
-    margin-left: 6px;
-    display:flex; 
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    font-size:12px;
+  margin-left: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  font-size: 12px;
 }
 
 .vol {
-    margin-top: 1px;
-    margin-left: 5px;
-    width: 85px;
-    cursor: pointer;
+  margin-top: 1px;
+  margin-left: 5px;
+  width: 85px;
+  cursor: pointer;
 }
 
-
-
-.icon-playbar{
-    display: flex;
-    align-items: flex-end;
-    padding: 6px;
-    font-size: 13px;
-    justify-content: space-between;
-    width: 42px;
+.icon-playbar {
+  display: flex;
+  align-items: flex-end;
+  padding: 6px;
+  font-size: 13px;
+  justify-content: space-between;
+  width: 42px;
 }
-
 
 .stn1 {
-    color: #999;
+  color: #999;
 }
-
 
 .p1 {
-    padding:5px;
-    cursor: not-allowed;
+  padding: 5px;
+  cursor: not-allowed;
 }
 .p2 {
-    padding:5px;
+  padding: 5px;
 }
 .p3 {
-    padding:5px;
-    cursor: pointer;
+  padding: 5px;
+  cursor: pointer;
 }
-
-
-
 
 .playbar-right {
-    width: 267px; 
-    height: 50px;
+  width: 267px;
+  height: 50px;
 }
 
-
 .vol-icon {
-    margin-top: 17px;
+  margin-top: 17px;
 }
 
 // .volume {
@@ -170,47 +155,64 @@ progress::-webkit-progress-value {
 // }
 
 .fa-heart {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .stn1:hover {
-    color: black;
+  color: black;
 }
 
 .stn2 {
-    color: rgb(63, 63, 63)
+  color: rgb(63, 63, 63);
 }
 .stn2:hover {
-    color: black;
+  color: black;
 }
 .fa-heart:hover {
-    color: red;
+  color: red;
 }
 
-@font-face {font-family: "Interstate";
-    src: url("//db.onlinewebfonts.com/t/52eb6cf4774d0a37d693b9cccc565891.eot");
-    src: url("//db.onlinewebfonts.com/t/52eb6cf4774d0a37d693b9cccc565891.eot?#iefix") format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/52eb6cf4774d0a37d693b9cccc565891.woff2") format("woff2"),
-    url("//db.onlinewebfonts.com/t/52eb6cf4774d0a37d693b9cccc565891.woff") format("woff"),
-    url("//db.onlinewebfonts.com/t/52eb6cf4774d0a37d693b9cccc565891.ttf") format("truetype"),
-    url("//db.onlinewebfonts.com/t/52eb6cf4774d0a37d693b9cccc565891.svg#Interstate") format("svg");
+@font-face {
+  font-family: "Interstate";
+  src: url("//db.onlinewebfonts.com/t/52eb6cf4774d0a37d693b9cccc565891.eot");
+  src: url("//db.onlinewebfonts.com/t/52eb6cf4774d0a37d693b9cccc565891.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/52eb6cf4774d0a37d693b9cccc565891.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/52eb6cf4774d0a37d693b9cccc565891.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/52eb6cf4774d0a37d693b9cccc565891.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/52eb6cf4774d0a37d693b9cccc565891.svg#Interstate")
+      format("svg");
 }
 
-
-@font-face {font-family: "Interstate-thin";
-    src: url("//db.onlinewebfonts.com/t/67c875133a76f1dc00e6beab89cd7329.eot");
-    src: url("//db.onlinewebfonts.com/t/67c875133a76f1dc00e6beab89cd7329.eot?#iefix") format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/67c875133a76f1dc00e6beab89cd7329.woff2") format("woff2"),
-    url("//db.onlinewebfonts.com/t/67c875133a76f1dc00e6beab89cd7329.woff") format("woff"),
-    url("//db.onlinewebfonts.com/t/67c875133a76f1dc00e6beab89cd7329.ttf") format("truetype"),
-    url("//db.onlinewebfonts.com/t/67c875133a76f1dc00e6beab89cd7329.svg#Interstate") format("svg");
+@font-face {
+  font-family: "Interstate-thin";
+  src: url("//db.onlinewebfonts.com/t/67c875133a76f1dc00e6beab89cd7329.eot");
+  src: url("//db.onlinewebfonts.com/t/67c875133a76f1dc00e6beab89cd7329.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/67c875133a76f1dc00e6beab89cd7329.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/67c875133a76f1dc00e6beab89cd7329.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/67c875133a76f1dc00e6beab89cd7329.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/67c875133a76f1dc00e6beab89cd7329.svg#Interstate")
+      format("svg");
 }
 
-@font-face {font-family: "InterstateLight";
-    src: url("//db.onlinewebfonts.com/t/5d7571268a2cc4dcdd56140df04d77d0.eot");
-    src: url("//db.onlinewebfonts.com/t/5d7571268a2cc4dcdd56140df04d77d0.eot?#iefix") format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/5d7571268a2cc4dcdd56140df04d77d0.woff2") format("woff2"),
-    url("//db.onlinewebfonts.com/t/5d7571268a2cc4dcdd56140df04d77d0.woff") format("woff"),
-    url("//db.onlinewebfonts.com/t/5d7571268a2cc4dcdd56140df04d77d0.ttf") format("truetype"),
-    url("//db.onlinewebfonts.com/t/5d7571268a2cc4dcdd56140df04d77d0.svg#InterstateLight") format("svg");
+@font-face {
+  font-family: "InterstateLight";
+  src: url("//db.onlinewebfonts.com/t/5d7571268a2cc4dcdd56140df04d77d0.eot");
+  src: url("//db.onlinewebfonts.com/t/5d7571268a2cc4dcdd56140df04d77d0.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/5d7571268a2cc4dcdd56140df04d77d0.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/5d7571268a2cc4dcdd56140df04d77d0.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/5d7571268a2cc4dcdd56140df04d77d0.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/5d7571268a2cc4dcdd56140df04d77d0.svg#InterstateLight")
+      format("svg");
 }
