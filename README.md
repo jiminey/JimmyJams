@@ -4,30 +4,40 @@
 [JimmyJams Live Site](https://jimmyjams.herokuapp.com/#/)
 
 
-JimmyJams is a replica of the popular online audio distribution platform, SoundCloud. Users at this site are able to browse through trending hits, featured songs, and discover new music through JimmyJams. JimmyJams allows users to upload and delete tracks onto our site to share with others.
+JimmyJams is a full stack replica of the popular online music distribution platform, SoundCloud,  in which users can listen and upload their favorite tracks.  (single-page application)
 
-JimmyJams is a fullstack application that uses Ruby on Rails as a backend API, PostgreSQL & AWS S3 for databases, and React with Redux for the frontend framework.
+(Ruby on Rails, PostgreSQL, React, Redux, Webpack, AWS, Heroku)	
 
-![JimmyJams Splash Page](https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/splash.png?raw=true)
-
+![JimmyJams Demo](https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/demologin.gif?raw=true)
 
 # Technology Used 
 
 * Ruby on Rails
-* Javascript
-* React/Redux
+* PostgreSQL
+* React
+* Redux
+* Webpack
+* AWS
 * Jbuilder
-* PostgreSQL with AWS S3
+* Heroku
 
 # Features 
 
 ### <u>User authorization </u>
 
-Users can create their own account/re-login or try out the site with the demo-login function/.
-
-![Demo Login Function](https://github.com/jiminey/JimmyJams/blob/master/app/assets/images/demologin.gif?raw=true)
+Users can create an account or use the demo login functionality. I implemented user authentication with indicative validation errors that utilizes BCrypt salts in which resulted in strengthened security.
 
 ### <u> Song interaction </u>
 
-Users can upload, delete, and listen to songs on the site.
+Users can upload, delete, and listen to songs on the site (SONG CRUD). I constructed top-level music player that integrated Redux’s global store with conditional logic and AWS S3 to fetch audio data in the form of JSON objects, thus ensuring for persistent music streaming during navigation. 
+
+### <u> Music player interaction </u>
+
+Users can pause, play and skip through points of a song with the seekbar. I constructed a seekbar that changes the current time of the song based on the position of the mouse relative to the seekbar through on-click event listeners.
+
+### <u> Search interaction </u>
+
+Users can search their favorite song non-case sensitive through the search bar.
+
+
 
